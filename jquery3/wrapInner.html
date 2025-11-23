@@ -1,0 +1,71 @@
+ <script src="js/rtian.index.js" ></script>
+            <header class="top-nav">
+                <a href="#index.html" title="">首页</a>&nbsp;&gt;&nbsp; <span class="sub-title">文档处理</span> &nbsp;&gt;&nbsp;wrapInner(html|ele|fn)
+                <a class="source" href="#jquery3.new.html" >jQuery3.0 新特性</a>
+            </header>
+            <div id="content" >
+              <h2><span>返回值:jQuery</span>wrapInner(htm|element|fnl)</h2>
+    <h3>概述</h3>
+    <div class="desc">
+      <p>将每一个匹配的元素的子内容(包括文本节点)用一个HTML结构包裹起来</p>
+      <div class="longdesc">
+        <p>这个函数的原理是检查提供的第一个元素（它是由所提供的HTML标记代码动态生成的），并在它的代码结构中找到最上层的祖先元素－－这个祖先元素就是包装元素。</p>
+      </div>
+    </div>
+    <h3>参数</h3>
+    <div class="parameter">
+      <h4><strong>html</strong><span>String</span><em>V1.2</em></h4>
+      <p>HTML标记代码字符串，用于动态生成元素并包装目标元素</p>
+      <h4><strong>element</strong><span>Element</span><em>V1.2</em></h4>
+      <p>用于包装目标元素的DOM元素</p>
+      <h4><strong>fn</strong><span>Function</span><em>V1.4</em></h4>
+      <p>生成包裹结构的一个函数</p>
+    </div>
+    <div class="example">
+      <h3>示例</h3>
+      <span id="f_ad2"></span>
+      <h4>参数html描述:</h4>
+      <p>把所有段落内的每个子内容加粗</p>
+      <h5>jQuery 代码:</h5>
+      <pre><code>$("p").wrapInner("&lt;b&gt;&lt;/b&gt;");</code></pre>
+      <h4>参数elem描述:</h4>
+      <p>把所有段落内的每个子内容加粗</p>
+      <h5>jQuery 代码:</h5>
+      <pre><code>$("p").wrapInner(document.createElement("b"));</code></pre>
+      <h4>回调函数 描述:</h4>
+      <p>用原先div的内容作为新div的class，并将每一个元素包裹起来</p>
+      <h5>HTML 代码:</h5>
+      <pre><code>&lt;div class="container"&gt;
+  &lt;div class="inner"&gt;Hello&lt;/div&gt;
+  &lt;div class="inner"&gt;Goodbye&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+      <h5>jQuery 代码:</h5>
+      <pre><code>$('.inner').wrapInner(function() {
+  return '&lt;div class="' + $(this).text() + '" /&gt;';
+});</code></pre>
+      <h5>结果:</h5>
+      <pre><code>&lt;div class="container"&gt;
+  &lt;div class="inner"&gt;
+    &lt;div class="Hello"&gt;Hello&lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class="inner"&gt;
+    &lt;div class="Goodbye"&gt;Goodbye&lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+    </div>
+            </div>
+            
+
+            <div class="navigation clearfix">
+                <span class="alignleft">上一篇：<a href="#wrapAll.html" >wrapall(html|ele)</a></span>
+                
+                <span class="alignright">下一篇：<a href="#replaceWith.html" >replaceWith(content|fn)</a></span>
+            </div>
+            <div class="donate-con">
+              <div class="donate-btn">捐助</div>
+              <div class="donate-body">
+                <div class="donate-tips">本站为非盈利网站，所有的捐赠收入将用于支付带宽、服务器费用，您的支持将是本站撑下去的最大动力！</div>
+                <div class="donate-img"> <a href="#source.html" ></a>  </div>
+              </div>
+            </div>
+

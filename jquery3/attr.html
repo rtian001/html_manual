@@ -1,0 +1,61 @@
+ <script src="js/rtian.index.js" ></script>
+            <header class="top-nav">
+                <a href="#index.html" title="">首页</a>&nbsp;&gt;&nbsp; <span class="sub-title">属性</span> &nbsp;&gt;&nbsp;attr(name|pro|key,val|fn)
+                <a class="source" href="#jquery3.new.html" >jQuery3.0 新特性</a>
+            </header>
+            <div id="content" >
+              <h2><span>返回值:String</span>attr(name|properties|key,value|fn)</h2>
+    <h3>概述</h3>
+    <div class="desc">
+      <p>设置或返回被选元素的属性值。</p>
+      <div class="longdesc">
+        <p></p>
+      </div>
+    </div>
+    <h3>参数</h3>
+    <div class="parameter">
+      <h4><strong>name</strong><span>String</span><em>V1.0</em></h4>
+      <p>属性名称</p>
+      <h4><strong>properties<em> </em></strong><span>Map</span><em>V1.0</em></h4>
+      <p>作为属性的“名/值对”对象</p>
+      <h4><strong>key,value<em> </em></strong><span>String,Object</span><em>V1.0</em></h4>
+      <p>属性名称，属性值</p>
+      <h4><strong>key,function(index, attr)<em> </em></strong><span>String,Function</span><em>V1.1</em></h4>
+      <p>1:属性名称。</p>
+      <p>2:返回属性值的函数,第一个参数为当前元素的索引值，第二个参数为原先的属性值。</p>
+    </div>
+    <div class="example">
+      <h3>示例</h3>
+      <h4>参数name 描述:</h4>
+      <p>返回文档中所有图像的src属性值。</p>
+      <h5>jQuery 代码:</h5>
+      <pre><code>$("img").attr("src");</code></pre>
+      <h4>参数properties 描述:</h4>
+      <p>为所有图像设置src和alt属性。</p>
+      <h5>jQuery 代码:</h5>
+      <pre><code>$("img").attr({ src: "test.jpg", alt: "Test Image" });</code></pre>
+      <h4>参数key,value 描述:</h4>
+      <p>为所有图像设置src属性。</p>
+      <h5>jQuery 代码:</h5>
+      <pre><code>$("img").attr("src","test.jpg");</code></pre>
+      <h4>参数key,回调函数 描述:</h4>
+      <p>把src属性的值设置为title属性的值。</p>
+      <h5>jQuery 代码:</h5>
+      <pre><code>$("img").attr("title", function() { return this.src });</code></pre>
+    </div>
+            </div>
+            
+
+            <div class="navigation clearfix">
+                <span class="alignleft">上一篇：<a href="#serializearray.html" >serializearray()</a></span>
+                
+                <span class="alignright">下一篇：<a href="#removeAttr.html" >removeAttr(name)</a></span>
+            </div>
+            <div class="donate-con">
+              <div class="donate-btn">捐助</div>
+              <div class="donate-body">
+                <div class="donate-tips">本站为非盈利网站，所有的捐赠收入将用于支付带宽、服务器费用，您的支持将是本站撑下去的最大动力！</div>
+                <div class="donate-img"> <a href="#source.html" ></a>  </div>
+              </div>
+            </div>
+

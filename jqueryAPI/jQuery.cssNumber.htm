@@ -1,0 +1,72 @@
+<script src="js/rtian.js" ></script>
+<meta charset="utf-8" />
+<title>jQuery.cssNumber | jQuery API中文文档(适用jQuery 1.0 - jQuery 3.0)</title>
+  <div id="content" >
+<div class="inner" role="main">
+ <article id="post-3704" class="post-3704 post type-post status-publish format-standard hentry category-css category-style-properties category-78">
+	<header class="entry-header">
+		<h1 class="entry-title">jQuery.cssNumber</h1>
+		<hr>
+				<div class="entry-meta">
+			分类: <span class="category">
+<a href="css_1.htm" >CSS</a></span><span class="category-divider"> | </span><span class="category">
+<a href="manipulation.htm" >操作</a> &gt; 
+<a href="style-properties.htm" >Style 属性</a></span>		</div><!-- .entry-meta -->
+			</header><!-- .entry-header -->
+	<div class="entry-content">
+		<article id="jQuery-cssNumber1" class="entry property"><h2 class="section-title">
+<span>jQuery.cssNumber</span><span class="returns">返回: 
+<a href="Types.htm#Object" >Object</a></span>
+</h2>
+<div class="entry-wrapper">
+<p class="desc"><strong>描述: </strong>一个对象，这个包含所有可以不使用单位的CSS属性。
+<a href="css.htm" ><code>.css()</code></a> 方法使用这个对象来确定是否可能附加<code>px</code>到无单位的值。</p>
+<ul class="signatures"><li class="signature"><h4 class="name">
+<span class="version-details">添加版本: 
+<a href="1.4.3.htm" >1.4.3</a></span>jQuery.cssNumber</h4></li></ul>
+<div class="longdesc" id="entry-longdesc">
+    <p>你可以将<code>jQuery.cssNumber</code>想象成一个CSS属性列表，这个列表包含所有可以不使用单位的CSS属性。它用于
+<a href="css.htm" ><code>.css()</code></a>， 来确定是否需要附加<code>px</code>到无单位的值</p>
+    <p><code>jQuery.cssNumber</code>对象的键是驼峰式命名，并且其值都设置成<code>true</code>。如果你想阻止的
+<a href="css.htm" ><code>.css()</code></a>方法自动添加<code>px</code>单位到特定的CSS属性，你可以添加一个额外的属性到<code>jQuery.cssNumber</code>对象。</p>
+    <div class="syntaxhighlighter javascript">
+	<table>
+		<tbody>
+			<tr>
+				<td class="gutter">
+						<div class="line n1">1</div>
+				</td>
+				<td class="code">
+					<pre><div class="container"><div class="line"><code>jQuery.cssNumber.someCSSProp = <span class="literal">true</span>;</code></div></div></pre>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+    <p>默认情况下，这个对象包含以下属性：</p>
+    <ul>
+      <li><code>zIndex</code></li>
+      <li><code>fontWeight</code></li>
+      <li><code>opacity</code></li>
+      <li><code>zoom</code></li>
+      <li><code>lineHeight</code></li>
+      <li>
+<code>widows</code> (jQuery 1.6开始添加)</li>
+      <li>
+<code>orphans</code> (jQuery 1.6开始添加)</li>
+      <li>
+<code>fillOpacity</code> (jQuery 1.6.2开始添加)</li>
+      <li>
+<code>columnCount</code> (jQuery 1.9开始添加)</li>
+      <li>
+<code>order</code> (jQuery 1.10.2开始添加)</li>
+      <li>
+<code>flexGrow</code> (jQuery 1.11.1开始添加)</li>
+      <li>
+<code>flexShrink</code> (jQuery 1.11.1开始添加)</li>
+    </ul>
+  </div>
+</div></article>	</div><!-- .entry-content -->
+</article>   
+</div>
+  </div>

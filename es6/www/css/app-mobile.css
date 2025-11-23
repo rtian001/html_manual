@@ -1,0 +1,146 @@
+body {
+	margin: 0;
+	padding: 10px;
+	padding-bottom: 35px;
+	overflow-x: hidden;
+}
+
+#sidebar {
+	position: fixed;
+	bottom: 10px;
+	width: 70%;
+	/* height: 100vh; */
+	overflow: hidden;
+	display: none;
+}
+
+#sidebar>* {
+	display: none;
+}
+
+#sidebar>ol {
+	display: block;
+	height: calc(100vh - 100px);
+	overflow-y: scroll;
+	background: rgba(0, 0, 0, 0.9);
+	border-radius: 5px;
+	list-style: decimal inside;
+	padding: 5px 10px;
+}
+
+#sidebar>ol>li {
+	height: 30px;
+	line-height: 30px;
+	margin: 5px 0;
+	padding: 0 10px;
+	background: rgba(255, 255, 255, 0.3);
+	border-radius: 5px;
+	color: #fff;
+	text-overflow: ellipsis;
+	overflow: hidden;
+	white-space: nowrap;
+}
+
+#sidebar>ol>li.active {
+	background: rgba(200, 255, 255, 0.4);
+}
+
+#sidebar>ol>li>.progress {
+	display: none;
+}
+
+#sidebar>ol>li>a {
+	text-decoration: none;
+	color: #fff;
+	text-shadow: 0 0 0 #369;
+}
+
+#right {
+	height: 100vh;
+	overflow-y: scroll;
+}
+
+#content h1 {
+	margin: 0;
+	padding-bottom: 3px;
+	border-bottom: 2px solid #999;
+}
+
+#content h2 {
+	margin-top: 50px;
+	padding-top: 20px;
+	border-top: 2px solid #666;
+	font-size: 1.2em;
+}
+
+#content p {
+	font-size: 1em;
+	line-height: 1.5;
+}
+
+#content p code {
+	font-size: 0.9em;
+}
+
+ol.content-toc {
+	background: rgba(0, 0, 0, 0.3);
+	padding: 10px;
+	border-radius: 5px;
+	list-style: decimal inside;
+}
+
+ol.content-toc>li {
+	margin: 5px;
+	width: 100%;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	overflow: hidden;
+	white-space: nowrap;
+	word-break: keep-all;
+	color: #36b;
+}
+
+#content code.language-none {
+	padding: 1px 3px;
+	background: #f9f2f4;
+	color: #f63;
+	text-shadow: none;
+}
+
+ol.content-toc a {
+	text-decoration: none;
+	color: #36b;
+}
+
+#footer {
+	display: none;
+}
+
+#flip {
+	background: #fff;
+	height: 30px;
+	width: 100%;
+	position: fixed;
+	left: 0;
+	bottom: 0;
+	display: flex;
+	justify-content: space-between;
+	padding: 3px;
+}
+
+#flip>div {
+	width: 100px;
+	background: rgba(0, 0, 0, 0.8);
+	text-align: center;
+	color: #fff;
+	line-height: 30px;
+	height: 30px;
+	border-radius: 20px;
+	margin: 0 20px;
+}
+
+#pagedown,
+#pageup,
+#menu {
+	cursor: pointer;
+}

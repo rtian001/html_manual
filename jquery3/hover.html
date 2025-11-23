@@ -1,0 +1,75 @@
+ <script src="js/rtian.index.js" ></script>
+            <header class="top-nav">
+                <a href="#index.html" title="">首页</a>&nbsp;&gt;&nbsp; <span class="sub-title">事件</span> &nbsp;&gt;&nbsp;hover([over,]out)
+                <a class="source" href="#jquery3.new.html" >jQuery3.0 新特性</a>
+            </header>
+            <div id="content" >
+              <h2><span>返回值:jQuery</span>hover([over,]out)</h2>
+    <h3>概述</h3>
+    <div class="desc">
+      <p>一个模仿悬停事件（鼠标移动到一个对象上面及移出这个对象）的方法。这是一个自定义的方法，它为频繁使用的任务提供了一种“保持在其中”的状态。</p>
+      <div class="longdesc">
+        <p>当鼠标移动到一个匹配的元素上面时，会触发指定的第一个函数。当鼠标移出这个元素时，会触发指定的第二个函数。而且，会伴随着对鼠标是否仍然处在特定元素中的检测（例如，处在div中的图像），如果是，则会继续保持“悬停”状态，而不触发移出事件（修正了使用mouseout事件的一个常见错误）。</p>
+      </div>
+    </div>
+    <h3>参数</h3>
+    <div class="parameter">
+      <h4><strong>over,out</strong><span>Function,Function</span><em>V1.0</em></h4>
+      <p>over:鼠标移到元素上要触发的函数</p>
+      <p>out:鼠标移出元素要触发的函数</p>
+      <h4><strong>out</strong><span>Object</span><em>V1.4</em></h4>
+      <p>当鼠标移到元素上或移出元素时触发执行的事件函数</p>
+    </div>
+    <div class="example">
+      <h3>示例</h3>
+      <span id="f_ad2"></span>
+      <h4>over,out 描述:</h4>
+      <p>鼠标悬停的表格加上特定的类</p>
+      <h5>jQuery 代码:</h5>
+      <pre><code>$("td").hover(
+  function () {
+    $(this).addClass("hover");
+  },
+  function () {
+    $(this).removeClass("hover");
+  }
+);</code></pre>
+      <h4>out 描述:</h4>
+      <p>hover()方法通过绑定变量&quot;handlerInOut&quot;来切换方法。</p>
+      <h5>jQuery 代码:</h5>
+      <pre>$(&quot;<code>td</code>&quot;).bind(&quot;mouseenter mouseleave&quot;,handlerInOut);
+$(&quot;<code>td</code>&quot;).hover(handlerInOut);</pre>
+    </div>
+            </div>
+            
+
+            <div class="navigation clearfix">
+                <span class="alignleft">上一篇：<a href="#undelegate.html" >undelegate([s,[t],fn])</a></span>
+                
+                <span class="alignright">下一篇：<a href="#toggle.html" >toggle(fn, fn2, [fn3, fn4, ...])</a></span>
+            </div>
+            <div class="donate-con">
+              <div class="donate-btn">捐助</div>
+              <div class="donate-body">
+                <div class="donate-tips">本站为非盈利网站，所有的捐赠收入将用于支付带宽、服务器费用，您的支持将是本站撑下去的最大动力！</div>
+                <div class="donate-img"> <a href="#source.html" ></a>  </div>
+              </div>
+            </div>
+
+        </div><!-- main-wraper end -->
+      <footer id="footer-con" class="footer" style="display:none;" >
+<p id="footer">Copyright &copy; rtian &nbsp;&nbsp; 2012 - 2016 &nbsp;&nbsp; All rights reserved. </p>      </footer>
+
+    </div><!-- main -container end -->
+
+
+     <div id="menu"></div>
+
+<script type="text/javascript" src="js/jquery-1.11.3.min.js" ></script>
+<script type="text/javascript" src="js/jquery.autocomplete.js" ></script>
+<script type="text/javascript" src="js/dtree.js" ></script>
+<script type="text/javascript" src="js/js.js" ></script>
+
+
+</body>
+</html>

@@ -1,0 +1,49 @@
+ <script src="js/rtian.index.js" ></script>
+            <header class="top-nav">
+                <a href="#index.html" title="">首页</a>&nbsp;&gt;&nbsp; <span class="sub-title">工具</span> &nbsp;&gt;&nbsp;$.browser
+                <a class="source" href="#jquery3.new.html" >jQuery3.0 新特性</a>
+            </header>
+            <div id="content" >
+              <h2><span>返回值:Map</span>jQuery.browser</h2>
+    <h3><em>V1.0</em>概述</h3>
+    <div class="desc">
+      <p>在jQuery 1.3中不建议使用。浏览器内核标识。依据 navigator.userAgent 判断。</p>
+      <div class="longdesc">
+        <p>可用值:  safari </p>
+        <p>opera </p>
+        <p>msie </p>
+        <p> mozilla  此属性在 DOM 树加载完成前即有效，可用于为特定浏览器设置 ready 事件。 </p>
+        <p>浏览器对象检测技术与此属性共同使用可提供可靠的浏览器检测支持。</p>
+        <p class="outmoded">注意：通过user agent字符串来检测浏览器不是一个好主意，在1.9中将完全移除该方法，不过你可以使用jQuery Migrate（迁移）插件。或者你可以试试<a href="http://modernizr.com/" >Modernizr</a>。</p>
+      </div>
+    </div>
+    <div class="example">
+      <h3>示例</h3>
+      <span id="f_ad2"></span>
+      <h4>描述:</h4>
+      <p>在 Microsoft's Internet Explorer 浏览器中返回 true。</p>
+      <h5>jQuery 代码:</h5>
+      <pre><code>$.browser.msie</code></pre>
+      <h4>描述:</h4>
+      <p>仅在 Safari 中提示 "this is safari!" 。</p>
+      <h5>jQuery 代码:</h5>
+      <pre><code>if ($.browser.safari) {
+   alert("this is safari!");
+}</code></pre>
+    </div>
+            </div>
+            
+
+            <div class="navigation clearfix">
+                <span class="alignleft">上一篇：<a href="#jQuery.support.html" >$.support</a></span>
+                
+                <span class="alignright">下一篇：<a href="#jQuery.browser.version.html" >$.browser.version</a></span>
+            </div>
+            <div class="donate-con">
+              <div class="donate-btn">捐助</div>
+              <div class="donate-body">
+                <div class="donate-tips">本站为非盈利网站，所有的捐赠收入将用于支付带宽、服务器费用，您的支持将是本站撑下去的最大动力！</div>
+                <div class="donate-img"> <a href="#source.html" ></a>  </div>
+              </div>
+            </div>
+

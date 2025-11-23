@@ -1,0 +1,47 @@
+ <script src="js/rtian.index.js" ></script>
+            <header class="top-nav">
+                <a href="#index.html" title="">首页</a>&nbsp;&gt;&nbsp; <span class="sub-title">筛选</span> &nbsp;&gt;&nbsp;andSelf()
+                <a class="source" href="#jquery3.new.html" >jQuery3.0 新特性</a>
+            </header>
+            <div id="content" >
+              <h2><span>返回值:jQuery</span>andSelf()</h2>
+    <h3><em>V1.2</em>概述</h3>
+    <div class="desc">
+      <p>加入先前所选的加入当前元素中</p>
+      <div class="longdesc">
+        <p>对于筛选或查找后的元素，要加入先前所选元素时将会很有用。</p>
+        <p class="outmoded">从jQuery1.8开始，.andSelf()方法已经被标注过时，在jQuery1.8和更高版本中应使用.addBack()。</p>
+        <p>我们认为对于&ldquo;添加并返回&rdquo;以前的结果集合这是一个更好的名字。新方法可以接受一个可选的选择器，该选择器可以用来过滤之前集合，将它添加到当前集合并返回。$(&ldquo;section, aside&rdquo;).children(&ldquo;ul&rdquo;).addBack(&ldquo;aside&rdquo;) 会根据他们在文档中的顺序，得到section与aside下所有ul子元素，外加所有aside元素。虽然.addSelf()在1.9中仍然可以使用，我们建议您尽快修改名称。如果使用.addSelf()，jQuery Migrate插件会提出警告。</p>
+      </div>
+    </div>
+    <div class="example">
+      <h3>示例</h3>
+      <span id="f_ad2"></span>
+      <h4>描述:</h4>
+      <p>选取所有div以及内部的p，并加上border类</p>
+      <h5>HTML 代码:</h5>
+      <pre><code>&lt;div&gt;&lt;p&gt;First Paragraph&lt;/p&gt;&lt;p&gt;Second Paragraph&lt;/p&gt;&lt;/div&gt;</code></pre>
+      <h5>jQuery 代码:</h5>
+      <pre><code>$("div").find("p").andSelf().addClass("border");</code></pre>
+      <h5>结果:</h5>
+      <pre><code>&lt;div class="border"&gt;
+    &lt;p class="border"&gt;First Paragraph&lt;/p&gt;
+    &lt;p class="border"&gt;Second Paragraph&lt;/p&gt;
+&lt;/div&gt;</code></pre>
+    </div>
+            </div>
+            
+
+            <div class="navigation clearfix">
+                <span class="alignleft">上一篇：<a href="#add.html" >add(e|e|h|o[,c])</a></span>
+                
+                <span class="alignright">下一篇：<a href="#addBack.html" >addBack()</a></span>
+            </div>
+            <div class="donate-con">
+              <div class="donate-btn">捐助</div>
+              <div class="donate-body">
+                <div class="donate-tips">本站为非盈利网站，所有的捐赠收入将用于支付带宽、服务器费用，您的支持将是本站撑下去的最大动力！</div>
+                <div class="donate-img"> <a href="#source.html" ></a>  </div>
+              </div>
+            </div>
+

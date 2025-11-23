@@ -1,0 +1,62 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title>jQuery.type(obj) | jQuery API 中文手册</title>
+<meta name="author" content="jQuery 中文手册 ">
+<meta name="keywords" content="jquery,chm,手册,在线,api" />
+<link type="image/x-icon" href="img/favicon.ico" rel="shortcut icon">
+<link type="text/css" rel="stylesheet" href="style/style.css"   />
+</head>
+<body>
+<div id="wrapper">
+<div id='left' class='dtree'>
+  <p style="text-align:center">
+    <input type="text" name="query" id="query" placeholder="请输入关键字"/>
+    <!--<input type="button" id="butsoso" value="搜索" />--></p>
+  <p style="margin:7px 0; text-align:center"><a href="javascript:void(0)" id="openAll">全部展开</a> | <a href="javascript:void(0)" id="closeAll">全部折叠 </a> | <a href="index.html" >速查表</a></p>
+	<div id="menu">
+    
+    </div>
+</div>
+<div id="content" class="a2">
+  <div rel="jQuery.type">
+    <h2><span>返回值:String</span>jQuery.type(obj)</h2>
+    <h3>概述</h3>
+    <div class="desc">
+      <p> 检测obj的数据类型。</p>
+    </div>
+    <h3>参数</h3>
+    <div class="parameter">
+      <h4><strong>obj</strong><span>Object</span><em>V1.4.3</em></h4>
+      <p>用于测试类型的对象</p>
+    </div>
+    <div class="example">
+      <h3>示例</h3>
+      <span id="f_ad2"></span>
+      <h4>描述:</h4>
+      <p>以下obj的类型如下：</p>
+      <p>&nbsp;</p>
+      <PRE><CODE class="example demo-code"><UL>
+      <LI>jQuery.type(true) === "boolean"</LI>
+      <LI>jQuery.type(3) === "number"
+        <LI>jQuery.type("test") === "string"</LI>
+      <LI>jQuery.type(function(){}) === "function"
+        <LI>jQuery.type([]) === "array"</LI>
+      <LI>jQuery.type(new Date()) === "date"
+        <LI>jQuery.type(/test/) === "regexp"</LI>
+      </UL></CODE></PRE>
+    </div>
+  </div>
+    
+</div>
+
+</div>
+</body>
+
+<script type="text/javascript" src="js/jquery-1.11.3.min.js" ></script>
+<script type="text/javascript" src="js/jquery.autocomplete.js" ></script>
+<script type="text/javascript" src="js/dtree.js" ></script>
+<script type="text/javascript" src="js/js.js" ></script>
+
+</html>

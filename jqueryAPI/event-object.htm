@@ -1,0 +1,325 @@
+<script src="js/rtian.js" ></script>
+<meta charset="utf-8" />
+<title>分类：事件对象 | jQuery API中文文档(适用jQuery 1.0 - jQuery 3.0)</title>
+<div id="content">	
+    <div class="inner listing" role="main">
+		<header class="page-header">
+			<h1 class="page-title">分类：事件对象</h1>
+			<hr>
+<div class="category-archive-meta"><p>
+                jQuery的事件系统根据 
+<a href="http://www.w3.org/TR/2003/WD-DOM-Level-3-Events-20030331/ecma-script-binding.html">W3C
+                标准</a>规范的事件对象。
+                事件对象是保证传递给事件处理程序。
+                大部分属性由原来的事件被复制过来，归到新的事件对象。</p>
+<div class="longdesc">
+<h4>jQuery.Event 构造函数</h4>
+<p>
+    该<code>jQuery.Event</code> 构造函数 是暴露的并且可以调用
+<a href="trigger.htm">trigger</a>时使用。
+    <code>new</code>运算符是可选的。
+    </p>
+<p>查看
+<a href="trigger.htm">trigger</a>的文档，以了解如何结合使用自己的事件对象。</p>
+<p>Example:</p>
+    <div class="syntaxhighlighter javascript nogutter">
+    <table>
+    <tbody>
+    <tr>
+    <td class="gutter">
+    <div class="line n1">1</div>
+    <div class="line n2">2</div>
+    <div class="line n3">3</div>
+    <div class="line n4">4</div>
+    <div class="line n5">5</div>
+    </td>
+    <td class="code">
+    <pre><div class="container"><div class="line"><code><span class="comment">//Create a new jQuery.Event object without the "new" operator.</span></code></div></div><div class="container"><div class="line"><code><span class="keyword">var</span> e = jQuery.Event( <span class="string">"click"</span> );</code></div></div><div class="container"><div class="line"><code> </code></div></div><div class="container"><div class="line"><code><span class="comment">// trigger an artificial click event</span></code></div></div><div class="container"><div class="line"><code>jQuery( <span class="string">"body"</span> ).trigger( e );</code></div></div></pre>
+    </td>
+    </tr>
+    </tbody>
+    </table>
+    </div>
+<p>
+    在jQuery 1.6中，您也可以将对象传递给<code>jQuery.Event()</code>，其属性会设置成新创建的事件对象上。</p>
+<p>Example:</p>
+    <div class="syntaxhighlighter javascript nogutter">
+    <table>
+    <tbody>
+    <tr>
+    <td class="gutter">
+    <div class="line n1">1</div>
+    <div class="line n2">2</div>
+    <div class="line n3">3</div>
+    <div class="line n4">4</div>
+    <div class="line n5">5</div>
+    </td>
+    <td class="code">
+    <pre><div class="container"><div class="line"><code><span class="comment">// Create a new jQuery.Event object with specified event properties.</span></code></div></div><div class="container"><div class="line"><code><span class="keyword">var</span> e = jQuery.Event( <span class="string">"keydown"</span>, { keyCode: <span class="number">64</span> } );</code></div></div><div class="container"><div class="line"><code> </code></div></div><div class="container"><div class="line"><code><span class="comment">// trigger an artificial keydown event with keyCode 64</span></code></div></div><div class="container"><div class="line"><code>jQuery( <span class="string">"body"</span> ).trigger( e );</code></div></div></pre>
+    </td>
+    </tr>
+    </tbody>
+    </table>
+    </div>
+<h4>Event 属性</h4>
+<p>以下兼容跨浏览器的jQuery标准化的属性：</p>
+<ul>
+<li>
+              <code>target</code>
+            </li>
+<li>
+              <code>relatedTarget</code>
+            </li>
+<li>
+              <code>pageX</code>
+            </li>
+<li>
+              <code>pageY</code>
+            </li>
+<li>
+              <code>which</code>
+            </li>
+<li>
+              <code>metaKey</code>
+            </li>
+</ul>
+<p>
+    下面的属性也将被复制到事件对象，
+    虽然他们的一些值可能不确定，取决于事件：
+    </p>
+<p>altKey, bubbles, button, cancelable, charCode, clientX, clientY, ctrlKey, currentTarget, data, detail, eventPhase, metaKey, offsetX, offsetY, originalTarget, pageX, pageY, prevValue, relatedTarget, screenX, screenY, shiftKey, target, view, which</p>
+<h4>OtherProperties</h4>
+<p>
+    某些事件可能有它们特定的属性。
+    那些属性可以存取在<code>event.originalEvent</code>对象上。</p>
+<p>Example:</p>
+    <div class="syntaxhighlighter javascript nogutter">
+    <table>
+    <tbody>
+    <tr>
+    <td class="gutter">
+    <div class="line n1">1</div>
+    <div class="line n2">2</div>
+    <div class="line n3">3</div>
+    </td>
+    <td class="code">
+    <pre><div class="container"><div class="line"><code><span class="comment">// add the dataTransfer property for use with the native `drop` event</span></code></div></div><div class="container"><div class="line"><code><span class="comment">// to capture information about files dropped into the browser window</span></code></div></div><div class="container"><div class="line"><code>jQuery.event.props.push( <span class="string">"dataTransfer"</span> );</code></div></div></pre>
+    </td>
+    </tr>
+    </tbody>
+    </table>
+    </div>
+<p></div>
+</div>		</header><article id="post-181" class="post-181 post type-post status-publish format-standard hentry category-event-object category-13">
+	<header class="entry-header">
+		<div class="entry-meta">
+					</div>
+					<h1 class="entry-title">
+<a href="event.currentTarget.htm"  title="Permalink to event.currentTarget" rel="bookmark">event.currentTarget</a>
+			</h1>
+			</header>
+		<div class="entry-summary">
+		<p>在事件冒泡过程中的当前DOM元素。</p>
+	</div><!-- .entry-summary -->
+</article><article id="post-183" class="post-183 post type-post status-publish format-standard hentry category-event-object category-11">
+	<header class="entry-header">
+		<div class="entry-meta">
+					</div>
+					<h1 class="entry-title">
+<a href="event.data.htm"  title="Permalink to event.data" rel="bookmark">event.data</a>
+			</h1>
+			</header>
+		<div class="entry-summary">
+		<p>一个可选的数据对象传递给一个事件方法，当当前正在执行的处理程序被绑定。</p>
+	</div><!-- .entry-summary -->
+</article><article id="post-185" class="post-185 post type-post status-publish format-standard hentry category-event-object category-events category-17">
+	<header class="entry-header">
+		<div class="entry-meta">
+			<span class="category">
+<a href="Events.htm"  title="View all posts in Events">事件</a></span>		</div>
+					<h1 class="entry-title">
+<a href="event.delegateTarget.htm"  title="Permalink to event.delegateTarget" rel="bookmark">event.delegateTarget</a>
+			</h1>
+			</header>
+		<div class="entry-summary">
+		<p>绑定了当前正在调用jQuery 事件处理器的元素。</p>
+	</div><!-- .entry-summary -->
+</article><article id="post-187" class="post-187 post type-post status-publish format-standard hentry category-event-object category-13">
+	<header class="entry-header">
+		<div class="entry-meta">
+					</div>
+					<h1 class="entry-title">
+<a href="event.isDefaultPrevented.htm"  title="Permalink to event.isDefaultPrevented()" rel="bookmark">event.isDefaultPrevented()</a>
+			</h1>
+			</header>
+		<div class="entry-summary">
+		<p>根据事件对象中是否调用过 event.preventDefault() 方法,来返回一个布尔值。</p>
+	</div><!-- .entry-summary -->
+</article><article id="post-189" class="post-189 post type-post status-publish format-standard hentry category-event-object category-13">
+	<header class="entry-header">
+		<div class="entry-meta">
+					</div>
+					<h1 class="entry-title">
+<a href="event.isImmediatePropagationStopped.htm"  title="Permalink to event.isImmediatePropagationStopped()" rel="bookmark">event.isImmediatePropagationStopped()</a>
+			</h1>
+			</header>
+		<div class="entry-summary">
+		<p>根据事件对象中是否调用过 event.stopImmediatePropagation() 方法,来返回一个布尔值。</p>
+	</div><!-- .entry-summary -->
+</article><article id="post-191" class="post-191 post type-post status-publish format-standard hentry category-event-object category-13">
+	<header class="entry-header">
+		<div class="entry-meta">
+					</div>
+					<h1 class="entry-title">
+<a href="event.isPropagationStopped.htm"  title="Permalink to event.isPropagationStopped()" rel="bookmark">event.isPropagationStopped()</a>
+			</h1>
+			</header>
+		<div class="entry-summary">
+		<p>根据事件对象中是否调用过 event.stopPropagation() 方法,来返回一个布尔值。</p>
+	</div><!-- .entry-summary -->
+</article><article id="post-193" class="post-193 post type-post status-publish format-standard hentry category-event-object category-104">
+	<header class="entry-header">
+		<div class="entry-meta">
+					</div>
+					<h1 class="entry-title">
+<a href="event.metaKey.htm"  title="Permalink to event.metaKey" rel="bookmark">event.metaKey</a>
+			</h1>
+			</header>
+		<div class="entry-summary">
+		<p>表示事件触发时哪个Meta键被按下。</p>
+	</div><!-- .entry-summary -->
+</article><article id="post-195" class="post-195 post type-post status-publish format-standard hentry category-event-object category-143">
+	<header class="entry-header">
+		<div class="entry-meta">
+					</div>
+					<h1 class="entry-title">
+<a href="event.namespace.htm"  title="Permalink to event.namespace" rel="bookmark">event.namespace</a>
+			</h1>
+			</header>
+		<div class="entry-summary">
+		<p>当事件被触发时此属性包含指定的命名空间。</p>
+	</div><!-- .entry-summary -->
+</article><article id="post-197" class="post-197 post type-post status-publish format-standard hentry category-event-object category-104">
+	<header class="entry-header">
+		<div class="entry-meta">
+					</div>
+					<h1 class="entry-title">
+<a href="event.pageX.htm"  title="Permalink to event.pageX" rel="bookmark">event.pageX</a>
+			</h1>
+			</header>
+		<div class="entry-summary">
+		<p>鼠标相对于文档的左边缘的位置。</p>
+	</div><!-- .entry-summary -->
+</article><article id="post-199" class="post-199 post type-post status-publish format-standard hentry category-event-object category-104">
+	<header class="entry-header">
+		<div class="entry-meta">
+					</div>
+					<h1 class="entry-title">
+<a href="event.pageY.htm"  title="Permalink to event.pageY" rel="bookmark">event.pageY</a>
+			</h1>
+			</header>
+		<div class="entry-summary">
+		<p>鼠标相对于文档的顶部边缘的位置。</p>
+	</div><!-- .entry-summary -->
+</article><article id="post-201" class="post-201 post type-post status-publish format-standard hentry category-event-object category-10">
+	<header class="entry-header">
+		<div class="entry-meta">
+					</div>
+					<h1 class="entry-title">
+<a href="event.preventDefault.htm"  title="Permalink to event.preventDefault()" rel="bookmark">event.preventDefault()</a>
+			</h1>
+			</header>
+		<div class="entry-summary">
+		<p>如果调用这个方法，默认事件行为将不再触发。</p>
+	</div><!-- .entry-summary -->
+</article><article id="post-203" class="post-203 post type-post status-publish format-standard hentry category-event-object category-114">
+	<header class="entry-header">
+		<div class="entry-meta">
+					</div>
+					<h1 class="entry-title">
+<a href="event.relatedTarget.htm"  title="Permalink to event.relatedTarget" rel="bookmark">event.relatedTarget</a>
+			</h1>
+			</header>
+		<div class="entry-summary">
+		<p>在事件中涉及的其它任何DOM元素。</p>
+	</div><!-- .entry-summary -->
+</article><article id="post-205" class="post-205 post type-post status-publish format-standard hentry category-event-object category-13">
+	<header class="entry-header">
+		<div class="entry-meta">
+					</div>
+					<h1 class="entry-title">
+<a href="event.result.htm"  title="Permalink to event.result" rel="bookmark">event.result</a>
+			</h1>
+			</header>
+		<div class="entry-summary">
+		<p>事件被触发的一个事件处理程序的最后返回值，除非值是 undefined。</p>
+	</div><!-- .entry-summary -->
+</article><article id="post-207" class="post-207 post type-post status-publish format-standard hentry category-event-object category-13">
+	<header class="entry-header">
+		<div class="entry-meta">
+					</div>
+					<h1 class="entry-title">
+<a href="event.stopImmediatePropagation.htm"  title="Permalink to event.stopImmediatePropagation()" rel="bookmark">event.stopImmediatePropagation()</a>
+			</h1>
+			</header>
+		<div class="entry-summary">
+		<p>阻止剩余的事件处理函数执行并且防止事件冒泡到DOM树上。</p>
+	</div><!-- .entry-summary -->
+</article><article id="post-209" class="post-209 post type-post status-publish format-standard hentry category-event-object category-10">
+	<header class="entry-header">
+		<div class="entry-meta">
+					</div>
+					<h1 class="entry-title">
+<a href="event.stopPropagation.htm"  title="Permalink to event.stopPropagation()" rel="bookmark">event.stopPropagation()</a>
+			</h1>
+			</header>
+		<div class="entry-summary">
+		<p>防止事件冒泡到DOM树上，也就是不触发的任何前辈元素上的事件处理函数。</p>
+	</div><!-- .entry-summary -->
+</article><article id="post-211" class="post-211 post type-post status-publish format-standard hentry category-event-object category-10">
+	<header class="entry-header">
+		<div class="entry-meta">
+					</div>
+					<h1 class="entry-title">
+<a href="event.target.htm"  title="Permalink to event.target" rel="bookmark">event.target</a>
+			</h1>
+			</header>
+		<div class="entry-summary">
+		<p>触发事件的DOM元素。</p>
+	</div><!-- .entry-summary -->
+</article><article id="post-213" class="post-213 post type-post status-publish format-standard hentry category-event-object category-126">
+	<header class="entry-header">
+		<div class="entry-meta">
+					</div>
+					<h1 class="entry-title">
+<a href="event.timeStamp.htm"  title="Permalink to event.timeStamp" rel="bookmark">event.timeStamp</a>
+			</h1>
+			</header>
+		<div class="entry-summary">
+		<p>这个属性返回事件触发时距离1970年1月1日的毫秒数。</p>
+	</div><!-- .entry-summary -->
+</article><article id="post-215" class="post-215 post type-post status-publish format-standard hentry category-event-object category-10">
+	<header class="entry-header">
+		<div class="entry-meta">
+					</div>
+					<h1 class="entry-title">
+<a href="event.type.htm"  title="Permalink to event.type" rel="bookmark">event.type</a>
+			</h1>
+			</header>
+		<div class="entry-summary">
+		<p>描述事件的性质。</p>
+	</div><!-- .entry-summary -->
+</article><article id="post-217" class="post-217 post type-post status-publish format-standard hentry category-event-object category-113">
+	<header class="entry-header">
+		<div class="entry-meta">
+					</div>
+					<h1 class="entry-title">
+<a href="event.which.htm"  title="Permalink to event.which" rel="bookmark">event.which</a>
+			</h1>
+			</header>
+		<div class="entry-summary">
+		<p>针对键盘和鼠标事件，这个属性能确定你到底按的是哪个键。</p>
+	</div><!-- .entry-summary -->
+</article>
+		</div>
+  </div>

@@ -1,0 +1,67 @@
+ <script src="js/rtian.index.js" ></script>
+            <header class="top-nav">
+                <a href="#index.html" title="">首页</a>&nbsp;&gt;&nbsp; <span class="sub-title">事件</span> &nbsp;&gt;&nbsp;unbind(t,[d|f])
+                <a class="source" href="#jquery3.new.html" >jQuery3.0 新特性</a>
+            </header>
+            <div id="content" >
+              <h2><span>返回值:jQuery</span>unbind(type,[data|fn]])</h2>
+    <h3>概述</h3>
+    <div class="desc">
+      <p>bind()的反向操作，从每一个匹配的元素中删除绑定的事件。</p>
+     <p>jQuery 3.0中已弃用此方法，请用 <a href="#off.html" >off()</a>代替。</p>
+      <div class="longdesc">
+        <p>如果没有参数，则删除所有绑定的事件。</p>
+        <p>你可以将你用bind()注册的自定义事件取消绑定。</p>
+        <p>如果提供了事件类型作为参数，则只删除该类型的绑定事件。</p>
+        <p>如果把在绑定时传递的处理函数作为第二个参数，则只有这个特定的事件处理函数会被删除。</p>
+      </div>
+    </div>
+    <h3>参数</h3>
+    <div class="parameter">
+      <h4><strong>type,[fn]</strong><span>String,Function</span><em>V1.0</em></h4>
+      <p><strong>type:</strong>删除元素的一个或多个事件,由空格分隔多个事件值。</p>
+      <p><strong>fn:</strong>要从每个匹配元素的事件中反绑定的事件处理函数</p>
+      <h4><strong>type,false</strong><span>String,bool</span><em>V1.4.3</em></h4>
+      <p><strong>type:</strong>删除元素的一个或多个事件,由空格分隔多个事件值</p>
+      <p><strong>false:</strong>设置为false会使默认的动作失效。 </p>
+      <h4><strong>eventObj</strong><span>String</span><em>V1.0</em></h4>
+      <p>事件对象。这个 eventObj 参数来自事件绑定函数</p>
+    </div>
+    <div class="example">
+      <h3>示例</h3>
+      <span id="f_ad2"></span>
+      <h4 xmlns="">描述:</h4>
+      <p xmlns="">把所有段落的所有事件取消绑定</p>
+      <h5 xmlns="">jQuery 代码:</h5>
+      <pre xmlns=""><code>$("p").unbind()</code></pre>
+      <h4 xmlns="">描述:</h4>
+      <p xmlns="">将段落的click事件取消绑定</p>
+      <h5 xmlns="">jQuery 代码:</h5>
+      <pre xmlns=""><code>$("p").unbind( "click" )</code></pre>
+      <h4 xmlns="">描述:</h4>
+      <p xmlns="">删除特定函数的绑定，将函数作为第二个参数传入</p>
+      <h5 xmlns="">jQuery 代码:</h5>
+      <pre xmlns=""><code>var foo = function () {
+  // 处理某个事件的代码
+};
+
+$("p").bind("click", foo); // ... 当点击段落的时候会触发 foo 
+
+$("p").unbind("click", foo); // ... 再也不会被触发 foo</code></pre>
+    </div>
+            </div>
+            
+
+            <div class="navigation clearfix">
+                <span class="alignleft">上一篇：<a href="#triggerHandler.html" >triggerHandler(type, [data])</a></span>
+                
+                <span class="alignright">下一篇：<a href="#live.html" >live(type,[data],fn)</a></span>
+            </div>
+            <div class="donate-con">
+              <div class="donate-btn">捐助</div>
+              <div class="donate-body">
+                <div class="donate-tips">本站为非盈利网站，所有的捐赠收入将用于支付带宽、服务器费用，您的支持将是本站撑下去的最大动力！</div>
+                <div class="donate-img"> <a href="#source.html" ></a>  </div>
+              </div>
+            </div>
+

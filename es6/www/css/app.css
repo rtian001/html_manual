@@ -1,0 +1,390 @@
+body {
+	margin: 0;
+	padding: 0;
+	font-family: Verdana, Arial;
+}
+
+#main {
+	width: 100vw;
+	height: 100vh;
+	position: fixed;
+	left: 0;
+	top: 0;
+	display: flex;
+}
+
+#left {
+	flex: 0 0 260px;
+	height: 100%;
+	overflow: hidden;
+	position: relative;
+	padding: 0 20px;
+}
+
+#right {
+	flex: 1;
+	height: 100%;
+	overflow: hidden;
+	position: relative;
+	padding-left: 20px;
+}
+
+#sidebar>p {
+	display: none;
+}
+
+#sidebar h1 {
+	font-size: 1.5rem;
+	margin-bottom: 0px;
+	padding-bottom: 0px;
+}
+
+#sidebar h1 a:link,
+#sidebar h1 a:visited {
+	color: #333;
+}
+
+#sidebar h2 {
+	font-size: 16px;
+}
+
+#sidebar h5 {
+	margin-top: 20px;
+	margin-bottom: 0;
+}
+
+#sidebar li:hover a {
+	color: #f63;
+}
+
+#sidebar a {
+	color: #58c;
+	text-decoration: none;
+}
+
+#sidebar ul {
+	list-style-type: none;
+	margin: 0;
+	padding-left: 10px;
+	padding-top: 0;
+}
+
+#sidebar ol {
+	margin: 0;
+	padding-left: 30px;
+	padding: 0;
+}
+
+#sidebar ul li:before {
+	/* a hack to have dashes as a list style */
+	content: "-";
+	position: relative;
+	left: -5px;
+}
+
+#sidebar ul li,
+#sidebar ol li {
+	margin-top: 0;
+	margin-bottom: 0.2rem;
+	margin-left: 10px;
+	padding: 3px 10px;
+	text-indent: 0;
+	font-size: 0.85rem;
+	list-style-position: inside;
+}
+
+#sidebar div.active {
+	/* background: rgba(0, 0, 0, 0.2); */
+}
+
+#content {
+	width: 720px;
+	/* height: calc(100% + 50px); */
+	/* padding-left: 330px; */
+	margin-left: 0px;
+	margin-right: 0px;
+	line-height: 1.3rem;
+	font-size: 0.9rem;
+	padding-bottom: 30px;
+}
+
+#content p {
+	text-indent: 2em;
+}
+
+#content pre {
+	margin-left: auto;
+	margin-right: auto;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	padding-left: 0.7rem;
+	line-height: 1.2;
+	color: #FFF;
+	background: #111;
+	border-radius: 5px;
+	white-space: pre-wrap;
+}
+
+#content code {
+	color: #a6e22e;
+	font-size: 0.9rem;
+	font-weight: normal;
+	font-family: Consolas, "Courier New", Courier, FreeMono, monospace;
+	background: #111;
+	border-radius: 2px;
+	word-break: keep-all;
+}
+
+#content p code,
+#content li>code,
+#content h2>code,
+#content h3>code {
+	padding-left: 3px;
+	padding-right: 3px;
+	color: #c7254e;
+	background: #f9f2f4;
+}
+
+#content h2 {
+	margin-top: 50px;
+	margin-bottom: 0px;
+	padding-top: 20px;
+	padding-bottom: 0px;
+	font-size: 20px;
+	text-align: left;
+	border-top: 2px solid #666;
+	counter-increment: section;
+}
+
+#content h2:before {
+	content: counter(section) ". ";
+}
+
+#content h3 {
+	margin-top: 50px;
+	margin-bottom: 0px;
+	padding-top: 20px;
+	padding-bottom: 0px;
+	text-align: left;
+	border-top: 1px dotted #777;
+}
+
+#content h2:hover,
+#content h3:hover {
+	color: #ED1C24;
+}
+
+#content img {
+	max-width: 90%;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 40px;
+	margin-bottom: 40px;
+	border-radius: 5px;
+}
+
+#content ul {
+	display: block;
+	list-style-type: none;
+	padding-top: 0.5rem;
+	padding-bottom: 0.5rem;
+}
+
+#content ol {
+	display: block;
+	padding-top: 0.5rem;
+	padding-bottom: 0.5rem;
+}
+
+#content ul li:before {
+	/* a hack to have dashes as a list style */
+	content: "-";
+	position: relative;
+	left: -5px;
+}
+
+#content ul li,
+#content ol li {
+	text-indent: 0px;
+	/* to compensate for the padding for the dash */
+	font-size: 0.8rem;
+	line-height: 1.5rem;
+	/* text-shadow: 1px 1px 1px #aaa; */
+}
+
+#content ol.content-toc li.link:hover,
+#content ol.content-toc li:hover a {
+	color: #f63;
+}
+
+#content ul li.link,
+#content ol li.link {
+	color: #2980b9;
+	text-decoration: none;
+	font-size: 0.8rem;
+	font-weight: bold;
+	cursor: pointer;
+}
+
+#content a:link,
+#content a:visited {
+	color: #4682BE;
+	text-decoration: none;
+}
+
+#content .content-toc {
+	background: #bdc3c7;
+	border-radius: 5px;
+}
+
+#content table {
+	display: block;
+	width: 100%;
+	overflow: auto;
+	word-break: normal;
+	word-break: keep-all
+}
+
+#content table th {
+	font-weight: bold
+}
+
+#content table th,
+#content table td {
+	padding: 6px 13px;
+	border: 1px solid #ddd
+}
+
+#content table tr {
+	background-color: #fff;
+	border-top: 1px solid #ccc
+}
+
+#content table tr:nth-child(2n) {
+	background-color: #f8f8f8
+}
+
+#flip {
+	height: 20px;
+	width: 680px;
+	position: absolute;
+	left: 20px;
+	bottom: 5px;
+	z-index: 9;
+	display: flex;
+	justify-content: space-between;
+	pointer-events: none;
+}
+
+#pageup,
+#pagedown {
+	flex: 0 0 80px;
+	height: 20px;
+	border-radius: 5px;
+	background-color: rgba(0, 0, 0, 0.8);
+	text-align: center;
+	line-height: 20px;
+	font-size: 10px;
+	color: #FFF;
+	user-select: none;
+	pointer-events: auto;
+}
+
+#pageup {
+	margin-right: 5px;
+}
+
+#pageup:hover,
+#pagedown:hover {
+	background-color: #369;
+	cursor: pointer;
+}
+
+#pagedown {
+	margin-left: 5px;
+}
+
+.reading-progress {
+	position: fixed;
+	top: 0;
+	left: 0;
+	height: 3px;
+	background-color: #0A74DA;
+	transition: all 0.3s ease;
+}
+
+#menu {
+	display: none;
+}
+
+#footer {
+	position: absolute;
+	width: 720px;
+	height: 30px;
+	line-height: 30px;
+	left: 0;
+	bottom: 0px;
+	/* margin-left: 300px; */
+	text-align: center;
+	text-decoration: none;
+	background-color: #fff;
+	font-size: 14px;
+	box-shadow: -1px 0 5px 2px #fff;
+	z-index: 0;
+}
+
+#right .scrollbar {
+	/* background: transparent; */
+	background: linear-gradient(#fff, #9f9 10%, #99f 90%, #fff);
+}
+
+#right .scrollbar:hover {
+	/* background: linear-gradient(#fff, #99f 10%, #99f 90%, #fff); */
+}
+
+#right .slide {
+	display: flex;
+	align-items: center;
+	overflow: hidden;
+}
+
+#right .slide::before {
+	content: '☷';
+	height: 22px;
+	font-size: 22px;
+	line-height: 22px;
+	display: block;
+	color: rgba(160, 200, 255, 0.8);
+}
+
+#sidebar ol>li {
+	position: relative;
+	margin: 0;
+	overflow: hidden;
+}
+
+#sidebar ol>li.active>.progress {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	transition: all 0.5s ease;
+	background: linear-gradient(to right, rgba(100, 100, 255, 0.2) 90%, transparent);
+}
+
+#sidebar ol>li.active {
+	background: rgba(200, 200, 255, 0.2);
+	width: 80%;
+}
+
+@media screen and (max-width:750px) {
+	#left {
+		display: none;
+	}
+
+	#footer {
+		display: none;
+	}
+}

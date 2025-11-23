@@ -1,0 +1,50 @@
+ <script src="js/rtian.index.js" ></script>
+            <header class="top-nav">
+                <a href="#index.html" title="">首页</a>&nbsp;&gt;&nbsp; <span class="sub-title">核心</span> &nbsp;&gt;&nbsp;$.data(ele,[key],[val])
+                <a class="source" href="#jquery3.new.html" >jQuery3.0 新特性</a>
+            </header>
+            <div id="content" >
+              <h2><span>返回值:jQuery</span>jQuery.data(element,[key],[value])</h2>
+    <h3>概述</h3>
+    <div class="desc">
+      <p>在元素上存放数据,返回jQuery对象。</p>
+      <div class="longdesc">
+        <p>注意：这是一个底层方法。你应当使用.data()来代替。</p>
+        <p class="outmoded">此方法在jQuery 1.8中删除，但你仍然可以通过$._data(element, "events")调试事件数据。请注意，这是不支持的公共接口;实际的数据结构可能会改变从版本之间不兼容。 </p>
+      </div>
+    </div>
+    <h3>参数</h3>
+    <div class="parameter">
+      <h4><strong>element,key,value</strong><span>String,String,Any</span><em>V1.2.3</em></h4>
+      <p><strong>element</strong>:要关联数据的DOM对象</p>
+      <p><strong>key</strong>:存储的数据名</p>
+      <p><strong>value</strong>:将要存储的任意数据</p>
+      <h4><strong>element,key</strong><span>String,String</span><em>V1.2.3</em></h4>
+      <p><strong>element</strong>:要查询数据的DOM对象</p>
+      <p><strong>key</strong>:存储的数据名</p>
+      <h4><strong>element</strong><span>String</span><em>V1.4</em></h4>
+      <p>要查询数据的DOM对象</p>
+    </div>
+    <div class="example">
+      <h3>示例</h3>
+      <span id="f_ad2"></span>
+      <h5>jQuery 代码:</h5>
+      <pre><code>jQuery.data(document.body, 'foo', 52);
+jQuery.data(document.body, 'bar', 'test');</code></pre>
+    </div>
+            </div>
+            
+
+            <div class="navigation clearfix">
+                <span class="alignleft">上一篇：<a href="#removeData.html" >removeData([name|list])</a></span>
+                
+                <span class="alignright">下一篇：<a href="#queue.html" >queue(e,[q])</a></span>
+            </div>
+            <div class="donate-con">
+              <div class="donate-btn">捐助</div>
+              <div class="donate-body">
+                <div class="donate-tips">本站为非盈利网站，所有的捐赠收入将用于支付带宽、服务器费用，您的支持将是本站撑下去的最大动力！</div>
+                <div class="donate-img"> <a href="#source.html" ></a>  </div>
+              </div>
+            </div>
+

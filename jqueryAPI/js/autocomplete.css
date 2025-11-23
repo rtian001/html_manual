@@ -1,0 +1,54 @@
+body{
+    font: 14px/18px Verdana,Tahoma,Arial,sans-serif,"Microsoft YaHei";
+    transition: background-color .2s ease-in;
+}
+/****************检索框*********************/
+input {
+    font: 14px/18px Verdana,Tahoma,Arial,sans-serif,"Microsoft YaHei";
+	box-sizing: border-box;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	-o-border-radius: 5px;
+	-ms-border-radius: 5px;
+	border-radius: 5px;
+	padding: 3px 5px 3px 5px;
+	border: none;
+	outline: 0;
+	background: #fff;
+	height:30px;width:215px;
+	margin:4px;
+}
+
+nput:focus {
+	background: #fff
+}
+
+.auto-query-con {
+	padding: 3px 10px;
+}
+
+.autocomplete-suggestions {
+	padding:0 0 0 5px;
+	background: #fff;
+	color: #444;
+	cursor: default;
+	text-align: left;
+	max-height: 350px;
+	overflow-y: auto;
+	overflow-x: hidden
+}
+
+.autocomplete-suggestion {
+	padding: 4px;
+	font-size: 13px
+}
+
+.autocomplete-suggestion strong {
+	color: #ff404b
+}
+
+.autocomplete-selected {
+	background: #dedede
+}
+
+#desc{color:#ccc}

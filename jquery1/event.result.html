@@ -1,0 +1,65 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title>event.result | jQuery API 中文手册</title>
+<meta name="author" content="jQuery 中文手册 ">
+<meta name="keywords" content="jquery,chm,手册,在线,api" />
+<link type="image/x-icon" href="img/favicon.ico" rel="shortcut icon">
+<link type="text/css" rel="stylesheet" href="style/style.css"   />
+</head>
+<body>
+<div id="wrapper">
+<div id='left' class='dtree'>
+  <p style="text-align:center">
+    <input type="text" name="query" id="query" placeholder="请输入关键字"/>
+    <!--<input type="button" id="butsoso" value="搜索" />--></p>
+  <p style="margin:7px 0; text-align:center"><a href="javascript:void(0)" id="openAll">全部展开</a> | <a href="javascript:void(0)" id="closeAll">全部折叠 </a> | <a href="index.html" >速查表</a></p>
+	<div id="menu">
+    
+    </div>
+</div>
+<div id="content" class="a2">
+  <div rel="event.result">
+    <h2><span>返回值:Object</span>event.result</h2>
+    <h3><em>V1.3</em>概述</h3>
+    <div class="desc">
+      <p>这个属性包含了当前事件事件最后触发的那个处理函数的返回值，除非值是 undefined 。</p>
+    </div>
+    <div></div>
+    <div class="example">
+      <h3>示例</h3>
+      <span id="f_ad2"></span>
+      <h4>描述:</h4>
+      <p>显示前一个事件处理函数的返回值。</p>
+      <h5> 代码: </h5>
+      <pre>&lt;!DOCTYPE html&gt;
+  &lt;html&gt;
+  &lt;head&gt;
+    &lt;script src=&quot;http://code.jquery.com/jquery-latest.min.js&quot;&gt;&lt;/script&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+      &lt;button&gt;display event.result&lt;/button&gt;
+      &lt;p&gt;&lt;/p&gt;
+      &lt;script&gt;
+       $(&quot;button&quot;).click(function(event) {    return &quot;hey&quot;;  });
+       $(&quot;button&quot;).click(function(event) {
+           $(&quot;p&quot;).html( event.result );
+       });
+    &lt;/script&gt;
+    &lt;/body&gt;
+  &lt;/html&gt;</pre>
+    </div>
+  </div>
+    
+</div>
+
+</div>
+</body>
+
+<script type="text/javascript" src="js/jquery-1.11.3.min.js" ></script>
+<script type="text/javascript" src="js/jquery.autocomplete.js" ></script>
+<script type="text/javascript" src="js/dtree.js" ></script>
+<script type="text/javascript" src="js/js.js" ></script>
+
+</html>

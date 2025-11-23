@@ -1,0 +1,68 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title>contents() | jQuery API 中文手册</title>
+<meta name="author" content="jQuery 中文手册 ">
+<meta name="keywords" content="jquery,chm,手册,在线,api" />
+<link type="image/x-icon" href="img/favicon.ico" rel="shortcut icon">
+<link type="text/css" rel="stylesheet" href="style/style.css"   />
+<script type="text/javascript" src="js/jquery-1.11.3.min.js" ></script>
+<script type="text/javascript" src="js/jquery.autocomplete.js" ></script>
+<script type="text/javascript" src="js/dtree.js" ></script>
+<script type="text/javascript" src="js/js.js" ></script><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" /><meta name="apple-mobile-web-app-capable" content="yes" /><meta name="apple-mobile-web-app-status-bar-style" content="black" /><meta name="format-detection" content="telephone=no" />
+
+</head>
+<body>
+<div id="wrapper">
+<div id='left' class='dtree'>
+  <p style="text-align:center">
+    <input type="text" name="query" id="query" placeholder="请输入关键字"/>
+    <!--<input type="button" id="butsoso" value="搜索" />--></p>
+  <p style="margin:7px 0; text-align:center"><a href="javascript:void(0)" id="openAll">全部展开</a> | <a href="javascript:void(0)" id="closeAll">全部折叠 </a> | <a href="index.html" >速查表</a></p>
+	<div id="menu">
+    
+    </div>
+</div>
+<div id="content" class="a2">
+  <div rel="contents">
+    <h2><span>返回值:jQuery</span>contents()</h2>
+    <h3><em>V1.2</em>概述</h3>
+    <div class="desc">
+      <p>查找匹配元素内部所有的子节点（包括文本节点）。如果元素是一个iframe，则查找文档内容</p>
+      <div class="longdesc">
+        <p></p>
+      </div>
+    </div>
+    <div class="example">
+      <h3>示例</h3>
+      <span id="f_ad2"></span>
+      <h4>描述:</h4>
+      <p>查找所有文本节点并加粗</p>
+      <h5>HTML 代码:</h5>
+      <pre><code>&lt;p&gt;Hello &lt;a href="http://ejohn.org/"&gt;John&lt;/a&gt;, how are you doing?&lt;/p&gt;</code></pre>
+      <h5>jQuery 代码:</h5>
+      <pre><code>$("p").contents().not("[nodeType=1]").wrap("&lt;b/&gt;");</code></pre>
+      <h5>结果:</h5>
+      <pre><code>&lt;p&gt;&lt;b&gt;Hello&lt;/b&gt; &lt;a href="http://ejohn.org/"&gt;John&lt;/a&gt;, &lt;b&gt;how are you doing?&lt;/b&gt;&lt;/p&gt;</code></pre>
+      <h4>描述:</h4>
+      <p>往一个空框架中加些内容</p>
+      <h5>HTML 代码:</h5>
+      <pre><code>&lt;iframe src="/index-blank.html" width="300" height="100"&gt;&lt;/iframe&gt;</code></pre>
+      <h5>jQuery 代码:</h5>
+      <pre><code>$("iframe").contents().find("body")
+  .append("I'm in an iframe!");</code></pre>
+    </div>
+  </div>
+    
+</div>
+
+</div>
+</body>
+
+<script type="text/javascript" src="js/jquery-1.11.3.min.js" ></script>
+<script type="text/javascript" src="js/jquery.autocomplete.js" ></script>
+<script type="text/javascript" src="js/dtree.js" ></script>
+<script type="text/javascript" src="js/js.js" ></script>
+
+</html>

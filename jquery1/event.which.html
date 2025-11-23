@@ -1,0 +1,65 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title>event.which | jQuery API 中文手册</title>
+<meta name="author" content="jQuery 中文手册 ">
+<meta name="keywords" content="jquery,chm,手册,在线,api" />
+<link type="image/x-icon" href="img/favicon.ico" rel="shortcut icon">
+<link type="text/css" rel="stylesheet" href="style/style.css"   />
+</head>
+<body>
+<div id="wrapper">
+<div id='left' class='dtree'>
+  <p style="text-align:center">
+    <input type="text" name="query" id="query" placeholder="请输入关键字"/>
+    <!--<input type="button" id="butsoso" value="搜索" />--></p>
+  <p style="margin:7px 0; text-align:center"><a href="javascript:void(0)" id="openAll">全部展开</a> | <a href="javascript:void(0)" id="closeAll">全部折叠 </a> | <a href="index.html" >速查表</a></p>
+	<div id="menu">
+    
+    </div>
+</div>
+<div id="content" class="a2">
+  <div rel="event.which">
+    <h2><span>返回值:String</span>event.which</h2>
+    <h3><em>V1.1.3</em>概述</h3>
+    <div class="desc">
+      <p>针对键盘和鼠标事件，这个属性能确定你到底按的是哪个键或按钮。</p>
+      <div class="longdesc">
+        <p> event.which&nbsp;将&nbsp;event.keyCode&nbsp;和&nbsp;event.charCode&nbsp;标准化了。推荐用&nbsp;event.which&nbsp;来监视键盘输入。更多细节请参阅：&nbsp;event.charCode on the MDC</a>. </p>
+      </div>
+    </div>
+    <div class="example">
+      <h3>示例</h3>
+      <span id="f_ad2"></span>
+      <h4>描述:</h4>
+      <p>记录按键。</p>
+      <h5> 代码: </h5>
+      <pre>&lt;!DOCTYPE html&gt;
+  &lt;html&gt;
+  &lt;head&gt;
+    &lt;script src=&quot;http://code.jquery.com/jquery-latest.min.js&quot;&gt;&lt;/script&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+      &lt;input id=&quot;whichkey&quot; value=&quot;type something&quot;&gt;
+      &lt;div id=&quot;log&quot;&gt;&lt;/div&gt;
+      &lt;script&gt;
+        $('#whichkey').bind('keydown',function(e){
+        $('#log').html(e.type + ': ' +  e.which );  });
+      &lt;/script&gt;
+    &lt;/body&gt;
+  &lt;/html&gt;</pre>
+    </div>
+  </div>
+    
+</div>
+
+</div>
+</body>
+
+<script type="text/javascript" src="js/jquery-1.11.3.min.js" ></script>
+<script type="text/javascript" src="js/jquery.autocomplete.js" ></script>
+<script type="text/javascript" src="js/dtree.js" ></script>
+<script type="text/javascript" src="js/js.js" ></script>
+
+</html>

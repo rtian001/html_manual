@@ -1,0 +1,66 @@
+<script src="js/rtian.js" ></script>
+<meta charset="utf-8" />
+<title>:disabled Selector | jQuery API中文文档(适用jQuery 1.0 - jQuery 3.0)</title>
+  <div id="content" >
+<div class="inner" role="main"><article id="post-159" class="post-159 post type-post status-publish format-standard hentry category-form-selectors category-10">
+  <header class="entry-header">
+    <h1 class="entry-title">:disabled Selector</h1>
+    <hr>
+<div class="entry-meta">
+      分类: <span class="category">
+<a href="selectors.htm"  title="View all posts in Selectors">选择器</a> &gt; 
+<a href="form-selectors.htm"  title="View all posts in Form">表单</a></span>   </div><!-- .entry-meta -->
+      </header><!-- .entry-header -->
+  <div class="entry-content">
+    <article id="disabled1" class="entry selector"><h2 class="section-title"><span>disabled selector</span></h2>
+<div class="entry-wrapper">
+<p class="desc"><strong>描述: </strong>选择所有被禁用的元素。</p>
+<ul class="signatures"><li class="signature"><h4 class="name">
+<span class="version-details">添加的版本: 
+<a href="1.0.htm" >1.0</a></span>jQuery( ":disabled" )</h4></li></ul>
+<div class="longdesc" id="entry-longdesc">
+    <p>如同其他伪类选择器（那些以“:”开始），建议前面加上一个标记名称或其他选择器;否则，通用（通配）选择器("*")被默认使用。换句话说，<code>$(':disabled')</code>等价于<code>$('*:disabled')</code>，所以应该使用<code>$('input:disabled')</code>或类似写法代替。 </p>
+    <p>虽然他们的选择的结果通常是一样的，<code>:disabled</code>选择器和<code>[disabled]</code> 属性（attribute） 选择器还是有些细微的差别；
+      <code>:disabled</code> 检查元素
+<a href="https://html.spec.whatwg.org/multipage/scripting.html#disabled-elements" target="_blank">实际的<code>disabled</code>属性值</a>（是否被禁用，布尔值true/false），<code>[disabled]</code> 检查是否存在的disabled属性。</p>
+    <p><code>:disabled</code> 选择器仅限用于选择支持<code>disabled</code>属性（attribute）的HTML元素(<code>&lt;button&gt;</code>, <code>&lt;input&gt;</code>, <code>&lt;optgroup&gt;</code>, <code>&lt;option&gt;</code>, <code>&lt;select&gt;</code>, <code>&lt;textarea&gt;</code>, <code>&lt;menuitem&gt;</code>, and <code>&lt;fieldset&gt;</code>)。</p>
+  </div>
+<div class="jquery-api-top">
+</div>
+<section class="entry-examples" id="entry-examples"><header><h2 class="underline">例子:</h2></header><div class="entry-example" id="example-0">
+<h4><span class="desc">查找所有被禁用的input元素。</span></h4>
+<div class="syntaxhighlighter xml ">
+  <table>
+    <tbody>
+      <tr>
+        <td class="gutter">
+            <div class="line n1">1</div>
+            <div class="line n2">2</div>
+            <div class="line n3">3</div>
+            <div class="line n4">4</div>
+            <div class="line n5">5</div>
+            <div class="line n6">6</div>
+            <div class="line n7">7</div>
+            <div class="line n8">8</div>
+            <div class="line n9">9</div>
+            <div class="line n10">10</div>
+            <div class="line n11">11</div>
+            <div class="line n12">12</div>
+            <div class="line n13">13</div>
+            <div class="line n14">14</div>
+            <div class="line n15">15</div>
+        </td>
+        <td class="code">
+          <pre><div class="container"><div class="line"><code><span class="doctype">&lt;!DOCTYPE html&gt;</span></code></div></div><div class="container"><div class="line"><code><span class="tag">&lt;<span class="title">html</span>&gt;</span></code></div></div><div class="container"><div class="line"><code><span class="tag">&lt;<span class="title">head</span>&gt;</span></code></div></div><div class="container"><div class="line"><code>  <span class="tag">&lt;<span class="title">script</span> <span class="attribute">src</span>=<span class="value">"http://code.jquery.com/jquery-latest.js"</span>&gt;</span><span class="javascript"></span><span class="tag">&lt;/<span class="title">script</span>&gt;</span></code></div></div><div class="container"><div class="line"><code><span class="tag">&lt;/<span class="title">head</span>&gt;</span></code></div></div><div class="container"><div class="line"><code><span class="tag">&lt;<span class="title">body</span>&gt;</span></code></div></div><div class="container"><div class="line"><code>  <span class="tag">&lt;<span class="title">表单</span>&gt;</span></code></div></div><div class="container"><div class="line"><code> </code></div></div><div class="container"><div class="line"><code>    <span class="tag">&lt;<span class="title">input</span> <span class="attribute">name</span>=<span class="value">"email"</span> <span class="attribute">disabled</span>=<span class="value">"disabled"</span> /&gt;</span></code></div></div><div class="container"><div class="line"><code>    <span class="tag">&lt;<span class="title">input</span> <span class="attribute">name</span>=<span class="value">"id"</span> /&gt;</span></code></div></div><div class="container"><div class="line"><code>  <span class="tag">&lt;/<span class="title">表单</span>&gt;</span></code></div></div><div class="container"><div class="line"><code><span class="tag">&lt;<span class="title">script</span>&gt;</span><span class="javascript">$(<span class="string">"input:disabled"</span>).val(<span class="string">"this is it"</span>);</span><span class="tag">&lt;/<span class="title">script</span>&gt;</span></code></div></div><div class="container"><div class="line"><code> </code></div></div><div class="container"><div class="line"><code><span class="tag">&lt;/<span class="title">body</span>&gt;</span></code></div></div><div class="container"><div class="line"><code><span class="tag">&lt;/<span class="title">html</span>&gt;</span></code></div></div></pre>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+<h4>Demo:</h4>
+<div class="demo code-demo"></div>
+</div></section>
+</div></article>  </div><!-- .entry-content -->
+</article>        
+</div>
+  </div>

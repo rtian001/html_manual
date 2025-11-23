@@ -1,0 +1,222 @@
+body {
+	outline: 0;
+	vertical-align: baseline;
+font: 14px/18px "Helvetica Neue",Helvetica,"Microsoft YaHei",Arial,sans-serif;
+	overflow:hidden;
+-webkit-font-smoothing:antialiased;
+}
+body>header {
+	height: 100px;
+	background: #333;
+	margin-bottom: 5px;
+}
+.grid-item a {
+	text-decoration: none;
+	color: #333
+}
+body > aside {
+	height: calc(100vh - 168px);
+	background: #333;
+	overflow: auto;
+	float: left;
+	width: 220px;
+	padding: 40px 5px 5px 5px;
+	border-radius: 3px;
+}
+body > aside .grid-item > ul{
+	display:none;
+	margin:0;
+}
+body > aside .grid-item h2:before {
+	content:"✿ "
+}
+body > aside .grid-index h2:before {
+	content:"♔ "
+}
+body > aside .grid h2,body > aside .grid li{
+	cursor:pointer;
+}
+body > aside .grid h2:hover {
+	background:#f33;
+}
+body > aside .grid h2 {
+	background: #000;
+	color: #ccc;
+	line-height: 30px;
+	margin: 0;
+	border-top:1px solid #111;
+	padding: 0 10px;
+	font-size:14px;
+	letter-spacing:1px;
+transition:background-color .3s ease-in;
+}
+body > aside .grid ul {
+	list-style: none;
+	padding: 0;
+}
+body > aside .grid-item > ul   ul li:hover{
+	background:#8aa;
+}
+body > aside .grid-item > ul   ul li:hover a{
+	color:#000  !important;
+}
+body > aside .grid-item > ul   ul li.active{
+	background:#888;
+	border-left:5px solid #f88;
+}
+body > aside .grid-item > ul   ul li.active a{
+	color:#000 !important;
+	padding-left:15px;
+}
+body > aside .grid-item > ul   ul li {
+font: 14px/18px Verdana,Tahoma,Arial,sans-serif,"Microsoft YaHei";
+transition:background-color .2s ease-in;
+}
+body > aside .grid-item > ul   ul li a{display:inline-block;
+max-width:170px;
+font-size:14px;
+	padding-left:20px;
+	line-height:20px;
+	white-space:nowrap;
+	overflow:hidden;
+	text-overflow:ellipsis;
+}
+body > aside .grid h3 {
+	display: none;
+}
+body > aside .grid-item a:before {
+	content:"▷ ";
+}
+body > aside .grid li.active a:before {
+	content:"▶ ";
+}
+body > aside .grid-item a {
+	color: #ccc;
+}
+body > aside .grid-item ul {
+	display:;
+}
+body > aside .grid .active > h2{
+	background:#f33;
+}
+article{
+	position: relative;
+	height: calc(100vh - 150px);
+	overflow: auto;
+	margin: 0 0 0 235px;
+	border-radius: 3px;
+}
+#article_content .grid-index h2 {
+	display:none;
+}
+#article_content .grid-item {
+	width: 210px;
+	border-radius: 3px;
+	padding: 5px;
+}
+#article_content .grid-item ul {
+	list-style: none;
+	padding: 0 0 0 10px;
+}
+sup {
+	color: #f66;
+}
+del,del > a{
+	color:#888 !important;
+}
+#article_content .grid-item * {
+	margin: 0
+}
+#article_content .grid-item h2 {
+	background: #666;
+	line-height: 20px;
+	font-size: 14px;
+	padding: 0 5px;
+	color: #fff;
+}
+#article_content .grid-item h3 {
+font: 14px/18px Arial,sans-serif,"Microsoft YaHei";
+	color:#006699;
+}
+#article_content .grid-item h3 + ul li a{
+	font: 13px Verdana,Tahoma,Arial,sans-serif;
+max-width:200px;
+color:#444;
+	white-space:nowrap;
+	overflow:hidden;
+	text-overflow:ellipsis;
+	
+}
+#article_content .grid-item h3 + ul {
+	padding-left: 10px;
+}
+footer {
+	margin: 2px 0 0 235px;
+	text-align: center;
+	line-height: 26px;
+	background: #aaa;
+}
+#search{
+	position:fixed;
+	left:8px;top:120px;
+	width:230px;text-align:center;
+	
+}
+/*****************内容***********************/
+#article_content > .content{
+	font:15px Helvetica, Arial, sans-serif;
+	padding:10px;
+}
+/****************检索框*********************/
+input {
+	box-sizing: border-box;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	-o-border-radius: 5px;
+	-ms-border-radius: 5px;
+	border-radius: 5px;
+	width: 90%;
+	height: 26px;
+	padding: 3px 5px 3px 5px;
+	border: none;
+	outline: 0;
+	background: #efefef
+}
+nput:focus {
+	background: #fff
+}
+.auto-query-con {
+	padding: 3px 10px;
+}
+/*
+.auto-query-con::before {
+	content: "☯ ";
+	position: absolute;
+	left: 17px;
+	font-family: FontAwesome;
+	cursor: pointer;
+	top: 8px;
+	color: #c4c4cd;
+	display: inline-block
+}
+*/
+.autocomplete-suggestions {
+	padding:0 0 0 5px;
+	background: #fff;
+	color: #444;
+	cursor: default;
+	text-align: left;
+	max-height: 350px;
+	overflow-y: auto;
+	overflow-x: hidden
+}
+.autocomplete-suggestion {
+	padding: 4px;
+	font-size: 12px
+}
+.autocomplete-suggestion strong {
+	color: #ff404b
+}
+.autocomplete-selected {
+	background: #dedede
+}

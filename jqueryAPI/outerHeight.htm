@@ -1,0 +1,240 @@
+<script src="js/rtian.js" ></script>
+<meta charset="utf-8" />
+<title>.outerHeight() | jQuery API中文文档(适用jQuery 1.0 - jQuery 3.0)</title>
+  <div id="content" >
+<div class="inner" role="main"><article id="post-467" class="post-467 post type-post status-publish format-standard hentry category-css category-dimensions category-style-properties category-126">
+	<header class="entry-header">
+		<h1 class="entry-title">.outerHeight()</h1>
+        <hr>
+				<div class="entry-meta">
+			分类: <span class="category">
+<a href="css_1.htm">CSS</a></span><span class="category-divider"> | </span><span class="category">
+<a href="dimensions.htm">尺寸</a></span><span class="category-divider"> | </span><span class="category">
+<a href="manipulation.htm">操作</a> &gt; 
+<a href="style-properties.htm">Style 属性</a></span>		</div><!-- .entry-meta -->
+			</header><!-- .entry-header -->
+	<div class="entry-content">
+    获取匹配元素集合中第一个元素的当前计算宽度值,包括padding，border和选择性的margin。返回一个整数（不包含“px”）表示的值  ，或如果在一个空集合上调用该方法，则会返回 null。
+        <div class="toc">
+<h4><span>Contents:</span></h4>
+            <ul class="toc-list">
+                <li>
+<a href="#outerHeight1">.outerHeight( [includeMargin ] )</a>
+                    <ul>
+                        <li>
+<a href="#outerHeight-includeMargin">.outerHeight( [includeMargin ] )</a></li>
+                    </ul>
+                </li>
+                <li>
+<a href="#outerHeight2">.outerHeight( value )</a>
+                    <ul>
+                        <li>
+<a href="#outerHeight-value">.outerHeight( value )</a></li>
+                        <li>
+<a href="#outerHeight-functionindex--height">.outerHeight( function(index, height) )</a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+</div><article id="outerHeight1" class="entry method"><h2 class="section-title">
+<span class="name">.outerHeight(  [includeMargin ] )</span><span class="returns">返回: 
+<a href="Types.htm#Number" >Number</a></span>
+</h2>
+<div class="entry-wrapper">
+<p class="desc"><strong>描述:</strong>获取匹配元素集合中第一个元素的当前计算宽度值,包括padding，border和选择性的margin。返回一个整数（不包含“px”）表示的值  ，或如果在一个空集合上调用该方法，则会返回 null。</p>
+    <ul class="signatures">
+        <li class="signature">
+            <h4 class="name">
+                <span class="version-details">添加的版本:
+<a href="1.2.6.htm" >1.2.6</a></span>.outerHeight( [includeMargin ] )
+            </h4>
+            <ul>
+                <li>
+                    <div><strong>includeMargin</strong> (默认: <code>false</code>)</div>
+                    <div>类型： 
+<a href="Types.htm#Boolean" >Boolean</a>
+                    </div>
+                    <div>一个布尔值，表明是否在计算时包含元素的margin值。</div>
+                </li>
+            </ul>
+        </li>
+    </ul>
+    <div class="longdesc" id="entry-longdesc">
+        <p>在<code>.outerHeight()</code>计算中总是包含padding-top ,padding-bottom 和 border-top，border-bottom ；如果<code>includeMargin</code>参数设置为<code>true</code>，那么margin (top 和 bottom)也会被包含。</p>
+        <p>这个方法不适用于<code>window</code> 和 <code>document</code>对象，可以使用<code>
+<a href="height.htm" >.height()</a></code>代替。 </p>
+        <figure>
+        		              <img src="images/0042_04_03.png"  alt="">
+        		              <figcaption>图1 - 测量外部高度的插图</figcaption>
+        		            </figure>
+    </div>
+    <h3>其他注意事项:</h3>
+    <div class="longdesc">
+        <ul>
+            <li>
+                尺寸相关的API返回的数字，包括 <code>.outerHeight()</code>，在某些情况下可能是小数。你的代码不应该假定它是一个整数。
+                另外，当页面被用户放大或缩小时，尺寸可能不正确的;浏览器没有公开的API来检测这种情况。
+            </li>
+            <li>当元素或其父元素被隐藏时，<code>.outerHeight()</code>得到的值不能保证准确。要得到准确的值，你应该确保该元素在使用<code>.outerHeight()</code>前可见。jQuery将尝试临时显示，然后再隐藏元素来测量元素尺寸，但这是不可靠的，（即使得到准确的值）也会显著影响页面的性能。这总临时显示然后再隐藏的测量功能，可能在jQuery未来的版本中删除。
+            </li>
+        </ul>
+    </div>
+    <div class="jquery-api-top">
+    </div>
+<section class="entry-examples" id="entry-examples"><header><h2>Example:</h2></header><div class="entry-example" id="example-0">
+<h4><span class="desc">获取一个段落的outerHeight。</span></h4>
+<div class="syntaxhighlighter xml ">
+	<table>
+		<tbody>
+			<tr>
+				<td class="gutter">
+						<div class="line n1">1</div>
+						<div class="line n2">2</div>
+						<div class="line n3">3</div>
+						<div class="line n4">4</div>
+						<div class="line n5">5</div>
+						<div class="line n6">6</div>
+						<div class="line n7">7</div>
+						<div class="line n8">8</div>
+						<div class="line n9">9</div>
+						<div class="line n10">10</div>
+						<div class="line n11">11</div>
+						<div class="line n12">12</div>
+						<div class="line n13">13</div>
+						<div class="line n14">14</div>
+						<div class="line n15">15</div>
+						<div class="line n16">16</div>
+						<div class="line n17">17</div>
+						<div class="line n18">18</div>
+						<div class="line n19">19</div>
+						<div class="line n20">20</div>
+						<div class="line n21">21</div>
+						<div class="line n22">22</div>
+						<div class="line n23">23</div>
+						<div class="line n24">24</div>
+						<div class="line n25">25</div>
+						<div class="line n26">26</div>
+						<div class="line n27">27</div>
+				</td>
+				<td class="code">
+					<pre><div class="container"><div class="line"><code><span class="doctype">&lt;!doctype html&gt;</span></code></div></div><div class="container"><div class="line"><code><span class="tag">&lt;<span class="title">html</span> <span class="attribute">lang</span>=<span class="value">"en"</span>&gt;</span></code></div></div><div class="container"><div class="line"><code><span class="tag">&lt;<span class="title">head</span>&gt;</span></code></div></div><div class="container"><div class="line"><code>  <span class="tag">&lt;<span class="title">meta</span> <span class="attribute">charset</span>=<span class="value">"utf-8"</span>&gt;</span></code></div></div><div class="container"><div class="line"><code>  <span class="tag">&lt;<span class="title">title</span>&gt;</span>outerHeight demo<span class="tag">&lt;/<span class="title">title</span>&gt;</span></code></div></div><div class="container"><div class="line"><code>  <span class="tag">&lt;<span class="title">style</span>&gt;</span><span class="css"></span></code></div></div><div class="container"><div class="line"><code>  <span class="tag">p</span> <span class="rules">{</span></code></div></div><div class="container"><div class="line"><code>    <span class="rule"><span class="attribute">margin</span>:<span class="value"> <span class="number">10</span>px;</span></span></code></div></div><div class="container"><div class="line"><code>    <span class="rule"><span class="attribute">padding</span>:<span class="value"> <span class="number">5</span>px;</span></span></code></div></div><div class="container"><div class="line"><code>    <span class="rule"><span class="attribute">border</span>:<span class="value"> <span class="number">2</span>px solid <span class="hexcolor">#666</span>;</span></span></code></div></div><div class="container"><div class="line"><code>  <span class="rule">}</span></code></div></div><div class="container"><div class="line"><code>  <span class="tag">&lt;/<span class="title">style</span>&gt;</span></code></div></div><div class="container"><div class="line"><code>  <span class="tag">&lt;<span class="title">script</span> <span class="attribute">src</span>=<span class="value">"//code.jquery.com/jquery-1.10.2.js"</span>&gt;</span><span class="javascript"></span><span class="tag">&lt;/<span class="title">script</span>&gt;</span></code></div></div><div class="container"><div class="line"><code><span class="tag">&lt;/<span class="title">head</span>&gt;</span></code></div></div><div class="container"><div class="line"><code><span class="tag">&lt;<span class="title">body</span>&gt;</span></code></div></div><div class="container"><div class="line"><code> </code></div></div><div class="container"><div class="line"><code><span class="tag">&lt;<span class="title">p</span>&gt;</span>Hello<span class="tag">&lt;/<span class="title">p</span>&gt;</span><span class="tag">&lt;<span class="title">p</span>&gt;</span><span class="tag">&lt;/<span class="title">p</span>&gt;</span></code></div></div><div class="container"><div class="line"><code> </code></div></div><div class="container"><div class="line"><code><span class="tag">&lt;<span class="title">script</span>&gt;</span><span class="javascript"></span></code></div></div><div class="container"><div class="line"><code><span class="keyword">var</span> p = $( <span class="string">"p:first"</span> );</code></div></div><div class="container"><div class="line"><code>$( <span class="string">"p:last"</span> ).text(</code></div></div><div class="container"><div class="line"><code>  <span class="string">"outerHeight:"</span> + p.outerHeight() +</code></div></div><div class="container"><div class="line"><code>  <span class="string">" , outerHeight( true ):"</span> + p.outerHeight( <span class="literal">true</span> ) );</code></div></div><div class="container"><div class="line"><code><span class="tag">&lt;/<span class="title">script</span>&gt;</span></code></div></div><div class="container"><div class="line"><code> </code></div></div><div class="container"><div class="line"><code><span class="tag">&lt;/<span class="title">body</span>&gt;</span></code></div></div><div class="container"><div class="line"><code><span class="tag">&lt;/<span class="title">html</span>&gt;</span></code></div></div></pre>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+<h4>Demo:</h4>
+<div class="demo code-demo"></div>
+</div></section>
+</div></article><article id="outerHeight2" class="entry method"><h2 class="section-title">
+<span class="name">.outerHeight( value )</span><span class="returns">返回: 
+<a href="Types.htm#jQuery" >jQuery</a></span>
+</h2>
+<div class="entry-wrapper">
+<p class="desc"><strong>描述:</strong>为匹配集合中的每个元素设置CSS外部高度。</p>
+    <ul class="signatures">
+        <li class="signature">
+            <h4 class="name">
+                <span class="version-details">添加的版本:
+<a href="1.8.htm">1.8.0</a></span>.outerHeight( value )
+            </h4>
+            <ul>
+                <li>
+                    <div><strong>value</strong></div>
+                    <div>类型： 
+<a href="Types.htm#String" >String</a> or 
+<a href="Types.htm#Number" >Number</a>
+                    </div>
+                    <div>一个表示像素数的数字，
+                    或带有一个附加可选的尺寸衡量单位的数字
+                    （作为一个字符串）。
+                    </div>
+                </li>
+            </ul>
+        </li>
+        <li class="signature">
+            <h4 class="name">
+                <span class="version-details">添加的版本:
+<a href="1.8.htm">1.8.0</a></span>.outerHeight( function(index, height) )
+            </h4>
+            <ul>
+                <li>
+                    <div><strong>function(index, height)</strong></div>
+                    <div>类型： 
+<a href="Types.htm#Function" >Function</a>()</div>
+                    <div>
+                        一个函数，返回值用来设置外部高度值。
+                        接收的集合中元素的索引位置和原来的外部高度值作为参数。 在这个函数中，<code>this</code> 指向集合中的当前元素。
+                    </div>
+                </li>
+            </ul>
+        </li>
+    </ul>
+    <div class="longdesc" id="entry-longdesc-1">
+        <p>
+              当调用<code>.outerHeight("value")</code>方法的时候，这个“value”参数可以是一个字符串（数字加单位）或者是一个数字。如果这个“value”参数只提供一个数字，jQuery会自动加上像素单位（px）。应该是任何有效的可以为高度赋值的CSS尺寸（就像<code>100px</code>, <code>50%</code>, 或者 <code>auto</code>）。</p>
+    </div>
+    <div class="jquery-api-top">
+    </div>
+<section class="entry-examples" id="entry-examples-1"><header><h2>Example:</h2></header><div class="entry-example" id="example-1-0">
+<h4><span class="desc">每个div首次被点击时改变它的外部高度（和改变其颜色）。</span></h4>
+<div class="syntaxhighlighter xml ">
+	<table>
+		<tbody>
+			<tr>
+				<td class="gutter">
+						<div class="line n1">1</div>
+						<div class="line n2">2</div>
+						<div class="line n3">3</div>
+						<div class="line n4">4</div>
+						<div class="line n5">5</div>
+						<div class="line n6">6</div>
+						<div class="line n7">7</div>
+						<div class="line n8">8</div>
+						<div class="line n9">9</div>
+						<div class="line n10">10</div>
+						<div class="line n11">11</div>
+						<div class="line n12">12</div>
+						<div class="line n13">13</div>
+						<div class="line n14">14</div>
+						<div class="line n15">15</div>
+						<div class="line n16">16</div>
+						<div class="line n17">17</div>
+						<div class="line n18">18</div>
+						<div class="line n19">19</div>
+						<div class="line n20">20</div>
+						<div class="line n21">21</div>
+						<div class="line n22">22</div>
+						<div class="line n23">23</div>
+						<div class="line n24">24</div>
+						<div class="line n25">25</div>
+						<div class="line n26">26</div>
+						<div class="line n27">27</div>
+						<div class="line n28">28</div>
+						<div class="line n29">29</div>
+						<div class="line n30">30</div>
+						<div class="line n31">31</div>
+						<div class="line n32">32</div>
+						<div class="line n33">33</div>
+						<div class="line n34">34</div>
+						<div class="line n35">35</div>
+						<div class="line n36">36</div>
+						<div class="line n37">37</div>
+						<div class="line n38">38</div>
+						<div class="line n39">39</div>
+						<div class="line n40">40</div>
+				</td>
+				<td class="code">
+					<pre><div class="container"><div class="line"><code><span class="doctype">&lt;!doctype html&gt;</span></code></div></div><div class="container"><div class="line"><code><span class="tag">&lt;<span class="title">html</span> <span class="attribute">lang</span>=<span class="value">"en"</span>&gt;</span></code></div></div><div class="container"><div class="line"><code><span class="tag">&lt;<span class="title">head</span>&gt;</span></code></div></div><div class="container"><div class="line"><code>  <span class="tag">&lt;<span class="title">meta</span> <span class="attribute">charset</span>=<span class="value">"utf-8"</span>&gt;</span></code></div></div><div class="container"><div class="line"><code>  <span class="tag">&lt;<span class="title">title</span>&gt;</span>outerHeight demo<span class="tag">&lt;/<span class="title">title</span>&gt;</span></code></div></div><div class="container"><div class="line"><code>  <span class="tag">&lt;<span class="title">style</span>&gt;</span><span class="css"></span></code></div></div><div class="container"><div class="line"><code>  <span class="tag">div</span> <span class="rules">{</span></code></div></div><div class="container"><div class="line"><code>    <span class="rule"><span class="attribute">width</span>:<span class="value"> <span class="number">50</span>px;</span></span></code></div></div><div class="container"><div class="line"><code>    <span class="rule"><span class="attribute">padding</span>:<span class="value"> <span class="number">10</span>px;</span></span></code></div></div><div class="container"><div class="line"><code>    <span class="rule"><span class="attribute">height</span>:<span class="value"> <span class="number">60</span>px;</span></span></code></div></div><div class="container"><div class="line"><code>    <span class="rule"><span class="attribute">float</span>:<span class="value"> left;</span></span></code></div></div><div class="container"><div class="line"><code>    <span class="rule"><span class="attribute">margin</span>:<span class="value"> <span class="number">5</span>px;</span></span></code></div></div><div class="container"><div class="line"><code>    <span class="rule"><span class="attribute">background</span>:<span class="value"> red;</span></span></code></div></div><div class="container"><div class="line"><code>    <span class="rule"><span class="attribute">cursor</span>:<span class="value"> pointer;</span></span></code></div></div><div class="container"><div class="line"><code>  <span class="rule">}</span></code></div></div><div class="container"><div class="line"><code>  <span class="class">.mod</span> <span class="rules">{</span></code></div></div><div class="container"><div class="line"><code>    <span class="rule"><span class="attribute">background</span>:<span class="value"> blue;</span></span></code></div></div><div class="container"><div class="line"><code>    <span class="rule"><span class="attribute">cursor</span>:<span class="value"> default;</span></span></code></div></div><div class="container"><div class="line"><code>  <span class="rule">}</span></code></div></div><div class="container"><div class="line"><code>  <span class="tag">&lt;/<span class="title">style</span>&gt;</span></code></div></div><div class="container"><div class="line"><code>  <span class="tag">&lt;<span class="title">script</span> <span class="attribute">src</span>=<span class="value">"//code.jquery.com/jquery-1.10.2.js"</span>&gt;</span><span class="javascript"></span><span class="tag">&lt;/<span class="title">script</span>&gt;</span></code></div></div><div class="container"><div class="line"><code><span class="tag">&lt;/<span class="title">head</span>&gt;</span></code></div></div><div class="container"><div class="line"><code><span class="tag">&lt;<span class="title">body</span>&gt;</span></code></div></div><div class="container"><div class="line"><code> </code></div></div><div class="container"><div class="line"><code><span class="tag">&lt;<span class="title">div</span>&gt;</span>d<span class="tag">&lt;/<span class="title">div</span>&gt;</span></code></div></div><div class="container"><div class="line"><code><span class="tag">&lt;<span class="title">div</span>&gt;</span>d<span class="tag">&lt;/<span class="title">div</span>&gt;</span></code></div></div><div class="container"><div class="line"><code><span class="tag">&lt;<span class="title">div</span>&gt;</span>d<span class="tag">&lt;/<span class="title">div</span>&gt;</span></code></div></div><div class="container"><div class="line"><code><span class="tag">&lt;<span class="title">div</span>&gt;</span>d<span class="tag">&lt;/<span class="title">div</span>&gt;</span></code></div></div><div class="container"><div class="line"><code><span class="tag">&lt;<span class="title">div</span>&gt;</span>d<span class="tag">&lt;/<span class="title">div</span>&gt;</span></code></div></div><div class="container"><div class="line"><code> </code></div></div><div class="container"><div class="line"><code><span class="tag">&lt;<span class="title">script</span>&gt;</span><span class="javascript"></span></code></div></div><div class="container"><div class="line"><code><span class="keyword">var</span> modHeight = <span class="number">60</span>;</code></div></div><div class="container"><div class="line"><code>$( <span class="string">"div"</span> ).one( <span class="string">"click"</span>, <span class="keyword">function</span>() {</code></div></div><div class="container"><div class="line"><code>  $( <span class="keyword">this</span> ).outerHeight( modHeight ).addClass( <span class="string">"mod"</span> );</code></div></div><div class="container"><div class="line"><code>  modHeight -= <span class="number">8</span>;</code></div></div><div class="container"><div class="line"><code>});</code></div></div><div class="container"><div class="line"><code><span class="tag">&lt;/<span class="title">script</span>&gt;</span></code></div></div><div class="container"><div class="line"><code> </code></div></div><div class="container"><div class="line"><code><span class="tag">&lt;/<span class="title">body</span>&gt;</span></code></div></div><div class="container"><div class="line"><code><span class="tag">&lt;/<span class="title">html</span>&gt;</span></code></div></div></pre>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+<h4>Demo:</h4>
+<div class="demo code-demo"></div>
+</div></section>
+</div></article>	</div><!-- .entry-content -->
+</article>
+</div>
+  </div>

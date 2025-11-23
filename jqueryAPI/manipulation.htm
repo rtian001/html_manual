@@ -1,0 +1,607 @@
+<script src="js/rtian.js" ></script>
+<meta charset="utf-8" />
+<title>分类：操作 | jQuery API中文文档(适用jQuery 1.0 - jQuery 3.0)</title>
+  <div id="content" >
+    <div class="inner listing" role="main">
+		<header class="page-header">
+			<h1 class="page-title">分类：操作</h1>
+			<hr>
+<div class="category-archive-meta"><p>
+                此部分中所有的方法是一些操作DOM的方式。
+                其中几个方法是简单的改变一个元素的一个属性（也列在
+<a href="attributes.htm" >属性分类</a>中），
+                其他几个设置元素的样式属性的方法
+                （也列在
+<a href="css.htm" >CSS 分类</a>中）。
+                还有一些方法修改整个元素（或一组元素）本身—插入，复制，删除，等等。
+                所有这些方法被归类为为“setters”（设置器），因为他们改变属性的值。
+                有些方法 —如<code>.attr()</code>, <code>.html()</code>, and <code>.val()</code> —
+                还充当“getters”（获取器），从DOM元素检索信息，供以后使用。
+                </p>
+</div>		</header><article id="post-9" class="post-9 post type-post status-publish format-standard hentry category-attributes category-class-attribute category-css category-10 category-14">
+	<header class="entry-header">
+		<div class="entry-meta">
+			<span class="category">
+<a href="attributes.htm"  title="View all posts in Attributes">属性</a></span><span class="category-divider"> | </span><span class="category">
+<a href="manipulation.htm"  title="View all posts in Manipulation">操作</a> &gt; 
+<a href="class-attribute.htm"  title="View all posts in Class Attribute">Class 属性</a></span><span class="category-divider"> | </span><span class="category">
+<a href="css_1.htm"  title="View all posts in CSS">CSS</a></span>		</div>
+					<h1 class="entry-title">
+<a href="addClass.htm"  title="Permalink to .addClass()" rel="bookmark">.addClass()</a>
+			</h1>
+			</header>
+		<div class="entry-summary">
+		<p>为每个匹配的元素添加指定的样式类名</p>
+	</div><!-- .entry-summary -->
+</article><article id="post-11" class="post-11 post type-post status-publish format-standard hentry category-dom-insertion-outside category-10 category-14">
+	<header class="entry-header">
+		<div class="entry-meta">
+			<span class="category">
+<a href="manipulation.htm"  title="View all posts in Manipulation">操作</a> &gt; 
+<a href="dom-insertion-outside.htm"  title="View all posts in DOM Insertion, Outside">DOM 插入现有元素外</a></span>		</div>
+					<h1 class="entry-title">
+<a href="after.htm"  title="Permalink to .after()" rel="bookmark">.after()</a>
+			</h1>
+			</header>
+		<div class="entry-summary">
+		<p>在元素集合中匹配的每个元素后面插入参数所指定的内容。</p>
+	</div><!-- .entry-summary -->
+</article><article id="post-33" class="post-33 post type-post status-publish format-standard hentry category-dom-insertion-inside category-10 category-14">
+	<header class="entry-header">
+		<div class="entry-meta">
+			<span class="category">
+<a href="manipulation.htm"  title="View all posts in Manipulation">操作</a> &gt; 
+<a href="dom-insertion-inside.htm"  title="View all posts in DOM Insertion, Inside">DOM 插入现有元素内</a></span>		</div>
+					<h1 class="entry-title">
+<a href="append.htm"  title="Permalink to .append()" rel="bookmark">.append()</a>
+			</h1>
+			</header>
+		<div class="entry-summary">
+		<p>根据参数设定在每个匹配元素里面的末尾处插入内容。</p>
+	</div><!-- .entry-summary -->
+</article><article id="post-35" class="post-35 post type-post status-publish format-standard hentry category-dom-insertion-inside category-10">
+	<header class="entry-header">
+		<div class="entry-meta">
+			<span class="category">
+<a href="manipulation.htm"  title="View all posts in Manipulation">操作</a> &gt; 
+<a href="dom-insertion-inside.htm"  title="View all posts in DOM Insertion, Inside">DOM 插入现有元素内</a></span>		</div>
+					<h1 class="entry-title">
+<a href="appendTo.htm"  title="Permalink to .appendTo()" rel="bookmark">.appendTo()</a>
+			</h1>
+			</header>
+		<div class="entry-summary">
+		<p>将匹配的元素插入到目标元素的最后面（译者注：内部插入）。</p>
+	</div><!-- .entry-summary -->
+</article><article id="post-37" class="post-37 post type-post status-publish format-standard hentry category-attributes category-general-attributes category-10 category-11 category-16">
+	<header class="entry-header">
+		<div class="entry-meta">
+			<span class="category">
+<a href="attributes.htm"  title="View all posts in Attributes">属性</a></span><span class="category-divider"> | </span><span class="category">
+<a href="manipulation.htm"  title="View all posts in Manipulation">操作</a> &gt; 
+<a href="general-attributes.htm"  title="View all posts in General Attributes">通用属性</a></span>		</div>
+					<h1 class="entry-title">
+<a href="attr.htm"  title="Permalink to .attr()" rel="bookmark">.attr()</a>
+			</h1>
+			</header>
+		<div class="entry-summary">
+		<p>获取匹配的元素集合中的第一个元素的属性的值  或 设置每一个匹配元素的一个或多个属性。</p>
+	</div><!-- .entry-summary -->
+</article><article id="post-53" class="post-53 post type-post status-publish format-standard hentry category-dom-insertion-outside category-10 category-14">
+	<header class="entry-header">
+		<div class="entry-meta">
+			<span class="category">
+<a href="manipulation.htm"  title="View all posts in Manipulation">操作</a> &gt; 
+<a href="dom-insertion-outside.htm"  title="View all posts in DOM Insertion, Outside">DOM 插入现有元素外</a></span>		</div>
+					<h1 class="entry-title">
+<a href="before.htm"  title="Permalink to .before()" rel="bookmark">.before()</a>
+			</h1>
+			</header>
+		<div class="entry-summary">
+		<p>根据参数设定在匹配元素的前面插入内容（译者注：外部插入）。</p>
+	</div><!-- .entry-summary -->
+</article><article id="post-99" class="post-99 post type-post status-publish format-standard hentry category-copying category-10 category-15">
+	<header class="entry-header">
+		<div class="entry-meta">
+			<span class="category">
+<a href="manipulation.htm"  title="View all posts in Manipulation">操作</a> &gt; 
+<a href="copying.htm"  title="View all posts in Copying">复制元素</a></span>		</div>
+					<h1 class="entry-title">
+<a href="clone.htm"  title="Permalink to .clone()" rel="bookmark">.clone()</a>
+			</h1>
+			</header>
+		<div class="entry-summary">
+		<p>创建一个匹配的元素集合的深度拷贝副本。</p>
+	</div><!-- .entry-summary -->
+</article><article id="post-109" class="post-109 post type-post status-publish format-standard hentry category-css category-style-properties category-10 category-14 category-19">
+	<header class="entry-header">
+		<div class="entry-meta">
+			<span class="category">
+<a href="css_1.htm"  title="View all posts in CSS">CSS</a></span><span class="category-divider"> | </span><span class="category">
+<a href="manipulation.htm"  title="View all posts in Manipulation">操作</a> &gt; 
+<a href="style-properties.htm"  title="View all posts in Style Properties">Style 属性</a></span>		</div>
+					<h1 class="entry-title">
+<a href="css.htm"  title="Permalink to .css()" rel="bookmark">.css()</a>
+			</h1>
+			</header>
+		<div class="entry-summary">
+		<p>获取匹配元素集合中的第一个元素的样式属性的值  或  设置每个匹配元素的一个或多个CSS属性。</p>
+	</div><!-- .entry-summary -->
+</article><article id="post-155" class="post-155 post type-post status-publish format-standard hentry category-dom-removal category-14">
+	<header class="entry-header">
+		<div class="entry-meta">
+			<span class="category">
+<a href="manipulation.htm"  title="View all posts in Manipulation">操作</a> &gt; 
+<a href="dom-removal.htm"  title="View all posts in DOM Removal">DOM 移除</a></span>		</div>
+					<h1 class="entry-title">
+<a href="detach.htm"  title="Permalink to .detach()" rel="bookmark">.detach()</a>
+			</h1>
+			</header>
+		<div class="entry-summary">
+		<p>从DOM中去掉所有匹配的元素。</p>
+	</div><!-- .entry-summary -->
+</article><article id="post-167" class="post-167 post type-post status-publish format-standard hentry category-dom-removal category-10">
+	<header class="entry-header">
+		<div class="entry-meta">
+			<span class="category">
+<a href="manipulation.htm"  title="View all posts in Manipulation">操作</a> &gt; 
+<a href="dom-removal.htm"  title="View all posts in DOM Removal">DOM 移除</a></span>		</div>
+					<h1 class="entry-title">
+<a href="empty.htm"  title="Permalink to .empty()" rel="bookmark">.empty()</a>
+			</h1>
+			</header>
+		<div class="entry-summary">
+		<p>从DOM中移除集合中匹配元素的所有子节点。</p>
+	</div><!-- .entry-summary -->
+</article><article id="post-257" class="post-257 post type-post status-publish format-standard hentry category-attributes category-class-attribute category-css category-12">
+	<header class="entry-header">
+		<div class="entry-meta">
+			<span class="category">
+<a href="attributes.htm"  title="View all posts in Attributes">属性</a></span><span class="category-divider"> | </span><span class="category">
+<a href="manipulation.htm"  title="View all posts in Manipulation">操作</a> &gt; 
+<a href="class-attribute.htm"  title="View all posts in Class Attribute">Class 属性</a></span><span class="category-divider"> | </span><span class="category">
+<a href="css_1.htm"  title="View all posts in CSS">CSS</a></span>		</div>
+					<h1 class="entry-title">
+<a href="hasClass.htm"  title="Permalink to .hasClass()" rel="bookmark">.hasClass()</a>
+			</h1>
+			</header>
+		<div class="entry-summary">
+		<p>确定任何一个匹配元素是否有被分配给定的（样式）类。</p>
+	</div><!-- .entry-summary -->
+</article><article id="post-261" class="post-261 post type-post status-publish format-standard hentry category-css category-dimensions category-style-properties category-10 category-141">
+	<header class="entry-header">
+		<div class="entry-meta">
+			<span class="category">
+<a href="css_1.htm"  title="View all posts in CSS">CSS</a></span><span class="category-divider"> | </span><span class="category">
+<a href="dimensions.htm"  title="View all posts in Dimensions">尺寸</a></span><span class="category-divider"> | </span><span class="category">
+<a href="manipulation.htm"  title="View all posts in Manipulation">操作</a> &gt; 
+<a href="style-properties.htm"  title="View all posts in Style Properties">Style 属性</a></span>		</div>
+					<h1 class="entry-title">
+<a href="height.htm"  title="Permalink to .height()" rel="bookmark">.height()</a>
+			</h1>
+			</header>
+		<div class="entry-summary">
+		<p>获取匹配元素集合中的第一个元素的当前计算高度值 或 设置每一个匹配元素的高度值。</p>
+	</div><!-- .entry-summary -->
+</article><article id="post-269" class="post-269 post type-post status-publish format-standard hentry category-attributes category-dom-insertion-inside category-10 category-14">
+	<header class="entry-header">
+		<div class="entry-meta">
+			<span class="category">
+<a href="attributes.htm"  title="View all posts in Attributes">属性</a></span><span class="category-divider"> | </span><span class="category">
+<a href="manipulation.htm"  title="View all posts in Manipulation">操作</a> &gt; 
+<a href="dom-insertion-inside.htm"  title="View all posts in DOM Insertion, Inside">DOM 插入现有元素内</a></span>		</div>
+					<h1 class="entry-title">
+<a href="html.htm"  title="Permalink to .html()" rel="bookmark">.html()</a>
+			</h1>
+			</header>
+		<div class="entry-summary">
+		<p>从集合的第一个匹配元素中获取HTML内容 或 设置每一个匹配元素的html内容。</p>
+	</div><!-- .entry-summary -->
+</article><article id="post-277" class="post-277 post type-post status-publish format-standard hentry category-css category-dimensions category-style-properties category-126">
+	<header class="entry-header">
+		<div class="entry-meta">
+			<span class="category">
+<a href="css_1.htm"  title="View all posts in CSS">CSS</a></span><span class="category-divider"> | </span><span class="category">
+<a href="dimensions.htm"  title="View all posts in Dimensions">尺寸</a></span><span class="category-divider"> | </span><span class="category">
+<a href="manipulation.htm"  title="View all posts in Manipulation">操作</a> &gt; 
+<a href="style-properties.htm"  title="View all posts in Style Properties">Style 属性</a></span>		</div>
+					<h1 class="entry-title">
+<a href="innerHeight.htm"  title="Permalink to .innerHeight()" rel="bookmark">.innerHeight()</a>
+			</h1>
+			</header>
+		<div class="entry-summary">
+		<p>为匹配的元素集合中获取第一个元素的当前计算高度值,包括padding，但是不包括border。</p>
+	</div><!-- .entry-summary -->
+</article><article id="post-279" class="post-279 post type-post status-publish format-standard hentry category-css category-dimensions category-style-properties category-126">
+	<header class="entry-header">
+		<div class="entry-meta">
+			<span class="category">
+<a href="css_1.htm"  title="View all posts in CSS">CSS</a></span><span class="category-divider"> | </span><span class="category">
+<a href="dimensions.htm"  title="View all posts in Dimensions">尺寸</a></span><span class="category-divider"> | </span><span class="category">
+<a href="manipulation.htm"  title="View all posts in Manipulation">操作</a> &gt; 
+<a href="style-properties.htm"  title="View all posts in Style Properties">Style 属性</a></span>		</div>
+					<h1 class="entry-title">
+<a href="innerWidth.htm"  title="Permalink to .innerWidth()" rel="bookmark">.innerWidth()</a>
+			</h1>
+			</header>
+		<div class="entry-summary">
+		<p>为匹配的元素集合中获取第一个元素的当前计算宽度值,包括padding，但是不包括border。</p>
+	</div><!-- .entry-summary -->
+</article><article id="post-283" class="post-283 post type-post status-publish format-standard hentry category-dom-insertion-outside category-10">
+	<header class="entry-header">
+		<div class="entry-meta">
+			<span class="category">
+<a href="manipulation.htm"  title="View all posts in Manipulation">操作</a> &gt; 
+<a href="dom-insertion-outside.htm"  title="View all posts in DOM Insertion, Outside">DOM 插入现有元素外</a></span>		</div>
+					<h1 class="entry-title">
+<a href="insertAfter.htm"  title="Permalink to .insertAfter()" rel="bookmark">.insertAfter()</a>
+			</h1>
+			</header>
+		<div class="entry-summary">
+		<p>在目标元素后面插入集合中每个匹配的元素。</p>
+	</div><!-- .entry-summary -->
+</article><article id="post-285" class="post-285 post type-post status-publish format-standard hentry category-dom-insertion-outside category-10">
+	<header class="entry-header">
+		<div class="entry-meta">
+			<span class="category">
+<a href="manipulation.htm"  title="View all posts in Manipulation">操作</a> &gt; 
+<a href="dom-insertion-outside.htm"  title="View all posts in DOM Insertion, Outside">DOM 插入现有元素外</a></span>		</div>
+					<h1 class="entry-title">
+<a href="insertBefore.htm"  title="Permalink to .insertBefore()" rel="bookmark">.insertBefore()</a>
+			</h1>
+			</header>
+		<div class="entry-summary">
+		<p>在目标元素前面插入集合中每个匹配的元素。</p>
+	</div><!-- .entry-summary -->
+</article>
+		<article id="post-3704" class="post-3704 post type-post status-publish format-standard hentry category-css category-style-properties category-78">
+	<header class="entry-header">
+		<div class="entry-meta">
+			<span class="category">
+<a href="manipulation.htm" >操作</a> &gt; 
+<a href="style-properties.htm" >Style 属性</a></span>		</div>
+					<h1 class="entry-title">
+<a href="jQuery.cssNumber.htm"  title="Permalink to jQuery.cssNumber" rel="bookmark">jQuery.cssNumber</a>
+			</h1>
+			</header>
+		<div class="entry-summary">
+		<p>一个对象，这个包含所有可以不使用单位的CSS属性。.css()方法使用这个对象来确定是否可能附加px到无单位的值。</p>
+	</div><!-- .entry-summary -->
+</article>
+		<article id="post-4171" class="post-4171 post type-post status-publish format-standard hentry category-manipulation">
+			<header class="entry-header">
+				<div class="entry-meta">
+							</div>
+							<h1 class="entry-title">
+<a href="jQuery.htmlPrefilter.htm"  title="Permalink to jQuery.htmlPrefilter()" rel="bookmark">jQuery.htmlPrefilter()</a>
+					</h1>
+					</header>
+				<div class="entry-summary">
+				<p>通过jQuery操作方法修改和过滤HTML字符串。</p>
+			</div><!-- .entry-summary -->
+		</article><article id="post-457" class="post-457 post type-post status-publish format-standard hentry category-css category-offset category-style-properties category-12 category-14">
+	<header class="entry-header">
+		<div class="entry-meta">
+			<span class="category">
+<a href="css_1.htm"  title="View all posts in CSS">CSS</a></span><span class="category-divider"> | </span><span class="category">
+<a href="offset_1.htm"  title="View all posts in Offset">位置</a></span><span class="category-divider"> | </span><span class="category">
+<a href="manipulation.htm"  title="View all posts in Manipulation">操作</a> &gt; 
+<a href="style-properties.htm"  title="View all posts in Style Properties">Style 属性</a></span>		</div>
+					<h1 class="entry-title">
+<a href="offset.htm"  title="Permalink to .offset()" rel="bookmark">.offset()</a>
+			</h1>
+			</header>
+		<div class="entry-summary">
+		<p>在匹配的元素集合中，获取的第一个元素的当前坐标， 或设置每一个元素的坐标， 坐标相对于文档。</p>
+	</div><!-- .entry-summary -->
+</article><article id="post-467" class="post-467 post type-post status-publish format-standard hentry category-css category-dimensions category-style-properties category-126">
+	<header class="entry-header">
+		<div class="entry-meta">
+			<span class="category">
+<a href="css_1.htm"  title="View all posts in CSS">CSS</a></span><span class="category-divider"> | </span><span class="category">
+<a href="dimensions.htm"  title="View all posts in Dimensions">尺寸</a></span><span class="category-divider"> | </span><span class="category">
+<a href="manipulation.htm"  title="View all posts in Manipulation">操作</a> &gt; 
+<a href="style-properties.htm"  title="View all posts in Style Properties">Style 属性</a></span>		</div>
+					<h1 class="entry-title">
+<a href="outerHeight.htm"  title="Permalink to .outerHeight()" rel="bookmark">.outerHeight()</a>
+			</h1>
+			</header>
+		<div class="entry-summary">
+		<p>为匹配的元素集合中获取第一个元素的当前计算高度值,包括padding，border和选择性的margin。返回一个整数（不包含“px”）表示的值  或 null如果空集合的元素调用。</p>
+	</div><!-- .entry-summary -->
+</article><article id="post-469" class="post-469 post type-post status-publish format-standard hentry category-css category-dimensions category-style-properties category-126">
+	<header class="entry-header">
+		<div class="entry-meta">
+			<span class="category">
+<a href="css_1.htm"  title="View all posts in CSS">CSS</a></span><span class="category-divider"> | </span><span class="category">
+<a href="dimensions.htm"  title="View all posts in Dimensions">尺寸</a></span><span class="category-divider"> | </span><span class="category">
+<a href="manipulation.htm"  title="View all posts in Manipulation">操作</a> &gt; 
+<a href="style-properties.htm"  title="View all posts in Style Properties">Style 属性</a></span>		</div>
+					<h1 class="entry-title">
+<a href="outerWidth.htm"  title="Permalink to .outerWidth()" rel="bookmark">.outerWidth()</a>
+			</h1>
+			</header>
+		<div class="entry-summary">
+		<p>为匹配的元素集合中获取第一个元素的当前计算宽度值,包括padding，border。</p>
+	</div><!-- .entry-summary -->
+</article><article id="post-481" class="post-481 post type-post status-publish format-standard hentry category-css category-offset category-style-properties category-12">
+	<header class="entry-header">
+		<div class="entry-meta">
+			<span class="category">
+<a href="css_1.htm"  title="View all posts in CSS">CSS</a></span><span class="category-divider"> | </span><span class="category">
+<a href="offset_1.htm"  title="View all posts in Offset">位置</a></span><span class="category-divider"> | </span><span class="category">
+<a href="manipulation.htm"  title="View all posts in Manipulation">操作</a> &gt; 
+<a href="style-properties.htm"  title="View all posts in Style Properties">Style 属性</a></span>		</div>
+					<h1 class="entry-title">
+<a href="position.htm"  title="Permalink to .position()" rel="bookmark">.position()</a>
+			</h1>
+			</header>
+		<div class="entry-summary">
+		<p>获取匹配元素中第一个元素的当前坐标，相对于offset parent的坐标。( 译者注：offset parent指离该元素最近的而且被定位过的祖先元素 )</p>
+	</div><!-- .entry-summary -->
+</article><article id="post-483" class="post-483 post type-post status-publish format-standard hentry category-dom-insertion-inside category-10 category-14">
+	<header class="entry-header">
+		<div class="entry-meta">
+			<span class="category">
+<a href="manipulation.htm"  title="View all posts in Manipulation">操作</a> &gt; 
+<a href="dom-insertion-inside.htm"  title="View all posts in DOM Insertion, Inside">DOM 插入现有元素内</a></span>		</div>
+					<h1 class="entry-title">
+<a href="prepend.htm"  title="Permalink to .prepend()" rel="bookmark">.prepend()</a>
+			</h1>
+			</header>
+		<div class="entry-summary">
+		<p>将参数内容插入到每个匹配元素的前面（元素内部）。</p>
+	</div><!-- .entry-summary -->
+</article><article id="post-485" class="post-485 post type-post status-publish format-standard hentry category-dom-insertion-inside category-10">
+	<header class="entry-header">
+		<div class="entry-meta">
+			<span class="category">
+<a href="manipulation.htm"  title="View all posts in Manipulation">操作</a> &gt; 
+<a href="dom-insertion-inside.htm"  title="View all posts in DOM Insertion, Inside">DOM 插入现有元素内</a></span>		</div>
+					<h1 class="entry-title">
+<a href="prependTo.htm"  title="Permalink to .prependTo()" rel="bookmark">.prependTo()</a>
+			</h1>
+			</header>
+		<div class="entry-summary">
+		<p>将所有元素插入到目标前面（元素内）。</p>
+	</div><!-- .entry-summary -->
+</article><article id="post-495" class="post-495 post type-post status-publish format-standard hentry category-attributes category-general-attributes category-16">
+	<header class="entry-header">
+		<div class="entry-meta">
+			<span class="category">
+<a href="attributes.htm"  title="View all posts in Attributes">属性</a></span><span class="category-divider"> | </span><span class="category">
+<a href="manipulation.htm"  title="View all posts in Manipulation">操作</a> &gt; 
+<a href="general-attributes.htm"  title="View all posts in General Attributes">通用属性</a></span>		</div>
+					<h1 class="entry-title">
+<a href="prop.htm"  title="Permalink to .prop()" rel="bookmark">.prop()</a>
+			</h1>
+			</header>
+		<div class="entry-summary">
+		<p>获取匹配的元素集中的第一个元素的属性（property）值或设置每一个匹配元素的一个或多个属性。</p>
+	</div><!-- .entry-summary -->
+</article><article id="post-505" class="post-505 post type-post status-publish format-standard hentry category-dom-removal category-10">
+	<header class="entry-header">
+		<div class="entry-meta">
+			<span class="category">
+<a href="manipulation.htm"  title="View all posts in Manipulation">操作</a> &gt; 
+<a href="dom-removal.htm"  title="View all posts in DOM Removal">DOM 移除</a></span>		</div>
+					<h1 class="entry-title">
+<a href="remove.htm"  title="Permalink to .remove()" rel="bookmark">.remove()</a>
+			</h1>
+			</header>
+		<div class="entry-summary">
+		<p>从DOM中去掉所有匹配的元素。</p>
+	</div><!-- .entry-summary -->
+</article><article id="post-507" class="post-507 post type-post status-publish format-standard hentry category-attributes category-general-attributes category-10 category-14 category-17">
+	<header class="entry-header">
+		<div class="entry-meta">
+			<span class="category">
+<a href="attributes.htm"  title="View all posts in Attributes">属性</a></span><span class="category-divider"> | </span><span class="category">
+<a href="manipulation.htm"  title="View all posts in Manipulation">操作</a> &gt; 
+<a href="general-attributes.htm"  title="View all posts in General Attributes">通用属性</a></span>		</div>
+					<h1 class="entry-title">
+<a href="removeAttr.htm"  title="Permalink to .removeAttr()" rel="bookmark">.removeAttr()</a>
+			</h1>
+			</header>
+		<div class="entry-summary">
+		<p>为匹配的元素集合中的每个元素中移除一个属性。</p>
+	</div><!-- .entry-summary -->
+</article><article id="post-509" class="post-509 post type-post status-publish format-standard hentry category-attributes category-class-attribute category-css category-10 category-14">
+	<header class="entry-header">
+		<div class="entry-meta">
+			<span class="category">
+<a href="attributes.htm"  title="View all posts in Attributes">属性</a></span><span class="category-divider"> | </span><span class="category">
+<a href="manipulation.htm"  title="View all posts in Manipulation">操作</a> &gt; 
+<a href="class-attribute.htm"  title="View all posts in Class Attribute">Class 属性</a></span><span class="category-divider"> | </span><span class="category">
+<a href="css_1.htm"  title="View all posts in CSS">CSS</a></span>		</div>
+					<h1 class="entry-title">
+<a href="removeClass.htm"  title="Permalink to .removeClass()" rel="bookmark">.removeClass()</a>
+			</h1>
+			</header>
+		<div class="entry-summary">
+		<p>移除集合中每个匹配元素上一个，多个或全部样式。</p>
+	</div><!-- .entry-summary -->
+</article><article id="post-513" class="post-513 post type-post status-publish format-standard hentry category-attributes category-general-attributes category-16">
+	<header class="entry-header">
+		<div class="entry-meta">
+			<span class="category">
+<a href="attributes.htm"  title="View all posts in Attributes">属性</a></span><span class="category-divider"> | </span><span class="category">
+<a href="manipulation.htm"  title="View all posts in Manipulation">操作</a> &gt; 
+<a href="general-attributes.htm"  title="View all posts in General Attributes">通用属性</a></span>		</div>
+					<h1 class="entry-title">
+<a href="removeProp.htm"  title="Permalink to .removeProp()" rel="bookmark">.removeProp()</a>
+			</h1>
+			</header>
+		<div class="entry-summary">
+		<p>为集合中匹配的元素删除一个属性（property）。</p>
+	</div><!-- .entry-summary -->
+</article><article id="post-515" class="post-515 post type-post status-publish format-standard hentry category-dom-replacement category-12">
+	<header class="entry-header">
+		<div class="entry-meta">
+			<span class="category">
+<a href="manipulation.htm"  title="View all posts in Manipulation">操作</a> &gt; 
+<a href="dom-replacement.htm"  title="View all posts in DOM Replacement">DOM 替换</a></span>		</div>
+					<h1 class="entry-title">
+<a href="replaceAll.htm"  title="Permalink to .replaceAll()" rel="bookmark">.replaceAll()</a>
+			</h1>
+			</header>
+		<div class="entry-summary">
+		<p>用集合的匹配元素替换每个目标元素。</p>
+	</div><!-- .entry-summary -->
+</article><article id="post-517" class="post-517 post type-post status-publish format-standard hentry category-dom-replacement category-12 category-14">
+	<header class="entry-header">
+		<div class="entry-meta">
+			<span class="category">
+<a href="manipulation.htm"  title="View all posts in Manipulation">操作</a> &gt; 
+<a href="dom-replacement.htm"  title="View all posts in DOM Replacement">DOM 替换</a></span>		</div>
+					<h1 class="entry-title">
+<a href="replaceWith.htm"  title="Permalink to .replaceWith()" rel="bookmark">.replaceWith()</a>
+			</h1>
+			</header>
+		<div class="entry-summary">
+		<p>用提供的内容替换集合中所有匹配的元素并且返回被删除元素的集合。</p>
+	</div><!-- .entry-summary -->
+</article><article id="post-525" class="post-525 post type-post status-publish format-standard hentry category-css category-offset category-style-properties category-126">
+	<header class="entry-header">
+		<div class="entry-meta">
+			<span class="category">
+<a href="css_1.htm"  title="View all posts in CSS">CSS</a></span><span class="category-divider"> | </span><span class="category">
+<a href="offset_1.htm"  title="View all posts in Offset">位置</a></span><span class="category-divider"> | </span><span class="category">
+<a href="manipulation.htm"  title="View all posts in Manipulation">操作</a> &gt; 
+<a href="style-properties.htm"  title="View all posts in Style Properties">Style 属性</a></span>		</div>
+					<h1 class="entry-title">
+<a href="scrollLeft.htm"  title="Permalink to .scrollLeft()" rel="bookmark">.scrollLeft()</a>
+			</h1>
+			</header>
+		<div class="entry-summary">
+		<p>获取匹配的元素集合中第一个元素的当前水平滚动条的位置或设置每个匹配元素的水平滚动条位置。</p>
+	</div><!-- .entry-summary -->
+</article><article id="post-527" class="post-527 post type-post status-publish format-standard hentry category-css category-offset category-style-properties category-126">
+	<header class="entry-header">
+		<div class="entry-meta">
+			<span class="category">
+<a href="css_1.htm"  title="View all posts in CSS">CSS</a></span><span class="category-divider"> | </span><span class="category">
+<a href="offset_1.htm"  title="View all posts in Offset">位置</a></span><span class="category-divider"> | </span><span class="category">
+<a href="manipulation.htm"  title="View all posts in Manipulation">操作</a> &gt; 
+<a href="style-properties.htm"  title="View all posts in Style Properties">Style 属性</a></span>		</div>
+					<h1 class="entry-title">
+<a href="scrollTop.htm"  title="Permalink to .scrollTop()" rel="bookmark">.scrollTop()</a>
+			</h1>
+			</header>
+		<div class="entry-summary">
+		<p>获取匹配的元素集合中第一个元素的当前垂直滚动条的位置或设置每个匹配元素的垂直滚动条位置。</p>
+	</div><!-- .entry-summary -->
+</article><article id="post-561" class="post-561 post type-post status-publish format-standard hentry category-dom-insertion-inside category-10 category-14">
+	<header class="entry-header">
+		<div class="entry-meta">
+			<span class="category">
+<a href="manipulation.htm"  title="View all posts in Manipulation">操作</a> &gt; 
+<a href="dom-insertion-inside.htm"  title="View all posts in DOM Insertion, Inside">DOM 插入现有元素内</a></span>		</div>
+					<h1 class="entry-title">
+<a href="text.htm"  title="Permalink to .text()" rel="bookmark">.text()</a>
+			</h1>
+			</header>
+		<div class="entry-summary">
+		<p>得到匹配元素集合中每个元素的文本内容结合，包括他们的后代，或设置匹配元素集合中每个元素的文本内容为指定的文本内容。</p>
+	</div><!-- .entry-summary -->
+</article><article id="post-569" class="post-569 post type-post status-publish format-standard hentry category-attributes category-class-attribute category-css category-10 category-13 category-14">
+	<header class="entry-header">
+		<div class="entry-meta">
+			<span class="category">
+<a href="attributes.htm"  title="View all posts in Attributes">属性</a></span><span class="category-divider"> | </span><span class="category">
+<a href="manipulation.htm"  title="View all posts in Manipulation">操作</a> &gt; 
+<a href="class-attribute.htm"  title="View all posts in Class Attribute">Class 属性</a></span><span class="category-divider"> | </span><span class="category">
+<a href="css_1.htm"  title="View all posts in CSS">CSS</a></span>		</div>
+					<h1 class="entry-title">
+<a href="toggleClass.htm"  title="Permalink to .toggleClass()" rel="bookmark">.toggleClass()</a>
+			</h1>
+			</header>
+		<div class="entry-summary">
+		<p>在匹配的元素集合中的每个元素上添加或删除一个或多个样式类,取决于这个样式类是否存在或价值切换属性。即：如果存在（不存在）就删除（添加）一个类。</p>
+	</div><!-- .entry-summary -->
+</article><article id="post-581" class="post-581 post type-post status-publish format-standard hentry category-dom-insertion-around category-dom-removal category-14">
+	<header class="entry-header">
+		<div class="entry-meta">
+			<span class="category">
+<a href="manipulation.htm"  title="View all posts in Manipulation">操作</a> &gt; 
+<a href="dom-insertion-around.htm"  title="View all posts in DOM Insertion, Around">DOM 插入并包裹现有内容</a></span><span class="category-divider"> | </span><span class="category">
+<a href="manipulation.htm"  title="View all posts in Manipulation">操作</a> &gt; 
+<a href="dom-removal.htm"  title="View all posts in DOM Removal">DOM 移除</a></span>		</div>
+					<h1 class="entry-title">
+<a href="unwrap.htm"  title="Permalink to .unwrap()" rel="bookmark">.unwrap()</a>
+			</h1>
+			</header>
+		<div class="entry-summary">
+		<p>将匹配元素集合的父级元素删除，保留自身（和兄弟元素，如果存在）在原来的位置。</p>
+	</div><!-- .entry-summary -->
+</article><article id="post-583" class="post-583 post type-post status-publish format-standard hentry category-attributes category-forms category-general-attributes category-10 category-14">
+	<header class="entry-header">
+		<div class="entry-meta">
+			<span class="category">
+<a href="attributes.htm"  title="View all posts in Attributes">属性</a></span><span class="category-divider"> | </span><span class="category">
+<a href="forms.htm"  title="View all posts in Forms">表单</a></span><span class="category-divider"> | </span><span class="category">
+<a href="manipulation.htm"  title="View all posts in Manipulation">操作</a> &gt; 
+<a href="general-attributes.htm"  title="View all posts in General Attributes">通用属性</a></span>		</div>
+					<h1 class="entry-title">
+<a href="val.htm"  title="Permalink to .val()" rel="bookmark">.val()</a>
+			</h1>
+			</header>
+		<div class="entry-summary">
+		<p>获取匹配的元素集合中第一个元素的当前值或设置匹配的元素集合中每个元素的值。</p>
+	</div><!-- .entry-summary -->
+</article><article id="post-587" class="post-587 post type-post status-publish format-standard hentry category-css category-dimensions category-style-properties category-10 category-141">
+	<header class="entry-header">
+		<div class="entry-meta">
+			<span class="category">
+<a href="css_1.htm"  title="View all posts in CSS">CSS</a></span><span class="category-divider"> | </span><span class="category">
+<a href="dimensions.htm"  title="View all posts in Dimensions">尺寸</a></span><span class="category-divider"> | </span><span class="category">
+<a href="manipulation.htm"  title="View all posts in Manipulation">操作</a> &gt; 
+<a href="style-properties.htm"  title="View all posts in Style Properties">Style 属性</a></span>		</div>
+					<h1 class="entry-title">
+<a href="width.htm"  title="Permalink to .width()" rel="bookmark">.width()</a>
+			</h1>
+			</header>
+		<div class="entry-summary">
+		<p>为匹配的元素集合中获取第一个元素的当前计算宽度值或给每个匹配的元素设置宽度。</p>
+	</div><!-- .entry-summary -->
+</article><article id="post-589" class="post-589 post type-post status-publish format-standard hentry category-dom-insertion-around category-10 category-14">
+	<header class="entry-header">
+		<div class="entry-meta">
+			<span class="category">
+<a href="manipulation.htm"  title="View all posts in Manipulation">操作</a> &gt; 
+<a href="dom-insertion-around.htm"  title="View all posts in DOM Insertion, Around">DOM 插入并包裹现有内容</a></span>		</div>
+					<h1 class="entry-title">
+<a href="wrap.htm"  title="Permalink to .wrap()" rel="bookmark">.wrap()</a>
+			</h1>
+			</header>
+		<div class="entry-summary">
+		<p>在每个匹配的元素外层包上一个html元素。</p>
+	</div><!-- .entry-summary -->
+</article><article id="post-591" class="post-591 post type-post status-publish format-standard hentry category-dom-insertion-around category-12 category-14">
+	<header class="entry-header">
+		<div class="entry-meta">
+			<span class="category">
+<a href="manipulation.htm"  title="View all posts in Manipulation">操作</a> &gt; 
+<a href="dom-insertion-around.htm"  title="View all posts in DOM Insertion, Around">DOM 插入并包裹现有内容</a></span>		</div>
+					<h1 class="entry-title">
+<a href="wrapAll.htm"  title="Permalink to .wrapAll()" rel="bookmark">.wrapAll()</a>
+			</h1>
+			</header>
+		<div class="entry-summary">
+		<p>在所有匹配元素外面包一层HTML结构。</p>
+	</div><!-- .entry-summary -->
+</article><article id="post-593" class="post-593 post type-post status-publish format-standard hentry category-dom-insertion-around category-12 category-14">
+	<header class="entry-header">
+		<div class="entry-meta">
+			<span class="category">
+<a href="manipulation.htm"  title="View all posts in Manipulation">操作</a> &gt; 
+<a href="dom-insertion-around.htm"  title="View all posts in DOM Insertion, Around">DOM 插入并包裹现有内容</a></span>		</div>
+					<h1 class="entry-title">
+<a href="wrapInner.htm"  title="Permalink to .wrapInner()" rel="bookmark">.wrapInner()</a>
+			</h1>
+			</header>
+		<div class="entry-summary">
+		<p>在匹配元素里的内容外包一层结构。</p>
+	</div><!-- .entry-summary -->
+</article>
+		</div>
+  </div>

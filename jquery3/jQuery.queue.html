@@ -1,0 +1,146 @@
+ <script src="js/rtian.index.js" ></script><article id="jq31">
+  <header class="entry-header">
+    <h1 class="entry-title">jQuery.queue()</h1>
+    <hr>
+<div class="jquery-api-top">
+
+
+</div>
+
+<div class="entry-meta">
+      分类: <span class="category"><a href="http://www.css88.com/jqapi-1.9/category/data/" title="View all posts in Data">Data</a></span><span class="category-divider"> | </span><span class="category"><a href="http://www.css88.com/jqapi-1.9/category/utilities/" title="View all posts in Utilities">Utilities</a></span>    </div><!-- .entry-meta -->
+      </header><!-- .entry-header -->
+
+  <div class="entry-content">显示或操作匹配的元素上已经执行的函数列队。<div class="toc">
+<h4><span>Contents:</span></h4>
+<ul class="toc-list">
+<li>
+<a href="#jQuery-queue1">jQuery.queue( element [, queueName ] )</a><ul><li>jQuery.queue( element [, queueName ] )</li></ul>
+</li>
+<li>
+<a href="#jQuery-queue2">jQuery.queue( element, queueName, newQueue )</a><ul>
+<li>jQuery.queue( element, queueName, newQueue )</li>
+<li>jQuery.queue( element, queueName, callback() )</li>
+</ul>
+</li>
+</ul>
+</div><article id="jQuery-queue1" class="entry method"><h2 class="section-title">
+<span class="name">jQuery.queue( element [, queueName ] )</span><span class="returns">返回: <a href="http://www.css88.com/jqapi-1.9/Types#Array">Array</a></span>
+</h2>
+<div class="entry-wrapper">
+<p class="desc"><strong>描述: </strong>显示在匹配的元素上的已经执行的函数列队。</p>
+<ul class="signatures"><li class="signature" id="jQuery-queue-element-queueName">
+<h4 class="name">
+<span class="version-details">添加的版本: <a href="http://www.css88.com/jqapi-1.9/category/version/1.3/">1.3</a></span>jQuery.queue( element [, queueName ] )</h4>
+<ul>
+<li>
+<div><strong>element</strong></div>
+<div>类型: <a href="http://www.css88.com/jqapi-1.9/Types#Element">Element</a>
+</div>
+<div>一个用于检查附加列队的DOM元素。</div>
+</li>
+<li>
+<div><strong>queueName</strong></div>
+<div>类型: <a href="http://www.css88.com/jqapi-1.9/Types#String">String</a>
+</div>
+<div>一个含有队列名的字符串。默认是 <code>fx</code>，标准的动画队列。</div>
+</li>
+</ul>
+</li></ul>
+<div class="longdesc" id="entry-longdesc">
+      <p><strong>注意：</strong> 这是一个底层的方法，你应该用<code><a href="http://www.css88.com/jqapi-1.9/queue">.queue()</a></code>代替。</p>
+    </div>
+<div class="jquery-api-top">
+</div>
+
+<section class="entry-examples" id="entry-examples"><header><h2 class="underline">例子:</h2></header><div class="entry-example" id="example-0">
+<h4><span class="desc">显示列队的长度。</span></h4>
+<div class="syntaxhighlighter xml ">
+  <table>
+    <tbody>
+      <tr>
+        <td class="gutter">
+          
+            <div class="line n1">1</div>
+          
+            <div class="line n2">2</div>
+          
+            <div class="line n3">3</div>
+          
+            <div class="line n4">4</div>
+          
+            <div class="line n5">5</div>
+          
+            <div class="line n6">6</div>
+          
+            <div class="line n7">7</div>
+          
+            <div class="line n8">8</div>
+          
+            <div class="line n9">9</div>
+          
+            <div class="line n10">10</div>
+          
+            <div class="line n11">11</div>
+          
+            <div class="line n12">12</div>
+          
+            <div class="line n13">13</div>
+          
+            <div class="line n14">14</div>
+          
+            <div class="line n15">15</div>
+          
+            <div class="line n16">16</div>
+          
+            <div class="line n17">17</div>
+          
+            <div class="line n18">18</div>
+          
+            <div class="line n19">19</div>
+          
+            <div class="line n20">20</div>
+          
+            <div class="line n21">21</div>
+          
+            <div class="line n22">22</div>
+          
+            <div class="line n23">23</div>
+          
+            <div class="line n24">24</div>
+          
+            <div class="line n25">25</div>
+          
+            <div class="line n26">26</div>
+          
+            <div class="line n27">27</div>
+          
+            <div class="line n28">28</div>
+          
+            <div class="line n29">29</div>
+          
+            <div class="line n30">30</div>
+          
+            <div class="line n31">31</div>
+          
+            <div class="line n32">32</div>
+          
+            <div class="line n33">33</div>
+          
+            <div class="line n34">34</div>
+          
+            <div class="line n35">35</div>
+          
+        </td>
+        <td class="code">
+          <pre><div class="container"><div class="line"><code><span class="doctype">&lt;!DOCTYPE html&gt;</span></code></div></div><div class="container"><div class="line"><code><span class="tag">&lt;<span class="title">html</span>&gt;</span></code></div></div><div class="container"><div class="line"><code><span class="tag">&lt;<span class="title">head</span>&gt;</span></code></div></div><div class="container"><div class="line"><code>  <span class="tag">&lt;<span class="title">style</span>&gt;</span><span class="css"><span class="tag">div</span> <span class="rules">{ <span class="rule"><span class="attribute">margin</span>:<span class="value"><span class="number">3</span>px;</span></span> <span class="rule"><span class="attribute">width</span>:<span class="value"><span class="number">40</span>px;</span></span> <span class="rule"><span class="attribute">height</span>:<span class="value"><span class="number">40</span>px;</span></span></span></span></code></div></div><div class="container"><div class="line"><code>        <span class="rule"><span class="attribute">position</span>:<span class="value">absolute;</span></span> <span class="rule"><span class="attribute">left</span>:<span class="value"><span class="number">0</span>px;</span></span> <span class="rule"><span class="attribute">top</span>:<span class="value"><span class="number">30</span>px;</span></span></code></div></div><div class="container"><div class="line"><code>        <span class="rule"><span class="attribute">background</span>:<span class="value">green;</span></span> <span class="rule"><span class="attribute">display</span>:<span class="value">none;</span></span> <span class="rule">}</span></code></div></div><div class="container"><div class="line"><code>  <span class="tag">div</span><span class="class">.newcolor</span> <span class="rules">{ <span class="rule"><span class="attribute">background</span>:<span class="value">blue;</span></span> <span class="rule">}</span></span></code></div></div><div class="container"><div class="line"><code>  <span class="tag">span</span> <span class="rules">{ <span class="rule"><span class="attribute">color</span>:<span class="value">red;</span></span> <span class="rule">}</span></span>  <span class="tag">&lt;/<span class="title">style</span>&gt;</span></code></div></div><div class="container"><div class="line"><code>  <span class="tag">&lt;<span class="title">script</span> <span class="attribute">src</span>=<span class="value">"http://code.jquery.com/jquery-latest.js"</span>&gt;</span><span class="javascript"></span><span class="tag">&lt;/<span class="title">script</span>&gt;</span></code></div></div><div class="container"><div class="line"><code><span class="tag">&lt;/<span class="title">head</span>&gt;</span></code></div></div><div class="container"><div class="line"><code><span class="tag">&lt;<span class="title">body</span>&gt;</span></code></div></div><div class="container"><div class="line"><code>  <span class="tag">&lt;<span class="title">button</span> <span class="attribute">id</span>=<span class="value">"show"</span>&gt;</span>Show Length of Queue<span class="tag">&lt;/<span class="title">button</span>&gt;</span></code></div></div><div class="container"><div class="line"><code>  <span class="tag">&lt;<span class="title">span</span>&gt;</span><span class="tag">&lt;/<span class="title">span</span>&gt;</span></code></div></div><div class="container"><div class="line"><code>  <span class="tag">&lt;<span class="title">div</span>&gt;</span><span class="tag">&lt;/<span class="title">div</span>&gt;</span></code></div></div><div class="container"><div class="line"><code> </code></div></div><div class="container"><div class="line"><code><span class="tag">&lt;<span class="title">script</span>&gt;</span><span class="javascript"></span></code></div></div><div class="container"><div class="line"><code>  $(<span class="string">"#show"</span>).click(<span class="function"><span class="keyword">function</span> <span class="params">()</span> {</span></code></div></div><div class="container"><div class="line"><code>    <span class="keyword">var</span> n = jQuery.queue( $(<span class="string">"div"</span>)[<span class="number">0</span>], <span class="string">"fx"</span> );</code></div></div><div class="container"><div class="line"><code>    $(<span class="string">"span"</span>).text(<span class="string">"Queue length is: "</span> + n.length);</code></div></div><div class="container"><div class="line"><code>  });</code></div></div><div class="container"><div class="line"><code>  <span class="function"><span class="keyword">function</span> <span class="title">runIt</span><span class="params">()</span> {</span></code></div></div><div class="container"><div class="line"><code>    $(<span class="string">"div"</span>).show(<span class="string">"slow"</span>);</code></div></div><div class="container"><div class="line"><code>    $(<span class="string">"div"</span>).animate({left:<span class="string">'+=200'</span>},<span class="number">2000</span>);</code></div></div><div class="container"><div class="line"><code>    $(<span class="string">"div"</span>).slideToggle(<span class="number">1000</span>);</code></div></div><div class="container"><div class="line"><code>    $(<span class="string">"div"</span>).slideToggle(<span class="string">"fast"</span>);</code></div></div><div class="container"><div class="line"><code>    $(<span class="string">"div"</span>).animate({left:<span class="string">'-=200'</span>},<span class="number">1500</span>);</code></div></div><div class="container"><div class="line"><code>    $(<span class="string">"div"</span>).hide(<span class="string">"slow"</span>);</code></div></div><div class="container"><div class="line"><code>    $(<span class="string">"div"</span>).show(<span class="number">1200</span>);</code></div></div><div class="container"><div class="line"><code>    $(<span class="string">"div"</span>).slideUp(<span class="string">"normal"</span>, runIt);</code></div></div><div class="container"><div class="line"><code>  }</code></div></div><div class="container"><div class="line"><code>  runIt();</code></div></div><div class="container"><div class="line"><code>  <span class="tag">&lt;/<span class="title">script</span>&gt;</span></code></div></div><div class="container"><div class="line"><code> </code></div></div><div class="container"><div class="line"><code><span class="tag">&lt;/<span class="title">body</span>&gt;</span></code></div></div><div class="container"><div class="line"><code><span class="tag">&lt;/<span class="title">html</span>&gt;</span></code></div></div></pre>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<h4>Demo:</h4>
+<div class="demo code-demo"></div>
+</div></section>
+</div></article> 

@@ -1,0 +1,140 @@
+<script src="js/rtian.js" ></script>
+<meta charset="utf-8" />
+<title>分类：属性选择器 | jQuery API中文文档(适用jQuery 1.0 - jQuery 3.0)</title>
+<div id="content">	
+    <div class="inner listing" role="main">
+		<header class="page-header">
+			<h1 class="page-title">分类：属性选择器</h1>
+			<hr>
+<div class="category-archive-meta"><p>
+                CSS规范允许元素由它们的属性来识别。
+                虽然在一些旧的浏览器中，这个意图 在 样式文件上不支持，
+                jQuery的可以让你在所有浏览器中来使用它们。</p>
+<p>
+    当使用以下任意的属性选择器时，
+    你应该考虑具有多个，使用空格分隔值的属性。
+    由于这些选择器将属性值视为一个单独的字符串，
+    这个选择器，
+     例如， <code>$("a[rel='nofollow']")</code>，
+    将选择<code>&lt;a href="example.html" rel="nofollow"&gt;Some text&lt;/a&gt;</code>
+    但不选择<code>&lt;a href="example.html" rel="nofollow foe"&gt;Some text&lt;/a&gt;</code>。
+    </p>
+<p>
+    在选择器表达式中的属性值<b>必须</b>遵循W3C的CSS选择器规则;
+    在一般情况下，
+    这意味着任何东西，就是说
+<a href="http://www.w3.org/TR/CSS21/syndata.html#value-def-identifier">有效的标识符</a>应该使用引号括起来。</p>
+<ul>
+<li>单引号里的双引号：<code>$('a[rel="nofollow self"]')</code></li>
+<li>双引号里的单引号： <code>$("a[rel='nofollow self']")</code></li>
+<li>单引号里面转义单引号： <code>$('a[rel=\'nofollow self\']')</code></li>
+<li>双引号里面转义双引号： <code>$("a[rel=\"nofollow self\"]")</code></li>
+</ul>
+<p>您选择的变化一般和代码风格和方便有关联的。</p>
+<p><strong>注意</strong>:
+    在jQuery1.3中，<code>[@attr]</code>样式选择器被移除了（他们在jQuery 1.2中以前不建议使用）。
+    简单地从你的选择器中删除“@”符号，以使他们重新工作。</p>
+</div>		</header><article id="post-39" class="post-39 post type-post status-publish format-standard hentry category-attribute-selectors category-10">
+	<header class="entry-header">
+		<div class="entry-meta">
+					</div>
+					<h1 class="entry-title">
+<a href="attribute-contains-prefix-selector.htm"  title="Permalink to Attribute Contains Prefix Selector [name|=&quot;value&quot;]" rel="bookmark">Attribute Contains Prefix Selector [name|="value"]</a>
+			</h1>
+			</header>
+		<div class="entry-summary">
+		<p>选择指定属性值等于给定字符串或以该字符串为前缀（该字符串后跟一个连字符“-” ）的元素。</p>
+	</div><!-- .entry-summary -->
+</article><article id="post-41" class="post-41 post type-post status-publish format-standard hentry category-attribute-selectors category-10">
+	<header class="entry-header">
+		<div class="entry-meta">
+					</div>
+					<h1 class="entry-title">
+<a href="attribute-contains-selector.htm"  title="Permalink to Attribute Contains Selector [name*=&quot;value&quot;]" rel="bookmark">Attribute Contains Selector [name*="value"]</a>
+			</h1>
+			</header>
+		<div class="entry-summary">
+		<p>选择指定属性具有包含一个给定的子字符串的元素。（选择给定的属性是以包含某些值的元素）</p>
+	</div><!-- .entry-summary -->
+</article><article id="post-43" class="post-43 post type-post status-publish format-standard hentry category-attribute-selectors category-10">
+	<header class="entry-header">
+		<div class="entry-meta">
+					</div>
+					<h1 class="entry-title">
+<a href="attribute-contains-word-selector.htm"  title="Permalink to Attribute Contains Word Selector [name~=&quot;value&quot;]" rel="bookmark">Attribute Contains Word Selector [name~="value"]</a>
+			</h1>
+			</header>
+		<div class="entry-summary">
+		<p>选择指定属性用空格分隔的值中包含一个给定值的元素。</p>
+	</div><!-- .entry-summary -->
+</article><article id="post-45" class="post-45 post type-post status-publish format-standard hentry category-attribute-selectors category-10">
+	<header class="entry-header">
+		<div class="entry-meta">
+					</div>
+					<h1 class="entry-title">
+<a href="attribute-ends-with-selector.htm"  title="Permalink to Attribute Ends With Selector [name$=&quot;value&quot;]" rel="bookmark">Attribute Ends With Selector [name$="value"]</a>
+			</h1>
+			</header>
+		<div class="entry-summary">
+		<p>选择指定属性是以给定值结尾的元素。这个比较是区分大小写的。</p>
+	</div><!-- .entry-summary -->
+</article><article id="post-47" class="post-47 post type-post status-publish format-standard hentry category-attribute-selectors category-10">
+	<header class="entry-header">
+		<div class="entry-meta">
+					</div>
+					<h1 class="entry-title">
+<a href="attribute-equals-selector.htm"  title="Permalink to Attribute Equals Selector [name=&quot;value&quot;]" rel="bookmark">Attribute Equals Selector [name="value"]</a>
+			</h1>
+			</header>
+		<div class="entry-summary">
+		<p>选择指定属性是给定值的元素。</p>
+	</div><!-- .entry-summary -->
+</article><article id="post-49" class="post-49 post type-post status-publish format-standard hentry category-attribute-selectors category-jquery-selector-extensions category-10">
+	<header class="entry-header">
+		<div class="entry-meta">
+			<span class="category">
+<a href="attribute-selectors.htm"  title="View all posts in Selectors">选择器</a> &gt; 
+<a href="jquery-selector-extensions.htm"  title="View all posts in jQuery Extensions">jQuery 扩展</a></span>		</div>
+					<h1 class="entry-title">
+<a href="attribute-not-equal-selector.htm"  title="Permalink to Attribute Not Equal Selector [name!=&quot;value&quot;]" rel="bookmark">Attribute Not Equal Selector [name!="value"]</a>
+			</h1>
+			</header>
+		<div class="entry-summary">
+		<p>选择不存在指定属性，或者指定的属性值不等于给定值的元素。</p>
+	</div><!-- .entry-summary -->
+</article><article id="post-51" class="post-51 post type-post status-publish format-standard hentry category-attribute-selectors category-10">
+	<header class="entry-header">
+		<div class="entry-meta">
+					</div>
+					<h1 class="entry-title">
+<a href="attribute-starts-with-selector.htm"  title="Permalink to Attribute Starts With Selector [name^=&quot;value&quot;]" rel="bookmark">Attribute Starts With Selector [name^="value"]</a>
+			</h1>
+			</header>
+		<div class="entry-summary">
+		<p>选择指定属性是以给定字符串开始的元素</p>
+	</div><!-- .entry-summary -->
+</article><article id="post-251" class="post-251 post type-post status-publish format-standard hentry category-attribute-selectors category-10">
+	<header class="entry-header">
+		<div class="entry-meta">
+					</div>
+					<h1 class="entry-title">
+<a href="has-attribute-selector.htm"  title="Permalink to Has Attribute Selector [name]" rel="bookmark">Has Attribute Selector [name]</a>
+			</h1>
+			</header>
+		<div class="entry-summary">
+		<p>选择所有具有指定属性的元素，该属性可以是任何值。</p>
+	</div><!-- .entry-summary -->
+</article><article id="post-433" class="post-433 post type-post status-publish format-standard hentry category-attribute-selectors category-10">
+	<header class="entry-header">
+		<div class="entry-meta">
+					</div>
+					<h1 class="entry-title">
+<a href="multiple-attribute-selector.htm"  title="Permalink to Multiple Attribute Selector [name=&quot;value&quot;][name2=&quot;value2&quot;]" rel="bookmark">Multiple Attribute Selector [name="value"][name2="value2"]</a>
+			</h1>
+			</header>
+		<div class="entry-summary">
+		<p>选择匹配所有指定的属性筛选器的元素</p>
+	</div><!-- .entry-summary -->
+</article>
+		</div>
+  </div>

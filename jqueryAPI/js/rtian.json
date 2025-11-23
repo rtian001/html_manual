@@ -1,0 +1,1858 @@
+{
+"contents": [
+{
+    "value": ".add()",
+    "data": "add.htm",
+    "desc": "添加元素到匹配的元素集合。",
+    "slug": "add"
+},
+{
+    "value": ".addBack()",
+    "data": "addBack.htm",
+    "desc": "上一组元素在堆栈中添加 到当前设定， 任选由一个选择器过滤。",
+    "slug": "addBack"
+},
+{
+    "value": ".addClass()",
+    "data": "addClass.htm",
+    "desc": "为每个匹配的元素添加指定的样式类名",
+    "slug": "addClass"
+},
+{
+    "value": ".after()",
+    "data": "after.htm",
+    "desc": "在元素集合中匹配的每个元素后面插入参数所指定的内容。",
+    "slug": "after"
+},
+{
+    "value": ".ajaxComplete()",
+    "data": "ajaxComplete.htm",
+    "desc": "当Ajax请求完成后注册一个回调函数。这是一个 AjaxEvent。",
+    "slug": "ajaxComplete"
+},
+{
+    "value": ".ajaxError()",
+    "data": "ajaxError.htm",
+    "desc": "Ajax请求出错时注册一个回调处理函数，这是一个 Ajax Event。",
+    "slug": "ajaxError"
+},
+{
+    "value": ".ajaxSend()",
+    "data": "ajaxSend.htm",
+    "desc": "在Ajax请求发送之前绑定一个要执行的函数，这是一个 Ajax Event.",
+    "slug": "ajaxSend"
+},
+{
+    "value": ".ajaxStart()",
+    "data": "ajaxStart.htm",
+    "desc": "在AJAX 请求刚开始时执行一个处理函数。 这是一个 Ajax Event.",
+    "slug": "ajaxStart"
+},
+{
+    "value": ".ajaxStop()",
+    "data": "ajaxStop.htm",
+    "desc": "在AJAX 请求完成时执行一个处理函数。 这是一个 Ajax Event。",
+    "slug": "ajaxStop"
+},
+{
+    "value": ".ajaxSuccess()",
+    "data": "ajaxSuccess.htm",
+    "desc": "绑定一个函数当 Ajax 请求成功完成时执行。 这是一个Ajax Event.",
+    "slug": "ajaxSuccess"
+},
+{
+    "value": "All Selector (“*”)",
+    "data": "All Selector (“*”).htm",
+    "desc": "选择所有元素.",
+    "slug": "All Selector (“*”)"
+},
+{
+    "value": ".andSelf()",
+    "data": "andSelf.htm",
+    "desc": "添加先前的堆栈元素集合到当前组合。",
+    "slug": "andSelf"
+},
+{
+    "value": ".animate()",
+    "data": "animate.htm",
+    "desc": "执行一个CSS属性设置的自定义动画。",
+    "slug": "animate"
+},
+{
+    "value": ":animated Selector",
+    "data": ":animated Selector.htm",
+    "desc": "选择所有正在执行动画效果的元素。",
+    "slug": ":animated Selector"
+},
+{
+    "value": ".append()",
+    "data": "append.htm",
+    "desc": "根据参数设定在每个匹配元素里面的末尾处插入内容。",
+    "slug": "append"
+},
+{
+    "value": ".appendTo()",
+    "data": "appendTo.htm",
+    "desc": "将匹配的元素插入到目标元素的最后面（译者注：内部插入）。",
+    "slug": "appendTo"
+},
+{
+    "value": ".attr()",
+    "data": "attr.htm",
+    "desc": "获取匹配的元素集合中的第一个元素的属性的值  或 设置每一个匹配元素的一个或多个属性。",
+    "slug": "attr"
+},
+{
+    "value": "Attribute Contains Prefix Selector [name|=\"value\"]",
+    "data": "Attribute Contains Prefix Selector [name|=\"value\"].htm",
+    "desc": "选择指定属性值等于给定字符串或以该字符串为前缀（该字符串后跟一个连字符“-” ）的元素。",
+    "slug": "Attribute Contains Prefix Selector [name|=\"value\"]"
+},
+{
+    "value": "Attribute Contains Selector [name*=\"value\"]",
+    "data": "Attribute Contains Selector [name*=\"value\"].htm",
+    "desc": "选择指定属性具有包含一个给定的子字符串的元素。（选择给定的属性是以包含某些值的元素）",
+    "slug": "Attribute Contains Selector [name*=\"value\"]"
+},
+{
+    "value": "Attribute Contains Word Selector [name~=\"value\"]",
+    "data": "Attribute Contains Word Selector [name~=\"value\"].htm",
+    "desc": "选择指定属性用空格分隔的值中包含一个给定值的元素。",
+    "slug": "Attribute Contains Word Selector [name~=\"value\"]"
+},
+{
+    "value": "Attribute Ends With Selector [name$=\"value\"]",
+    "data": "Attribute Ends With Selector [name$=\"value\"].htm",
+    "desc": " 选择指定属性是以给定值结尾的元素。这个比较是区分大小写的。",
+    "slug": "Attribute Ends With Selector [name$=\"value\"]"
+},
+{
+    "value": "Attribute Equals Selector [name=\"value\"]",
+    "data": "Attribute Equals Selector [name=\"value\"].htm",
+    "desc": "选择指定属性是给定值的元素。",
+    "slug": "Attribute Equals Selector [name=\"value\"]"
+},
+{
+    "value": "Attribute Not Equal Selector [name!=\"value\"]",
+    "data": "Attribute Not Equal Selector [name!=\"value\"].htm",
+    "desc": "选择不存在指定属性，或者指定的属性值不等于给定值的元素。",
+    "slug": "Attribute Not Equal Selector [name!=\"value\"]"
+},
+{
+    "value": "Attribute Starts With Selector [name^=\"value\"]",
+    "data": "Attribute Starts With Selector [name^=\"value\"].htm",
+    "desc": "选择指定属性是以给定字符串开始的元素",
+    "slug": "Attribute Starts With Selector [name^=\"value\"]"
+},
+{
+    "value": ".before()",
+    "data": "before.htm",
+    "desc": "根据参数设定在匹配元素的前面插入内容（译者注：外部插入）",
+    "slug": "before"
+},
+{
+    "value": ".bind()",
+    "data": "bind.htm",
+    "desc": "为一个元素绑定一个事件处理程序。",
+    "slug": "bind"
+},
+{
+    "value": ".blur()",
+    "data": "blur.htm",
+    "desc": "为“blur”事件绑定一个处理器，或者触发元素上的 “blur” 事件。",
+    "slug": "blur"
+},
+{
+    "value": ":button Selector",
+    "data": ":button Selector.htm",
+    "desc": "选择所有按钮元素和类型为按钮的元素。",
+    "slug": ":button Selector"
+},
+{
+    "value": "callbacks.add()",
+    "data": "callbacks.add.htm",
+    "desc": "回调列表中添加一个回调或回调的集合。",
+    "slug": "callbacks.add"
+},
+{
+    "value": "callbacks.disable()",
+    "data": "callbacks.disable.htm",
+    "desc": "禁用回调列表中的回调",
+    "slug": "callbacks.disable"
+},
+{
+    "value": "callbacks.disabled()",
+    "data": "callbacks.disabled.htm",
+    "desc": "确定回调列表是否已被禁用",
+    "slug": "callbacks.disabled"
+},
+{
+    "value": "callbacks.empty()",
+    "data": "callbacks.empty.htm",
+    "desc": "从列表中删除所有的回调.",
+    "slug": "callbacks.empty"
+},
+{
+    "value": "callbacks.fire()",
+    "data": "callbacks.fire.htm",
+    "desc": "",
+    "slug": "callbacks.fire"
+},
+{
+    "value": "callbacks.fired()",
+    "data": "callbacks.fired.htm",
+    "desc": "确定回调是否至少已经调用一次。",
+    "slug": "callbacks.fired"
+},
+{
+    "value": "callbacks.fireWith()",
+    "data": "callbacks.fireWith.htm",
+    "desc": "访问给定的上下文和参数列表中的所有回调。",
+    "slug": "callbacks.fireWith"
+},
+{
+    "value": "callbacks.has()",
+    "data": "callbacks.has.htm",
+    "desc": "确定列表中是否提供一个回调",
+    "slug": "callbacks.has"
+},
+{
+    "value": "callbacks.lock()",
+    "data": "callbacks.lock.htm",
+    "desc": "确定回调列表是否已被锁定。",
+    "slug": "callbacks.lock"
+},
+{
+    "value": "callbacks.locked()",
+    "data": "callbacks.locked.htm",
+    "desc": "从回调列表中的删除一个回调或回调集合。",
+    "slug": "callbacks.locked"
+},
+{
+    "value": "callbacks.remove()",
+    "data": "callbacks.remove.htm",
+    "desc": "从回调列表中的删除一个回调或回调集合。",
+    "slug": "callbacks.remove"
+},
+{
+    "value": ".change()",
+    "data": "change.htm",
+    "desc": "为“change” 事件绑定一个处理函数，或者触发元素上的“change” 事件。",
+    "slug": "change"
+},
+{
+    "value": ":checkbox Selector",
+    "data": ":checkbox Selector.htm",
+    "desc": "选择所有类型为复选框的元素。",
+    "slug": ":checkbox Selector"
+},
+{
+    "value": ":checked Selector",
+    "data": ":checked Selector.htm",
+    "desc": "匹配所有勾选的元素。",
+    "slug": ":checked Selector"
+},
+{
+    "value": "Child Selector (“parent > child”)",
+    "data": "Child Selector (“parent > child”).htm",
+    "desc": "选择所有指定“parent”元素中指定的“child”的直接子元素。",
+    "slug": "Child Selector (“parent > child”)"
+},
+{
+    "value": ".children()",
+    "data": "children.htm",
+    "desc": "获得元素集合中每个匹配元素的子元素，选择器选择性筛选。",
+    "slug": "children"
+},
+{
+    "value": "Class Selector (“.class”)",
+    "data": "Class Selector (“.class”).htm",
+    "desc": "选择给定样式类名的所有元素。",
+    "slug": "Class Selector (“.class”)"
+},
+{
+    "value": ".clearQueue()",
+    "data": "clearQueue.htm",
+    "desc": "从列队中移除所有未执行的项。",
+    "slug": "clearQueue"
+},
+{
+    "value": ".click()",
+    "data": "click.htm",
+    "desc": " 为 “click”事件绑定一个处理器，或者触发元素上的 “click” 事件。",
+    "slug": "click"
+},
+{
+    "value": ".clone()",
+    "data": "clone.htm",
+    "desc": "创建一个匹配的元素集合的深度拷贝副本。",
+    "slug": "clone"
+},
+{
+    "value": ".closest()",
+    "data": "closest.htm",
+    "desc": "从元素本身开始，在DOM 树上逐级向上级元素匹配，并返回最先匹配的祖先元素。",
+    "slug": "closest"
+},
+{
+    "value": ":contains() Selector",
+    "data": ":contains() Selector.htm",
+    "desc": "选择所有包含指定文本的元素。.",
+    "slug": ":contains Selector"
+},
+{
+    "value": ".contents()",
+    "data": "contents.htm",
+    "desc": "获得每个匹配元素集合元素的子元素，包括文字和注释节点。",
+    "slug": "contents"
+},
+{
+    "value": ".context",
+    "data": "context.htm",
+    "desc": "原始的DOM节点的内容传给jQuery()；如果没有东西被传递，那么上下文将可能是该文档（document）。",
+    "slug": "context"
+},
+{
+    "value": ".css()",
+    "data": "css.htm",
+    "desc": "获取匹配元素集合中的第一个元素的样式属性的值  或  设置每个匹配元素的一个或多个CSS属性。",
+    "slug": "css"
+},
+{
+    "value": ".data()",
+    "data": "data.htm",
+    "desc": "在匹配元素上存储任意相关数据 或 返回匹配的元素集合中的第一个元素的给定名称的数据存储的值。",
+    "slug": "data"
+},
+{
+    "value": ".dblclick()",
+    "data": "dblclick.htm",
+    "desc": "为“dblclick” 事件绑定一个处理函数，或者触发元素上的 “dblclick” 事件。",
+    "slug": "dblclick"
+},
+{
+    "value": "deferred.always()",
+    "data": "deferred.always.htm",
+    "desc": "当Deferred（延迟）对象解决或拒绝时，调用添加处理程序。",
+    "slug": "deferred.always"
+},
+{
+    "value": "deferred.done()",
+    "data": "deferred.done.htm",
+    "desc": "当Deferred（延迟）对象解决时，调用添加处理程序。",
+    "slug": "deferred.done"
+},
+{
+    "value": "deferred.fail()",
+    "data": "deferred.fail.htm",
+    "desc": "当Deferred（延迟）对象拒绝时，调用添加处理程序。",
+    "slug": "deferred.fail"
+},
+{
+    "value": "deferred.isRejected()",
+    "data": "deferred.isRejected.htm",
+    "desc": "确定一个Deferred（延迟）对象是否已被拒绝。",
+    "slug": "deferred.isRejected"
+},
+{
+    "value": "deferred.isResolved()",
+    "data": "deferred.isResolved.htm",
+    "desc": "确定一个Deferred（延迟）对象是否已被解决。",
+    "slug": "deferred.isResolved"
+},
+{
+    "value": "deferred.notify()",
+    "data": "deferred.notify.htm",
+    "desc": "根据给定的 args参数 调用Deferred（延迟）对象上进行中的回调 （progressCallbacks）。",
+    "slug": "deferred.notify"
+},
+{
+    "value": "deferred.notifyWith()",
+    "data": "deferred.notifyWith.htm",
+    "desc": "根据给定的上下文（context）和args递延调用Deferred（延迟）对象上进行中的回调（progressCallbacks ）。",
+    "slug": "deferred.notifyWith"
+},
+{
+    "value": "deferred.pipe()",
+    "data": "deferred.pipe.htm",
+    "desc": "用的方法来过滤 and/or 链Deferreds。",
+    "slug": "deferred.pipe"
+},
+{
+    "value": "deferred.progress()",
+    "data": "deferred.progress.htm",
+    "desc": " 当Deferred（延迟）对象生成进度通知时，调用添加处理程序。",
+    "slug": "deferred.progress"
+},
+{
+    "value": "deferred.promise()",
+    "data": "deferred.promise.htm",
+    "desc": "返回Deferred(延迟)的Promise（承诺）对象。",
+    "slug": "deferred.promise"
+},
+{
+    "value": "deferred.reject()",
+    "data": "deferred.reject.htm",
+    "desc": "拒绝Deferred（延迟）对象，并根据给定的args参数调用任何失败回调函数（failCallbacks）。",
+    "slug": "deferred.reject"
+},
+{
+    "value": "deferred.rejectWith()",
+    "data": "deferred.rejectWith.htm",
+    "desc": "拒绝Deferred（延迟）对象，并根据给定的 context和args参数调用任何失败回调函数（failCallbacks）。",
+    "slug": "deferred.rejectWith"
+},
+{
+    "value": "deferred.resolve()",
+    "data": "deferred.resolve.htm",
+    "desc": "解决Deferred（延迟）对象，并根据给定的args参数调用任何完成回调函数（doneCallbacks）。",
+    "slug": "deferred.resolve"
+},
+{
+    "value": "deferred.resolveWith()",
+    "data": "deferred.resolveWith.htm",
+    "desc": "解决Deferred（延迟）对象，并根据给定的 context和args参数调用任何完成回调函数（doneCallbacks）。",
+    "slug": "deferred.resolveWith"
+},
+{
+    "value": "deferred.state()",
+    "data": "deferred.state.htm",
+    "desc": "确定一个Deferred（延迟）对象的当前状态。",
+    "slug": "deferred.state"
+},
+{
+    "value": "deferred.then()",
+    "data": "deferred.then.htm",
+    "desc": "当Deferred（延迟）对象解决，拒绝或仍在进行中时，调用添加处理程序。",
+    "slug": "deferred.then"
+},
+{
+    "value": ".delay()",
+    "data": "delay.htm",
+    "desc": "设置一个延时来推迟执行队列中后续的项的执行。",
+    "slug": "delay"
+},
+{
+    "value": ".delegate()",
+    "data": "delegate.htm",
+    "desc": "为所有匹配选择器（selector参数）的元素绑定一个处理器到一个或多个事件，现在或将来， 基于根元素的一个特定的组",
+    "slug": "delegate"
+},
+{
+    "value": ".dequeue()",
+    "data": "dequeue.htm",
+    "desc": "执行匹配元素队列的下一个函数。",
+    "slug": "dequeue"
+},
+{
+    "value": "Descendant Selector (“ancestor descendant”)",
+    "data": "Descendant Selector (“ancestor descendant”).htm",
+    "desc": "选择给定的祖先元素的所有后代元素。",
+    "slug": "Descendant Selector (“ancestor descendant”)"
+},
+{
+    "value": ".detach()",
+    "data": "detach.htm",
+    "desc": "从DOM中去掉所有匹配的元素。",
+    "slug": "detach"
+},
+{
+    "value": ".die()",
+    "data": "die.htm",
+    "desc": "从元素中删除先前用.live()绑定的所有事件。",
+    "slug": "die"
+},
+{
+    "value": ":disabled Selector",
+    "data": ":disabled Selector.htm",
+    "desc": "选择所有被禁用的元素。",
+    "slug": ":disabled Selector"
+},
+{
+    "value": ".each()",
+    "data": "each.htm",
+    "desc": "遍历一个jQuery对象，为每个匹配元素执行一个函数。",
+    "slug": "each"
+},
+{
+    "value": "Element Selector (“element”)",
+    "data": "Element Selector (“element”).htm",
+    "desc": "根据给定（html）标记名称选择所有的元素",
+    "slug": "Element Selector (“element”)"
+},
+{
+    "value": ".empty()",
+    "data": "empty.htm",
+    "desc": "从DOM中移除集合中匹配元素的所有子节点。",
+    "slug": "empty"
+},
+{
+    "value": ":empty Selector",
+    "data": ":empty Selector.htm",
+    "desc": "选择所有没有子元素的元素（包括文本节点）。",
+    "slug": ":empty Selector"
+},
+{
+    "value": ":enabled Selector",
+    "data": ":enabled Selector.htm",
+    "desc": "选择所有可用的元素。",
+    "slug": ":enabled Selector"
+},
+{
+    "value": ".end()",
+    "data": "end.htm",
+    "desc": "终止在当前链的最新过滤操作，并返回匹配的元素集合为它以前的状态。",
+    "slug": "end"
+},
+{
+    "value": ".eq()",
+    "data": "eq.htm",
+    "desc": "减少匹配元素的集合为指定的索引的哪一个元素。",
+    "slug": "eq"
+},
+{
+    "value": ":eq() Selector",
+    "data": ":eq() Selector.htm",
+    "desc": "在匹配的集合选择索引值为n的元素。",
+    "slug": ":eq Selector"
+},
+{
+    "value": ".error()",
+    "data": "error.htm",
+    "desc": "绑定一个事件处理器到“error” JavaScript事件上。",
+    "slug": "error"
+},
+{
+    "value": ":even Selector",
+    "data": ":even Selector.htm",
+    "desc": "选择偶数元素，从 0 开始计数。 也可以查看 odd.",
+    "slug": ":even Selector"
+},
+{
+    "value": "event.currentTarget",
+    "data": "event.currentTarget.htm",
+    "desc": "在事件冒泡过程中的当前DOM元素。",
+    "slug": "event.currentTarget"
+},
+{
+    "value": "event.data",
+    "data": "event.data.htm",
+    "desc": "一个可选的数据对象传递给一个事件方法，当当前正在执行的处理程序被绑定。",
+    "slug": "event.data"
+},
+{
+    "value": "event.delegateTarget",
+    "data": "event.delegateTarget.htm",
+    "desc": "绑定了当前正在调用jQuery 事件处理器的元素。",
+    "slug": "event.delegateTarget"
+},
+{
+    "value": "event.isDefaultPrevented()",
+    "data": "event.isDefaultPrevented.htm",
+    "desc": "根据事件对象中是否调用过 event.preventDefault() 方法,来返回一个布尔值。",
+    "slug": "event.isDefaultPrevented"
+},
+{
+    "value": "event.isImmediatePropagationStopped()",
+    "data": "event.isImmediatePropagationStopped.htm",
+    "desc": "根据事件对象中是否调用过 event.stopImmediatePropagation() 方法,来返回一个布尔值。",
+    "slug": "event.isImmediatePropagationStopped"
+},
+{
+    "value": "event.isPropagationStopped()",
+    "data": "event.isPropagationStopped.htm",
+    "desc": "根据事件对象中是否调用过 event.stopPropagation() 方法,来返回一个布尔值。",
+    "slug": "event.isPropagationStopped"
+},
+{
+    "value": "event.metaKey",
+    "data": "event.metaKey.htm",
+    "desc": "表示事件触发时哪个Meta键被按下。",
+    "slug": "event.metaKey"
+},
+{
+    "value": "event.namespace",
+    "data": "event.namespace.htm",
+    "desc": "当事件被触发时此属性包含指定的命名空间。",
+    "slug": "event.namespace"
+},
+{
+    "value": "event.pageX",
+    "data": "event.pageX.htm",
+    "desc": "鼠标相对于文档的左边缘的位置。",
+    "slug": "event.pageX"
+},
+{
+    "value": "event.pageY",
+    "data": "event.pageY.htm",
+    "desc": "鼠标相对于文档的顶部边缘的位置。",
+    "slug": "event.pageY"
+},
+{
+    "value": "event.preventDefault()",
+    "data": "event.preventDefault.htm",
+    "desc": "如果调用这个方法，默认事件行为将不再触发。",
+    "slug": "event.preventDefault"
+},
+{
+    "value": "event.relatedTarget",
+    "data": "event.relatedTarget.htm",
+    "desc": "在事件中涉及的其它任何DOM元素。",
+    "slug": "event.relatedTarget"
+},
+{
+    "value": "event.result",
+    "data": "event.result.htm",
+    "desc": "事件被触发的一个事件处理程序的最后返回值，除非值是 undefined。",
+    "slug": "event.result"
+},
+{
+    "value": "event.stopImmediatePropagation()",
+    "data": "event.stopImmediatePropagation.htm",
+    "desc": "阻止剩余的事件处理函数执行并且防止事件冒泡到DOM树上。",
+    "slug": "event.stopImmediatePropagation"
+},
+{
+    "value": "event.stopPropagation()",
+    "data": "event.stopPropagation.htm",
+    "desc": "防止事件冒泡到DOM树上，也就是不触发的任何前辈元素上的事件处理函数。",
+    "slug": "event.stopPropagation"
+},
+{
+    "value": "event.target",
+    "data": "event.target.htm",
+    "desc": "触发事件的DOM元素。",
+    "slug": "event.target"
+},
+{
+    "value": "event.timeStamp",
+    "data": "event.timeStamp.htm",
+    "desc": "这个属性返回事件触发时距离1970年1月1日的毫秒数。",
+    "slug": "event.timeStamp"
+},
+{
+    "value": "event.type",
+    "data": "event.type.htm",
+    "desc": "描述事件的性质。",
+    "slug": "event.type"
+},
+{
+    "value": "event.which",
+    "data": "event.which.htm",
+    "desc": "针对键盘和鼠标事件，这个属性能确定你到底按的是哪个键。",
+    "slug": "event.which"
+},
+{
+    "value": ".fadeIn()",
+    "data": "fadeIn.htm",
+    "desc": "通过淡入的方式显示匹配元素。",
+    "slug": "fadeIn"
+},
+{
+    "value": ".fadeOut()",
+    "data": "fadeOut.htm",
+    "desc": "通过淡出的方式隐藏匹配元素。",
+    "slug": "fadeOut"
+},
+{
+    "value": ".fadeTo()",
+    "data": "fadeTo.htm",
+    "desc": "调整匹配元素的透明度。",
+    "slug": "fadeTo"
+},
+{
+    "value": ".fadeToggle()",
+    "data": "fadeToggle.htm",
+    "desc": "通过它们的不透明度动画，显示或隐藏匹配的元素。",
+    "slug": "fadeToggle"
+},
+{
+    "value": ":file Selector",
+    "data": ":file Selector.htm",
+    "desc": "选择所有类型为文件（file）的元素。",
+    "slug": ":file Selector"
+},
+{
+    "value": ".filter()",
+    "data": "filter.htm",
+    "desc": "筛选元素集合中匹配表达式或传递函数的测试的那些元素集合。",
+    "slug": "filter"
+},
+{
+    "value": ".find()",
+    "data": "find.htm",
+    "desc": "得到当前匹配的元素集合中每个元素的后代， 由一个选择器，jQuery对象，或元素过滤。",
+    "slug": "find"
+},
+{
+    "value": ".finish()",
+    "data": "finish.htm",
+    "desc": "停止当前正在运行的动画，删除所有排队的动画，并匹配元素完成所有的动画。",
+    "slug": "finish"
+},
+{
+    "value": ".first()",
+    "data": "first.htm",
+    "desc": "获取匹配元素集合中第一个元素。",
+    "slug": "first"
+},
+{
+    "value": ":first-child Selector",
+    "data": ":first-child Selector.htm",
+    "desc": "选择所有父级元素下的第一个子元素。",
+    "slug": ":first-child Selector"
+},
+{
+    "value": ":first-of-type Selector",
+    "data": ":first-of-type Selector.htm",
+    "desc": "选择所有相同的元素名称的第一个兄弟元素。",
+    "slug": ":first-of-type Selector"
+},
+{
+    "value": ":first Selector",
+    "data": ":first Selector.htm",
+    "desc": "选择第一个匹配的元素。",
+    "slug": ":first Selector"
+},
+{
+    "value": ".focus()",
+    "data": "focus.htm",
+    "desc": "为“focus” 事件绑定一个处理函数，或者触发元素上的 “focus” 事件。",
+    "slug": "focus"
+},
+{
+    "value": ":focus Selector",
+    "data": ":focus Selector.htm",
+    "desc": "选择当前获取焦点的元素。",
+    "slug": ":focus Selector"
+},
+{
+    "value": ".focusin()",
+    "data": "focusin.htm",
+    "desc": "将一个事件函数绑定到“focusin” 事件。",
+    "slug": "focusin"
+},
+{
+    "value": ".focusout()",
+    "data": "focusout.htm",
+    "desc": "将一个事件函数绑定到“focusout”事件。",
+    "slug": "focusout"
+},
+{
+    "value": ".get()",
+    "data": "get.htm",
+    "desc": "通过jQuery对象获取对应的DOM元素。",
+    "slug": "get"
+},
+{
+    "value": ":gt() Selector",
+    "data": ":gt() Selector.htm",
+    "desc": "选择匹配集合中所有大于给定index（索引值）的元素。",
+    "slug": ":gt Selector"
+},
+{
+    "value": ".has()",
+    "data": "has.htm",
+    "desc": "筛选匹配元素集合中的那些有相匹配的选择器或DOM元素的后代元素。",
+    "slug": "has"
+},
+{
+    "value": "Has Attribute Selector [name]",
+    "data": "Has Attribute Selector [name].htm",
+    "desc": "选择所有具有指定属性的元素，该属性可以是任何值。",
+    "slug": "Has Attribute Selector [name]"
+},
+{
+    "value": ":has() Selector",
+    "data": ":has() Selector.htm",
+    "desc": "选择元素其中至少包含指定选择器匹配的一个种元素。",
+    "slug": ":has Selector"
+},
+{
+    "value": ".hasClass()",
+    "data": "hasClass.htm",
+    "desc": "确定任何一个匹配元素是否有被分配给定的（样式）类。",
+    "slug": "hasClass"
+},
+{
+    "value": ":header Selector",
+    "data": ":header Selector.htm",
+    "desc": "选择所有标题元素，像h1, h2, h3 等.",
+    "slug": ":header Selector"
+},
+{
+    "value": ".height()",
+    "data": "height.htm",
+    "desc": "获取匹配元素集合中的第一个元素的当前计算高度值 或 设置每一个匹配元素的高度值。",
+    "slug": "height"
+},
+{
+    "value": ":hidden Selector",
+    "data": ":hidden Selector.htm",
+    "desc": "选择所有隐藏的元素。",
+    "slug": ":hidden Selector"
+},
+{
+    "value": ".hide()",
+    "data": "hide.htm",
+    "desc": "隐藏匹配的元素。",
+    "slug": "hide"
+},
+{
+    "value": ".hover()",
+    "data": "hover.htm",
+    "desc": "将二个事件函数绑定到匹配元素上，分别当鼠标指针进入和离开元素时被执行。",
+    "slug": "hover"
+},
+{
+    "value": ".html()",
+    "data": "html.htm",
+    "desc": "从集合的第一个匹配元素中获取HTML内容 或 设置每一个匹配元素的html内容。",
+    "slug": ".htm"
+},
+{
+    "value": "ID Selector (“#id”)",
+    "data": "ID Selector (“#id”).htm",
+    "desc": "选择一个具有给定id属性的单个元素。",
+    "slug": "ID Selector (“#id”)"
+},
+{
+    "value": ":image Selector",
+    "data": ":image Selector.htm",
+    "desc": "选择所有图像类型的元素。",
+    "slug": ":image Selector"
+},
+{
+    "value": ".index()",
+    "data": "index.htm",
+    "desc": "从匹配的元素中搜索给定元素的索引值，从0开始计数。",
+    "slug": "index"
+},
+{
+    "value": ".innerHeight()",
+    "data": "innerHeight.htm",
+    "desc": "为匹配的元素集合中获取第一个元素的当前计算高度值,包括padding，但是不包括border。",
+    "slug": "innerHeight"
+},
+{
+    "value": ".innerWidth()",
+    "data": "innerWidth.htm",
+    "desc": "为匹配的元素集合中获取第一个元素的当前计算宽度值,包括padding，但是不包括border。",
+    "slug": "innerWidth"
+},
+{
+    "value": ":input Selector",
+    "data": ":input Selector.htm",
+    "desc": "选择所有 input, textarea, select 和 button 元素.",
+    "slug": ":input Selector"
+},
+{
+    "value": ".insertAfter()",
+    "data": "insertAfter.htm",
+    "desc": "在目标元素后面插入集合中每个匹配的元素。",
+    "slug": "insertAfter"
+},
+{
+    "value": ".insertBefore()",
+    "data": "insertBefore.htm",
+    "desc": "在目标元素前面插入集合中每个匹配的元素。",
+    "slug": "insertBefore"
+},
+{
+    "value": ".is()",
+    "data": "is.htm",
+    "desc": "针对一个选择器，DOM元素，或者jQuery对象检查当前匹配的元素集合，如果这些元素至少一个匹配给定的参数，那么返回true。",
+    "slug": "is"
+},
+{
+    "value": "jQuery()",
+    "data": "jQuery.htm",
+    "desc": "返回匹配的元素集合 无论是通过 在DOM的基础上传递的参数还是创建一个HTML字符串。",
+    "slug": "jQuery"
+},
+{
+    "value": ".jquery",
+    "data": "jquery.htm",
+    "desc": "一个包含了jQuery版本号的字符串",
+    "slug": "jquery"
+},
+{
+    "value": "jQuery.ajax()",
+    "data": "jQuery.ajax.htm",
+    "desc": "执行一个异步的HTTP（Ajax）的请求。",
+    "slug": "jQuery.ajax"
+},
+{
+    "value": "jQuery.ajaxPrefilter()",
+    "data": "jQuery.ajaxPrefilter.htm",
+    "desc": "在每个请求之前被发送和$.ajax()处理它们前处理自定义Ajax选项或修改现有选项。",
+    "slug": "jQuery.ajaxPrefilter"
+},
+{
+    "value": "jQuery.ajaxSetup()",
+    "data": "jQuery.ajaxSetup.htm",
+    "desc": "为以后要用到的Ajax请求设置默认的值",
+    "slug": "jQuery.ajaxSetup"
+},
+{
+    "value": "jQuery.ajaxTransport()",
+    "data": "jQuery.ajaxTransport.htm",
+    "desc": "创建一个对象用于处理Ajax数据的实际传输。",
+    "slug": "jQuery.ajaxTransport"
+},
+{
+    "value": "jQuery.boxModel",
+    "data": "jQuery.boxModel.htm",
+    "desc": " 在jQuery 1.3中不建议使用（查看jQuery.support)）。当前页面中浏览器是否使用标准盒模型渲染页面。 建议使用 jQuery.support.boxModel 代替。W3C CSS Box Model。",
+    "slug": "jQuery.boxModel"
+},
+{
+    "value": "jQuery.browser",
+    "data": "jQuery.browser.htm",
+    "desc": "用来获取useragent的包含标志，读取自 navigator.userAgent。 我们不推荐使用这个属性，请尝试使用功能检测来代替（见jQuery.support）。 jQuery.browser在未来的版本中可能会转移到一个jQuery插件。",
+    "slug": "jQuery.browser"
+},
+{
+    "value": "jQuery.Callbacks()",
+    "data": "jQuery.Callbacks.htm",
+    "desc": "一个多用途的回调列表对象，提供了强大的的方式来管理回调函数列表。",
+    "slug": "jQuery.Callbacks"
+},
+{
+    "value": "jQuery.contains()",
+    "data": "jQuery.contains.htm",
+    "desc": "检查一个DOM元素是另一个DOM元素的后代。",
+    "slug": "jQuery.contains"
+},
+{
+    "value": "jQuery.cssHooks",
+    "data": "jQuery.cssHooks.htm",
+    "desc": "Hook一进入jQuery就覆盖特定的CSS属性获取或设置，正常化CSS属性命名，或创建自定义属性。",
+    "slug": "jQuery.cssHooks"
+},
+{
+    "value": "jQuery.cssNumber",
+    "data": "jQuery.cssNumber.htm",
+    "desc": "一个对象，这个包含所有可以不使用单位的CSS属性。.css() 方法使用这个对象来确定是否可能附加px到无单位的值。",
+    "slug": "jQuery.cssNumber"
+},
+{
+    "value": "jQuery.data()",
+    "data": "jQuery.data.htm",
+    "desc": "存储任意数据到指定的元素 并且/或者 返回设置的值。",
+    "slug": "jQuery.data"
+},
+{
+    "value": "jQuery.Deferred()",
+    "data": "jQuery.Deferred.htm",
+    "desc": "一个构造函数，返回一个链式实用对象方法来注册多个回调，回调队列，  调用回调队列，并转达任何同步或异步函数的成功或失败状态。",
+    "slug": "jQuery.Deferred"
+},
+{
+    "value": "jQuery.dequeue()",
+    "data": "jQuery.dequeue.htm",
+    "desc": "在匹配的元素上执行队列中的下一个函数。",
+    "slug": "jQuery.dequeue"
+},
+{
+    "value": "jQuery.each()",
+    "data": "jQuery.each.htm",
+    "desc": "一个通用的迭代函数，它可以用来无缝迭代对象和数组。数组和类似数组的对象通过一个长度属性（如一个函数的参数对象）来迭代数字索引，从0到length - 1。其他对象迭代通过其命名属性。",
+    "slug": "jQuery.each"
+},
+{
+    "value": "jQuery.error()",
+    "data": "jQuery.error.htm",
+    "desc": "接受一个字符串，并抛出包含这个字符串的异常。",
+    "slug": "jQuery.error"
+},
+{
+    "value": "jQuery.escapeSelector()",
+    "data": "jQuery.escapeSelector.htm",
+    "desc": "转义CSS选择器中任何具有特殊的含义字符。",
+    "slug": "jQuery.escapeSelector"
+},
+{
+    "value": "jQuery.extend()",
+    "data": "jQuery.extend.htm",
+    "desc": "合并两个或更多对象的内容集成到第一个对象。",
+    "slug": "jQuery.extend"
+},
+{
+    "value": "jQuery.fx.interval",
+    "data": "jQuery.fx.interval.htm",
+    "desc": "该动画的频率（以毫秒为单位）。",
+    "slug": "jQuery.fx.interval"
+},
+{
+    "value": "jQuery.fx.off",
+    "data": "jQuery.fx.off.htm",
+    "desc": "全局的禁用所有动画。",
+    "slug": "jQuery.fx.off"
+},
+{
+    "value": "jQuery.get()",
+    "data": "jQuery.get.htm",
+    "desc": "使用一个HTTP GET请求从服务器加载数据。",
+    "slug": "jQuery.get"
+},
+{
+    "value": "jQuery.getJSON()",
+    "data": "jQuery.getJSON.htm",
+    "desc": "使用一个HTTP GET请求从服务器加载JSON编码数据。",
+    "slug": "jQuery.getJSON"
+},
+{
+    "value": "jQuery.getScript()",
+    "data": "jQuery.getScript.htm",
+    "desc": "使用一个HTTP GET请求从服务器加载并执行一个 JavaScript 文件",
+    "slug": "jQuery.getScript"
+},
+{
+    "value": "jQuery.globalEval()",
+    "data": "jQuery.globalEval.htm",
+    "desc": " 在全局范围下执行一些JavaScript代码。",
+    "slug": "jQuery.globalEval"
+},
+{
+    "value": "jQuery.grep()",
+    "data": "jQuery.grep.htm",
+    "desc": "查找满足过滤功能数组元素。原始数组不受影响。",
+    "slug": "jQuery.grep"
+},
+{
+    "value": "jQuery.hasData()",
+    "data": "jQuery.hasData.htm",
+    "desc": " 确定任何一个元素是否有与之相关的jQuery数据。",
+    "slug": "jQuery.hasData"
+},
+{
+    "value": "jQuery.holdReady()",
+    "data": "jQuery.holdReady.htm",
+    "desc": "暂停或恢复.ready() 事件的执行。",
+    "slug": "jQuery.holdReady"
+},
+{
+    "value": "jQuery.inArray()",
+    "data": "jQuery.inArray.htm",
+    "desc": "搜索数组中指定值并返回它的索引（如果没有找到则返回-1）。",
+    "slug": "jQuery.inArray"
+},
+{
+    "value": "jQuery.isArray()",
+    "data": "jQuery.isArray.htm",
+    "desc": "确定的参数是一个数组。",
+    "slug": "jQuery.isArray"
+},
+{
+    "value": "jQuery.isEmptyObject()",
+    "data": "jQuery.isEmptyObject.htm",
+    "desc": "检查对象是否为空（不包含任何属性）。",
+    "slug": "jQuery.isEmptyObject"
+},
+{
+    "value": "jQuery.isFunction()",
+    "data": "jQuery.isFunction.htm",
+    "desc": "确定的参数是一个Javascript 函数。",
+    "slug": "jQuery.isFunction"
+},
+{
+    "value": "jQuery.isNumeric()",
+    "data": "jQuery.isNumeric.htm",
+    "desc": "确定它的参数是否是一个数字。",
+    "slug": "jQuery.isNumeric"
+},
+{
+    "value": "jQuery.isPlainObject()",
+    "data": "jQuery.isPlainObject.htm",
+    "desc": "测试对象是否是纯粹的对象（通过 \"{}\" 或者 \"new Object\" 创建的）",
+    "slug": "jQuery.isPlainObject"
+},
+{
+    "value": "jQuery.isWindow()",
+    "data": "jQuery.isWindow.htm",
+    "desc": " 确定参数是否为一个window对象。",
+    "slug": "jQuery.isWindow"
+},
+{
+    "value": "jQuery.isXMLDoc()",
+    "data": "jQuery.isXMLDoc.htm",
+    "desc": "检查一个DOM节点是否在XML文档中（或者是一个XML文档）。",
+    "slug": "jQuery.isXMLDoc"
+},
+{
+    "value": "jQuery.makeArray()",
+    "data": "jQuery.makeArray.htm",
+    "desc": "转换一个类似数组的对象成为真正的JavaScript数组。",
+    "slug": "jQuery.makeArray"
+},
+{
+    "value": "jQuery.map()",
+    "data": "jQuery.map.htm",
+    "desc": "将一个数组中的所有元素转换到另一个数组中。",
+    "slug": "jQuery.map"
+},
+{
+    "value": "jQuery.merge()",
+    "data": "jQuery.merge.htm",
+    "desc": "合并两个数组内容到第一个数组。",
+    "slug": "jQuery.merge"
+},
+{
+    "value": "jQuery.noConflict()",
+    "data": "jQuery.noConflict.htm",
+    "desc": "放弃jQuery控制的$ 变量。",
+    "slug": "jQuery.noConflict"
+},
+{
+    "value": "jQuery.noop()",
+    "data": "jQuery.noop.htm",
+    "desc": "一个空函数",
+    "slug": "jQuery.noop"
+},
+{
+    "value": "jQuery.now()",
+    "data": "jQuery.now.htm",
+    "desc": "返回一个数字，表示当前时间。",
+    "slug": "jQuery.now"
+},
+{
+    "value": "jQuery.param()",
+    "data": "jQuery.param.htm",
+    "desc": "创建一个序列化的数组或对象，适用于一个URL 地址查询字符串或Ajax请求。",
+    "slug": "jQuery.param"
+},
+{
+    "value": "jQuery.parseHTML()",
+    "data": "jQuery.parseHTML.htm",
+    "desc": "将字符串解析到一个DOM节点的数组中。",
+    "slug": "jQuery.parse.htm"
+},
+{
+    "value": "jQuery.parseJSON()",
+    "data": "jQuery.parseJSON.htm",
+    "desc": "接受一个标准格式的 JSON 字符串，并返回解析后的 JavaScript 对象。",
+    "slug": "jQuery.parseJSON"
+},
+{
+    "value": "jQuery.parseXML()",
+    "data": "jQuery.parseXML.htm",
+    "desc": "解析一个字符串到一个XML文件。",
+    "slug": "jQuery.parseXML"
+},
+{
+    "value": "jQuery.post()",
+    "data": "jQuery.post.htm",
+    "desc": "通过服务器HTTP POST请求加载数据。",
+    "slug": "jQuery.post"
+},
+{
+    "value": "jQuery.proxy()",
+    "data": "jQuery.proxy.htm",
+    "desc": "接受一个函数，然后返回一个新函数，并且这个新函数始终保持了特定的上下文语境。",
+    "slug": "jQuery.proxy"
+},
+{
+    "value": "jQuery.queue()",
+    "data": "jQuery.queue.htm",
+    "desc": "显示或操作匹配的元素上已经执行的函数列队。",
+    "slug": "jQuery.queue"
+},
+{
+    "value": "jQuery.readyException()",
+    "data": "jQuery.readyException.htm",
+    "desc": "处理包裹在jQuery()中函数同步抛出的错误。",
+    "slug": "jQuery.readyException"
+},
+{
+    "value": "jQuery.removeData()",
+    "data": "jQuery.removeData.htm",
+    "desc": "删除一个先前存储的数据块。",
+    "slug": "jQuery.removeData"
+},
+{
+    "value": "jQuery.sub()",
+    "data": "jQuery.sub.htm",
+    "desc": "可创建一个新的jQuery副本，其属性和方法可以修改，而不会影响原来的jQuery对象。",
+    "slug": "jQuery.sub"
+},
+{
+    "value": "jQuery.support",
+    "data": "jQuery.support.htm",
+    "desc": "存在不同的浏览器功能或错误的属性的集合。 主要用于jQuery的内部使用;当他们不再需要在内部以提高页面的启动性能  可能会被删除的特定属性 。（译者注：一组属性，它们代表了不同的浏览器功能或缺陷的存在的集合。)",
+    "slug": "jQuery.support"
+},
+{
+    "value": "jQuery.trim()",
+    "data": "jQuery.trim.htm",
+    "desc": "去掉字符串起始和结尾的空格。",
+    "slug": "jQuery.trim"
+},
+{
+    "value": "jQuery.type()",
+    "data": "jQuery.type.htm",
+    "desc": "确定JavaScript 对象的类型[[Class]] 。",
+    "slug": "jQuery.type"
+},
+{
+    "value": "jQuery.unique()",
+    "data": "jQuery.unique.htm",
+    "desc": "删除数组中重复元素。只处理删除DOM元素数组，而不能处理字符串或者数字数组。",
+    "slug": "jQuery.unique"
+},
+{
+    "value": "jQuery.when()",
+    "data": "jQuery.when.htm",
+    "desc": "提供一种方法来执行一个或多个对象的回调函数， Deferred(延迟)对象通常表示异步事件。",
+    "slug": "jQuery.when"
+},
+{
+    "value": ".keydown()",
+    "data": "keydown.htm",
+    "desc": "为 “keydown” 事件绑定一个处理函数，或者触发元素上的“keydown” 事件。",
+    "slug": "keydown"
+},
+{
+    "value": ".keypress()",
+    "data": "keypress.htm",
+    "desc": "为 “keypress” 事件绑定一个处理函数，或者触发元素上的 “keypress” 事件。",
+    "slug": "keypress"
+},
+{
+    "value": ".keyup()",
+    "data": "keyup.htm",
+    "desc": "为 \"keyup\" 事件绑定一个处理函数，或者触发元素上的 \"keyup\" 事件。",
+    "slug": "keyup"
+},
+{
+    "value": ":lang Selector",
+    "data": ":lang Selector.htm",
+    "desc": "选择指定语言的所有元素。",
+    "slug": ":lang Selector"
+},
+{
+    "value": ".last()",
+    "data": "last.htm",
+    "desc": "获取匹配元素集合中最后一个元素。",
+    "slug": "last"
+},
+{
+    "value": ":last-child Selector",
+    "data": ":last-child Selector.htm",
+    "desc": "选择所有父级元素下的最后一个子元素。",
+    "slug": ":last-child Selector"
+},
+{
+    "value": ":last-of-type Selector",
+    "data": ":last-of-type Selector.htm",
+    "desc": "选择所有相同的元素名称的最后一个兄弟元素。",
+    "slug": ":last-of-type Selector"
+},
+{
+    "value": ":last Selector",
+    "data": ":last Selector.htm",
+    "desc": "选择最后一个匹配的元素。",
+    "slug": ":last Selector"
+},
+{
+    "value": ".length",
+    "data": "length.htm",
+    "desc": "在jQuery对象中元素的数量。",
+    "slug": "length"
+},
+{
+    "value": ".live()",
+    "data": "live.htm",
+    "desc": "附加一个事件处理器到符合目前选择器的所有元素匹配，现在和未来。",
+    "slug": "live"
+},
+{
+    "value": ".load()",
+    "data": "load.htm",
+    "desc": "从服务器载入数据并且将返回的 HTML 代码并插入至 匹配的元素 中。",
+    "slug": "load"
+},
+{
+    "value": ".load()",
+    "data": "load.htm",
+    "desc": "为“load” 事件绑定一个处理函数。",
+    "slug": "load"
+},
+{
+    "value": ":lt() Selector",
+    "data": ":lt() Selector.htm",
+    "desc": "选择匹配集合中所有小于给定index索引值）的元素。",
+    "slug": ":lt Selector"
+},
+{
+    "value": ".map()",
+    "data": "map.htm",
+    "desc": "通过一个函数匹配当前集合中的每个元素,产生一个包含的返回值的jQuery新对象。",
+    "slug": "map"
+},
+{
+    "value": ".mousedown()",
+    "data": "mousedown.htm",
+    "desc": "为“mousedown”事件绑定一个处理函数，或者触发元素上的“mousedown” 事件。",
+    "slug": "mousedown"
+},
+{
+    "value": ".mouseenter()",
+    "data": "mouseenter.htm",
+    "desc": "为 mouse enters（鼠标进入） 事件绑定一个处理函数，或者触发元素上的 mouse enters（鼠标进入） 事件。",
+    "slug": "mouseenter"
+},
+{
+    "value": ".mouseleave()",
+    "data": "mouseleave.htm",
+    "desc": "为 mouse leaves（鼠标离开） 事件绑定一个处理函数，或者触发元素上的 mouse leaves（鼠标离开） 事件。",
+    "slug": "mouseleave"
+},
+{
+    "value": ".mousemove()",
+    "data": "mousemove.htm",
+    "desc": "为 \"mousemove\" 事件绑定一个处理函数，或者触发元素上的 \"mousemove\" 事件。",
+    "slug": "mousemove"
+},
+{
+    "value": ".mouseout()",
+    "data": "mouseout.htm",
+    "desc": " 为 \"mouseout\" 事件绑定一个处理函数，或者触发元素上的 \"mouseout\" 事件。",
+    "slug": "mouseout"
+},
+{
+    "value": ".mouseover()",
+    "data": "mouseover.htm",
+    "desc": "为 \"mouseover\" 事件绑定一个处理函数，或者触发元素上的\"mouseover\" 事件。",
+    "slug": "mouseover"
+},
+{
+    "value": ".mouseup()",
+    "data": "mouseup.htm",
+    "desc": "为\"mouseup\" 事件绑定一个处理函数，或者触发元素上的 \"mouseup\" 事件。",
+    "slug": "mouseup"
+},
+{
+    "value": "Multiple Attribute Selector [name=\"value\"][name2=\"value2\"]",
+    "data": "Multiple Attribute Selector [name=\"value\"][name2=\"value2\"].htm",
+    "desc": "选择匹配所有指定的属性筛选器的元素",
+    "slug": "Multiple Attribute Selector [name=\"value\"][name2=\"value2\"]"
+},
+{
+    "value": "Multiple Selector (“selector1, selector2, selectorN”)",
+    "data": "Multiple Selector (“selector1, selector2, selectorN”).htm",
+    "desc": "将每一个选择器匹配到的元素合并后一起返回。",
+    "slug": "Multiple Selector (“selector1, selector2, selectorN”)"
+},
+{
+    "value": ".next()",
+    "data": "next.htm",
+    "desc": "取得一个包含匹配的元素集合中每一个元素紧邻的后面同辈元素的元素集合。如果提供一个选择器，它检索下一个匹配选择器的兄弟元素。",
+    "slug": "next"
+},
+{
+    "value": "Next Adjacent Selector (“prev + next”)",
+    "data": "Next Adjacent Selector (“prev + next”).htm",
+    "desc": "选择所有紧接在 “prev” 元素后的 “next” 元素",
+    "slug": "Next Adjacent Selector (“prev + next”)"
+},
+{
+    "value": "Next Siblings Selector (“prev ~ siblings”)",
+    "data": "Next Siblings Selector (“prev ~ siblings”).htm",
+    "desc": "匹配 “prev” 元素之后的所有 兄弟元素。具有相同的父元素，并匹配过滤“兄弟姐妹”选择器。",
+    "slug": "Next Siblings Selector (“prev ~ siblings”)"
+},
+{
+    "value": ".nextAll()",
+    "data": "nextAll.htm",
+    "desc": "获得每个匹配元素集合中所有下面的同辈元素，选择性筛选的选择器。",
+    "slug": "nextAll"
+},
+{
+    "value": ".nextUntil()",
+    "data": "nextUntil.htm",
+    "desc": "通过选择器，DOM节点，或jQuery对象得到每个元素接下来的所有的兄弟元素，但不包括匹配的元素。",
+    "slug": "nextUntil"
+},
+{
+    "value": ".not()",
+    "data": "not.htm",
+    "desc": "删除匹配的元素集合中元素。",
+    "slug": "not"
+},
+{
+    "value": ":not() Selector",
+    "data": ":not() Selector.htm",
+    "desc": "选择所有元素去除不匹配给定的选择器的元素。",
+    "slug": ":not Selector"
+},
+{
+    "value": ":nth-child() Selector",
+    "data": ":nth-child() Selector.htm",
+    "desc": "选择的他们所有父元素的第n个子元素。",
+    "slug": ":nth-child Selector"
+},
+{
+    "value": ":nth-last-child() Selector",
+    "data": ":nth-last-child() Selector.htm",
+    "desc": "选择的他们所有父元素的第n个子元素。计数从最后一个元素到第一个。",
+    "slug": ":nth-last-child Selector"
+},
+{
+    "value": ":nth-last-of-type() Selector",
+    "data": ":nth-last-of-type() Selector.htm",
+    "desc": "选择的所有他们的父级元素的第n个子元素，计数从最后一个元素到第一个。",
+    "slug": ":nth-last-of-type Selector"
+},
+{
+    "value": ":nth-of-type() Selector",
+    "data": ":nth-of-type() Selector.htm",
+    "desc": "选择他们父元素的兄弟元素中所有第n个子元素，且相同的元素名称。",
+    "slug": ":nth-of-type Selector"
+},
+{
+    "value": ":odd Selector",
+    "data": ":odd Selector.htm",
+    "desc": "选择奇数元素，从 0 开始计数。同样查看偶数 even.",
+    "slug": ":odd Selector"
+},
+{
+    "value": ".off()",
+    "data": "off.htm",
+    "desc": "移除一个事件处理函数。",
+    "slug": "off"
+},
+{
+    "value": ".offset()",
+    "data": "offset.htm",
+    "desc": "在匹配的元素集合中，获取的第一个元素的当前坐标， 或设置每一个元素的坐标， 坐标相对于文档。",
+    "slug": "offset"
+},
+{
+    "value": ".offsetParent()",
+    "data": "offsetParent.htm",
+    "desc": "返回最近的被定过位的祖先元素。（译者注：祖先元素指该元素的上级元素，即包着它的外层元素）",
+    "slug": "offsetParent"
+},
+{
+    "value": ".on()",
+    "data": "on.htm",
+    "desc": "在选定的元素上绑定一个或多个事件处理函数。",
+    "slug": "on"
+},
+{
+    "value": ".one()",
+    "data": "one.htm",
+    "desc": "附加一个处理事件到元素。处理函数在每个元素上最多执行一次。",
+    "slug": "one"
+},
+{
+    "value": ":only-child Selector",
+    "data": ":only-child Selector.htm",
+    "desc": "选择所有其父元素下只有一个子元素的元素。",
+    "slug": ":only-child Selector"
+},
+{
+    "value": ":only-of-type Selector",
+    "data": ":only-of-type Selector.htm",
+    "desc": "选择所有元素没有兄弟元素具有相同的元素名称的所有元素。",
+    "slug": ":only-of-type Selector"
+},
+{
+    "value": ".outerHeight()",
+    "data": "outerHeight.htm",
+    "desc": "为匹配的元素集合中获取第一个元素的当前计算高度值,包括padding，border和选择性的margin。返回一个整数（不包含“px”）表示的值  或 null如果空集合的元素调用。",
+    "slug": "outerHeight"
+},
+{
+    "value": ".outerWidth()",
+    "data": "outerWidth.htm",
+    "desc": "为匹配的元素集合中获取第一个元素的当前计算宽度值,包括padding，border。",
+    "slug": "outerWidth"
+},
+{
+    "value": ".parent()",
+    "data": "parent.htm",
+    "desc": "获得集合中每个匹配元素的父级元素，选择性筛选的选择器。",
+    "slug": "parent"
+},
+{
+    "value": ":parent Selector",
+    "data": ":parent Selector.htm",
+    "desc": "选择所有含有子元素或者文本的父级元素。",
+    "slug": ":parent Selector"
+},
+{
+    "value": ".parents()",
+    "data": "parents.htm",
+    "desc": "获得集合中每个匹配元素的祖先元素，选择性筛选的选择器",
+    "slug": "parents"
+},
+{
+    "value": ".parentsUntil()",
+    "data": "parentsUntil.htm",
+    "desc": "查找当前元素的所有的前辈元素，直到遇到选择器匹配的元素为止，不包括那个匹配到的元素。",
+    "slug": "parentsUntil"
+},
+{
+    "value": ":password Selector",
+    "data": ":password Selector.htm",
+    "desc": "选择所有类型为密码的元素。",
+    "slug": ":password Selector"
+},
+{
+    "value": ".position()",
+    "data": "position.htm",
+    "desc": "获取匹配元素中第一个元素的当前坐标，相对于offset parent的坐标。( 译者注：offset parent指离该元素最近的而且被定位过的祖先元素 )",
+    "slug": "position"
+},
+{
+    "value": ".prepend()",
+    "data": "prepend.htm",
+    "desc": "将参数内容插入到每个匹配元素的前面（元素内部）。",
+    "slug": "prepend"
+},
+{
+    "value": ".prependTo()",
+    "data": "prependTo.htm",
+    "desc": "将所有元素插入到目标前面（元素内）。",
+    "slug": "prependTo"
+},
+{
+    "value": ".prev()",
+    "data": "prev.htm",
+    "desc": "取得一个包含匹配的元素集合中每一个元素紧邻的前一个同辈元素的元素集合。选择性筛选的选择器。",
+    "slug": "prev"
+},
+{
+    "value": ".prevAll()",
+    "data": "prevAll.htm",
+    "desc": "获得集合中每个匹配元素的所有前面的兄弟元素，选择性筛选的选择器。",
+    "slug": "prevAll"
+},
+{
+    "value": ".prevUntil()",
+    "data": "prevUntil.htm",
+    "desc": "获取每个元素但不包括选择器，DOM节点，或者jQuery对象匹配的元素的所有前面的兄弟元素。",
+    "slug": "prevUntil"
+},
+{
+    "value": ".promise()",
+    "data": "promise.htm",
+    "desc": "返回一个 Promise 对象用来观察当某种类型的所有行动绑定到集合，排队与否还是已经完成。",
+    "slug": "promise"
+},
+{
+    "value": ".prop()",
+    "data": "prop.htm",
+    "desc": "获取匹配的元素集中的第一个元素的属性（property）值或设置每一个匹配元素的一个或多个属性。",
+    "slug": "prop"
+},
+{
+    "value": ".pushStack()",
+    "data": "pushStack.htm",
+    "desc": "将一个DOM元素集合加入到jQuery栈。",
+    "slug": "pushStack"
+},
+{
+    "value": ".queue()",
+    "data": "queue.htm",
+    "desc": "显示或操作匹配的元素上已经执行的函数列队。",
+    "slug": "queue"
+},
+{
+    "value": ":radio Selector",
+    "data": ":radio Selector.htm",
+    "desc": "选择所有类型为单选框的元素。",
+    "slug": ":radio Selector"
+},
+{
+    "value": ".ready()",
+    "data": "ready.htm",
+    "desc": "当DOM准备就绪时，指定一个函数来执行。",
+    "slug": "ready"
+},
+{
+    "value": ".remove()",
+    "data": "remove.htm",
+    "desc": "将匹配元素集合从DOM中删除。",
+    "slug": "remove"
+},
+{
+    "value": ".removeAttr()",
+    "data": "removeAttr.htm",
+    "desc": "为匹配的元素集合中的每个元素中移除一个属性。",
+    "slug": "removeAttr"
+},
+{
+    "value": ".removeClass()",
+    "data": "removeClass.htm",
+    "desc": "移除集合中每个匹配元素上一个，多个或全部样式。",
+    "slug": "removeClass"
+},
+{
+    "value": ".removeData()",
+    "data": "removeData.htm",
+    "desc": "在元素上移除绑定的数据",
+    "slug": "removeData"
+},
+{
+    "value": ".removeProp()",
+    "data": "removeProp.htm",
+    "desc": "为集合中匹配的元素删除一个属性（property）。",
+    "slug": "removeProp"
+},
+{
+    "value": ".replaceAll()",
+    "data": "replaceAll.htm",
+    "desc": "用集合的匹配元素替换每个目标元素。",
+    "slug": "replaceAll"
+},
+{
+    "value": ".replaceWith()",
+    "data": "replaceWith.htm",
+    "desc": "用提供的内容替换集合中所有匹配的元素并且返回被删除元素的集合。",
+    "slug": "replaceWith"
+},
+{
+    "value": ":reset Selector",
+    "data": ":reset Selector.htm",
+    "desc": "选择所有类型为重置的元素。",
+    "slug": ":reset Selector"
+},
+{
+    "value": ".resize()",
+    "data": "resize.htm",
+    "desc": "为“resize”事件绑定一个处理函数，或者触发元素上的“resize” 事件。",
+    "slug": "resize"
+},
+{
+    "value": ":root Selector",
+    "data": ":root Selector.htm",
+    "desc": "选择该文档的根元素。",
+    "slug": ":root Selector"
+},
+{
+    "value": ".scroll()",
+    "data": "scroll.htm",
+    "desc": "为 \"scroll\" 事件绑定一个处理函数，或者触发元素上的 \"scroll\" 事件。",
+    "slug": "scroll"
+},
+{
+    "value": ".scrollLeft()",
+    "data": "scrollLeft.htm",
+    "desc": "获取匹配的元素集合中第一个元素的当前水平滚动条的位置或设置每个匹配元素的水平滚动条位置。",
+    "slug": "scrollLeft"
+},
+{
+    "value": ".scrollTop()",
+    "data": "scrollTop.htm",
+    "desc": "获取匹配的元素集合中第一个元素的当前垂直滚动条的位置或设置每个匹配元素的垂直滚动条位置。",
+    "slug": "scrollTop"
+},
+{
+    "value": ".select()",
+    "data": "select.htm",
+    "desc": "为“select” 事件绑定一个处理函数，或者触发元素上的 “select” 事件。",
+    "slug": "select"
+},
+{
+    "value": ":selected Selector",
+    "data": ":selected Selector.htm",
+    "desc": "",
+    "slug": ":selected Selector"
+},
+{
+    "value": ".selector",
+    "data": "selector.htm",
+    "desc": "为“select” 事件绑定一个处理函数，或者触发元素上的“select” 事件。",
+    "slug": "selector"
+},
+{
+    "value": ".serialize()",
+    "data": "serialize.htm",
+    "desc": " 将用作提交的表单元素的值编译成字符串。",
+    "slug": "serialize"
+},
+{
+    "value": ".serializeArray()",
+    "data": "serializeArray.htm",
+    "desc": "将用作提交的表单元素的值编译成拥有name和value对象组成的数组。例如[ { name: a value: 1 }, { name: b value: 2 },...]",
+    "slug": "serializeArray"
+},
+{
+    "value": ".show()",
+    "data": "show.htm",
+    "desc": "显示匹配元素",
+    "slug": "show"
+},
+{
+    "value": ".siblings()",
+    "data": "siblings.htm",
+    "desc": "获得匹配元素集合中每个元素的兄弟元素，选择性筛选的选择器。",
+    "slug": "siblings"
+},
+{
+    "value": ".size()",
+    "data": "size.htm",
+    "desc": "返回的jQuery对象匹配的DOM元素的数量。",
+    "slug": "size"
+},
+{
+    "value": ".slice()",
+    "data": "slice.htm",
+    "desc": "减少匹配元素集合由索引范围指定的一个子集。",
+    "slug": "slice"
+},
+{
+    "value": ".slideDown()",
+    "data": "slideDown.htm",
+    "desc": "用滑动动画显示一个匹配元素。",
+    "slug": "slideDown"
+},
+{
+    "value": ".slideToggle()",
+    "data": "slideToggle.htm",
+    "desc": "用滑动动画显示或隐藏一个匹配元素。",
+    "slug": "slideToggle"
+},
+{
+    "value": ".slideUp()",
+    "data": "slideUp.htm",
+    "desc": "用滑动动画隐藏一个匹配元素。",
+    "slug": "slideUp"
+},
+{
+    "value": ".stop()",
+    "data": "stop.htm",
+    "desc": "停止匹配元素当前正在运行的动画。",
+    "slug": "stop"
+},
+{
+    "value": ".submit()",
+    "data": "submit.htm",
+    "desc": "为“submit”事件绑定一个处理函数，或者触发元素上的“submit”事件。",
+    "slug": "submit"
+},
+{
+    "value": ":submit Selector",
+    "data": ":submit Selector.htm",
+    "desc": "选择所有类型为提交的元素。",
+    "slug": ":submit Selector"
+},
+{
+    "value": ":target Selector",
+    "data": ":target Selector.htm",
+    "desc": "选择 由文档URI的格式化识别码表示的目标元素。",
+    "slug": ":target Selector"
+},
+{
+    "value": ".text()",
+    "data": "text.htm",
+    "desc": "得到匹配元素集合中每个元素的文本内容结合，包括他们的后代，或设置匹配元素集合中每个元素的文本内容为指定的文本内容。",
+    "slug": "text"
+},
+{
+    "value": ":text Selector",
+    "data": ":text Selector.htm",
+    "desc": "选择所有类型为文本的元素。",
+    "slug": ":text Selector"
+},
+{
+    "value": ".toArray()",
+    "data": "toArray.htm",
+    "desc": "返回一个包含jQuery对象集合中的所有DOM元素的数组。",
+    "slug": "toArray"
+},
+{
+    "value": ".toggle()",
+    "data": "toggle.htm",
+    "desc": "显示或隐藏匹配元素。",
+    "slug": "toggle"
+},
+{
+    "value": ".toggle()",
+    "data": "toggle.htm",
+    "desc": "绑定两个或多个处理程序绑定到匹配的元素，用来执行在交替的点击。",
+    "slug": "toggle"
+},
+{
+    "value": ".toggleClass()",
+    "data": "toggleClass.htm",
+    "desc": "在匹配的元素集合中的每个元素上添加或删除一个或多个样式类,取决于这个样式类是否存在或价值切换属性。即：如果存在（不存在）就删除（添加）一个类。",
+    "slug": "toggleClass"
+},
+{
+    "value": ".trigger()",
+    "data": "trigger.htm",
+    "desc": "根据绑定到匹配元素的给定的事件类型执行所有的处理程序和行为。",
+    "slug": "trigger"
+},
+{
+    "value": ".triggerHandler()",
+    "data": "triggerHandler.htm",
+    "desc": "为一个事件执行附加到元素的所有处理程序。",
+    "slug": "triggerHandler"
+},
+{
+    "value": ".unbind()",
+    "data": "unbind.htm",
+    "desc": "从元素上删除一个以前附加事件处理程序。",
+    "slug": "unbind"
+},
+{
+    "value": ".undelegate()",
+    "data": "undelegate.htm",
+    "desc": "删除当前选择器匹配的所有元素的事件处理程序，根据一组特定根元素的集合。",
+    "slug": "undelegate"
+},
+{
+    "value": ".unload()",
+    "data": "unload.htm",
+    "desc": "为“unload”JavaScript事件绑定一个事件处理程序。",
+    "slug": "unload"
+},
+{
+    "value": ".unwrap()",
+    "data": "unwrap.htm",
+    "desc": "将匹配元素集合的父级元素删除，保留自身（和兄弟元素，如果存在）在原来的位置。",
+    "slug": "unwrap"
+},
+{
+    "value": ".val()",
+    "data": "val.htm",
+    "desc": "获取匹配的元素集合中第一个元素的当前值或设置匹配的元素集合中每个元素的值。",
+    "slug": "val"
+},
+{
+    "value": ":visible Selector",
+    "data": ":visible Selector.htm",
+    "desc": "选择所有可见的元素。",
+    "slug": ":visible Selector"
+},
+{
+    "value": ".width()",
+    "data": "width.htm",
+    "desc": "为匹配的元素集合中获取第一个元素的当前计算宽度值或给每个匹配的元素设置宽度。",
+    "slug": "width"
+},
+{
+    "value": ".wrap()",
+    "data": "wrap.htm",
+    "desc": " 在每个匹配的元素外层包上一个html元素。",
+    "slug": "wrap"
+},
+{
+    "value": ".wrapAll()",
+    "data": "wrapAll.htm",
+    "desc": "在所有匹配元素外面包一层HTML结构。",
+    "slug": "wrapAll"
+},
+{
+    "value": ".wrapInner()",
+    "data": "wrapInner.htm",
+    "desc": "在匹配元素里的内容外包一层结构。",
+    "slug": "wrapInner"
+}
+]
+}

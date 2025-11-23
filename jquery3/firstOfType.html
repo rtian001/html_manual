@@ -1,0 +1,74 @@
+ <script src="js/rtian.index.js" ></script>
+            <header class="top-nav">
+                <a href="#index.html" title="">首页</a>&nbsp;&gt;&nbsp; <span class="sub-title">选择器</span> &nbsp;&gt;&nbsp;:first-of-type
+                <a class="source" href="#jquery3.new.html" >jQuery3.0 新特性</a>
+            </header>
+            <div id="content" >
+              <h2><span>返回值:jQuery</span>:first-of-type</h2>
+    <h3><em>V1.9</em>概述</h3>
+    <div class="desc">
+      <p>结构化伪类，匹配E的父元素的第一个E类型的孩子。等价于<a href="#nthOfType.html" > :nth-of-type(1) </a> 选择器。</p>
+<p>  解释的很模糊，网上搜了很多都是扯淡的解释，作者也只能自己一个个试，试了几十次才弄的稍微有点清楚，如果错了，慢点拍砖，怕怕。直接看示例。</p>
+     
+    </div>
+   <!-- <h3>参数</h3>
+    <div class="parameter">
+      <h4><strong>language</strong><span></span><em>V1.9</em></h4>
+      <p>语言代码</p>
+    </div>-->
+    <div class="example">
+      <h4>描述:</h4>
+      <p>查找作为父元素的span类型子元素中的"长子"的span标签</p>
+      <h5>HTML 代码:</h5>
+      <pre><code>&lt;div id="n1"&gt;
+    &lt;div id="n2" class="abc"&gt;
+        &lt;label id="n3"&gt;label1&lt;/label&gt;
+        &lt;span id="n4"&gt;span1&lt;/span&gt;
+        &lt;span id="n5" class="abc"&gt;span2&lt;/span&gt;
+        &lt;span id="n6"&gt;span3&lt;/span&gt;
+    &lt;/div&gt;
+    &lt;div id="n7"&gt;
+        &lt;span id="n8" class="abc"&gt;span1&lt;/span&gt;
+        &lt;span id="n9"&gt;span2&lt;/span&gt;
+    &lt;/div>
+&lt;/div></code></pre>
+      <h5>jQuery 代码:</h5>
+      <pre><code>$("span:first-of-type");</code></pre>
+      <h5>结果:</h5>
+      <pre><code>//n4虽然不是n2的第一个子元素，但它是n2所有span类型子元素中的第一个，因此可以匹配
+[&lt;span id="n4"&gt;span1&lt;/span&gt;,&lt;span id="n8" class="abc"&gt;span1&lt;/span&gt;]</code></pre>
+<h5>HTML 代码:</h5>
+      <pre><code>&lt;div id="n1"&gt;
+    &lt;div id="n2" class="abc"&gt;
+        &lt;label id="n3"&gt;label1&lt;/label&gt;
+        &lt;span id="n4"&gt;span1&lt;/span&gt;
+        &lt;span id="n5" class="abc"&gt;span2&lt;/span&gt;
+        &lt;span id="n6"&gt;span3&lt;/span&gt;
+    &lt;/div&gt;
+    &lt;div id="n7"&gt;
+        &lt;span id="n8" class="abc"&gt;span1&lt;/span&gt;
+        &lt;span id="n9"&gt;span2&lt;/span&gt;
+    &lt;/div>
+&lt;/div></code></pre>
+      <h5>jQuery 代码:</h5>
+      <pre><code>$(".abc:first-of-type");</code></pre>
+      <h5>结果:</h5>
+      <pre><code>//.abc可以匹配id分别为n2、n5、n8的3个元素，n2是n1所有div类型子元素中的第一个，n8是n7所有span类型子元素中的第一个，但n5不是n2所有span类型子元素中的第一个，因此不能匹配n5。
+[&lt;div id="n2" class="abc"&gt;,&lt;span id="n8" class="abc"&gt;span1&lt;/span&gt;]</code></pre>
+    </div>
+            </div>
+            
+
+            <div class="navigation clearfix">
+                <span class="alignleft">上一篇：<a href="#firstChild.html" >:first-child</a></span>
+                
+                <span class="alignright">下一篇：<a href="#lastChild.html" >:last-child</a></span>
+            </div>
+            <div class="donate-con">
+              <div class="donate-btn">捐助</div>
+              <div class="donate-body">
+                <div class="donate-tips">本站为非盈利网站，所有的捐赠收入将用于支付带宽、服务器费用，您的支持将是本站撑下去的最大动力！</div>
+                <div class="donate-img"> <a href="#source.html" ></a>  </div>
+              </div>
+            </div>
+

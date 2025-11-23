@@ -1,0 +1,86 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title>css(name|pro|[,val|fn]) | jQuery API 中文手册</title>
+<meta name="author" content="jQuery 中文手册 - hemin.cn/jq/">
+<meta name="description" content="访问匹配元素的样式属性 - jQuery API 中文手册">
+<meta name="keywords" content="jquery,chm,手册,在线,api" />
+<link type="image/x-icon" href="img/favicon.ico" rel="shortcut icon">
+<link type="text/css" rel="stylesheet" href="style/style.css"   />
+</head>
+<body>
+<div id="wrapper">
+<div id='left' class='dtree'>
+  <p style="text-align:center">
+    <input type="text" name="query" id="query" placeholder="请输入关键字"/>
+    <!--<input type="button" id="butsoso" value="搜索" />--></p>
+  <p style="margin:7px 0; text-align:center"><a href="javascript:void(0)" id="openAll">全部展开</a> | <a href="javascript:void(0)" id="closeAll">全部折叠 </a> | <a href="index.html" >速查表</a></p>
+	<div id="menu">
+    
+    </div>
+</div>
+<div id="content" class="a2">
+  <div rel="css">
+    <h2><span>返回值:String</span>css(name|pro|[,val|fn])</h2>
+    <h3>概述</h3>
+    <div class="desc">
+      <p>访问匹配元素的样式属性。</p>
+      <div class="longdesc">
+        <p>jQuery 1.8中，当你使用CSS属性在<a href="css.html" .</p>
+      </div>
+    </div>
+    <h3>参数</h3>
+    <div class="parameter">
+      <h4><strong>name</strong><span>String</span><em>V1.0</em></h4>
+      <p>要访问的属性名称</p>
+       <h4><strong>name</strong><span>Array</span><em>V1.9</em></h4>
+      <p>一个或多个CSS属性组成的一个数组</p>
+      <h4><strong>properties</strong><span>Map</span><em>V1.0</em></h4>
+      <p>要设置为样式属性的名/值对</p>
+      <h4><strong>name,value</strong><span>String, Number</span><em>V1.4</em></h4>
+      <p>属性名,属性值</p>
+      <h4><strong>name,function(index, value)</strong><span>String,Function</span><em>V1.0</em></h4>
+      <p>1:属性名</p>
+      <p>2:此函数返回要设置的属性值。接受两个参数，index为元素在对象集合中的索引位置，value是原先的属性值。</p>
+    </div>
+    <div class="example">
+      <h3>示例</h3>
+      <span id="f_ad2"></span>
+      <h4>参数name 描述:</h4>
+      <p>取得第一个段落的color样式属性的值。</p>
+      <h5>jQuery 代码:</h5>
+      <pre><code>$("p").css("color");</code></pre>
+      <h4>参数properties 描述:</h4>
+      <p>将所有段落的字体颜色设为红色并且背景为蓝色。</p>
+      <h5>jQuery 代码:</h5>
+      <pre><code>$("p").css({ "color": "#ff0011", "background": "blue" });</code></pre>
+      <h4>参数name,value 描述:</h4>
+      <p>将所有段落字体设为红色</p>
+      <h5>jQuery 代码:</h5>
+      <pre><code>$("p").css("color","red");</code></pre>
+      <h4>参数name,回调函数 描述:</h4>
+      <p>逐渐增加div的大小</p>
+      <h5>jQuery 代码:</h5>
+      <pre><code>  $("div").click(function() {
+    $(this).css({
+      width: function(index, value) {
+        return parseFloat(value) * 1.2;
+      }, 
+      height: function(index, value) {
+        return parseFloat(value) * 1.2;
+      }
+    });
+  });</code></pre>
+    </div>
+  </div>
+</div>
+
+</div>
+</body>
+
+<script type="text/javascript" src="js/jquery-1.11.3.min.js" ></script>
+<script type="text/javascript" src="js/jquery.autocomplete.js" ></script>
+<script type="text/javascript" src="js/dtree.js" ></script>
+<script type="text/javascript" src="js/js.js" ></script>
+</html>

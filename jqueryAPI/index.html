@@ -1,0 +1,813 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>jQuery API 中文文档(适用jQuery 1.0 - jQuery 3.0)</title>
+<meta charset="utf-8"/>
+<meta name="keywords" content="jQuery,API,中文版,中文文档,中文手册,chm,手册,jQuery3 中文文档,jQuery2 中文文档,官方翻译"/>
+<link rel="stylesheet" media="screen" href="css/cssstyle/main.min.css" />
+<link rel="stylesheet" media="screen" href="css/cssstyle/style.css" />
+<link rel="stylesheet" id="theme-styles" href="css/colorfull.css" >
+<link rel="stylesheet" href="css/jquery.mCustomScrollbar.min.css" >
+<link rel="stylesheet" href="js/autocomplete.css" >
+<link rel="stylesheet"  href="css/20161015.css" >
+<link rel="stylesheet" href="css/styles.css" >
+<script src="/js/jquery-2.1.4.min.js"></script>
+<script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
+<script src="js/jquery.hashchange.js"></script>
+<script src="js/jquery.autocomplete.min.js"></script>
+<script type="text/javascript">
+	$(function(){
+		//**添加左右滚动轴
+		$("#navigation").mCustomScrollbar({theme:"minimal"});
+		$("#content_box").mCustomScrollbar({theme:"inset-3"});
+
+		 var query=location.hash.substring(1);
+		 if (query != "") {	//**检索url参数，并更新页面
+			$("#content_main").load(query,function(){
+				$("title").text($("#content_box title").text());
+			});
+			$("#content_box").mCustomScrollbar("scrollTo","top",{scrollInertia:0});
+
+		 }
+
+		$("a[href^=#]").click(function(){//***页面内链接事件
+			var a=$(this).attr("href").substring(1);
+			$("#content_main").load(a,function(){//***载入完成后修改网页标题
+				$("title").text($("#content_box title").text());
+			});
+			//*****内容区滚动到顶端
+			$("#content_box").mCustomScrollbar("scrollTo","top",{scrollInertia:0});
+		});
+
+
+		$.getJSON("js/rtian.json",function(data){
+				$("#autoquery").autocomplete({
+					lookup: data.contents,
+					width: 210,
+					autoSelectFirst: !0,
+					onSelect: function(d) {
+						location.href="#" + d.data,
+						$(this).val('');
+					}
+				});
+		});
+
+
+
+
+	});
+
+ </script>
+</head>
+<body>
+<div id="header_warp">
+	<div class="header-box">
+		<div class="logo">
+			<h1><a href="index.html" title="jQuery API中文文档(适用jQuery 1.0 - jQuery 3.0)">jQuery API中文文档</a></h1>
+	</div>
+</div>
+</div>
+<div id="navigation">
+	<input id="autoquery" type="search" placeholder="搜索API" >		
+	<aside id="categories" class="widget">
+		<ul>
+		<li class="cat-item"><a href="#ajax.htm" title="查看Ajax分类下的所有文档">Ajax</a>
+		<ul class="children">
+		<li class="cat-item"><a href="#global-ajax-event-handlers.htm">全局Ajax事件处理程序</a> </li>
+		<li class="cat-item"><a href="#helper-functions.htm">辅助函数</a> </li>
+		<li class="cat-item"><a href="#low-level-interface.htm">底层接口</a></li>
+		<li class="cat-item"><a href="#shorthand-methods.htm">快捷方法</a> </li>
+		</ul>
+		</li>
+		<li class="cat-item"><a href="#attributes.htm">属性</a></li>
+		<li class="cat-item"><a href="#callbacks-object.htm">回调对象</a> </li>
+		<li class="cat-item"><a href="#core.htm">核心</a></li>
+		<li class="cat-item"><a href="#css_1.htm">CSS</a></li>
+		<li class="cat-item"><a href="#data_1.htm">数据</a> </li>
+		<li class="cat-item"><a href="#deferred-object.htm">延迟对象</a> </li>
+		<li class="cat-item"><a href="#deprecated.htm">弃用</a>
+		<ul class="children">
+		<li class="cat-item"><a href="#deprecated-1.3.htm">1.3 版本弃用的 API</a> </li>
+		<li class="cat-item"><a href="#deprecated-1.7.htm">1.7 版本弃用的 API</a> </li>
+		<li class="cat-item"><a href="#deprecated-1.8.htm">1.8 版本弃用的 API</a> </li>
+		<li class="cat-item"><a href="#deprecated-1.10.htm">1.10 版本弃用的 API</a> </li>
+		<li class="cat-item"><a href="#deprecated-3.0.htm">3.0 版本弃用的 API</a> </li>
+		</ul>
+		</li>
+		<li class="cat-item"><a href="#dimensions.htm">尺寸</a> </li>
+		<li class="cat-item"><a href="#effects.htm">效果</a>
+		<ul class="children">
+		<li class="cat-item"><a href="#basics.htm">基础</a></li>
+		<li class="cat-item"><a href="#custom-effects.htm">自定义</a> </li>
+		<li class="cat-item"><a href="#fading.htm">渐变</a></li>
+		<li class="cat-item"><a href="#sliding.htm">滑动</a></li>
+		</ul>
+		</li>
+		<li class="cat-item"><a href="#events.htm">事件</a>
+		<ul class="children">
+		<li class="cat-item"><a href="#browser-events.htm">浏览器事件</a></li>
+		<li class="cat-item"><a href="#document-loading.htm">文档加载</a></li>
+		<li class="cat-item"><a href="#event-handler-attachment.htm">事件绑定</a></li>
+		<li class="cat-item"><a href="#event-object.htm">事件对象</a></li>
+		<li class="cat-item"><a href="#form-events.htm">表单事件</a></li>
+		<li class="cat-item"><a href="#keyboard-events.htm">键盘事件</a></li>
+		<li class="cat-item"><a href="#mouse-events.htm">鼠标事件</a></li>
+		</ul>
+		</li>
+		<li class="cat-item"><a href="#forms.htm">表单</a> </li>
+		<li class="cat-item"><a href="#internals.htm">内部函数</a> </li>
+		<li class="cat-item"><a href="#manipulation.htm">操作</a>
+		<ul class="children">
+		<li class="cat-item"><a href="#class-attribute.htm">Class属性</a> </li>
+		<li class="cat-item"><a href="#copying.htm">复制元素</a></li>
+		<li class="cat-item"><a href="#dom-insertion-around.htm">DOM 插入并包裹现有内容</a></li>
+		<li class="cat-item"><a href="#dom-insertion-inside.htm">DOM 插入现有元素内</a></li>
+		<li class="cat-item"><a href="#dom-insertion-outside.htm">DOM 插入现有元素外</a></li>
+		<li class="cat-item"><a href="#dom-removal.htm">DOM 移除</a> </li>
+		<li class="cat-item"><a href="#dom-replacement.htm">DOM 替换</a></li>
+		<li class="cat-item"><a href="#general-attributes.htm">通用属性</a></li>
+		<li class="cat-item"><a href="#style-properties.htm">Style 属性</a></li>
+		</ul>
+		</li>
+		<li class="cat-item"><a href="#miscellaneous.htm">杂项</a>
+		<ul class="children">
+		<li class="cat-item"><a href="#collection-manipulation.htm">集合操作</a></li>
+		<li class="cat-item"><a href="#data-storage.htm">数据存储</a> </li>
+		<li class="cat-item"><a href="#dom-element-methods.htm">DOM 元素方法</a></li>
+		<li class="cat-item"><a href="#setup-methods.htm">设置方法</a></li>
+		</ul>
+		</li>
+		<li class="cat-item"><a href="#offset_1.htm">位置</a></li>
+		<li class="cat-item"><a href="#properties.htm">特性</a>
+		<ul class="children">
+		<li class="cat-item"><a href="#jquery-object-instance-properties.htm">jQuery 对象实例特性</a></li>
+		<li class="cat-item"><a href="#global-jquery-object-properties.htm">全局jQuery 对象特性</a></li>
+		</ul>
+		</li>
+		<li class="cat-item"><a href="#removed.htm">已删除的</a></li>
+		<li class="cat-item"><a href="#selectors.htm">选择器</a>
+		<ul class="children">
+		<li class="cat-item"><a href="#attribute-selectors.htm">属性</a> </li>
+		<li class="cat-item"><a href="#basic-css-selectors.htm">基础</a> </li>
+		<li class="cat-item"><a href="#basic-filter-selectors.htm">基础筛选</a></li>
+		<li class="cat-item"><a href="#child-filter-selectors.htm">子元素筛选</a></li>
+		<li class="cat-item"><a href="#content-filter-selector.htm">内容筛选</a></li>
+		<li class="cat-item"><a href="#form-selectors.htm">表单</a></li>
+		<li class="cat-item"><a href="#hierarchy-selectors.htm">层级</a></li>
+		<li class="cat-item"><a href="#jquery-selector-extensions.htm">jQuery 扩展</a></li>
+		<li class="cat-item"><a href="#visibility-filter-selectors.htm">可见性筛选</a></li>
+		</ul>
+		</li>
+		<li class="cat-item"><a href="#traversing.htm">遍历</a>
+		<ul class="children">
+		<li class="cat-item"><a href="#filtering.htm">筛选</a></li>
+		<li class="cat-item"><a href="#miscellaneous-traversal.htm">其他遍历</a></li>
+		<li class="cat-item"><a href="#tree-traversal.htm">树遍历</a></li>
+		</ul>
+		</li>
+		<li class="cat-item"><a href="#utilities.htm">实用工具</a></li>
+		<li class="cat-item"><a href="#version.htm">版本</a>
+		<ul class="children">
+		<li class="cat-item"><a href="#1.0.htm">版本 1.0</a></li>
+		<li class="cat-item"><a href="#1.0.4.htm">版本 1.0.4</a></li>
+		<li class="cat-item"><a href="#1.1.htm">版本 1.1</a></li>
+		<li class="cat-item"><a href="#1.1.2.htm">版本 1.1.2</a></li>
+		<li class="cat-item"><a href="#1.1.3.htm">版本 1.1.3</a></li>
+		<li class="cat-item"><a href="#1.1.4.htm">版本 1.1.4</a></li>
+		<li class="cat-item"><a href="#1.2.htm">版本 1.2</a></li>
+		<li class="cat-item"><a href="#1.2.3.htm">版本 1.2.3</a></li>
+		<li class="cat-item"><a href="#1.2.6.htm">版本 1.2.6</a></li>
+		<li class="cat-item"><a href="#1.3.htm">版本 1.3</a></li>
+		<li class="cat-item"><a href="#1.4.htm">版本 1.4</a></li>
+		<li class="cat-item"><a href="#1.4.1.htm">版本 1.4.1</a></li>
+		<li class="cat-item"><a href="#1.4.2.htm">版本 1.4.2</a></li>
+		<li class="cat-item"><a href="#1.4.3.htm">版本 1.4.3</a></li>
+		<li class="cat-item"><a href="#1.4.4.htm">版本 1.4.4</a></li>
+		<li class="cat-item"><a href="#1.5.htm">版本 1.5</a></li>
+		<li class="cat-item"><a href="#1.5.1.htm">版本 1.5.1</a></li>
+		<li class="cat-item"><a href="#1.6.htm">版本 1.6</a></li>
+		<li class="cat-item"><a href="#1.7.htm">版本 1.7</a></li>
+		<li class="cat-item"><a href="#1.8.htm">版本 1.8</a></li>
+		<li class="cat-item"><a href="#1.9.htm">版本 1.9</a></li>
+		<li class="cat-item"><a href="#1.12-2.2.htm">版本 1.12 & 2.2</a></li>
+		<li class="cat-item"><a href="#3.0.htm">版本 3.0</a></li>
+		<li class="cat-item"><a href="#3.1.htm">版本 3.1</a></li>
+		</ul>
+		</li>
+		</ul>
+	</aside>
+</div>
+<div id="content_box">
+	<div id="content_main">
+	<div class="content_warp">
+	<header class="header">
+	<hgroup>
+	<div class=" title">jQuery快速API参考</div>
+	</hgroup>
+	<nav>
+	<label>选择jQuery API版本:
+	<select id="version">
+	<option value="a.v3-1">3.1</option>
+	<option value="a.v3-0">3.0</option>
+	<option value="a.v1-10">1.10 / 2.0</option>
+	<option value="a.v1-9">1.9</option>
+	<option value="a.v1-8">1.8</option>
+	<option value="a.v1-7">1.7</option>
+	<option value="a.v1-6">1.6</option>
+	<option value="a.v1-5">1.5</option>
+	<option value="a.v1-4-4">1.4.4</option>
+	<option value="a.v1-4-3">1.4.3</option>
+	<option value="a.v1-4-2">1.4.2</option>
+	<option value="a.v1-4-1">1.4.1</option>
+	<option value="a.v1-4">1.4</option>
+	<option value="a.v1-3">1.3</option>
+	<option value="a.v1-2-6">1.2.6</option>
+	<option value="a.v1-2-3">1.2.3</option>
+	<option value="a.v1-2">1.2</option>
+	<option value="a.v1-1-4">1.1.4</option>
+	<option value="a.v1-1-3">1.1.3</option>
+	<option value="a.v1-1-2">1.1.2</option>
+	<option value="a.v1-1">1.1</option>
+	<option value="a.v1-0-4">1.0.4</option>
+	<option value="a.v1-0">1.0</option>
+	</select>
+	</label>
+	</nav>
+	</header>
+	<div class="content clearfix">
+	<article id="selectors">
+	<h1>选择器</h1>
+	<div>
+	<section>
+	<h2>基本</h2>
+	<ul>
+	<li><a class="v1-0" title="Selects all elements." href="#all-selector.htm" >*</a></li>
+	<li><a class="v1-0" title="Selects all elements with the given class." href="#class-selector.htm" >.class</a></li>
+	<li><a class="v1-0" title="Selects all elements with the given tag name." href="#element-selector.htm" >element</a></li>
+	<li><a class="v1-0" title="Selects a single element with the given id attribute." href="#id-selector.htm" >#id</a></li>
+	<li><a class="v1-0" title="Selects the combined results of all the specified selectors." href="#multiple-selector.htm" >selector1, selectorN, ...</a></li>
+	</ul>
+	</section>
+	<section>
+	<h2>层级</h2>
+	<ul>
+	<li><a class="v1-0" title="Selects all direct child elements specified by 'child' of elements specified by 'parent'." href="#child-selector.htm" >parent &gt; child</a></li>
+	<li><a class="v1-0" title="Selects all elements that are descendants of a given ancestor." href="#descendant-selector.htm" >ancestor descendant</a></li>
+	<li><a class="v1-0" title="Selects all next elements matching 'next' that are immediately preceded by a sibling 'prev'." href="#next-adjacent-selector.htm" >prev + next</a></li>
+	<li><a class="v1-0" title="Selects all sibling elements that follow after the 'prev' element, have the same parent, and match the filtering 'siblings' selector." href="#next-siblings-selector.htm" >prev ~ siblings</a></li>
+	</ul>
+	</section>
+	<section>
+	<h2>基本筛选</h2>
+	<ul>
+	<li><a class="v1-2" title="Select all elements that are in the progress of an animation at the time the selector is run." href="#animated-selector.htm" >:animated</a></li>
+	<li><a class="v1-0" title="Select the element at index n within the matched set." href="#eq-selector.htm" >:eq()</a></li>
+	<li><a class="v1-0" title="Selects even elements, zero-indexed. See also odd." href="#even-selector.htm" >:even</a></li>
+	<li><a class="v1-0" title="Selects the first matched element." href="#first-selector.htm" >:first</a></li>
+	<li><a class="v1-0" title="Select all elements at an index greater than index within the matched set." href="#gt-selector.htm" >:gt()</a></li>
+	<li><a class="v1-2" title="Selects all elements that are headers, like h1, h2, h3 and so on." href="#header-selector.htm" >:header</a></li>
+	<li><a class="v1-9" title="Selects all elements of the specified language." href="#lang-selector.htm" >:lang()</a></li>
+	<li><a class="v1-0" title="Selects the last matched element." href="#last-selector.htm" >:last</a></li>
+	<li><a class="v1-0" title="Select all elements at an index less than index within the matched set." href="#lt-selector.htm" >:lt()</a></li>
+	<li><a class="v1-0" title="Selects all elements that do not match the given selector." href="#not-selector.htm" >:not()</a></li>
+	<li><a class="v1-0" title="Selects odd elements, zero-indexed. See also even." href="#odd-selector.htm" >:odd</a></li>
+	<li><a class="v1-9" title="Selects the element that is the root of the document." href="#root-selector.htm" >:root</a></li>
+	<li><a class="v1-9" title="Selects the target element indicated by the fragment identifier of the document's URI." href="#target-selector.htm" >:target</a></li>
+	</ul>
+	</section>
+	<section>
+	<h2>内容筛选</h2>
+	<ul>
+	<li><a class="v1-1-4" title="Select all elements that contain the specified text." href="#contains-selector.htm" >:contains()</a></li>
+	<li><a class="v1-0" title="Select all elements that have no children (including text nodes)." href="#empty-selector.htm" >:empty</a></li>
+	<li><a class="v1-1-4" title="Selects elements which contain at least one element that matches the specified selector." href="#has-selector.htm" >:has()</a></li>
+	<li><a class="v1-0" title="Select all elements that are the parent of another element, including text nodes." href="#parent-selector.htm" >:parent</a></li>
+	</ul>
+	</section>
+	</div>
+	<div>
+	<section>
+	<h2>可见性筛选</h2>
+	<ul>
+	<li><a class="v1-0" title="Selects all elements that are hidden." href="#hidden-selector.htm" >:hidden</a></li>
+	<li><a class="v1-0" title="Selects all elements that are visible." href="#visible-selector.htm" >:visible</a></li>
+	</ul>
+	</section>
+	<section>
+	<h2>属性</h2>
+	<ul>
+	<li><a class="v1-0" title="Selects elements that have the specified attribute with a value either equal to a given string or starting with that string followed by a hyphen (-)." href="#attribute-contains-prefix-selector.htm" >[name|="value"]</a></li>
+	<li><a class="v1-0" title="Selects elements that have the specified attribute with a value containing the a given substring." href="#attribute-contains-selector.htm" >[name*="value"]</a></li>
+	<li><a class="v1-0" title="Selects elements that have the specified attribute with a value containing a given word, delimited by spaces." href="#attribute-contains-word-selector.htm" >[name~="value"]</a></li>
+	<li><a class="v1-0" title="Selects elements that have the specified attribute with a value ending exactly with a given string. The comparison is case sensitive." href="#attribute-ends-with-selector.htm" >[name$="value"]</a></li>
+	<li><a class="v1-0" title="Selects elements that have the specified attribute with a value exactly equal to a certain value." href="#attribute-equals-selector.htm" >[name="value"]</a></li>
+	<li><a class="v1-0" title="Select elements that either don't have the specified attribute, or do have the specified attribute but not with a certain value." href="#attribute-not-equal-selector.htm" >[name!="value"</a></li>
+	<li><a class="v1-0" title="Selects elements that have the specified attribute with a value beginning exactly with a given string." href="#attribute-starts-with-selector.htm" >[name^="value"]</a></li>
+	<li><a class="v1-0" title="Selects elements that have the specified attribute, with any value." href="#has-attribute-selector.htm" >[name]</a></li>
+	<li><a class="v1-0" title="Matches elements that match all of the specified attribute filters." href="#multiple-attribute-selector.htm" >[name="value"][name2="value2"]</a> </li>
+	</ul>
+	</section>
+	<section>
+	<h2>子元素筛选</h2>
+	<ul>
+	<li><a class="v1-1-4" title="Selects all elements that are the first child of their parent." href="#first-child-selector.htm" >:first-child</a></li>
+	<li><a class="v1-9" title="Selects all elements that are the first among siblings of the same element name." href="#first-of-type-selector.htm" >:first-of-type</a></li>
+	<li><a class="v1-1-4" title="Selects all elements that are the last child of their parent." href="#last-child-selector.htm" >:last-child</a></li>
+	<li><a class="v1-9" title="Selects all elements that are the last among siblings of the same element name." href="#last-of-type-selector.htm" >:last-of-type</a></li>
+	<li><a class="v1-1-4" title="Selects all elements that are the nth-child of their parent." href="#nth-child-selector.htm" >:nth-child()</a></li>
+	<li><a class="v1-9" title="Selects all elements that are the nth-child of their parent, counting from the last element to the first." href="#nth-last-child-selector.htm" >:nth-last-child()</a></li>
+	<li><a class="v1-9" title="Selects all elements that are the nth-child of their parent, counting from the last element to the first." href="#nth-last-of-type-selector.htm" >:nth-last-of-type()</a></li>
+	<li><a class="v1-9" title="Selects all elements that are the nth child of their parent in relation to siblings with the same element name." href="#nth-of-type-selector.htm" >:nth-of-type()</a></li>
+	<li><a class="v1-1-4" title="Selects all elements that are the only child of their parent." href="#only-child-selector.htm" >:only-child</a></li>
+	<li><a class="v1-9" title="Selects all elements that have no siblings with the same element name." href="#only-of-type-selector.htm" >:only-of-type()</a></li>
+	</ul>
+	</section>
+	</div>
+	<div>
+	<section>
+	<h2>表单</h2>
+	<ul>
+	<li><a class="v1-0" title="Selects all button elements and elements of type button." href="#button-selector.htm" >:button</a></li>
+	<li><a class="v1-0" title="Selects all elements of type checkbox." href="#checkbox-selector.htm" >:checkbox</a></li>
+	<li><a class="v1-0" title="Matches all elements that are checked." href="#checked-selector.htm" >:checked</a></li>
+	<li><a class="v1-0" title="Selects all elements that are disabled." href="#disabled-selector.htm" >:disabled</a></li>
+	<li><a class="v1-0" title="Selects all elements that are enabled." href="#enabled-selector.htm" >:enabled</a></li>
+	<li><a class="v1-6" title="Selects element if it is currently focused." href="#focus-selector.htm" >:focus</a></li>
+	<li><a class="v1-0" title="Selects all elements of type file." href="#file-selector.htm" >:file</a></li>
+	<li><a class="v1-0" title="Selects all elements of type image." href="#image-selector.htm" >:image</a></li>
+	<li><a class="v1-0" title="Selects all input, textarea, select and button elements." href="#input-selector.htm" >:input</a></li>
+	<li><a class="v1-0" title="Selects all elements of type password." href="#password-selector.htm" >:password</a></li>
+	<li><a class="v1-0" title="Selects all elements of type radio." href="#radio-selector.htm" >:radio</a></li>
+	<li><a class="v1-0" title="Selects all elements of type reset." href="#reset-selector.htm" >:reset</a></li>
+	<li><a class="v1-0" title="Selects all elements that are selected." href="#selected-selector.htm" >:selected</a></li>
+	<li><a class="v1-0" title="Selects all elements of type submit." href="#submit-selector.htm" >:submit</a></li>
+	<li><a class="v1-0" title="Selects all elements of type text." href="#text-selector.htm" >:text</a></li>
+	</ul>
+	</section>
+	</div>
+	</article>
+	<article id="attributes">
+	<h1>属性 / CSS</h1>
+	<div>
+	<section>
+	<h2>属性</h2>
+	<ul>
+	<li><a class="v1-0" title="Get the value of an attribute for the first element in the set of matched elements." href="#attr.htm" >.attr()</a></li>
+	<li><a class="v1-6" title="Get the value of a property for the first element in the set of matched elements." href="#prop.htm" >.prop()</a></li>
+	<li><a class="v1-0" title="Remove an attribute from each element in the set of matched elements." href="#removeAttr.htm" >.removeAttr()</a></li>
+	<li><a class="v1-6" title="Remove a property for the set of matched elements." href="#removeProp.htm" >.removeProp()</a></li>
+	<li><a class="v1-0" title="Get the current value of the first element in the set of matched elements." href="#val.htm" >.val()</a></li>
+	</ul>
+	</section>
+	<section>
+	<h2>CSS</h2>
+	<ul>
+	<li><a class="v1-0" title="Adds the specified class(es) to each of the set of matched elements." href="#addClass.htm" >.addClass()</a></li>
+	<li><a class="v1-0" title="Get the value of a style property for the first element in the set of matched elements." href="#css.htm" >.css()</a></li>
+	<li><a class="v1-4-3" title="Provides a way to hook directly into jQuery to override how particular CSS properties are retrieved or set. Amongst other uses, cssHooks can be used to create custom, browser-normalized properties for CSS3 features such as box-shadows and gradients." href="#jQuery.cssHooks.htm" >jQuery.cssHooks</a></li>
+	<li><a class="v1-4-3" title="An object containing all CSS properties that may be used without a unit. The .css() method uses this object to see if it may append px to unitless values.." href="#jQuery.cssNumber.htm" >jQuery.cssNumber</a></li>
+	<li><a class="v3-0" title="Escapes any character that has a special meaning in a CSS selector." href="#jQuery.escapeSelector.htm" >jQuery.escapeSelector()</a></li>
+	<li><a class="v1-2" title="Determine whether any of the matched elements are assigned the given class." href="#hasClass.htm" >.hasClass()</a></li>
+	<li><a class="v1-0" title="Remove a single class, multiple classes, or all classes from each element in the set of matched elements." href="#removeClass.htm" >.removeClass()</a></li>
+	<li><a class="v1-0" title="Add or remove one or more classes from each element in the set of matched elements, depending on either the class's presence or the value of the switch argument." href="#toggleClass.htm" >.toggleClass()</a></li>
+	</ul>
+	</section>
+	<section>
+	<h2>尺寸</h2>
+	<ul>
+	<li><a class="v1-0" title="Get the current computed height for the first element in the set of matched elements." href="#height.htm" >.height()</a></li>
+	<li><a class="v1-2-6" title="Get the current computed height for the first element in the set of matched elements, including padding but not border." href="#innerHeight.htm" >.innerHeight()</a></li>
+	<li><a class="v1-2-6" title="Get the current computed width for the first element in the set of matched elements, including padding but not border." href="#innerWidth.htm" >.innerWidth()</a></li>
+	<li><a class="v1-2-6" title="Get the current computed height for the first element in the set of matched elements, including padding, border, and optionally margin." href="#outerHeight.htm" >.outerHeight()</a></li>
+	<li><a class="v1-2-6" title="Get the current computed width for the first element in the set of matched elements, including padding and border." href="#outerWidth.htm" >.outerWidth()</a></li>
+	<li><a class="v1-0" title="Get the current computed width for the first element in the set of matched elements." href="#width.htm" >.width()</a></li>
+	</ul>
+	</section>
+	<section>
+	<h2>位置</h2>
+	<ul>
+	<li><a class="v1-2" title="Get the current coordinates of the first element in the set of matched elements, relative to the document." href="#offset.htm" >.offset()</a></li>
+	<li><a class="v1-2-6" title="Get the closest ancestor element that is positioned." href="#offsetParent.htm" >.offsetParent()</a></li>
+	<li><a class="v1-2" title="Get the current coordinates of the first element in the set of matched elements, relative to the offset parent." href="#position.htm" >.position()</a></li>
+	<li><a class="v1-2-6" title="Get the current horizontal position of the scroll bar for the first element in the set of matched elements." href="#scrollLeft.htm" >.scrollLeft()</a></li>
+	<li><a class="v1-2-6" title="Get the current vertical position of the scroll bar for the first element in the set of matched elements." href="#scrollTop.htm" >.scrollTop()</a></li>
+	</ul>
+	</section>
+	<section>
+	<h2>数据</h2>
+	<ul>
+	<li><a class="v1-2-3" title="Store arbitrary data associated with the specified element." href="#jQuery.data.htm" >jQuery.data()</a></li>
+	<li><a class="v1-2-3" title="Store arbitrary data associated with the matched elements." href="#data.htm" >.data()</a></li>
+	<li><a class="v1-5" title="Determine whether an element has any jQuery data associated with it." href="#jQuery.hasData.htm" >jQuery.hasData()</a></li>
+	<li><a class="v1-2-3" title="Remove a previously-stored piece of data." href="#jQuery.removeData.htm" >jQuery.removeData()</a></li>
+	<li><a class="v1-2-3" title="Remove a previously-stored piece of data." href="#removeData.htm" >.removeData()</a></li>
+	</ul>
+	</section>
+	</div>
+	</article>
+	<article id="manipulation">
+	<h1>操作</h1>
+	<div>
+	<section>
+	<h2>拷贝</h2>
+	<ul>
+	<li><a class="v1-0" title="Create a deep copy of the set of matched elements." href="#clone.htm" >.clone()</a></li>
+	</ul>
+	</section>
+	<section>
+	<h2>DOM 插入, 包裹</h2>
+	<ul>
+	<li><a class="v1-0" title="Wrap an HTML structure around each element in the set of matched elements." href="#wrap.htm" >.wrap()</a></li>
+	<li><a class="v1-2" title="Wrap an HTML structure around all elements in the set of matched elements." href="#wrapAll.htm" >.wrapAll()</a></li>
+	<li><a class="v1-2" title="Wrap an HTML structure around the content of each element in the set of matched elements." href="#wrapInner.htm" >.wrapInner()</a></li>
+	</ul>
+	</section>
+	<section>
+	<h2>DOM 插入, 内部插入</h2>
+	<ul>
+	<li><a class="v1-0" title="Insert content, specified by the parameter, to the end of each element in the set of matched elements." href="#append.htm" >.append()</a></li>
+	<li><a class="v1-0" title="Insert every element in the set of matched elements to the end of the target." href="#appendTo.htm" >.appendTo()</a></li>
+	<li><a class="v1-0" title="Get the HTML contents of the first element in the set of matched elements." href="#html.htm" >.html()</a></li>
+	<li><a class="v1-0" title="Insert content, specified by the parameter, to the beginning of each element in the set of matched elements." href="#prepend.htm" >.prepend()</a></li>
+	<li><a class="v1-0" title="Insert every element in the set of matched elements to the beginning of the target." href="#prependTo.htm" >.prependTo()</a></li>
+	<li><a class="v1-0" title="Get the combined text contents of each element in the set of matched elements, including their descendants." href="#text.htm" >.text()</a></li>
+	</ul>
+	</section>
+	<section>
+	<h2>DOM 插入, 外部插入</h2>
+	<ul>
+	<li><a class="v1-0" title="Insert content, specified by the parameter, after each element in the set of matched elements." href="#after.htm" >.after()</a></li>
+	<li><a class="v1-0" title="Insert content, specified by the parameter, before each element in the set of matched elements." href="#before.htm" >.before()</a></li>
+	<li><a class="v1-0" title="Insert every element in the set of matched elements after the target." href="#insertAfter.htm" >.insertAfter()</a></li>
+	<li><a class="v1-0" title="Insert every element in the set of matched elements before the target." href="#insertBefore.htm" >.insertBefore()</a></li>
+	</ul>
+	</section>
+	<section>
+	<h2>DOM 移除</h2>
+	<ul>
+	<li><a class="v1-4" title="Remove the set of matched elements from the DOM." href="#detach.htm" >.detach()</a></li>
+	<li><a class="v1-0" title="Remove all child nodes of the set of matched elements from the DOM." href="#empty.htm" >.empty()</a></li>
+	<li><a class="v1-0" title="Remove the set of matched elements from the DOM." href="#remove.htm" >.remove()</a></li>
+	<li><a class="v1-4" title="Remove the parents of the set of matched elements from the DOM, leaving the matched elements in their place." href="#unwrap.htm" >.unwrap()</a></li>
+	</ul>
+	</section>
+	<section>
+	<h2>DOM 替换</h2>
+	<ul>
+	<li><a class="v1-2" title="Replace each target element with the set of matched elements." href="#replaceAll.htm" >.replaceAll()</a></li>
+	<li><a class="v1-2" title="Replace each element in the set of matched elements with the provided new content." href="#replaceWith.htm" >.replaceWith()</a></li>
+	</ul>
+	</section>
+	</div>
+	</article>
+	<article id="traversing">
+	<h1>遍历</h1>
+	<div>
+	<section>
+	<h2>筛选</h2>
+	<ul>
+	<li><a class="v1-1-2" title="Reduce the set of matched elements to the one at the specified index." href="#eq.htm" >.eq()</a></li>
+	<li><a class="v1-0" title="Reduce the set of matched elements to those that match the selector or pass the function's test." href="#filter.htm" >.filter()</a></li>
+	<li><a class="v1-4" title="Reduce the set of matched elements to the first in the set." href="#first.htm" >.first()</a></li>
+	<li><a class="v1-4" title="Reduce the set of matched elements to those that have a descendant that matches the selector or DOM element." href="#has.htm" >.has()</a></li>
+	<li><a class="v1-0" title="Check the current matched set of elements against a selector and return true if at least one of these elements matches the selector." href="#is.htm" >.is()</a></li>
+	<li><a class="v1-4" title="Reduce the set of matched elements to the final one in the set." href="#last.htm" >.last()</a></li>
+	<li><a class="v1-2" title="Pass each element in the current matched set through a function, producing a new jQuery object containing the return values." href="#map.htm" >.map()</a></li>
+	<li><a class="v1-0" title="Remove elements from the set of matched elements." href="#not.htm" >.not()</a></li>
+	<li><a class="v1-1-4" title="Reduce the set of matched elements to a subset specified by a range of indices." href="#slice.htm" >.slice()</a></li>
+	</ul>
+	</section>
+	<section>
+	<h2>各种遍历</h2>
+	<ul>
+	<li><a class="v1-0" title="Add elements to the set of matched elements." href="#add.htm" >.add()</a></li>
+	<li><a class="v1-2 v1-8-d" title="Add the previous set of elements on the stack to the current set." href="#andSelf.htm" >.andSelf()</a></li>
+	<li><a class="v1-2" title="Get the children of each element in the set of matched elements, including text and comment nodes." href="#contents.htm" >.contents()</a></li>
+	<li><a class="v1-0" title="Iterate over a jQuery object, executing a function for each matched element." href="#each.htm" >.each()</a></li>
+	<li><a class="v1-0" title="End the most recent filtering operation in the current chain and return the set of matched elements to its previous state." href="#end.htm" >.end()</a></li>
+	</ul>
+	</section>
+	<section>
+	<h2>树遍历</h2>
+	<ul>
+	<li><a class="v1-8" title="Add the previous set of elements on the stack to the current set, optionally filtered by a selector." href="#addBack.htm" >.addBack()</a></li>
+	<li><a class="v1-0" title="Get the children of each element in the set of matched elements, optionally filtered by a selector." href="#children.htm" >.children()</a></li>
+	<li><a class="v1-3" title="Get the first ancestor element that matches the selector, beginning at the current element and progressing up through the DOM tree." href="#closest.htm" >.closest()</a></li>
+	<li><a class="v1-0" title="Get the descendants of each element in the current set of matched elements, filtered by a selector." href="#find.htm" >.find()</a></li>
+	<li><a class="v1-0" title="Get the immediately following sibling of each element in the set of matched elements. If a selector is provided, it retrieves the next sibling only if it matches that selector." href="#next.htm" >.next()</a></li>
+	<li><a class="v1-2" title="Get all following siblings of each element in the set of matched elements, optionally filtered by a selector." href="#nextAll.htm" >.nextAll()</a></li>
+	<li><a class="v1-4" title="Get all following siblings of each element up to but not including the element matched by the selector." href="#nextUntil.htm" >.nextUntil()</a></li>
+	<li><a class="v1-0" title="Get the parent of each element in the current set of matched elements, optionally filtered by a selector." href="#parent.htm" >.parent()</a></li>
+	<li><a class="v1-0" title="Get the ancestors of each element in the current set of matched elements, optionally filtered by a selector." href="#parents.htm" >.parents()</a></li>
+	<li><a class="v1-4" title="Get the ancestors of each element in the current set of matched elements, up to but not including the element matched by the selector." href="#parentsUntil.htm" >.parentsUntil()</a></li>
+	<li><a class="v1-0" title="Get the immediately preceding sibling of each element in the set of matched elements, optionally filtered by a selector." href="#prev.htm" >.prev()</a></li>
+	<li><a class="v1-2" title="Get all preceding siblings of each element in the set of matched elements, optionally filtered by a selector." href="#prevAll.htm" >.prevAll()</a></li>
+	<li><a class="v1-4" title="Get all preceding siblings of each element up to but not including the element matched by the selector." href="#prevUntil.htm" >.prevUntil()</a></li>
+	<li><a class="v1-0" title="Get the siblings of each element in the set of matched elements, optionally filtered by a selector." href="#siblings.htm" >.siblings()</a></li>
+	</ul>
+	</section>
+	</div>
+	</article>
+	<article id="events">
+	<h1>事件</h1>
+	<div>
+	<section>
+	<h2>浏览器事件</h2>
+	<ul>
+	<li><a class="v1-0 v1-8-d" title="Bind an event handler to the 'error' JavaScript event." href="#error.htm" >.error()</a></li>
+	<li><a class="v1-0" title="Bind an event handler to the 'resize' JavaScript event, or trigger that event on an element." href="#resize.htm" >.resize()</a></li>
+	<li><a class="v1-0" title="Bind an event handler to the 'scroll' JavaScript event, or trigger that event on an element." href="#scroll.htm" >.scroll()</a></li>
+	</ul>
+	</section>
+	<section>
+	<h2>文档加载</h2>
+	<ul>
+	<li><a class="v1-6" title="Holds or releases the execution of jQuery's ready event." href="#jQuery.holdReady.htm" >.holdReady()</a></li>
+	<li><a class="v1-0 v1-8-d" title="Bind an event handler to the 'load' JavaScript event." href="#load-event.htm" >.load()</a></li>
+	<li><a class="v1-0" title="Specify a function to execute when the DOM is fully loaded." href="#ready.htm" >.ready()</a></li>
+	<li><a class="v1-0 v1-8-d" title="Bind an event handler to the 'unload' JavaScript event." href="#unload.htm" >.unload()</a></li>
+	</ul>
+	</section>
+	<section>
+	<h2>事件绑定</h2>
+	<ul>
+	<li><a class="v1-0" title="Attach a handler to an event for the elements." href="#bind.htm" >.bind()</a></li>
+	<li><a class="v1-4-2" title="Attach a handler to one or more events for all elements that match the selector, now or in the future, based on a specific set of root elements." href="#delegate.htm" >.delegate()</a></li>
+	<li><a class="v1-3 v1-7-d v1-9-r" title="Remove all event handlers previously attached using .live() from the elements." href="#die.htm" >.die()</a></li>
+	<li><a class="v1-3 v1-7-d v1-9-r" title="Attach a handler to the event for all elements which match the current selector, now and in the future." href="#live.htm" >.live()</a></li>
+	<li><a class="v1-7" title="Remove an event handler." href="#off.htm" >.off()</a></li>
+	<li><a class="v1-7" title="Attach an event handler function for one or more events to the selected elements." href="#on.htm" >.on()</a></li>
+	<li><a class="v1-1" title="Attach a handler to an event for the elements. The handler is executed at most once per element." href="#one.htm" >.one()</a></li>
+	<li><a class="v1-0" title="Execute all handlers and behaviors attached to the matched elements for the given event type." href="#trigger.htm" >.trigger()</a></li>
+	<li><a class="v1-2" title="Execute all handlers attached to an element for an event." href="#triggerHandler.htm" >.triggerHandler()</a></li>
+	<li><a class="v1-0" title="Remove a previously-attached event handler from the elements." href="#unbind.htm" >.unbind()</a></li>
+	<li><a class="v1-4-2" title="Remove a handler from the event for all elements which match the current selector, now or in the future, based upon a specific set of root elements." href="#undelegate.htm" >.undelegate()</a></li>
+	</ul>
+	</section>
+	<section>
+	<h2>表单事件</h2>
+	<ul>
+	<li><a class="v1-0" title="Bind an event handler to the 'blur' JavaScript event, or trigger that event on an element." href="#blur.htm" >.blur()</a></li>
+	<li><a class="v1-0" title="Bind an event handler to the 'change' JavaScript event, or trigger that event on an element." href="#change.htm" >.change()</a></li>
+	<li><a class="v1-0" title="Bind an event handler to the 'focus' JavaScript event, or trigger that event on an element." href="#focus.htm" >.focus()</a></li>
+	<li><a class="v1-0" title="Bind an event handler to the 'select' JavaScript event, or trigger that event on an element." href="#select.htm" >.select()</a></li>
+	<li><a class="v1-0" title="Bind an event handler to the 'submit' JavaScript event, or trigger that event on an element." href="#submit.htm" >.submit()</a></li>
+	</ul>
+	</section>
+	<section>
+	<h2>键盘事件</h2>
+	<ul>
+	<li><a class="v1-0" title="Bind an event handler to the 'keydown' JavaScript event, or trigger that event on an element." href="#keydown.htm" >.keydown()</a></li>
+	<li><a class="v1-0" title="Bind an event handler to the 'keypress' JavaScript event, or trigger that event on an element." href="#keypress.htm" >.keypress()</a></li>
+	<li><a class="v1-0" title="Bind an event handler to the 'keyup' JavaScript event, or trigger that event on an element." href="#keyup.htm" >.keyup()</a></li>
+	</ul>
+	</section>
+	</div>
+	<div>
+	<section>
+	<h2>鼠标事件</h2>
+	<ul>
+	<li><a class="v1-0" title="Bind an event handler to the 'click' JavaScript event, or trigger that event on an element." href="#click.htm" >.click()</a></li>
+	<li><a class="v1-0" title="为 JavaScript 的contextmenu 事件绑定一个处理器，或者触发元素上的 contextmenu 事件" href="#contextmenu.htm" >.contextmenu()</a></li>
+	<li><a class="v1-0" title="Bind an event handler to the 'dblclick' JavaScript event, or trigger that event on an element." href="#dblclick.htm" >.dblclick()</a></li>
+	<li><a class="v1-4" title="Bind an event handler to the 'focusin' JavaScript event." href="#focusin.htm" >.focusin()</a></li>
+	<li><a class="v1-4" title="Bind an event handler to the 'focusout' JavaScript event." href="#focusout.htm" >.focusout()</a></li>
+	<li><a class="v1-0" title="Bind two handlers to the matched elements, to be executed when the mouse pointer enters and leaves the elements." href="#hover.htm" >.hover()</a></li>
+	<li><a class="v1-0" title="Bind an event handler to the 'mousedown' JavaScript event, or trigger that event on an element." href="#mousedown.htm" >.mousedown()</a></li>
+	<li><a class="v1-0" title="Bind an event handler to be fired when the mouse enters an element, or trigger that handler on an element." href="#mouseenter.htm" >.mouseenter()</a></li>
+	<li><a class="v1-0" title="Bind an event handler to be fired when the mouse leaves an element, or trigger that handler on an element." href="#mouseleave.htm" >.mouseleave()</a></li>
+	<li><a class="v1-0" title="Bind an event handler to the 'mousemove' JavaScript event, or trigger that event on an element." href="#mousemove.htm" >.mousemove()</a></li>
+	<li><a class="v1-0" title="Bind an event handler to the 'mouseout' JavaScript event, or trigger that event on an element." href="#mouseout.htm" >.mouseout()</a></li>
+	<li><a class="v1-0" title="Bind an event handler to the 'mouseover' JavaScript event, or trigger that event on an element." href="#mouseover.htm" >.mouseover()</a></li>
+	<li><a class="v1-0" title="Bind an event handler to the 'mouseup' JavaScript event, or trigger that event on an element." href="#mouseup.htm" >.mouseup()</a></li>
+	<li><a class="v1-0 v1-8-d v1-9-r" title="Bind two or more handlers to the matched elements, to be executed on alternate clicks." href="#toggle-event.htm" >.toggle()</a></li>
+	</ul>
+	</section>
+	<section>
+	<h2>事件对象</h2>
+	<ul>
+	<li><a class="v1-3" title="The current DOM element within the event bubbling phase." href="#event.currentTarget.htm" >event.currentTarget</a></li>
+	<li><a class="v1-1" title="The optional data passed to jQuery.fn.bind when the current executing handler was bound." href="#event.data.htm" >event.data</a></li>
+	<li><a class="v1-3" title="Returns whether event.preventDefault() was ever called on this event object." href="#event.isDefaultPrevented.htm" >event.isDefaultPrevented()</a> </li>
+	<li><a class="v1-3" title="Returns whether event.stopImmediatePropagation() was ever called on this event object." href="#event.isImmediatePropagationStopped.htm" >event.isImmediatePropagationStopped()</a> </li>
+	<li><a class="v1-3" title="Returns whether event.stopPropagation() was ever called on this event object." href="#event.isPropagationStopped.htm" >event.isPropagationStopped()</a> </li>
+	<li><a class="v1-4-3" title="The namespace specified when the event was triggered." href="#event.namespace.htm" >event.namespace</a></li>
+	<li><a class="v1-0-4" title="The mouse position relative to the left edge of the document." href="#event.pageX.htm" >event.pageX</a></li>
+	<li><a class="v1-0-4" title="The mouse position relative to the top edge of the document." href="#event.pageY.htm" >event.pageY</a></li>
+	<li><a class="v1-0" title="If this method is called, the default action of the event will not be triggered." href="#event.preventDefault.htm" >event.preventDefault()</a></li>
+	<li><a class="v1-1-4" title="The other DOM element involved in the event, if any." href="#event.relatedTarget.htm" >event.relatedTarget</a></li>
+	<li><a class="v1-3" title="The last value returned by an event handler that was triggered by this event, unless the value was undefined." href="#event.result.htm" >event.result</a></li>
+	<li><a class="v1-3" title="Prevents other event handlers from being called." href="#event.stopImmediatePropagation.htm" >event.stopImmediatePropagation()</a> </li>
+	<li><a class="v1-0" title="Prevents the event from bubbling up the DOM tree, preventing any parent handlers from being notified of the event." href="#event.stopPropagation.htm" >event.stopPropagation()</a></li>
+	<li><a class="v1-0" title="The DOM element that initiated the event." href="#event.target.htm" >event.target</a></li>
+	<li><a class="v1-2-6" title="The difference in milliseconds between the time an event is triggered and January 1, 1970." href="#event.timeStamp.htm" >event.timeStamp</a></li>
+	<li><a class="v1-0" title="Describes the nature of the event." href="#event.type.htm" >event.type</a></li>
+	<li><a class="v1-1-3" title="For key or button events, this attribute indicates the specific button or key that was pressed." href="#event.which.htm" >event.which</a></li>
+	</ul>
+	</section>
+	</div>
+	</article>
+	<article id="effects">
+	<h1>效果</h1>
+	<div>
+	<section>
+	<h2>基础</h2>
+	<ul>
+	<li><a class="v1-0" title="Hide the matched elements." href="#hide.htm" >.hide()</a> </li>
+	<li><a class="v1-0" title="Display the matched elements." href="#show.htm" >.show()</a> </li>
+	<li><a class="v1-0" title="Display or hide the matched elements." href="#toggle.htm" >.toggle()</a></li>
+	</ul>
+	</section>
+	<section>
+	<h2>自定义</h2>
+	<ul>
+	<li><a class="v1-0" title="Perform a custom animation of a set of CSS properties." href="#animate.htm" >.animate()</a></li>
+	<li><a class="v1-4" title="Remove from the queue all items that have not yet been run." href="#clearQueue.htm" >.clearQueue()</a></li>
+	<li><a class="v1-4" title="Set a timer to delay execution of subsequent items in the queue." href="#delay.htm" >.delay()</a></li>
+	<li><a class="v1-2" title="Execute the next function on the queue for the matched elements." href="#dequeue.htm" >.dequeue()</a></li>
+	<li><a class="v1-3" title="Execute the next function on the queue for the matched element." href="#jQuery.dequeue.htm" >jQuery.dequeue()</a></li>
+	<li><a class="v1-9" title="Stop the currently-running animation, remove all queued animations, and complete all animations for the matched elements." href="#finish.htm" >.finish()</a></li>
+	<li><a class="v1-4-3" title="The rate (in milliseconds) at which animations fire." href="#jQuery.fx.interval.htm" >jQuery.fx.interval</a></li>
+	<li><a class="v1-3" title="Globally disable all animations." href="#jQuery.fx.off.htm" >jQuery.fx.off</a></li>
+	<li><a class="v1-2" title="Show the queue of functions to be executed on the matched elements." href="#queue.htm" >.queue()</a></li>
+	<li><a class="v1-3" title="Show the queue of functions to be executed on the matched elements." href="#jQuery.queue.htm" >jQuery.queue()</a></li>
+	<li><a class="v1-2" title="Stop the currently-running animation on the matched elements." href="#stop.htm" >.stop()</a></li>
+	</ul>
+	</section>
+	<section>
+	<h2>渐变</h2>
+	<ul>
+	<li><a class="v1-0" title="Display the matched elements by fading them to opaque." href="#fadeIn.htm" >.fadeIn()</a></li>
+	<li><a class="v1-0" title="Hide the matched elements by fading them to transparent." href="#fadeOut.htm" >.fadeOut()</a></li>
+	<li><a class="v1-0" title="Adjust the opacity of the matched elements." href="#fadeTo.htm" >.fadeTo()</a></li>
+	<li><a class="v1-4-4" title="Display or hide the matched elements by animating their opacity." href="#fadeToggle.htm" >.fadeToggle()</a></li>
+	</ul>
+	</section>
+	<section>
+	<h2>滑动</h2>
+	<ul>
+	<li><a class="v1-0" title="Display the matched elements with a sliding motion." href="#slideDown.htm" >.slideDown()</a></li>
+	<li><a class="v1-0" title="Display or hide the matched elements with a sliding motion." href="#slideToggle.htm" >.slideToggle()</a></li>
+	<li><a class="v1-0" title="Hide the matched elements with a sliding motion." href="#slideUp.htm" >.slideUp()</a></li>
+	</ul>
+	</section>
+	</div>
+	</article>
+	<article id="ajax">
+	<h1>Ajax</h1>
+	<div>
+	<section>
+	<h2>全局Ajax事件处理程序</h2>
+	<ul>
+	<li><a class="v1-0" title="Register a handler to be called when Ajax requests complete. This is an Ajax Event." href="#ajaxComplete.htm" >.ajaxComplete()</a></li>
+	<li><a class="v1-0" title="Register a handler to be called when Ajax requests complete with an error. This is an Ajax Event." href="#ajaxError.htm" >.ajaxError()</a></li>
+	<li><a class="v1-0" title="Attach a function to be executed before an Ajax request is sent. This is an Ajax Event." href="#ajaxSend.htm" >.ajaxSend()</a></li>
+	<li><a class="v1-0" title="Register a handler to be called when the first Ajax request begins. This is an Ajax Event." href="#ajaxStart.htm" >.ajaxStart()</a></li>
+	<li><a class="v1-0" title="Register a handler to be called when all Ajax requests have completed. This is an Ajax Event." href="#ajaxStop.htm" >.ajaxStop()</a></li>
+	<li><a class="v1-0" title="Attach a function to be executed whenever an Ajax request completes successfully. This is an Ajax Event." href="#ajaxSuccess.htm" >.ajaxSuccess()</a></li>
+	</ul>
+	</section>
+	<section>
+	<h2>辅助函数</h2>
+	<ul>
+	<li><a class="v1-2" title="Create a serialized representation of an array or object, suitable for use in a URL query string or Ajax request." href="#jQuery.param.htm" >jQuery.param()</a></li>
+	<li><a class="v1-0" title="Encode a set of form elements as a string for submission." href="#serialize.htm" >.serialize()</a></li>
+	<li><a class="v1-2" title="Encode a set of form elements as an array of names and values." href="#serializeArray.htm" >.serializeArray()</a></li>
+	</ul>
+	</section>
+	<section>
+	<h2>底层接口</h2>
+	<ul>
+	<li><a class="v1-0" title="Perform an asynchronous HTTP (Ajax) request." href="#jQuery.ajax.htm" >jQuery.ajax()</a></li>
+	<li><a class="v1-1" title="Set default values for future Ajax requests." href="#jQuery.ajaxSetup.htm" >jQuery.ajaxSetup()</a></li>
+	</ul>
+	</section>
+	<section>
+	<h2>快捷方法</h2>
+	<ul>
+	<li><a class="v1-0" title="Load data from the server using a HTTP GET request." href="#jQuery.get.htm" >jQuery.get()</a></li>
+	<li><a class="v1-0" title="Load JSON-encoded data from the server using a GET HTTP request." href="#jQuery.getJSON.htm" >jQuery.getJSON()</a></li>
+	<li><a class="v1-0" title="Load a JavaScript file from the server using a GET HTTP request, then execute it." href="#jQuery.getScript.htm" >jQuery.getScript()</a></li>
+	<li><a class="v1-0" title="Load data from the server and place the returned HTML into the matched element." href="#load.htm" >.load()</a></li>
+	<li><a class="v1-0" title="Load data from the server using a HTTP POST request." href="#jQuery.post.htm" >jQuery.post()</a></li>
+	</ul>
+	</section>
+	</div>
+	</article>
+	<article id="core">
+	<h1>核心</h1>
+	<div>
+	<section>
+	<h2>jQuery 对象</h2>
+	<ul>
+	<li><a class="v1-0" title="Accepts a string containing a CSS selector which is then used to match a set of elements." href="#jQuery.htm" >jQuery()</a></li>
+	<li><a class="v1-0" title="Relinquish jQuery's control of the $ variable." href="#jQuery.noConflict.htm" >jQuery.noConflict()</a></li>
+	<li><a class="v1-5 v1-7-d v1-9-r" title="Creates a new copy of jQuery whose properties and methods can be modified without affecting the original jQuery object." href="#jQuery.sub.htm" >jQuery.sub()</a></li>
+	<li><a class="v1-5" title="Provides a way to execute callback functions based on one or more objects, usually Deferred objects that represent asynchronous events." href="#jQuery.when.htm" >jQuery.when()</a></li>
+	<li><a class="v1-5" title="处理包裹在jQuery()中函数同步抛出的错误。" href="#jQuery.readyException.htm" >jQuery.readyException()</a></li>
+	</ul>
+	</section>
+	<section>
+	<h2>实用工具</h2>
+	<ul>
+	<li><a class="v1-0 v1-3-d" title="States if the current page, in the user's browser, is being rendered using the W3C CSS Box Model." href="#jQuery.boxModel.htm" >jQuery.boxModel</a></li>
+	<li><a class="v1-0 v1-3-d v1-9-r" title="Contains flags for the useragent, read from navigator.userAgent. We recommend against using this property; please try to use feature detection instead (see jQuery.support). jQuery.browser may be moved to a plugin in a future release of jQuery." href="#jQuery.browser.htm" >jQuery.browser</a></li>
+	<li><a class="v1-4" title="Check to see if a DOM node is within another DOM node." href="#jQuery.contains.htm" >jQuery.contains()</a></li>
+	<li><a class="v1-0" title="A generic iterator function, which can be used to seamlessly iterate over both objects and arrays. Arrays and array-like objects with a length property (such as a function's arguments object) are iterated by numeric index, from 0 to length-1. Other objects are iterated via their named properties." href="#jQuery.each.htm" >jQuery.each()</a></li>
+	<li><a class="v1-0" title="Merge the contents of two or more objects together into the first object." href="#jQuery.extend.htm" >jQuery.extend()</a></li>
+	<li><a class="v1-0-4" title="Execute some JavaScript code globally." href="#jQuery.globalEval.htm" >jQuery.globalEval()</a></li>
+	<li><a class="v1-0" title="Finds the elements of an array which satisfy a filter function. The original array is not affected." href="#jQuery.grep.htm" >jQuery.grep()</a></li>
+	<li><a class="v1-2" title="Search for a specified value within an array and return its index (or -1 if not found)." href="#jQuery.inArray.htm" >jQuery.inArray()</a></li>
+	<li><a class="v1-3" title="Determine whether the argument is an array." href="#jQuery.isArray.htm" >jQuery.isArray()</a></li>
+	<li><a class="v1-4" title="Check to see if an object is empty (contains no properties)." href="#jQuery.isEmptyObject.htm" >jQuery.isEmptyObject()</a></li>
+	<li><a class="v1-2" title="Determine if the argument passed is a Javascript function object." href="#jQuery.isFunction.htm" >jQuery.isFunction()</a></li>
+	<li><a class="v1-7" title="Determines whether its argument is a number." href="#jQuery.isNumeric.htm" >jQuery.isNumeric()</a></li>
+	<li><a class="v1-4" title="Check to see if an object is a plain object (created using '{}' or 'new Object')." href="#jQuery.isPlainObject.htm" >jQuery.isPlainObject()</a></li>
+	<li><a class="v1-4-3" title="Determine whether the argument is a window." href="#jQuery.isWindow.htm" >jQuery.isWindow()</a></li>
+	<li><a class="v1-1-4" title="Check to see if a DOM node is within an XML document (or is an XML document)." href="#jQuery.isXMLDoc.htm" >jQuery.isXMLDoc()</a></li>
+	<li><a class="v1-2" title="Convert an array-like object into a true JavaScript array." href="#jQuery.makeArray.htm" >jQuery.makeArray()</a></li>
+	<li><a class="v1-0" title="Translate all items in an array or array-like object to another array of items." href="#jQuery.map.htm" >jQuery.map()</a></li>
+	<li><a class="v1-0" title="Merge the contents of two arrays together into the first array. " href="#jQuery.merge.htm" >jQuery.merge()</a></li>
+	<li><a class="v1-4" title="An empty function." href="#jQuery.noop.htm" >jQuery.noop()</a> </li>
+	<li><a class="v1-4-3" title="Return a number representing the current time." href="#jQuery.now.htm" >jQuery.now()</a></li>
+	<li><a class="v1-8" title="Parses a string into an array of DOM nodes." href="#jQuery.parseHTML.htm" >jQuery.parseHTML()</a></li>
+	<li><a class="v1-4-1" title="Takes a well-formed JSON string and returns the resulting JavaScript object." href="#jQuery.parseJSON.htm" >jQuery.parseJSON()</a></li>
+	<li><a class="v1-5" title="Parses a string into an XML document." href="#jQuery.parseXML.htm" >jQuery.parseXML()</a></li>
+	<li><a class="v1-4" title="Takes a function and returns a new one that will always have a particular context." href="#jQuery.proxy.htm" >jQuery.proxy()</a></li>
+	<li><a class="v3-1" title="处理包裹在jQuery()中函数同步抛出的错误。" href="#jQuery.readyException.htm" >jQuery.readyException()</a></li>
+	<li><a class="v1-3" title="A collection of properties that represent the presence of different browser features or bugs." href="#jQuery.support.htm" >jQuery.support</a></li>
+	<li><a class="v1-0" title="Remove the whitespace from the beginning and end of a string." href="#jQuery.trim.htm" >jQuery.trim()</a></li>
+	<li><a class="v1-4-3" title="Determine the internal JavaScript [[Class]] of an object." href="#jQuery.type.htm" >jQuery.type()</a></li>
+	<li><a class="v1-1-3" title="Sorts an array of DOM elements, in place, with the duplicates removed. Note that this only works on arrays of DOM elements, not strings or numbers." href="#jQuery.unique.htm" >jQuery.unique()</a></li>
+	</ul>
+	</section>
+	</div>
+	<div>
+	<section>
+	<h2>DOM 元素方法</h2>
+	<ul>
+	<li><a class="v1-0" title="Retrieve the DOM elements matched by the jQuery object." href="#get.htm" >.get()</a></li>
+	<li><a class="v1-0" title="Search for a given element from among the matched elements." href="#index_1.htm" >.index()</a></li>
+	<li><a class="v1-0 v1-8-d" title="Return the number of elements in the jQuery object." href="#size.htm" >.size()</a></li>
+	<li><a class="v1-4" title="Retrieve all the DOM elements contained in the jQuery set, as an array." href="#toArray.htm" >.toArray()</a></li>
+	</ul>
+	</section>
+	<section>
+	<h2>内部构件</h2>
+	<ul>
+	<li><a class="v1-0" title="A string containing the jQuery version number." href="#jquery-2.htm" >.jquery</a></li>
+	<li><a class="v1-3 v1-10-d" title="The DOM node context originally passed to jQuery(); if none was passed then context will likely be the document." href="#context.htm" >.context</a></li>
+	<li><a class="v1-4-1" title="Takes a string and throws an exception containing it." href="#jQuery.error.htm" >jQuery.error()</a></li>
+	<li><a class="v1-0" title="The number of elements in the jQuery object." href="#length.htm" >.length</a></li>
+	<li><a class="v1-0" title="Add a collection of DOM elements onto the jQuery stack." href="#pushStack.htm" >.pushStack()</a></li>
+	<li><a class="v1-3" title="A selector representing selector originally passed to jQuery()." href="#selector.htm" >.selector</a></li>
+	</ul>
+	</section>
+	<section>
+	<h2>延迟对象</h2>
+	<ul>
+	<li><a class="v1-6" title="Add handlers to be called when the Deferred object is either resolved or rejected." href="#deferred.always.htm" >deferred.always()</a></li>
+	<li><a class="v1-5" title="Add handlers to be called when the Deferred object is resolved." href="#deferred.done.htm" >deferred.done()</a></li>
+	<li><a class="v1-5" title="Add handlers to be called when the Deferred object is rejected." href="#deferred.fail.htm" >deferred.fail()</a></li>
+	<li><a class="v1-5 v1-7-d v1-8-r" title="Determine whether a Deferred object has been rejected." href="#deferred.isRejected.htm" >deferred.isRejected()</a></li>
+	<li><a class="v1-5 v1-7-d v1-8-r" title="Determine whether a Deferred object has been resolved." href="#deferred.isResolved.htm" >deferred.isResolved()</a></li>
+	<li><a class="v1-7" title="Call the progressCallbacks on a Deferred object with the given args." href="#deferred.notify.htm" >deferred.notify()</a></li>
+	<li><a class="v1-7" title="Call the progressCallbacks on a Deferred object with the given context and args." href="#deferred.notifyWith.htm" >deferred.notifyWith()</a></li>
+	<li><a class="v1-6 v1-8-d" title="Utility method to filter and/or chain Deferreds." href="#deferred.pipe.htm" >deferred.pipe()</a></li>
+	<li><a class="v1-7" title="Add handlers to be called when the Deferred object generates progress notifications." href="#deferred.progress.htm" >deferred.progress()</a></li>
+	<li><a class="v1-5" title="Return a Deferred's Promise object." href="#deferred.promise.htm" >deferred.promise()</a></li>
+	<li><a class="v1-5" title="Reject a Deferred object and call any failCallbacks with the given args." href="#deferred.reject.htm" >deferred.reject()</a></li>
+	<li><a class="v1-5" title="Reject a Deferred object and call any failCallbacks with the given context and args." href="#deferred.rejectWith.htm" >deferred.rejectWith()</a></li>
+	<li><a class="v1-5" title="Resolve a Deferred object and call any doneCallbacks with the given args." href="#deferred.resolve.htm" >deferred.resolve()</a></li>
+	<li><a class="v1-5" title="Resolve a Deferred object and call any doneCallbacks with the given context and args." href="#deferred.resolveWith.htm" >deferred.resolveWith()</a></li>
+	<li><a class="v1-7" title="Determine the current state of a Deferred object." href="#deferred.state.htm" >deferred.state()</a></li>
+	<li><a class="v1-5" title="Add handlers to be called when the Deferred object is resolved or rejected." href="#deferred.then.htm" >deferred.then()</a></li>
+	<li><a class="v1-6" title="Return a Promise object to observe when all actions of a certain type bound to the collection, queued or not, have finished." href="#promise.htm" >.promise()</a></li>
+	</ul>
+	</section>
+	</div>
+	<div>
+	<section>
+	<h2>回调对象</h2>
+	<ul>
+	<li><a class="v1-7" title="A multi-purpose callbacks list object that provides a powerful way to manage callback lists." href="#jQuery.Callbacks.htm" >jQuery.Callbacks()</a></li>
+	<li><a class="v1-7" title="Add a callback or a collection of callbacks to a callback list." href="#callbacks.add.htm" >callbacks.add()</a></li>
+	<li><a class="v1-7" title="Disable a callback list from doing anything more." href="#callbacks.disable.htm" >callbacks.disable()</a></li>
+	<li><a class="v1-7" title="Remove all of the callbacks from a list." href="#callbacks.empty.htm" >callbacks.empty()</a></li>
+	<li><a class="v1-7" title="Call all of the callbacks with the given arguments." href="#callbacks.fire.htm" >callbacks.fire()</a></li>
+	<li><a class="v1-7" title="Determine if the callbacks have already been called at least once." href="#callbacks.fired.htm" >callbacks.fired()</a></li>
+	<li><a class="v1-7" title="Call all callbacks in a list with the given context and arguments." href="#callbacks.fireWith.htm" >callbacks.fireWith()</a></li>
+	<li><a class="v1-7" title="Determine whether a supplied callback is in a list." href="#callbacks.has.htm" >callbacks.has()</a></li>
+	<li><a class="v1-7" title="Lock a callback list in its current state." href="#callbacks.lock.htm" >callbacks.lock()</a></li>
+	<li><a class="v1-7" title="Determine if the callbacks list has been locked." href="#callbacks.locked.htm" >callbacks.locked()</a></li>
+	<li><a class="v1-7" title="Remove a callback or a collection of callbacks from a callback list." href="#callbacks.remove.htm" >callbacks.remove()</a></li>
+	</ul>
+	</section>
+	</div>
+	</article>
+	</div>
+	</div>
+	</div>
+</div>
+</body>
+</html>

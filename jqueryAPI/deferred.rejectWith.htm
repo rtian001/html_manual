@@ -1,0 +1,69 @@
+<script src="js/rtian.js" ></script>
+<meta charset="utf-8" />
+<title>deferred.rejectWith() | jQuery API中文文档(适用jQuery 1.0 - jQuery 3.0)</title>
+  <div id="content" >
+<div class="inner" role="main"><article id="post-137" class="post-137 post type-post status-publish format-standard hentry category-deferred-object category-15">
+  <header class="entry-header">
+    <h1 class="entry-title">deferred.rejectWith()</h1>
+    <hr>
+<div class="entry-meta">
+      分类: <span class="category">
+<a href="deferred-object.htm"  title="View all posts in Deferred Object">延迟对象</a></span>   </div><!-- .entry-meta -->
+      </header><!-- .entry-header -->
+  <div class="entry-content">
+    <article id="deferred-rejectWith1" class="entry method"><h2 class="section-title">
+<span class="name">deferred.rejectWith( context [, args ] )</span><span class="returns">返回: 
+<a href="Types.htm#Deferred" >Deferred</a></span>
+</h2>
+<div class="entry-wrapper">
+<p class="desc"><strong>描述: </strong>  拒绝Deferred（延迟）对象，并根据给定的 <code>context</code>和<code>args</code>参数调用任何失败回调函数（failCallbacks）。 </p>
+<ul class="signatures"><li class="signature" id="deferred-rejectWith-context-args">
+<h4 class="name">
+<span class="version-details">添加的版本: 
+<a href="1.5.htm" >1.5</a></span>deferred.rejectWith( context [, args ] )</h4>
+<ul>
+<li>
+<div><strong>context</strong></div>
+<div>类型: 
+<a href="Types.htm#Object" >Object</a>
+</div>
+<div>
+        Context（上下文） 作为 <code>this</code>对象传递给失败回调函数（failCallbacks ）
+      </div>
+</li>
+<li>
+<div><strong>args</strong></div>
+<div>类型: 
+<a href="Types.htm#Array" >Array</a>
+</div>
+<div>传递一个可选的参数数组给失败回调函数（failCallbacks ）
+      </div>
+</li>
+</ul>
+</li></ul>
+<div class="longdesc" id="entry-longdesc">
+    <p>通常情况下，只有递延对象（Deferred）的创建者才能调用此方法;
+        您可以通过
+<a href="deferred.promise.htm" ><code>deferred.promise()</code></a>返回的受限制的 Promise 对象，来防止其他代码改变递延的状态 。
+        </p>
+        <div class="warning">
+            
+                <p>jQuery提供的
+<a href="deferred.promise.htm" ><code>deferred.promise()</code></a>方法的作用是，在原来的Deferred 对象上返回另一个 Deferred 对象，即受限制的 Promise 对象，受限制的 Promise 对象只开放与改变执行状态无关的方法（比如done()方法和fail()方法），屏蔽与改变执行状态有关的方法（比如resolve()方法和reject()方法），从而使得执行状态不能被改变。
+                </p>
+            <p>首先看一个 Deferred对象的执行状态被改变的例子：
+<a href="http://jsbin.com/zapeve/1/" target="_blank">http://jsbin
+                .com/zapeve/1/</a>;<br>代码的尾部加了一行dtd.resolve()，这就改变了dtd对象的执行状态，因此导致done()方法立刻执行</p>
+            <p>再看一个 Deferred对象返回<code>deferred.promise()</code>的例子：
+<a href="http://jsbin.com/fuvude/1/" target="_blank">http://jsbin.com/fuvude/1/</a>;<br>wait()函数返回的是promise对象。然后，我们把回调函数绑定在这个对象上面，而不是原来的deferred对象上面。这样的好处是，无法改变promise对象的执行状态，要想改变执行状态，只能操作原来的deferred对象。</p>
+            </div>
+    <p>
+      当延迟对象被 rejected 时，任何通过 <code>
+<a href="deferred.then.htm" >deferred.then</a></code>或
+<a href="deferred.fail.htm" ><code>deferred.fail</code></a> 添加的 failCallbacks，都会被调用。回调函数的执行顺序和它们被添加的顺序是一样的。传递给 <code>deferred.reject()</code> 的 <code>args</code>参数，会传给每个回调函数。当延迟对象进入 rejected 状态后，再添加的任何 failCallbacks，当它们被添加时，就会被立刻执行，并带上传入给 <code>.reject()</code> 的参数。有关详细信息，请参阅文件
+<a href="deferred-object.htm" >延迟对象</a> 。</p>
+  </div>
+</div></article>  </div><!-- .entry-content -->
+</article>        
+</div>
+  </div>

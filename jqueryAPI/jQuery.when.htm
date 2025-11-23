@@ -1,0 +1,204 @@
+<script src="js/rtian.js" ></script>
+<meta charset="utf-8" />
+<title>jQuery.when() | jQuery API中文文档(适用jQuery 1.0 - jQuery 3.0)</title>
+  <div id="content" >
+<div class="inner" role="main"><article id="post-393" class="post-393 post type-post status-publish format-standard hentry category-core category-deferred-object category-15">
+  <header class="entry-header">
+    <h1 class="entry-title">jQuery.when()</h1>
+    <hr>
+<div class="entry-meta">
+      分类: <span class="category">
+<a href="core.htm"  title="View all posts in Core">核心</a></span><span class="category-divider"> | </span><span class="category">
+<a href="deferred-object.htm"  title="View all posts in Deferred Object">延迟对象</a></span>    </div><!-- .entry-meta -->
+      </header><!-- .entry-header -->
+  <div class="entry-content">
+    <article id="jQuery-when1" class="entry method"><h2 class="section-title">
+<span class="name">jQuery.when( deferreds )</span><span class="returns">返回: 
+<a href="Types.htm#Promise" >Promise</a></span>
+</h2>
+<div class="entry-wrapper">
+<p class="desc"><strong>描述: </strong>提供一种方法来执行零个或多个对象的回调函数， 
+<a href="deferred-object.htm">Deferred(延迟)</a>对象通常表示异步事件。</p>
+<ul class="signatures"><li class="signature" id="jQuery-when-deferreds">
+<h4 class="name">
+<span class="version-details">添加的版本: 
+<a href="1.5.htm" >1.5</a></span>jQuery.when( deferreds )</h4>
+<ul><li>
+<div><strong>deferreds</strong></div>
+<div>类型: 
+<a href="Types.htm#Deferred" >Deferred</a>
+</div>
+<div>零个或多个延迟对象，或者普通的JavaScript对象。</div>
+</li></ul>
+</li></ul>
+<div class="longdesc" id="entry-longdesc">
+    <p>如果没有参数传递给 <code>jQuery.when()</code>，它会返回一个resolved状态的Promise。</p>
+    <p>
+      如果向 <code>jQuery.when()</code> 传入一个单独的延迟对象，那么会返回它的 Promise 对象(延迟方法的一个子集)。可以继续绑定 Promise 对象的其它方法，例如， <code>
+<a href="deferred.then.htm" >defered.then</a></code> 。当延迟对象已经被解决（resolved）或被拒绝(rejected）（通常是由创建延迟对象的最初代码执行的），那么就会调用适当的回调函数。例如，由 <code>jQuery.ajax()</code> 返回的 jqXHR 对象是一并立的延迟对象并且可以像下面这样使用：</p>
+    <div class="syntaxhighlighter javascript nogutter">
+  <table>
+    <tbody>
+      <tr>
+        <td class="gutter">
+            <div class="line n1">1</div>
+            <div class="line n2">2</div>
+            <div class="line n3">3</div>
+        </td>
+        <td class="code">
+          <pre><div class="container"><div class="line"><code>$.when( $.ajax(<span class="string">"test.aspx"</span>) ).then(<span class="keyword">function</span>(data, textStatus, jqXHR){</code></div></div><div class="container"><div class="line"><code>     alert( jqXHR.status ); <span class="comment">// alerts 200</span></code></div></div><div class="container"><div class="line"><code>});</code></div></div></pre>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+    <p>如果一个参数被传递给<code>jQuery.when()</code> ， 并且它不是一个Deferred或Promise对象，
+      那么它会被当作是一个被解决（resolved）的延迟对象，并且绑定到上面的任何 doneCallbacks 都会被立刻执行。向 doneCallbacks 中传入的是原始的参数。在这种情况下，设定的任何 failCallbacks 永远都不会被执行，因为延迟对象永远不会被拒绝（rejected）。例如：</p>
+    <div class="syntaxhighlighter javascript nogutter">
+  <table>
+    <tbody>
+      <tr>
+        <td class="gutter">
+            <div class="line n1">1</div>
+            <div class="line n2">2</div>
+            <div class="line n3">3</div>
+        </td>
+        <td class="code">
+          <pre><div class="container"><div class="line"><code>$.when( { testing: <span class="number">123</span> } ).done(</code></div></div><div class="container"><div class="line"><code>    <span class="keyword">function</span>(x) { alert(x.testing); } <span class="comment">/* alerts "123" */</span></code></div></div><div class="container"><div class="line"><code>    );</code></div></div></pre>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+    <p>如果你不传递任何参数，
+     <code>jQuery.when()</code>将返回一个resolved（解决）状态的promise对象。</p>
+    <div class="syntaxhighlighter javascript nogutter">
+    	<table>
+    		<tbody>
+    			<tr>
+    				<td class="gutter">
+    						<div class="line n1">1</div>
+    						<div class="line n2">2</div>
+    						<div class="line n3">3</div>
+    				</td>
+    				<td class="code">
+    					<pre><div class="container"><div class="line"><code>$.when().then(<span class="keyword">function</span>( x ) {</code></div></div><div class="container"><div class="line"><code>  alert( <span class="string">"I fired immediately"</span> );</code></div></div><div class="container"><div class="line"><code>});</code></div></div></pre>
+    				</td>
+    			</tr>
+    		</tbody>
+    	</table>
+    </div>
+    <p>在多个延迟对象传递给<code>jQuery.when()</code> 的情况下，该方法根据一个新的“宿主” Deferred（延迟）对象，跟踪所有已通过Deferreds聚集状态，返回一个Promise对象。当所有的延迟对象被解决（resolve）时，“宿主” Deferred（延迟）对象才会解决（resolved）该方法，或者当其中有一个延迟对象被拒绝（rejected）时，“宿主” Deferred（延迟）对象就会reject（拒绝）该方法。如果“宿主” Deferred（延迟）对象是（resolved）解决状态时， “宿主” Deferred（延迟）对象的 doneCallbacks （解决回调）将被执行。参数传递给 doneCallbacks提供这解决（resolved）值给每个对应的Deferreds对象，并匹配Deferreds传递给 <code>jQuery.when()</code>的顺序。
+        例如：
+       </p>
+    <div class="syntaxhighlighter javascript nogutter">
+    	<table>
+    		<tbody>
+    			<tr>
+    				<td class="gutter">
+    						<div class="line n1">1</div>
+    						<div class="line n2">2</div>
+    						<div class="line n3">3</div>
+    						<div class="line n4">4</div>
+    						<div class="line n5">5</div>
+    						<div class="line n6">6</div>
+    						<div class="line n7">7</div>
+    						<div class="line n8">8</div>
+    						<div class="line n9">9</div>
+    						<div class="line n10">10</div>
+    				</td>
+    				<td class="code">
+    					<pre><div class="container"><div class="line"><code><span class="keyword">var</span> d1 = $.Deferred();</code></div></div><div class="container"><div class="line"><code><span class="keyword">var</span> d2 = $.Deferred();</code></div></div><div class="container"><div class="line"><code> </code></div></div><div class="container"><div class="line"><code>$.when( d1, d2 ).done(<span class="function"><span class="keyword">function</span> <span class="params">( v1, v2 )</span> {</span></code></div></div><div class="container"><div class="line"><code>    console.log( v1 ); <span class="comment">// "Fish"</span></code></div></div><div class="container"><div class="line"><code>    console.log( v2 ); <span class="comment">// "Pizza"</span></code></div></div><div class="container"><div class="line"><code>});</code></div></div><div class="container"><div class="line"><code> </code></div></div><div class="container"><div class="line"><code>d1.resolve( <span class="string">"Fish"</span> );</code></div></div><div class="container"><div class="line"><code>d2.resolve( <span class="string">"Pizza"</span> );</code></div></div></pre>
+    				</td>
+    			</tr>
+    		</tbody>
+    	</table>
+    </div>
+    <p>
+        如果没有值传递给 Deferred递延对象的解决（resolved）事件，
+        那么相应的doneCallback参数将是<code>undefined</code>。
+        如果传递给Deferred递延对象的解决（resolved）事件为单个的值，
+        相应的参数将保留那个值。
+        在传递给Deferred递延对象的解决（resolved）事件为为多个值的情况下，
+        相应的参数将是这些值组成的数组。例如：
+    </p>
+    <div class="syntaxhighlighter javascript nogutter">
+    	<table>
+    		<tbody>
+    			<tr>
+    				<td class="gutter">
+    						<div class="line n1">1</div>
+    						<div class="line n2">2</div>
+    						<div class="line n3">3</div>
+    						<div class="line n4">4</div>
+    						<div class="line n5">5</div>
+    						<div class="line n6">6</div>
+    						<div class="line n7">7</div>
+    						<div class="line n8">8</div>
+    						<div class="line n9">9</div>
+    						<div class="line n10">10</div>
+    						<div class="line n11">11</div>
+    						<div class="line n12">12</div>
+    						<div class="line n13">13</div>
+    				</td>
+    				<td class="code">
+    					<pre><div class="container"><div class="line"><code><span class="keyword">var</span> d1 = $.Deferred();</code></div></div><div class="container"><div class="line"><code><span class="keyword">var</span> d2 = $.Deferred();</code></div></div><div class="container"><div class="line"><code><span class="keyword">var</span> d3 = $.Deferred();</code></div></div><div class="container"><div class="line"><code> </code></div></div><div class="container"><div class="line"><code>$.when( d1, d2, d3 ).done(<span class="function"><span class="keyword">function</span> <span class="params">( v1, v2, v3 )</span> {</span></code></div></div><div class="container"><div class="line"><code>    console.log( v1 ); <span class="comment">// v1 is undefined</span></code></div></div><div class="container"><div class="line"><code>    console.log( v2 ); <span class="comment">// v2 is "abc"</span></code></div></div><div class="container"><div class="line"><code>    console.log( v3 ); <span class="comment">// v3 is an array [ 1, 2, 3, 4, 5 ]</span></code></div></div><div class="container"><div class="line"><code>});</code></div></div><div class="container"><div class="line"><code> </code></div></div><div class="container"><div class="line"><code>d1.resolve();</code></div></div><div class="container"><div class="line"><code>d2.resolve( <span class="string">"abc"</span> );</code></div></div><div class="container"><div class="line"><code>d3.resolve( <span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span> );</code></div></div></pre>
+    				</td>
+    			</tr>
+    		</tbody>
+    	</table>
+    </div>
+    <p>在多延迟情况下，如果Deferreds延迟对象一被拒绝（rejected），<code>jQuery.when()</code>触发立即调用  “宿主” Deferred（延迟）对象的 failCallbacks。请注意在这个时间点上，有一些延迟对象仍然可以是未解决（unresolved）的。  传递给failCallbacks的参数匹配Deferred（延迟）对象的 failCallbacks被 rejected 拒绝的顺序。那么，在这种情况下，如果需要执行一些额外的处理，例如，取消所有未完成的 ajax 请求，你可以在闭包中进行保持 jqXHR 对象的引用，并且在 failCallback 中检查或取消它们。</p>
+  </div>
+<div class="jquery-api-top">
+</div>
+<section class="entry-examples" id="entry-examples"><header><h2 class="underline">例子:</h2></header><div class="entry-example" id="example-0">
+<h4>Example: <span class="desc">执行Ajax请求后两个函数是成功的。（见jQuery.ajax()对于一个成功的和错误的案件为AJAX请求的完整描述文档）。</span>
+</h4>
+<div class="syntaxhighlighter javascript ">
+  <table>
+    <tbody>
+      <tr>
+        <td class="gutter">
+            <div class="line n1">1</div>
+            <div class="line n2">2</div>
+            <div class="line n3">3</div>
+            <div class="line n4">4</div>
+            <div class="line n5">5</div>
+            <div class="line n6">6</div>
+            <div class="line n7">7</div>
+            <div class="line n8">8</div>
+        </td>
+        <td class="code">
+          <pre><div class="container"><div class="line"><code>$.when($.ajax(<span class="string">"/page1.php"</span>), $.ajax(<span class="string">"/page2.php"</span>)).done(<span class="keyword">function</span>(a1,  a2){</code></div></div><div class="container"><div class="line"><code>  <span class="comment">/* a1 and a2 are arguments resolved for the</span></code></div></div><div class="container"><div class="line"><code>      page1 and page2 ajax requests, respectively */</code></div></div><div class="container"><div class="line"><code>  <span class="keyword">var</span> jqXHR = a1[<span class="number">2</span>]; <span class="comment">/* arguments are [ "success", statusText, jqXHR ] */</span></code></div></div><div class="container"><div class="line"><code>  <span class="keyword">if</span> ( <span class="regexp">/Whip It/</span>.test(jqXHR.responseText) ) {</code></div></div><div class="container"><div class="line"><code>    alert(<span class="string">"First page has 'Whip It' somewhere."</span>);</code></div></div><div class="container"><div class="line"><code>  }</code></div></div><div class="container"><div class="line"><code>});</code></div></div></pre>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+</div>
+<div class="entry-example" id="example-1">
+<h4>Example: <span class="desc">
+执行函数<code>myFunc</code>当两个Ajax请求是成功的，如果任一或<code>myFailure</code>有一个错误。
+</span>
+</h4>
+<div class="syntaxhighlighter javascript ">
+  <table>
+    <tbody>
+      <tr>
+        <td class="gutter">
+            <div class="line n1">1</div>
+            <div class="line n2">2</div>
+        </td>
+        <td class="code">
+          <pre><div class="container"><div class="line"><code>$.when($.ajax(<span class="string">"/page1.php"</span>), $.ajax(<span class="string">"/page2.php"</span>))</code></div></div><div class="container"><div class="line"><code>  .then(myFunc, myFailure);</code></div></div></pre>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+</div></section>
+</div></article>  </div><!-- .entry-content -->
+</article>        
+</div>
+  </div>

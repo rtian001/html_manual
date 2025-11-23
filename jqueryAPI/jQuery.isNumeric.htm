@@ -1,0 +1,83 @@
+<script src="js/rtian.js" ></script>
+<meta charset="utf-8" />
+<title>jQuery.isNumeric() | jQuery API中文文档(适用jQuery 1.0 - jQuery 3.0)</title>
+  <div id="content" >
+<div class="inner" role="main"><article id="post-349" class="post-349 post type-post status-publish format-standard hentry category-utilities category-17">
+	<header class="entry-header">
+		<h1 class="entry-title">jQuery.isNumeric()</h1>
+		<hr>
+<div class="entry-meta">
+			分类: <span class="category">
+<a href="utilities.htm"  title="View all posts in Utilities">实用工具</a></span>		</div><!-- .entry-meta -->
+			</header><!-- .entry-header -->
+	<div class="entry-content">
+		<article id="jQuery-isNumeric1" class="entry method"><h2 class="section-title">
+			<span class="name">jQuery.isNumeric( value )</span><span class="returns">返回: 
+<a href="Types.htm#Boolean" >Boolean</a></span>
+		</h2>
+			<div class="entry-wrapper">
+				<p class="desc"><strong>描述: </strong>确定它的参数是否是一个JavaScript数字。</p>
+				<ul class="signatures">
+					<li class="signature" id="jQuery-isNumeric-value">
+						<h4 class="name">
+							<span class="version-details">添加的版本: 
+<a href="1.7.htm" >1.7</a></span>jQuery.isNumeric(
+							value )</h4>
+						<ul>
+							<li>
+								<div><strong>value</strong></div>
+								<div>类型: 
+<a href="Types.htm#Anything" >Anything</a>
+								</div>
+								<div>用于测试的值。</div>
+							</li>
+						</ul>
+					</li>
+				</ul>
+				<div class="longdesc" id="entry-longdesc">
+					<p><code>$.isNumeric()</code>方法检查它的参数是否能代表一个数值。如果是这样，则返回<code>true</code>。否则返回<code>false</code>。该参数可以是任何类型。（jQuery 3.0之前，这个方法会强制转换参数为<code>Number</code>，转换后的值类型如果是如果是<code>Number</code>，也会返回<code>true</code>）</p>
+					<p>在jQuery 3.0中，<code>$.isNumeric()</code>方法只有接收
+<a href="Types.htm#Number" ><code>number</code></a>类型的参数时候，或者是可以被强制为有限数值的 <code>string</code>类型的参数，才会返回<code>true</code>，在其他情况下，返回<code>false</code>。</p>
+				</div>
+<div class="jquery-api-top">
+</div>
+<section class="entry-examples" id="entry-examples"><header><h2 class="underline">例子:</h2></header><div class="entry-example" id="example-0">
+<h4><span class="desc">以下是使用 $.isNumeric 检测各种输入类型的例子。</span></h4>
+<div class="syntaxhighlighter javascript">
+	<table>
+		<tbody>
+			<tr>
+				<td class="gutter">
+						<div class="line n1">1</div>
+						<div class="line n2">2</div>
+						<div class="line n3">3</div>
+						<div class="line n4">4</div>
+						<div class="line n5">5</div>
+						<div class="line n6">6</div>
+						<div class="line n7">7</div>
+						<div class="line n8">8</div>
+						<div class="line n9">9</div>
+						<div class="line n10">10</div>
+						<div class="line n11">11</div>
+						<div class="line n12">12</div>
+						<div class="line n13">13</div>
+						<div class="line n14">14</div>
+						<div class="line n15">15</div>
+						<div class="line n16">16</div>
+						<div class="line n17">17</div>
+						<div class="line n18">18</div>
+						<div class="line n19">19</div>
+						<div class="line n20">20</div>
+				</td>
+				<td class="code">
+					<pre><div class="container"><div class="line"><code><span class="comment">// true (numeric)</span></code></div></div><div class="container"><div class="line"><code>$.isNumeric( <span class="string">"-10"</span> )</code></div></div><div class="container"><div class="line"><code>$.isNumeric( <span class="string">"0"</span> )</code></div></div><div class="container"><div class="line"><code>$.isNumeric( <span class="number">0xFF</span> )</code></div></div><div class="container"><div class="line"><code>$.isNumeric( <span class="string">"0xFF"</span> )</code></div></div><div class="container"><div class="line"><code>$.isNumeric( <span class="string">"8e5"</span> )</code></div></div><div class="container"><div class="line"><code>$.isNumeric( <span class="string">"3.1415"</span> )</code></div></div><div class="container"><div class="line"><code>$.isNumeric( +<span class="number">10</span> )</code></div></div><div class="container"><div class="line"><code>$.isNumeric( <span class="number">0144</span> )</code></div></div><div class="container"><div class="line"><code> </code></div></div><div class="container"><div class="line"><code><span class="comment">// false (non-numeric)</span></code></div></div><div class="container"><div class="line"><code>$.isNumeric( <span class="string">"-0x42"</span> )</code></div></div><div class="container"><div class="line"><code>$.isNumeric( <span class="string">"7.2acdgs"</span> )</code></div></div><div class="container"><div class="line"><code>$.isNumeric( <span class="string">""</span> )</code></div></div><div class="container"><div class="line"><code>$.isNumeric( {} )</code></div></div><div class="container"><div class="line"><code>$.isNumeric( <span class="literal">NaN</span> )</code></div></div><div class="container"><div class="line"><code>$.isNumeric( <span class="literal">null</span> )</code></div></div><div class="container"><div class="line"><code>$.isNumeric( <span class="literal">true</span> )</code></div></div><div class="container"><div class="line"><code>$.isNumeric( <span class="literal">Infinity</span> )</code></div></div><div class="container"><div class="line"><code>$.isNumeric( <span class="literal">undefined</span> )</code></div></div></pre>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+</div></section>
+</div></article>	</div><!-- .entry-content -->
+</article>
+</div>
+  </div>

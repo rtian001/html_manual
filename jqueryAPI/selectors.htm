@@ -1,0 +1,882 @@
+<script src="js/rtian.js" ></script>
+<meta charset="utf-8" />
+<title>分类：选择器 | jQuery API中文文档(适用jQuery 1.0 - jQuery 3.0)</title>
+  <div id="content" >
+    <div class="inner listing" role="main">
+		<header class="page-header">
+			<h1 class="page-title">分类：选择器</h1>
+			<hr>
+<div class="category-archive-meta"><p>
+                借鉴了CSS1-3中的选择器，然后加入了自己一些选择器，
+                jQuery提供了一套强大的工具，用于匹配一组文档中的元素。</p>
+<p>
+    使用任何的元字符（如<code> !"#$%&amp;'()*+,./:;&lt;=&gt;?@[\]^`{|}~</code>）作为名称的文本部分，
+    它必须被两个反斜杠转义：<code>\\</code>。
+    例如，<code>id="foo.bar"</code>的元素，
+    可以使用选择器 <code>$("#foo\\.bar")</code>(感谢网友@xieyunzi斧正)。
+    W3C的CSS规范中包含了
+<a href="http://www.w3.org/TR/CSS21/syndata.html#value-def-identifier">一整套关于有效的CSS选择器规则</a>。
+    也参考了Mathias Bynens博客上
+<a href="http://mathiasbynens.be/notes/css-escapes">CSS字符转义序列标识符</a>条目。
+    </p>
+</div>		</header><article id="post-25" class="post-25 post type-post status-publish format-standard hentry category-basic-css-selectors category-10">
+	<header class="entry-header">
+		<div class="entry-meta">
+			<span class="category">
+<a href="selectors.htm"  title="View all posts in Selectors">选择器</a> &gt; 
+<a href="basic-css-selectors.htm"  title="View all posts in Basic">基础</a></span>		</div>
+					<h1 class="entry-title">
+<a href="all-selector.htm"  title="Permalink to All Selector (“*”)" rel="bookmark">All Selector (“*”)</a>
+			</h1>
+			</header>
+		<div class="entry-summary">
+		<p>选择所有元素.</p>
+	</div><!-- .entry-summary -->
+</article><article id="post-31" class="post-31 post type-post status-publish format-standard hentry category-basic-filter-selectors category-jquery-selector-extensions category-12">
+	<header class="entry-header">
+		<div class="entry-meta">
+			<span class="category">
+<a href="selectors.htm"  title="View all posts in Selectors">选择器</a> &gt; 
+<a href="basic-filter-selectors.htm"  title="View all posts in Basic Filter">基础筛选</a></span><span class="category-divider"> | </span><span class="category">
+<a href="selectors.htm"  title="View all posts in Selectors">选择器</a> &gt; 
+<a href="jquery-selector-extensions.htm"  title="View all posts in jQuery Extensions">jQuery 扩展</a></span>		</div>
+					<h1 class="entry-title">
+<a href="animated-selector.htm"  title="Permalink to :animated Selector" rel="bookmark">:animated Selector</a>
+			</h1>
+			</header>
+		<div class="entry-summary">
+		<p>选择所有正在执行动画效果的元素.</p>
+	</div><!-- .entry-summary -->
+</article><article id="post-39" class="post-39 post type-post status-publish format-standard hentry category-attribute-selectors category-10">
+	<header class="entry-header">
+		<div class="entry-meta">
+			<span class="category">
+<a href="selectors.htm"  title="View all posts in Selectors">选择器</a> &gt; 
+<a href="attribute-selectors.htm"  title="View all posts in Attribute">属性选择器</a></span>		</div>
+					<h1 class="entry-title">
+<a href="attribute-contains-prefix-selector.htm"  title="Permalink to Attribute Contains Prefix Selector [name|=&quot;value&quot;]" rel="bookmark">Attribute Contains Prefix Selector [name|="value"]</a>
+			</h1>
+			</header>
+		<div class="entry-summary">
+		<p>选择指定属性值等于给定字符串或以该字符串为前缀（该字符串后跟一个连字符“-” ）的元素。</p>
+	</div><!-- .entry-summary -->
+</article><article id="post-41" class="post-41 post type-post status-publish format-standard hentry category-attribute-selectors category-10">
+	<header class="entry-header">
+		<div class="entry-meta">
+			<span class="category">
+<a href="selectors.htm"  title="View all posts in Selectors">选择器</a> &gt; 
+<a href="attribute-selectors.htm"  title="View all posts in Attribute">属性选择器</a></span>		</div>
+					<h1 class="entry-title">
+<a href="attribute-contains-selector.htm"  title="Permalink to Attribute Contains Selector [name*=&quot;value&quot;]" rel="bookmark">Attribute Contains Selector [name*="value"]</a>
+			</h1>
+			</header>
+		<div class="entry-summary">
+		<p>选择指定属性具有包含一个给定的子字符串的元素。（选择给定的属性是以包含某些值的元素）</p>
+	</div><!-- .entry-summary -->
+</article><article id="post-43" class="post-43 post type-post status-publish format-standard hentry category-attribute-selectors category-10">
+	<header class="entry-header">
+		<div class="entry-meta">
+			<span class="category">
+<a href="selectors.htm"  title="View all posts in Selectors">选择器</a> &gt; 
+<a href="attribute-selectors.htm"  title="View all posts in Attribute">属性选择器</a></span>		</div>
+					<h1 class="entry-title">
+<a href="attribute-contains-word-selector.htm"  title="Permalink to Attribute Contains Word Selector [name~=&quot;value&quot;]" rel="bookmark">Attribute Contains Word Selector [name~="value"]</a>
+			</h1>
+			</header>
+		<div class="entry-summary">
+		<p>选择指定属性用空格分隔的值中包含一个给定值的元素。</p>
+	</div><!-- .entry-summary -->
+</article><article id="post-45" class="post-45 post type-post status-publish format-standard hentry category-attribute-selectors category-10">
+	<header class="entry-header">
+		<div class="entry-meta">
+			<span class="category">
+<a href="selectors.htm"  title="View all posts in Selectors">选择器</a> &gt; 
+<a href="attribute-selectors.htm"  title="View all posts in Attribute">属性选择器</a></span>		</div>
+					<h1 class="entry-title">
+<a href="attribute-ends-with-selector.htm"  title="Permalink to Attribute Ends With Selector [name$=&quot;value&quot;]" rel="bookmark">Attribute Ends With Selector [name$="value"]</a>
+			</h1>
+			</header>
+		<div class="entry-summary">
+		<p>选择指定属性是以给定值结尾的元素。这个比较是区分大小写的。</p>
+	</div><!-- .entry-summary -->
+</article><article id="post-47" class="post-47 post type-post status-publish format-standard hentry category-attribute-selectors category-10">
+	<header class="entry-header">
+		<div class="entry-meta">
+			<span class="category">
+<a href="selectors.htm"  title="View all posts in Selectors">选择器</a> &gt; 
+<a href="attribute-selectors.htm"  title="View all posts in Attribute">属性选择器</a></span>		</div>
+					<h1 class="entry-title">
+<a href="attribute-equals-selector.htm"  title="Permalink to Attribute Equals Selector [name=&quot;value&quot;]" rel="bookmark">Attribute Equals Selector [name="value"]</a>
+			</h1>
+			</header>
+		<div class="entry-summary">
+		<p>选择指定属性是给定值的元素。</p>
+	</div><!-- .entry-summary -->
+</article><article id="post-49" class="post-49 post type-post status-publish format-standard hentry category-attribute-selectors category-jquery-selector-extensions category-10">
+	<header class="entry-header">
+		<div class="entry-meta">
+			<span class="category">
+<a href="selectors.htm"  title="View all posts in Selectors">选择器</a> &gt; 
+<a href="attribute-selectors.htm"  title="View all posts in Attribute">属性选择器</a></span><span class="category-divider"> | </span><span class="category">
+<a href="selectors.htm"  title="View all posts in Selectors">选择器</a> &gt; 
+<a href="jquery-selector-extensions.htm"  title="View all posts in jQuery Extensions">jQuery 扩展</a></span>		</div>
+					<h1 class="entry-title">
+<a href="attribute-not-equal-selector.htm"  title="Permalink to Attribute Not Equal Selector [name!=&quot;value&quot;]" rel="bookmark">Attribute Not Equal Selector [name!="value"]</a>
+			</h1>
+			</header>
+		<div class="entry-summary">
+		<p>选择不存在指定属性，或者指定的属性值不等于给定值的元素。</p>
+	</div><!-- .entry-summary -->
+</article><article id="post-51" class="post-51 post type-post status-publish format-standard hentry category-attribute-selectors category-10">
+	<header class="entry-header">
+		<div class="entry-meta">
+			<span class="category">
+<a href="selectors.htm"  title="View all posts in Selectors">选择器</a> &gt; 
+<a href="attribute-selectors.htm"  title="View all posts in Attribute">属性选择器</a></span>		</div>
+					<h1 class="entry-title">
+<a href="attribute-starts-with-selector.htm"  title="Permalink to Attribute Starts With Selector [name^=&quot;value&quot;]" rel="bookmark">Attribute Starts With Selector [name^="value"]</a>
+			</h1>
+			</header>
+		<div class="entry-summary">
+		<p>选择指定属性是以给定字符串开始的元素</p>
+	</div><!-- .entry-summary -->
+</article><article id="post-59" class="post-59 post type-post status-publish format-standard hentry category-form-selectors category-jquery-selector-extensions category-10">
+	<header class="entry-header">
+		<div class="entry-meta">
+			<span class="category">
+<a href="selectors.htm"  title="View all posts in Selectors">选择器</a> &gt; 
+<a href="form-selectors.htm"  title="View all posts in Form">表单</a></span><span class="category-divider"> | </span><span class="category">
+<a href="selectors.htm"  title="View all posts in Selectors">选择器</a> &gt; 
+<a href="jquery-selector-extensions.htm"  title="View all posts in jQuery Extensions">jQuery 扩展</a></span>		</div>
+					<h1 class="entry-title">
+<a href="button-selector.htm"  title="Permalink to :button Selector" rel="bookmark">:button Selector</a>
+			</h1>
+			</header>
+		<div class="entry-summary">
+		<p>选择所有按钮元素和类型为按钮的元素。</p>
+	</div><!-- .entry-summary -->
+</article><article id="post-85" class="post-85 post type-post status-publish format-standard hentry category-form-selectors category-jquery-selector-extensions category-10">
+	<header class="entry-header">
+		<div class="entry-meta">
+			<span class="category">
+<a href="selectors.htm"  title="View all posts in Selectors">选择器</a> &gt; 
+<a href="form-selectors.htm"  title="View all posts in Form">表单</a></span><span class="category-divider"> | </span><span class="category">
+<a href="selectors.htm"  title="View all posts in Selectors">选择器</a> &gt; 
+<a href="jquery-selector-extensions.htm"  title="View all posts in jQuery Extensions">jQuery 扩展</a></span>		</div>
+					<h1 class="entry-title">
+<a href="checkbox-selector.htm"  title="Permalink to :checkbox Selector" rel="bookmark">:checkbox Selector</a>
+			</h1>
+			</header>
+		<div class="entry-summary">
+		<p> 选择所有类型为复选框的元素。</p>
+	</div><!-- .entry-summary -->
+</article><article id="post-87" class="post-87 post type-post status-publish format-standard hentry category-form-selectors category-10">
+	<header class="entry-header">
+		<div class="entry-meta">
+			<span class="category">
+<a href="selectors.htm"  title="View all posts in Selectors">选择器</a> &gt; 
+<a href="form-selectors.htm"  title="View all posts in Form">表单</a></span>		</div>
+					<h1 class="entry-title">
+<a href="checked-selector.htm"  title="Permalink to :checked Selector" rel="bookmark">:checked Selector</a>
+			</h1>
+			</header>
+		<div class="entry-summary">
+		<p>匹配所有勾选的元素。</p>
+	</div><!-- .entry-summary -->
+</article><article id="post-89" class="post-89 post type-post status-publish format-standard hentry category-hierarchy-selectors category-10">
+	<header class="entry-header">
+		<div class="entry-meta">
+			<span class="category">
+<a href="selectors.htm"  title="View all posts in Selectors">选择器</a> &gt; 
+<a href="hierarchy-selectors.htm"  title="View all posts in Hierarchy">层级</a></span>		</div>
+					<h1 class="entry-title">
+<a href="child-selector.htm"  title="Permalink to Child Selector (“parent &gt; child”)" rel="bookmark">Child Selector (“parent &gt; child”)</a>
+			</h1>
+			</header>
+		<div class="entry-summary">
+		<p>选择所有指定“parent”元素中指定的&quot;child&quot;的直接子元素。</p>
+	</div><!-- .entry-summary -->
+</article><article id="post-93" class="post-93 post type-post status-publish format-standard hentry category-basic-css-selectors category-10">
+	<header class="entry-header">
+		<div class="entry-meta">
+			<span class="category">
+<a href="selectors.htm"  title="View all posts in Selectors">选择器</a> &gt; 
+<a href="basic-css-selectors.htm"  title="View all posts in Basic">基础</a></span>		</div>
+					<h1 class="entry-title">
+<a href="class-selector.htm"  title="Permalink to Class Selector (“.class”)" rel="bookmark">Class Selector (“.class”)</a>
+			</h1>
+			</header>
+		<div class="entry-summary">
+		<p>选择给定样式类名的所有元素。</p>
+	</div><!-- .entry-summary -->
+</article><article id="post-103" class="post-103 post type-post status-publish format-standard hentry category-content-filter-selector category-114">
+	<header class="entry-header">
+		<div class="entry-meta">
+			<span class="category">
+<a href="selectors.htm"  title="View all posts in Selectors">选择器</a> &gt; 
+<a href="content-filter-selector.htm"  title="View all posts in Content Filter">内容过滤</a></span>		</div>
+					<h1 class="entry-title">
+<a href="contains-selector.htm"  title="Permalink to :contains() Selector" rel="bookmark">:contains() Selector</a>
+			</h1>
+			</header>
+		<div class="entry-summary">
+		<p>选择所有包含指定文本的元素。</p>
+	</div><!-- .entry-summary -->
+</article><article id="post-153" class="post-153 post type-post status-publish format-standard hentry category-hierarchy-selectors category-10">
+	<header class="entry-header">
+		<div class="entry-meta">
+			<span class="category">
+<a href="selectors.htm"  title="View all posts in Selectors">选择器</a> &gt; 
+<a href="hierarchy-selectors.htm"  title="View all posts in Hierarchy">层级</a></span>		</div>
+					<h1 class="entry-title">
+<a href="descendant-selector.htm"  title="Permalink to Descendant Selector (“ancestor descendant”)" rel="bookmark">Descendant Selector (“ancestor descendant”)</a>
+			</h1>
+			</header>
+		<div class="entry-summary">
+		<p>选择给定的祖先元素的所有后代元素。</p>
+	</div><!-- .entry-summary -->
+</article><article id="post-159" class="post-159 post type-post status-publish format-standard hentry category-form-selectors category-10">
+	<header class="entry-header">
+		<div class="entry-meta">
+			<span class="category">
+<a href="selectors.htm"  title="View all posts in Selectors">选择器</a> &gt; 
+<a href="form-selectors.htm"  title="View all posts in Form">表单</a></span>		</div>
+					<h1 class="entry-title">
+<a href="disabled-selector.htm"  title="Permalink to :disabled Selector" rel="bookmark">:disabled Selector</a>
+			</h1>
+			</header>
+		<div class="entry-summary">
+		<p>选择所有被禁用的元素。</p>
+	</div><!-- .entry-summary -->
+</article><article id="post-163" class="post-163 post type-post status-publish format-standard hentry category-basic-css-selectors category-10">
+	<header class="entry-header">
+		<div class="entry-meta">
+			<span class="category">
+<a href="selectors.htm"  title="View all posts in Selectors">选择器</a> &gt; 
+<a href="basic-css-selectors.htm"  title="View all posts in Basic">基础</a></span>		</div>
+					<h1 class="entry-title">
+<a href="element-selector.htm"  title="Permalink to Element Selector (“element”)" rel="bookmark">Element Selector (“element”)</a>
+			</h1>
+			</header>
+		<div class="entry-summary">
+		<p>根据给定（html）标记名称选择所有的元素。</p>
+	</div><!-- .entry-summary -->
+</article><article id="post-165" class="post-165 post type-post status-publish format-standard hentry category-content-filter-selector category-10">
+	<header class="entry-header">
+		<div class="entry-meta">
+			<span class="category">
+<a href="selectors.htm"  title="View all posts in Selectors">选择器</a> &gt; 
+<a href="content-filter-selector.htm"  title="View all posts in Content Filter">内容过滤</a></span>		</div>
+					<h1 class="entry-title">
+<a href="empty-selector.htm"  title="Permalink to :empty Selector" rel="bookmark">:empty Selector</a>
+			</h1>
+			</header>
+		<div class="entry-summary">
+		<p>选择所有没有子元素的元素（包括文本节点）。</p>
+	</div><!-- .entry-summary -->
+</article><article id="post-169" class="post-169 post type-post status-publish format-standard hentry category-form-selectors category-10">
+	<header class="entry-header">
+		<div class="entry-meta">
+			<span class="category">
+<a href="selectors.htm"  title="View all posts in Selectors">选择器</a> &gt; 
+<a href="form-selectors.htm"  title="View all posts in Form">表单</a></span>		</div>
+					<h1 class="entry-title">
+<a href="enabled-selector.htm"  title="Permalink to :enabled Selector" rel="bookmark">:enabled Selector</a>
+			</h1>
+			</header>
+		<div class="entry-summary">
+		<p>选择所有可用的元素。</p>
+	</div><!-- .entry-summary -->
+</article><article id="post-173" class="post-173 post type-post status-publish format-standard hentry category-basic-filter-selectors category-jquery-selector-extensions category-10 category-18">
+	<header class="entry-header">
+		<div class="entry-meta">
+			<span class="category">
+<a href="selectors.htm"  title="View all posts in Selectors">选择器</a> &gt; 
+<a href="basic-filter-selectors.htm"  title="View all posts in Basic Filter">基础筛选</a></span><span class="category-divider"> | </span><span class="category">
+<a href="selectors.htm"  title="View all posts in Selectors">选择器</a> &gt; 
+<a href="jquery-selector-extensions.htm"  title="View all posts in jQuery Extensions">jQuery 扩展</a></span>		</div>
+					<h1 class="entry-title">
+<a href="eq-selector.htm"  title="Permalink to :eq() Selector" rel="bookmark">:eq() Selector</a>
+			</h1>
+			</header>
+		<div class="entry-summary">
+		<p> 在匹配的集合选择索引值为n的元素。</p>
+	</div><!-- .entry-summary -->
+</article><article id="post-179" class="post-179 post type-post status-publish format-standard hentry category-basic-filter-selectors category-jquery-selector-extensions category-10">
+	<header class="entry-header">
+		<div class="entry-meta">
+			<span class="category">
+<a href="selectors.htm"  title="View all posts in Selectors">选择器</a> &gt; 
+<a href="basic-filter-selectors.htm"  title="View all posts in Basic Filter">基础筛选</a></span><span class="category-divider"> | </span><span class="category">
+<a href="selectors.htm"  title="View all posts in Selectors">选择器</a> &gt; 
+<a href="jquery-selector-extensions.htm"  title="View all posts in jQuery Extensions">jQuery 扩展</a></span>		</div>
+					<h1 class="entry-title">
+<a href="even-selector.htm"  title="Permalink to :even Selector" rel="bookmark">:even Selector</a>
+			</h1>
+			</header>
+		<div class="entry-summary">
+		<p>选择偶数元素，从 0 开始计数。 也可以查看 odd.</p>
+	</div><!-- .entry-summary -->
+</article><article id="post-227" class="post-227 post type-post status-publish format-standard hentry category-form-selectors category-jquery-selector-extensions category-10">
+	<header class="entry-header">
+		<div class="entry-meta">
+			<span class="category">
+<a href="selectors.htm"  title="View all posts in Selectors">选择器</a> &gt; 
+<a href="form-selectors.htm"  title="View all posts in Form">表单</a></span><span class="category-divider"> | </span><span class="category">
+<a href="selectors.htm"  title="View all posts in Selectors">选择器</a> &gt; 
+<a href="jquery-selector-extensions.htm"  title="View all posts in jQuery Extensions">jQuery 扩展</a></span>		</div>
+					<h1 class="entry-title">
+<a href="file-selector.htm"  title="Permalink to :file Selector" rel="bookmark">:file Selector</a>
+			</h1>
+			</header>
+		<div class="entry-summary">
+		<p>选择所有类型为文件（file）的元素。</p>
+	</div><!-- .entry-summary -->
+</article><article id="post-233" class="post-233 post type-post status-publish format-standard hentry category-child-filter-selectors category-114">
+	<header class="entry-header">
+		<div class="entry-meta">
+			<span class="category">
+<a href="selectors.htm"  title="View all posts in Selectors">选择器</a> &gt; 
+<a href="child-filter-selectors.htm"  title="View all posts in Child Filter">Child Filter</a></span>		</div>
+					<h1 class="entry-title">
+<a href="first-child-selector.htm"  title="Permalink to :first-child Selector" rel="bookmark">:first-child Selector</a>
+			</h1>
+			</header>
+		<div class="entry-summary">
+		<p>选择所有父级元素下的第一个子元素。</p>
+	</div><!-- .entry-summary -->
+</article><article id="post-919" class="post-919 post type-post status-publish format-standard hentry category-child-filter-selectors category-19">
+	<header class="entry-header">
+		<div class="entry-meta">
+			<span class="category">
+<a href="selectors.htm"  title="View all posts in Selectors">选择器</a> &gt; 
+<a href="child-filter-selectors.htm"  title="View all posts in Child Filter">Child Filter</a></span>		</div>
+					<h1 class="entry-title">
+<a href="first-of-type-selector.htm"  title="Permalink to :first-of-type Selector" rel="bookmark">:first-of-type Selector</a>
+			</h1>
+			</header>
+		<div class="entry-summary">
+		<p>选择所有相同的元素名称的第一个兄弟元素。</p>
+	</div><!-- .entry-summary -->
+</article><article id="post-235" class="post-235 post type-post status-publish format-standard hentry category-basic-filter-selectors category-jquery-selector-extensions category-10">
+	<header class="entry-header">
+		<div class="entry-meta">
+			<span class="category">
+<a href="selectors.htm"  title="View all posts in Selectors">选择器</a> &gt; 
+<a href="basic-filter-selectors.htm"  title="View all posts in Basic Filter">基础筛选</a></span><span class="category-divider"> | </span><span class="category">
+<a href="selectors.htm"  title="View all posts in Selectors">选择器</a> &gt; 
+<a href="jquery-selector-extensions.htm"  title="View all posts in jQuery Extensions">jQuery 扩展</a></span>		</div>
+					<h1 class="entry-title">
+<a href="first-selector.htm"  title="Permalink to :first Selector" rel="bookmark">:first Selector</a>
+			</h1>
+			</header>
+		<div class="entry-summary">
+		<p>选择第一个匹配的元素。</p>
+	</div><!-- .entry-summary -->
+</article><article id="post-239" class="post-239 post type-post status-publish format-standard hentry category-basic-filter-selectors category-form-selectors category-16">
+	<header class="entry-header">
+		<div class="entry-meta">
+			<span class="category">
+<a href="selectors.htm"  title="View all posts in Selectors">选择器</a> &gt; 
+<a href="basic-filter-selectors.htm"  title="View all posts in Basic Filter">基础筛选</a></span><span class="category-divider"> | </span><span class="category">
+<a href="selectors.htm"  title="View all posts in Selectors">选择器</a> &gt; 
+<a href="form-selectors.htm"  title="View all posts in Form">表单</a></span>		</div>
+					<h1 class="entry-title">
+<a href="focus-selector.htm"  title="Permalink to :focus Selector" rel="bookmark">:focus Selector</a>
+			</h1>
+			</header>
+		<div class="entry-summary">
+		<p> 选择当前获取焦点的元素。</p>
+	</div><!-- .entry-summary -->
+</article><article id="post-249" class="post-249 post type-post status-publish format-standard hentry category-basic-filter-selectors category-jquery-selector-extensions category-10">
+	<header class="entry-header">
+		<div class="entry-meta">
+			<span class="category">
+<a href="selectors.htm"  title="View all posts in Selectors">选择器</a> &gt; 
+<a href="basic-filter-selectors.htm"  title="View all posts in Basic Filter">基础筛选</a></span><span class="category-divider"> | </span><span class="category">
+<a href="selectors.htm"  title="View all posts in Selectors">选择器</a> &gt; 
+<a href="jquery-selector-extensions.htm"  title="View all posts in jQuery Extensions">jQuery 扩展</a></span>		</div>
+					<h1 class="entry-title">
+<a href="gt-selector.htm"  title="Permalink to :gt() Selector" rel="bookmark">:gt() Selector</a>
+			</h1>
+			</header>
+		<div class="entry-summary">
+		<p>选择匹配集合中所有大于给定index（索引值）的元素。</p>
+	</div><!-- .entry-summary -->
+</article><article id="post-251" class="post-251 post type-post status-publish format-standard hentry category-attribute-selectors category-10">
+	<header class="entry-header">
+		<div class="entry-meta">
+			<span class="category">
+<a href="selectors.htm"  title="View all posts in Selectors">选择器</a> &gt; 
+<a href="attribute-selectors.htm"  title="View all posts in Attribute">属性选择器</a></span>		</div>
+					<h1 class="entry-title">
+<a href="has-attribute-selector.htm"  title="Permalink to Has Attribute Selector [name]" rel="bookmark">Has Attribute Selector [name]</a>
+			</h1>
+			</header>
+		<div class="entry-summary">
+		<p>选择所有具有指定属性的元素，该属性可以是任何值。</p>
+	</div><!-- .entry-summary -->
+</article><article id="post-253" class="post-253 post type-post status-publish format-standard hentry category-content-filter-selector category-jquery-selector-extensions category-114">
+	<header class="entry-header">
+		<div class="entry-meta">
+			<span class="category">
+<a href="selectors.htm"  title="View all posts in Selectors">选择器</a> &gt; 
+<a href="content-filter-selector.htm"  title="View all posts in Content Filter">内容过滤</a></span><span class="category-divider"> | </span><span class="category">
+<a href="selectors.htm"  title="View all posts in Selectors">选择器</a> &gt; 
+<a href="jquery-selector-extensions.htm"  title="View all posts in jQuery Extensions">jQuery 扩展</a></span>		</div>
+					<h1 class="entry-title">
+<a href="has-selector.htm"  title="Permalink to :has() Selector" rel="bookmark">:has() Selector</a>
+			</h1>
+			</header>
+		<div class="entry-summary">
+		<p>选择元素其中至少包含指定选择器匹配的一个种元素。</p>
+	</div><!-- .entry-summary -->
+</article><article id="post-259" class="post-259 post type-post status-publish format-standard hentry category-basic-filter-selectors category-jquery-selector-extensions category-12">
+	<header class="entry-header">
+		<div class="entry-meta">
+			<span class="category">
+<a href="selectors.htm"  title="View all posts in Selectors">选择器</a> &gt; 
+<a href="basic-filter-selectors.htm"  title="View all posts in Basic Filter">基础筛选</a></span><span class="category-divider"> | </span><span class="category">
+<a href="selectors.htm"  title="View all posts in Selectors">选择器</a> &gt; 
+<a href="jquery-selector-extensions.htm"  title="View all posts in jQuery Extensions">jQuery 扩展</a></span>		</div>
+					<h1 class="entry-title">
+<a href="header-selector.htm"  title="Permalink to :header Selector" rel="bookmark">:header Selector</a>
+			</h1>
+			</header>
+		<div class="entry-summary">
+		<p>选择所有标题元素，像h1, h2, h3 等.</p>
+	</div><!-- .entry-summary -->
+</article><article id="post-263" class="post-263 post type-post status-publish format-standard hentry category-jquery-selector-extensions category-10 category-visibility-filter-selectors">
+	<header class="entry-header">
+		<div class="entry-meta">
+			<span class="category">
+<a href="selectors.htm"  title="View all posts in Selectors">选择器</a> &gt; 
+<a href="jquery-selector-extensions.htm"  title="View all posts in jQuery Extensions">jQuery 扩展</a></span><span class="category-divider"> | </span><span class="category">
+<a href="selectors.htm"  title="View all posts in Selectors">选择器</a> &gt; 
+<a href="visibility-filter-selectors.htm"  title="View all posts in Visibility Filter">Visibility Filter</a></span>		</div>
+					<h1 class="entry-title">
+<a href="hidden-selector.htm"  title="Permalink to :hidden Selector" rel="bookmark">:hidden Selector</a>
+			</h1>
+			</header>
+		<div class="entry-summary">
+		<p>选择所有隐藏的元素。</p>
+	</div><!-- .entry-summary -->
+</article><article id="post-271" class="post-271 post type-post status-publish format-standard hentry category-basic-css-selectors category-10">
+	<header class="entry-header">
+		<div class="entry-meta">
+			<span class="category">
+<a href="selectors.htm"  title="View all posts in Selectors">选择器</a> &gt; 
+<a href="basic-css-selectors.htm"  title="View all posts in Basic">基础</a></span>		</div>
+					<h1 class="entry-title">
+<a href="id-selector.htm"  title="Permalink to ID Selector (“#id”)" rel="bookmark">ID Selector (“#id”)</a>
+			</h1>
+			</header>
+		<div class="entry-summary">
+		<p>选择一个具有给定id属性的单个元素。</p>
+	</div><!-- .entry-summary -->
+</article><article id="post-273" class="post-273 post type-post status-publish format-standard hentry category-form-selectors category-jquery-selector-extensions category-10">
+	<header class="entry-header">
+		<div class="entry-meta">
+			<span class="category">
+<a href="selectors.htm"  title="View all posts in Selectors">选择器</a> &gt; 
+<a href="form-selectors.htm"  title="View all posts in Form">表单</a></span><span class="category-divider"> | </span><span class="category">
+<a href="selectors.htm"  title="View all posts in Selectors">选择器</a> &gt; 
+<a href="jquery-selector-extensions.htm"  title="View all posts in jQuery Extensions">jQuery 扩展</a></span>		</div>
+					<h1 class="entry-title">
+<a href="image-selector.htm"  title="Permalink to :image Selector" rel="bookmark">:image Selector</a>
+			</h1>
+			</header>
+		<div class="entry-summary">
+		<p>选择所有图像类型的元素。</p>
+	</div><!-- .entry-summary -->
+</article><article id="post-281" class="post-281 post type-post status-publish format-standard hentry category-form-selectors category-jquery-selector-extensions category-10">
+	<header class="entry-header">
+		<div class="entry-meta">
+			<span class="category">
+<a href="selectors.htm"  title="View all posts in Selectors">选择器</a> &gt; 
+<a href="form-selectors.htm"  title="View all posts in Form">表单</a></span><span class="category-divider"> | </span><span class="category">
+<a href="selectors.htm"  title="View all posts in Selectors">选择器</a> &gt; 
+<a href="jquery-selector-extensions.htm"  title="View all posts in jQuery Extensions">jQuery 扩展</a></span>		</div>
+					<h1 class="entry-title">
+<a href="input-selector.htm"  title="Permalink to :input Selector" rel="bookmark">:input Selector</a>
+			</h1>
+			</header>
+		<div class="entry-summary">
+		<p>选择所有 input, textarea, select 和 button 元素.</p>
+	</div><!-- .entry-summary -->
+</article><article id="post-920" class="post-920 post type-post status-publish format-standard hentry category-basic-filter-selectors category-19">
+	<header class="entry-header">
+		<div class="entry-meta">
+			<span class="category">
+<a href="selectors.htm"  title="View all posts in Selectors">选择器</a> &gt; 
+<a href="basic-filter-selectors.htm"  title="View all posts in Basic Filter">基础筛选</a></span>		</div>
+					<h1 class="entry-title">
+<a href="lang-selector.htm"  title="Permalink to :lang Selector" rel="bookmark">:lang Selector</a>
+			</h1>
+			</header>
+		<div class="entry-summary">
+		<p>选择指定语言的所有元素。</p>
+	</div><!-- .entry-summary -->
+</article><article id="post-401" class="post-401 post type-post status-publish format-standard hentry category-child-filter-selectors category-114">
+	<header class="entry-header">
+		<div class="entry-meta">
+			<span class="category">
+<a href="selectors.htm"  title="View all posts in Selectors">选择器</a> &gt; 
+<a href="child-filter-selectors.htm"  title="View all posts in Child Filter">Child Filter</a></span>		</div>
+					<h1 class="entry-title">
+<a href="last-child-selector.htm"  title="Permalink to :last-child Selector" rel="bookmark">:last-child Selector</a>
+			</h1>
+			</header>
+		<div class="entry-summary">
+		<p>选择所有父级元素下的最后一个子元素。</p>
+	</div><!-- .entry-summary -->
+</article><article id="post-909" class="post-909 post type-post status-publish format-standard hentry category-child-filter-selectors category-19">
+	<header class="entry-header">
+		<div class="entry-meta">
+			<span class="category">
+<a href="selectors.htm"  title="View all posts in Selectors">选择器</a> &gt; 
+<a href="child-filter-selectors.htm"  title="View all posts in Child Filter">Child Filter</a></span>		</div>
+					<h1 class="entry-title">
+<a href="last-of-type-selector.htm"  title="Permalink to :last-of-type Selector" rel="bookmark">:last-of-type Selector</a>
+			</h1>
+			</header>
+		<div class="entry-summary">
+		<p>选择所有相同的元素名称的最后一个兄弟元素。</p>
+	</div><!-- .entry-summary -->
+</article><article id="post-403" class="post-403 post type-post status-publish format-standard hentry category-basic-filter-selectors category-jquery-selector-extensions category-10">
+	<header class="entry-header">
+		<div class="entry-meta">
+			<span class="category">
+<a href="selectors.htm"  title="View all posts in Selectors">选择器</a> &gt; 
+<a href="basic-filter-selectors.htm"  title="View all posts in Basic Filter">基础筛选</a></span><span class="category-divider"> | </span><span class="category">
+<a href="selectors.htm"  title="View all posts in Selectors">选择器</a> &gt; 
+<a href="jquery-selector-extensions.htm"  title="View all posts in jQuery Extensions">jQuery 扩展</a></span>		</div>
+					<h1 class="entry-title">
+<a href="last-selector.htm"  title="Permalink to :last Selector" rel="bookmark">:last Selector</a>
+			</h1>
+			</header>
+		<div class="entry-summary">
+		<p>选择最后一个匹配的元素。</p>
+	</div><!-- .entry-summary -->
+</article><article id="post-415" class="post-415 post type-post status-publish format-standard hentry category-basic-filter-selectors category-jquery-selector-extensions category-10">
+	<header class="entry-header">
+		<div class="entry-meta">
+			<span class="category">
+<a href="selectors.htm"  title="View all posts in Selectors">选择器</a> &gt; 
+<a href="basic-filter-selectors.htm"  title="View all posts in Basic Filter">基础筛选</a></span><span class="category-divider"> | </span><span class="category">
+<a href="selectors.htm"  title="View all posts in Selectors">选择器</a> &gt; 
+<a href="jquery-selector-extensions.htm"  title="View all posts in jQuery Extensions">jQuery 扩展</a></span>		</div>
+					<h1 class="entry-title">
+<a href="lt-selector.htm"  title="Permalink to :lt() Selector" rel="bookmark">:lt() Selector</a>
+			</h1>
+			</header>
+		<div class="entry-summary">
+		<p>选择匹配集合中所有小于给定index索引值）的元素。</p>
+	</div><!-- .entry-summary -->
+</article><article id="post-433" class="post-433 post type-post status-publish format-standard hentry category-attribute-selectors category-10">
+	<header class="entry-header">
+		<div class="entry-meta">
+			<span class="category">
+<a href="selectors.htm"  title="View all posts in Selectors">选择器</a> &gt; 
+<a href="attribute-selectors.htm"  title="View all posts in Attribute">属性选择器</a></span>		</div>
+					<h1 class="entry-title">
+<a href="multiple-attribute-selector.htm"  title="Permalink to Multiple Attribute Selector [name=&quot;value&quot;][name2=&quot;value2&quot;]" rel="bookmark">Multiple Attribute Selector [name="value"][name2="value2"]</a>
+			</h1>
+			</header>
+		<div class="entry-summary">
+		<p>选择匹配所有指定的属性筛选器的元素</p>
+	</div><!-- .entry-summary -->
+</article><article id="post-435" class="post-435 post type-post status-publish format-standard hentry category-basic-css-selectors category-10">
+	<header class="entry-header">
+		<div class="entry-meta">
+			<span class="category">
+<a href="selectors.htm"  title="View all posts in Selectors">选择器</a> &gt; 
+<a href="basic-css-selectors.htm"  title="View all posts in Basic">基础</a></span>		</div>
+					<h1 class="entry-title">
+<a href="multiple-selector.htm"  title="Permalink to Multiple Selector (“selector1, selector2, selectorN”)" rel="bookmark">Multiple Selector (“selector1, selector2, selectorN”)</a>
+			</h1>
+			</header>
+		<div class="entry-summary">
+		<p> 将每一个选择器匹配到的元素合并后一起返回。</p>
+	</div><!-- .entry-summary -->
+</article><article id="post-437" class="post-437 post type-post status-publish format-standard hentry category-hierarchy-selectors category-10">
+	<header class="entry-header">
+		<div class="entry-meta">
+			<span class="category">
+<a href="selectors.htm"  title="View all posts in Selectors">选择器</a> &gt; 
+<a href="hierarchy-selectors.htm"  title="View all posts in Hierarchy">层级</a></span>		</div>
+					<h1 class="entry-title">
+<a href="next-adjacent-selector-1.htm"  title="Permalink to Next Adjacent Selector (“prev + next”)" rel="bookmark">Next Adjacent Selector (“prev + next”)</a>
+			</h1>
+			</header>
+		<div class="entry-summary">
+		<p>选择所有紧接在 “prev” 元素后的 “next” 元素</p>
+	</div><!-- .entry-summary -->
+</article><article id="post-439" class="post-439 post type-post status-publish format-standard hentry category-hierarchy-selectors category-10">
+	<header class="entry-header">
+		<div class="entry-meta">
+			<span class="category">
+<a href="selectors.htm"  title="View all posts in Selectors">选择器</a> &gt; 
+<a href="hierarchy-selectors.htm"  title="View all posts in Hierarchy">层级</a></span>		</div>
+					<h1 class="entry-title">
+<a href="next-siblings-selector.htm"  title="Permalink to Next Siblings Selector (“prev ~ siblings”)" rel="bookmark">Next Siblings Selector (“prev ~ siblings”)</a>
+			</h1>
+			</header>
+		<div class="entry-summary">
+		<p>匹配 “prev” 元素之后的所有 兄弟元素。具有相同的父元素，并匹配过滤“兄弟姐妹”选择器。</p>
+	</div><!-- .entry-summary -->
+</article><article id="post-447" class="post-447 post type-post status-publish format-standard hentry category-basic-filter-selectors category-10">
+	<header class="entry-header">
+		<div class="entry-meta">
+			<span class="category">
+<a href="selectors.htm"  title="View all posts in Selectors">选择器</a> &gt; 
+<a href="basic-filter-selectors.htm"  title="View all posts in Basic Filter">基础筛选</a></span>		</div>
+					<h1 class="entry-title">
+<a href="not-selector.htm"  title="Permalink to :not() Selector" rel="bookmark">:not() Selector</a>
+			</h1>
+			</header>
+		<div class="entry-summary">
+		<p>选择所有元素去除不匹配给定的选择器的元素。</p>
+	</div><!-- .entry-summary -->
+</article><article id="post-451" class="post-451 post type-post status-publish format-standard hentry category-child-filter-selectors category-114">
+	<header class="entry-header">
+		<div class="entry-meta">
+			<span class="category">
+<a href="selectors.htm"  title="View all posts in Selectors">选择器</a> &gt; 
+<a href="child-filter-selectors.htm"  title="View all posts in Child Filter">Child Filter</a></span>		</div>
+					<h1 class="entry-title">
+<a href="nth-child-selector.htm"  title="Permalink to :nth-child() Selector" rel="bookmark">:nth-child() Selector</a>
+			</h1>
+			</header>
+		<div class="entry-summary">
+		<p>选择的他们所有父元素的第n个子元素。</p>
+	</div><!-- .entry-summary -->
+</article><article id="post-910" class="post-910 post type-post status-publish format-standard hentry category-child-filter-selectors category-19">
+	<header class="entry-header">
+		<div class="entry-meta">
+			<span class="category">
+<a href="selectors.htm"  title="View all posts in Selectors">选择器</a> &gt; 
+<a href="child-filter-selectors.htm"  title="View all posts in Child Filter">Child Filter</a></span>		</div>
+					<h1 class="entry-title">
+<a href="nth-last-child-selector.htm"  title="Permalink to :nth-last-child() Selector" rel="bookmark">:nth-last-child() Selector</a>
+			</h1>
+			</header>
+		<div class="entry-summary">
+		<p>选择的他们所有父元素的第n个子元素。计数从最后一个元素到第一个。</p>
+	</div><!-- .entry-summary -->
+</article><article id="post-921" class="post-921 post type-post status-publish format-standard hentry category-child-filter-selectors category-19">
+	<header class="entry-header">
+		<div class="entry-meta">
+			<span class="category">
+<a href="selectors.htm"  title="View all posts in Selectors">选择器</a> &gt; 
+<a href="child-filter-selectors.htm"  title="View all posts in Child Filter">Child Filter</a></span>		</div>
+					<h1 class="entry-title">
+<a href="nth-last-of-type-selector.htm"  title="Permalink to :nth-last-of-type() Selector" rel="bookmark">:nth-last-of-type() Selector</a>
+			</h1>
+			</header>
+		<div class="entry-summary">
+		<p>选择的他们所有父元素的第n个子元素。计数从最后一个元素到第一个。</p>
+	</div><!-- .entry-summary -->
+</article><article id="post-922" class="post-922 post type-post status-publish format-standard hentry category-child-filter-selectors category-19">
+	<header class="entry-header">
+		<div class="entry-meta">
+			<span class="category">
+<a href="selectors.htm"  title="View all posts in Selectors">选择器</a> &gt; 
+<a href="child-filter-selectors.htm"  title="View all posts in Child Filter">Child Filter</a></span>		</div>
+					<h1 class="entry-title">
+<a href="nth-of-type-selector.htm"  title="Permalink to :nth-of-type() Selector" rel="bookmark">:nth-of-type() Selector</a>
+			</h1>
+			</header>
+		<div class="entry-summary">
+		<p>选择他们父元素的兄弟元素中所有第n个子元素，且相同的元素名称。</p>
+	</div><!-- .entry-summary -->
+</article><article id="post-453" class="post-453 post type-post status-publish format-standard hentry category-basic-filter-selectors category-jquery-selector-extensions category-10">
+	<header class="entry-header">
+		<div class="entry-meta">
+			<span class="category">
+<a href="selectors.htm"  title="View all posts in Selectors">选择器</a> &gt; 
+<a href="basic-filter-selectors.htm"  title="View all posts in Basic Filter">基础筛选</a></span><span class="category-divider"> | </span><span class="category">
+<a href="selectors.htm"  title="View all posts in Selectors">选择器</a> &gt; 
+<a href="jquery-selector-extensions.htm"  title="View all posts in jQuery Extensions">jQuery 扩展</a></span>		</div>
+					<h1 class="entry-title">
+<a href="odd-selector.htm"  title="Permalink to :odd Selector" rel="bookmark">:odd Selector</a>
+			</h1>
+			</header>
+		<div class="entry-summary">
+		<p>选择奇数元素，从 0 开始计数。同样查看偶数 even.</p>
+	</div><!-- .entry-summary -->
+</article><article id="post-465" class="post-465 post type-post status-publish format-standard hentry category-child-filter-selectors category-114">
+	<header class="entry-header">
+		<div class="entry-meta">
+			<span class="category">
+<a href="selectors.htm"  title="View all posts in Selectors">选择器</a> &gt; 
+<a href="child-filter-selectors.htm"  title="View all posts in Child Filter">Child Filter</a></span>		</div>
+					<h1 class="entry-title">
+<a href="only-child-selector.htm"  title="Permalink to :only-child Selector" rel="bookmark">:only-child Selector</a>
+			</h1>
+			</header>
+		<div class="entry-summary">
+		<p>选择所有其父元素下只有一个子元素的元素。</p>
+	</div><!-- .entry-summary -->
+</article><article id="post-911" class="post-911 post type-post status-publish format-standard hentry category-child-filter-selectors category-19">
+	<header class="entry-header">
+		<div class="entry-meta">
+			<span class="category">
+<a href="selectors.htm"  title="View all posts in Selectors">选择器</a> &gt; 
+<a href="child-filter-selectors.htm"  title="View all posts in Child Filter">Child Filter</a></span>		</div>
+					<h1 class="entry-title">
+<a href="only-of-type-selector.htm"  title="Permalink to :only-of-type Selector" rel="bookmark">:only-of-type Selector</a>
+			</h1>
+			</header>
+		<div class="entry-summary">
+		<p>选择所有元素没有兄弟元素具有相同的元素名称的所有元素。</p>
+	</div><!-- .entry-summary -->
+</article><article id="post-471" class="post-471 post type-post status-publish format-standard hentry category-content-filter-selector category-jquery-selector-extensions category-10">
+	<header class="entry-header">
+		<div class="entry-meta">
+			<span class="category">
+<a href="selectors.htm"  title="View all posts in Selectors">选择器</a> &gt; 
+<a href="content-filter-selector.htm"  title="View all posts in Content Filter">内容过滤</a></span><span class="category-divider"> | </span><span class="category">
+<a href="selectors.htm"  title="View all posts in Selectors">选择器</a> &gt; 
+<a href="jquery-selector-extensions.htm"  title="View all posts in jQuery Extensions">jQuery 扩展</a></span>		</div>
+					<h1 class="entry-title">
+<a href="parent-selector.htm"  title="Permalink to :parent Selector" rel="bookmark">:parent Selector</a>
+			</h1>
+			</header>
+		<div class="entry-summary">
+		<p>选择所有含有子元素或者文本的父级元素。</p>
+	</div><!-- .entry-summary -->
+</article><article id="post-479" class="post-479 post type-post status-publish format-standard hentry category-form-selectors category-jquery-selector-extensions category-10">
+	<header class="entry-header">
+		<div class="entry-meta">
+			<span class="category">
+<a href="selectors.htm"  title="View all posts in Selectors">选择器</a> &gt; 
+<a href="form-selectors.htm"  title="View all posts in Form">表单</a></span><span class="category-divider"> | </span><span class="category">
+<a href="selectors.htm"  title="View all posts in Selectors">选择器</a> &gt; 
+<a href="jquery-selector-extensions.htm"  title="View all posts in jQuery Extensions">jQuery 扩展</a></span>		</div>
+					<h1 class="entry-title">
+<a href="password-selector.htm"  title="Permalink to :password Selector" rel="bookmark">:password Selector</a>
+			</h1>
+			</header>
+		<div class="entry-summary">
+		<p>选择所有类型为密码的元素。</p>
+	</div><!-- .entry-summary -->
+</article><article id="post-501" class="post-501 post type-post status-publish format-standard hentry category-form-selectors category-jquery-selector-extensions category-10">
+	<header class="entry-header">
+		<div class="entry-meta">
+			<span class="category">
+<a href="selectors.htm"  title="View all posts in Selectors">选择器</a> &gt; 
+<a href="form-selectors.htm"  title="View all posts in Form">表单</a></span><span class="category-divider"> | </span><span class="category">
+<a href="selectors.htm"  title="View all posts in Selectors">选择器</a> &gt; 
+<a href="jquery-selector-extensions.htm"  title="View all posts in jQuery Extensions">jQuery 扩展</a></span>		</div>
+					<h1 class="entry-title">
+<a href="radio-selector.htm"  title="Permalink to :radio Selector" rel="bookmark">:radio Selector</a>
+			</h1>
+			</header>
+		<div class="entry-summary">
+		<p>选择所有类型为单选框的元素。</p>
+	</div><!-- .entry-summary -->
+</article><article id="post-519" class="post-519 post type-post status-publish format-standard hentry category-form-selectors category-jquery-selector-extensions category-10">
+	<header class="entry-header">
+		<div class="entry-meta">
+			<span class="category">
+<a href="selectors.htm"  title="View all posts in Selectors">选择器</a> &gt; 
+<a href="form-selectors.htm"  title="View all posts in Form">表单</a></span><span class="category-divider"> | </span><span class="category">
+<a href="selectors.htm"  title="View all posts in Selectors">选择器</a> &gt; 
+<a href="jquery-selector-extensions.htm"  title="View all posts in jQuery Extensions">jQuery 扩展</a></span>		</div>
+					<h1 class="entry-title">
+<a href="reset-selector.htm"  title="Permalink to :reset Selector" rel="bookmark">:reset Selector</a>
+			</h1>
+			</header>
+		<div class="entry-summary">
+		<p>选择所有类型为重置的元素。</p>
+	</div><!-- .entry-summary -->
+</article><article id="post-923" class="post-923 post type-post status-publish format-standard hentry category-basic-filter-selectors category-19">
+	<header class="entry-header">
+		<div class="entry-meta">
+			<span class="category">
+<a href="selectors.htm"  title="View all posts in Selectors">选择器</a> &gt; 
+<a href="basic-filter-selectors.htm"  title="View all posts in Basic Filter">基础筛选</a></span>		</div>
+					<h1 class="entry-title">
+<a href="root-selector.htm"  title="Permalink to :root Selector" rel="bookmark">:root Selector</a>
+			</h1>
+			</header>
+		<div class="entry-summary">
+		<p>选择该文档的根元素。</p>
+	</div><!-- .entry-summary -->
+</article><article id="post-531" class="post-531 post type-post status-publish format-standard hentry category-form-selectors category-jquery-selector-extensions category-10">
+	<header class="entry-header">
+		<div class="entry-meta">
+			<span class="category">
+<a href="selectors.htm"  title="View all posts in Selectors">选择器</a> &gt; 
+<a href="form-selectors.htm"  title="View all posts in Form">表单</a></span><span class="category-divider"> | </span><span class="category">
+<a href="selectors.htm"  title="View all posts in Selectors">选择器</a> &gt; 
+<a href="jquery-selector-extensions.htm"  title="View all posts in jQuery Extensions">jQuery 扩展</a></span>		</div>
+					<h1 class="entry-title">
+<a href="selected-selector.htm"  title="Permalink to :selected Selector" rel="bookmark">:selected Selector</a>
+			</h1>
+			</header>
+		<div class="entry-summary">
+		<p>选择所有被选中的元素。</p>
+	</div><!-- .entry-summary -->
+</article><article id="post-555" class="post-555 post type-post status-publish format-standard hentry category-form-selectors category-jquery-selector-extensions category-10">
+	<header class="entry-header">
+		<div class="entry-meta">
+			<span class="category">
+<a href="selectors.htm"  title="View all posts in Selectors">选择器</a> &gt; 
+<a href="form-selectors.htm"  title="View all posts in Form">表单</a></span><span class="category-divider"> | </span><span class="category">
+<a href="selectors.htm"  title="View all posts in Selectors">选择器</a> &gt; 
+<a href="jquery-selector-extensions.htm"  title="View all posts in jQuery Extensions">jQuery 扩展</a></span>		</div>
+					<h1 class="entry-title">
+<a href="submit-selector.htm"  title="Permalink to :submit Selector" rel="bookmark">:submit Selector</a>
+			</h1>
+			</header>
+		<div class="entry-summary">
+		<p> 选择所有类型为提交的元素。</p>
+	</div><!-- .entry-summary -->
+</article><article id="post-924" class="post-924 post type-post status-publish format-standard hentry category-basic-filter-selectors category-19">
+	<header class="entry-header">
+		<div class="entry-meta">
+			<span class="category">
+<a href="selectors.htm"  title="View all posts in Selectors">选择器</a> &gt; 
+<a href="basic-filter-selectors.htm"  title="View all posts in Basic Filter">基础筛选</a></span>		</div>
+					<h1 class="entry-title">
+<a href="target-selector.htm"  title="Permalink to :target Selector" rel="bookmark">:target Selector</a>
+			</h1>
+			</header>
+		<div class="entry-summary">
+		<p>选择 由文档URI的格式化识别码表示的目标元素。</p>
+	</div><!-- .entry-summary -->
+</article><article id="post-559" class="post-559 post type-post status-publish format-standard hentry category-form-selectors category-jquery-selector-extensions category-10">
+	<header class="entry-header">
+		<div class="entry-meta">
+			<span class="category">
+<a href="selectors.htm"  title="View all posts in Selectors">选择器</a> &gt; 
+<a href="form-selectors.htm"  title="View all posts in Form">表单</a></span><span class="category-divider"> | </span><span class="category">
+<a href="selectors.htm"  title="View all posts in Selectors">选择器</a> &gt; 
+<a href="jquery-selector-extensions.htm"  title="View all posts in jQuery Extensions">jQuery 扩展</a></span>		</div>
+					<h1 class="entry-title">
+<a href="text-selector.htm"  title="Permalink to :text Selector" rel="bookmark">:text Selector</a>
+			</h1>
+			</header>
+		<div class="entry-summary">
+		<p>选择所有类型为文本的元素。</p>
+	</div><!-- .entry-summary -->
+</article><article id="post-585" class="post-585 post type-post status-publish format-standard hentry category-jquery-selector-extensions category-10 category-visibility-filter-selectors">
+	<header class="entry-header">
+		<div class="entry-meta">
+			<span class="category">
+<a href="selectors.htm"  title="View all posts in Selectors">选择器</a> &gt; 
+<a href="jquery-selector-extensions.htm"  title="View all posts in jQuery Extensions">jQuery 扩展</a></span><span class="category-divider"> | </span><span class="category">
+<a href="selectors.htm"  title="View all posts in Selectors">选择器</a> &gt; 
+<a href="visibility-filter-selectors.htm"  title="View all posts in Visibility Filter">Visibility Filter</a></span>		</div>
+					<h1 class="entry-title">
+<a href="visible-selector.htm"  title="Permalink to :visible Selector" rel="bookmark">:visible Selector</a>
+			</h1>
+			</header>
+		<div class="entry-summary">
+		<p>选择所有可见的元素。</p>
+	</div><!-- .entry-summary -->
+</article>
+		</div>
+  </div>

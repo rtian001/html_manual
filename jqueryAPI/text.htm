@@ -1,0 +1,283 @@
+<script src="js/rtian.js" ></script>
+<meta charset="utf-8" />
+<title>.text() | jQuery API中文文档(适用jQuery 1.0 - jQuery 3.0)</title>
+  <div id="content" >
+<div class="inner" role="main"><article id="post-561" class="post-561 post type-post status-publish format-standard hentry category-dom-insertion-inside category-10 category-14">
+  <header class="entry-header">
+    <h1 class="entry-title">.text()</h1>
+    <hr>
+<div class="entry-meta">
+      分类: <span class="category">
+<a href="manipulation.htm"  title="View all posts in Manipulation">操作</a> &gt; 
+<a href="dom-insertion-inside.htm"  title="View all posts in DOM Insertion, Inside">DOM 插入现有元素内</a></span>   </div><!-- .entry-meta -->
+      </header><!-- .entry-header -->
+  <div class="entry-content">
+    得到匹配元素集合中每个元素的文本内容结合，包括他们的后代，或设置匹配元素集合中每个元素的文本内容为指定的文本内容。<div class="toc">
+<h4><span>Contents:</span></h4>
+<ul class="toc-list">
+<li>
+<a href="#text1">.text()</a><ul><li>.text()</li></ul>
+</li>
+<li>
+<a href="#text2">.text( textString )</a><ul>
+<li>.text( textString )</li>
+<li>.text( function(index, text) )</li>
+</ul>
+</li>
+</ul>
+</div><article id="text1" class="entry method"><h2 class="section-title">
+<span class="name">.text()</span><span class="returns">返回: 
+<a href="Types.htm#String" >String</a></span>
+</h2>
+<div class="entry-wrapper">
+<p class="desc"><strong>描述: </strong>得到匹配元素集合中每个元素的合并文本，包括他们的后代</p>
+<ul class="signatures"><li class="signature" id="text">
+<h4 class="name">
+<span class="version-details">添加的版本: 
+<a href="1.0.htm" >1.0</a></span>.text()</h4>
+<ul><li><div class="null-signature">这个方法不接受任何参数。/div></div></li></ul>
+</li></ul>
+<div class="longdesc" id="entry-longdesc">
+  <p>和 <code>.html()</code> 方法不同， <code>.text()</code> 在XML 和 HTML 文档中都能使用。<code>.text()</code> 方法返回一个字符串，包含所有匹配元素的合并文本。
+ （由于在不同的浏览器中的HTML解析器的变化，返回的文本中换行和其他空白可能会有所不同。）考虑下面的html：</p>
+      <div class="syntaxhighlighter xml nogutter">
+  <table>
+    <tbody>
+      <tr>
+        <td class="gutter">
+            <div class="line n1">1</div>
+            <div class="line n2">2</div>
+            <div class="line n3">3</div>
+            <div class="line n4">4</div>
+            <div class="line n5">5</div>
+            <div class="line n6">6</div>
+            <div class="line n7">7</div>
+        </td>
+        <td class="code">
+          <pre><div class="container"><div class="line"><code><span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"demo-container"</span>&gt;</span></code></div></div><div class="container"><div class="line"><code>      <span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"demo-box"</span>&gt;</span>Demonstration Box<span class="tag">&lt;/<span class="title">div</span>&gt;</span></code></div></div><div class="container"><div class="line"><code>  <span class="tag">&lt;<span class="title">ul</span>&gt;</span></code></div></div><div class="container"><div class="line"><code>  <span class="tag">&lt;<span class="title">li</span>&gt;</span>list item 1<span class="tag">&lt;/<span class="title">li</span>&gt;</span></code></div></div><div class="container"><div class="line"><code>  <span class="tag">&lt;<span class="title">li</span>&gt;</span>list <span class="tag">&lt;<span class="title">strong</span>&gt;</span>item<span class="tag">&lt;/<span class="title">strong</span>&gt;</span> 2<span class="tag">&lt;/<span class="title">li</span>&gt;</span></code></div></div><div class="container"><div class="line"><code>  <span class="tag">&lt;/<span class="title">ul</span>&gt;</span></code></div></div><div class="container"><div class="line"><code>  <span class="tag">&lt;/<span class="title">div</span>&gt;</span></code></div></div></pre>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+      <p>代码<code>$('div.demo-container').text()</code> 将提供下面的结果:</p>
+      <p>
+        <code>Demonstration Box list item 1 list item 2</code>
+      </p>
+      <p><code>.text()</code> 方法不能使用在 input 元素或scripts元素上。 <code>input</code> 或 <code>textarea</code> 需要使用 
+<a href="val.htm" >.val()</a> 方法获取或设置文本值。得到scripts元素的值，使用
+<a href="html.htm" ><code>.html()</code></a>方法</p>
+      <p>从 jQuery 1.4开始， <code>.text()</code>方法返回文本内容和作为元素节点的CDATA 节点。</p>
+    </div>
+<div class="jquery-api-top">
+</div>
+<section class="entry-examples" id="entry-examples"><header><h2 class="underline">例子:</h2></header><div class="entry-example" id="example-0">
+<h4><span class="desc">Find the text in the first paragraph (stripping out the html), then set the html of the last paragraph to show it is just text (the red bold is gone).</span></h4>
+<div class="syntaxhighlighter xml ">
+  <table>
+    <tbody>
+      <tr>
+        <td class="gutter">
+            <div class="line n1">1</div>
+            <div class="line n2">2</div>
+            <div class="line n3">3</div>
+            <div class="line n4">4</div>
+            <div class="line n5">5</div>
+            <div class="line n6">6</div>
+            <div class="line n7">7</div>
+            <div class="line n8">8</div>
+            <div class="line n9">9</div>
+            <div class="line n10">10</div>
+            <div class="line n11">11</div>
+            <div class="line n12">12</div>
+            <div class="line n13">13</div>
+            <div class="line n14">14</div>
+            <div class="line n15">15</div>
+            <div class="line n16">16</div>
+            <div class="line n17">17</div>
+            <div class="line n18">18</div>
+            <div class="line n19">19</div>
+        </td>
+        <td class="code">
+          <pre><div class="container"><div class="line"><code><span class="doctype">&lt;!DOCTYPE html&gt;</span></code></div></div><div class="container"><div class="line"><code><span class="tag">&lt;<span class="title">html</span>&gt;</span></code></div></div><div class="container"><div class="line"><code><span class="tag">&lt;<span class="title">head</span>&gt;</span></code></div></div><div class="container"><div class="line"><code>  <span class="tag">&lt;<span class="title">style</span>&gt;</span><span class="css"></span></code></div></div><div class="container"><div class="line"><code>  <span class="tag">p</span> <span class="rules">{ <span class="rule"><span class="attribute">color</span>:<span class="value">blue;</span></span> <span class="rule"><span class="attribute">margin</span>:<span class="value"><span class="number">8</span>px;</span></span> <span class="rule">}</span></span></code></div></div><div class="container"><div class="line"><code>  <span class="tag">b</span> <span class="rules">{ <span class="rule"><span class="attribute">color</span>:<span class="value">red;</span></span> <span class="rule">}</span></span></code></div></div><div class="container"><div class="line"><code>  <span class="tag">&lt;/<span class="title">style</span>&gt;</span></code></div></div><div class="container"><div class="line"><code>  <span class="tag">&lt;<span class="title">script</span> <span class="attribute">src</span>=<span class="value">"http://code.jquery.com/jquery-latest.js"</span>&gt;</span><span class="javascript"></span><span class="tag">&lt;/<span class="title">script</span>&gt;</span></code></div></div><div class="container"><div class="line"><code><span class="tag">&lt;/<span class="title">head</span>&gt;</span></code></div></div><div class="container"><div class="line"><code><span class="tag">&lt;<span class="title">body</span>&gt;</span></code></div></div><div class="container"><div class="line"><code>  <span class="tag">&lt;<span class="title">p</span>&gt;</span><span class="tag">&lt;<span class="title">b</span>&gt;</span>Test<span class="tag">&lt;/<span class="title">b</span>&gt;</span> Paragraph.<span class="tag">&lt;/<span class="title">p</span>&gt;</span></code></div></div><div class="container"><div class="line"><code>  <span class="tag">&lt;<span class="title">p</span>&gt;</span><span class="tag">&lt;/<span class="title">p</span>&gt;</span></code></div></div><div class="container"><div class="line"><code><span class="tag">&lt;<span class="title">script</span>&gt;</span><span class="javascript"></span></code></div></div><div class="container"><div class="line"><code><span class="keyword">var</span> str = $(<span class="string">"p:first"</span>).text();</code></div></div><div class="container"><div class="line"><code>$(<span class="string">"p:last"</span>).html(str);</code></div></div><div class="container"><div class="line"><code><span class="tag">&lt;/<span class="title">script</span>&gt;</span></code></div></div><div class="container"><div class="line"><code> </code></div></div><div class="container"><div class="line"><code><span class="tag">&lt;/<span class="title">body</span>&gt;</span></code></div></div><div class="container"><div class="line"><code><span class="tag">&lt;/<span class="title">html</span>&gt;</span></code></div></div></pre>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+<h4>Demo:</h4>
+<div class="demo code-demo"></div>
+</div></section>
+</div></article><article id="text2" class="entry method"><h2 class="section-title">
+<span class="name">.text( textString )</span><span class="returns">返回: 
+<a href="Types.htm#jQuery" >jQuery</a></span>
+</h2>
+<div class="entry-wrapper">
+<p class="desc"><strong>描述: </strong>设置匹配元素集合中每个元素的文本内容为指定的文本内容。</p>
+    <ul class="signatures">
+        <li class="signature" id="text-textString">
+            <h4 class="name">
+                <span class="version-details">添加的版本: 
+<a href="1.0.htm" >1.0</a></span>.text( text )
+            </h4>
+            <ul>
+                <li>
+                    <div><strong>text</strong></div>
+                    <div>类型: 
+<a href="Types.htm#String" >String</a> or 
+<a href="Types.htm#Number" >Number</a> or 
+<a href="Types.htm#Boolean" >Boolean</a>
+                    </div>
+                    <div>用于设置匹配元素内容的文本。当提供的是一个数值或布尔值得时候，那么将被转换成一个字符串表现形式，提供给这个方法。
+                    </div>
+                </li>
+            </ul>
+        </li>
+        <li class="signature" id="text-functionindex--text">
+            <h4 class="name">
+                <span class="version-details">添加的版本: 
+<a href="1.4.htm" >1.4</a></span>.text(
+                function(index, text) )</h4>
+            <ul>
+                <li>
+                    <div><strong>function(index, text)</strong></div>
+                    <div>类型: 
+<a href="Types.htm#Function" >Function</a>()</div>
+                    <div>用来返回设置文本内容的一个函数。接收元素的索引位置和文本值作为参数。</div>
+                </li>
+            </ul>
+        </li>
+    </ul>
+<div class="longdesc" id="entry-longdesc-1">
+      <p>和 <code>.html()</code> 方法不同， <code>.text()</code> 在XML 和 HTML 文档中都能使用。 </p>
+      <p>我们必须意识到这种方法提供了必要的字符串从提供的正确的HTML中脱离出来。这样做， 他调用DOM 方法 <code>.createTextNode()</code>, 一种替代的特殊字符与HTML对应（比如<code>&lt;</code> 替换为 <code>&amp;lt;</code>  )方法。考虑下面的html：</p>
+      <div class="syntaxhighlighter xml nogutter">
+  <table>
+    <tbody>
+      <tr>
+        <td class="gutter">
+            <div class="line n1">1</div>
+            <div class="line n2">2</div>
+            <div class="line n3">3</div>
+            <div class="line n4">4</div>
+            <div class="line n5">5</div>
+            <div class="line n6">6</div>
+            <div class="line n7">7</div>
+        </td>
+        <td class="code">
+          <pre><div class="container"><div class="line"><code><span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"demo-container"</span>&gt;</span></code></div></div><div class="container"><div class="line"><code>  <span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"demo-box"</span>&gt;</span>Demonstration Box<span class="tag">&lt;/<span class="title">div</span>&gt;</span></code></div></div><div class="container"><div class="line"><code>  <span class="tag">&lt;<span class="title">ul</span>&gt;</span></code></div></div><div class="container"><div class="line"><code>    <span class="tag">&lt;<span class="title">li</span>&gt;</span>list item 1<span class="tag">&lt;/<span class="title">li</span>&gt;</span></code></div></div><div class="container"><div class="line"><code>    <span class="tag">&lt;<span class="title">li</span>&gt;</span>list <span class="tag">&lt;<span class="title">strong</span>&gt;</span>item<span class="tag">&lt;/<span class="title">strong</span>&gt;</span> 2<span class="tag">&lt;/<span class="title">li</span>&gt;</span></code></div></div><div class="container"><div class="line"><code>  <span class="tag">&lt;/<span class="title">ul</span>&gt;</span></code></div></div><div class="container"><div class="line"><code><span class="tag">&lt;/<span class="title">div</span>&gt;</span></code></div></div></pre>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+      <p><code>$('div.demo-container').text('&lt;p&gt;This is a test.&lt;/p&gt;');</code>代码语句将输出以下 DOM :</p>
+      <div class="syntaxhighlighter xml nogutter">
+  <table>
+    <tbody>
+      <tr>
+        <td class="gutter">
+            <div class="line n1">1</div>
+            <div class="line n2">2</div>
+            <div class="line n3">3</div>
+        </td>
+        <td class="code">
+          <pre><div class="container"><div class="line"><code><span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"demo-container"</span>&gt;</span></code></div></div><div class="container"><div class="line"><code>&amp;lt;p&amp;gt;This is a test.&amp;lt;/p&amp;gt;</code></div></div><div class="container"><div class="line"><code><span class="tag">&lt;/<span class="title">div</span>&gt;</span></code></div></div></pre>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+      <p>它会出现在渲染的页面上就好像标签被暴露，像这样：</p>
+      <div class="syntaxhighlighter xml nogutter">
+  <table>
+    <tbody>
+      <tr>
+        <td class="gutter">
+            <div class="line n1">1</div>
+        </td>
+        <td class="code">
+          <pre><div class="container"><div class="line"><code><span class="tag">&lt;<span class="title">p</span>&gt;</span>This is a test<span class="tag">&lt;/<span class="title">p</span>&gt;</span></code></div></div></pre>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+      <p><code>.text()</code> 方法不能使用在 input 元素上。 输入的文本需要使用 
+<a href="val.htm" >.val()</a> 方法。</p>
+      <p>从 jQuery 1.4开始， <code>.text()</code>方法允许我们通过函数来传递文本内容。</p>
+      <div class="syntaxhighlighter javascript nogutter">
+  <table>
+    <tbody>
+      <tr>
+        <td class="gutter">
+            <div class="line n1">1</div>
+            <div class="line n2">2</div>
+            <div class="line n3">3</div>
+        </td>
+        <td class="code">
+          <pre><div class="container"><div class="line"><code>$(<span class="string">'ul li'</span>).text(<span class="keyword">function</span>(index) {</code></div></div><div class="container"><div class="line"><code>  <span class="keyword">return</span> <span class="string">'item number '</span> + (index + <span class="number">1</span>);</code></div></div><div class="container"><div class="line"><code>});</code></div></div></pre>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+      <p>给定一个拥有3个<code>&lt;li&gt;</code>元素，在这个例子中将输出下面的DOM：</p>
+      <div class="syntaxhighlighter xml nogutter">
+  <table>
+    <tbody>
+      <tr>
+        <td class="gutter">
+            <div class="line n1">1</div>
+            <div class="line n2">2</div>
+            <div class="line n3">3</div>
+            <div class="line n4">4</div>
+            <div class="line n5">5</div>
+        </td>
+        <td class="code">
+          <pre><div class="container"><div class="line"><code><span class="tag">&lt;<span class="title">ul</span>&gt;</span></code></div></div><div class="container"><div class="line"><code>  <span class="tag">&lt;<span class="title">li</span>&gt;</span>item number 1<span class="tag">&lt;/<span class="title">li</span>&gt;</span></code></div></div><div class="container"><div class="line"><code>  <span class="tag">&lt;<span class="title">li</span>&gt;</span>item number 2<span class="tag">&lt;/<span class="title">li</span>&gt;</span></code></div></div><div class="container"><div class="line"><code>  <span class="tag">&lt;<span class="title">li</span>&gt;</span>item number 3<span class="tag">&lt;/<span class="title">li</span>&gt;</span></code></div></div><div class="container"><div class="line"><code><span class="tag">&lt;/<span class="title">ul</span>&gt;</span></code></div></div></pre>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+    </div>
+<div class="jquery-api-top">
+</div>
+<section class="entry-examples" id="entry-examples-1"><header><h2 class="underline">例子:</h2></header><div class="entry-example" id="example-1-0">
+<h4><span class="desc">在段落中添加文本。注意这个<code>&lt;b&gt;</code>标签将从HTML中脱离出来。
+</span></h4>
+<div class="syntaxhighlighter xml ">
+  <table>
+    <tbody>
+      <tr>
+        <td class="gutter">
+            <div class="line n1">1</div>
+            <div class="line n2">2</div>
+            <div class="line n3">3</div>
+            <div class="line n4">4</div>
+            <div class="line n5">5</div>
+            <div class="line n6">6</div>
+            <div class="line n7">7</div>
+            <div class="line n8">8</div>
+            <div class="line n9">9</div>
+            <div class="line n10">10</div>
+            <div class="line n11">11</div>
+            <div class="line n12">12</div>
+            <div class="line n13">13</div>
+            <div class="line n14">14</div>
+            <div class="line n15">15</div>
+        </td>
+        <td class="code">
+          <pre><div class="container"><div class="line"><code><span class="doctype">&lt;!DOCTYPE html&gt;</span></code></div></div><div class="container"><div class="line"><code><span class="tag">&lt;<span class="title">html</span>&gt;</span></code></div></div><div class="container"><div class="line"><code><span class="tag">&lt;<span class="title">head</span>&gt;</span></code></div></div><div class="container"><div class="line"><code>  <span class="tag">&lt;<span class="title">style</span>&gt;</span><span class="css"></span></code></div></div><div class="container"><div class="line"><code> </code></div></div><div class="container"><div class="line"><code>  <span class="tag">p</span> <span class="rules">{ <span class="rule"><span class="attribute">color</span>:<span class="value">blue;</span></span> <span class="rule"><span class="attribute">margin</span>:<span class="value"><span class="number">8</span>px;</span></span> <span class="rule">}</span></span></code></div></div><div class="container"><div class="line"><code>  <span class="tag">&lt;/<span class="title">style</span>&gt;</span></code></div></div><div class="container"><div class="line"><code>  <span class="tag">&lt;<span class="title">script</span> <span class="attribute">src</span>=<span class="value">"http://code.jquery.com/jquery-latest.js"</span>&gt;</span><span class="javascript"></span><span class="tag">&lt;/<span class="title">script</span>&gt;</span></code></div></div><div class="container"><div class="line"><code><span class="tag">&lt;/<span class="title">head</span>&gt;</span></code></div></div><div class="container"><div class="line"><code><span class="tag">&lt;<span class="title">body</span>&gt;</span></code></div></div><div class="container"><div class="line"><code>  <span class="tag">&lt;<span class="title">p</span>&gt;</span>Test Paragraph.<span class="tag">&lt;/<span class="title">p</span>&gt;</span></code></div></div><div class="container"><div class="line"><code><span class="tag">&lt;<span class="title">script</span>&gt;</span><span class="javascript">$(<span class="string">"p"</span>).text(<span class="string">"&lt;b&gt;Some&lt;/b&gt; new text."</span>);</span><span class="tag">&lt;/<span class="title">script</span>&gt;</span></code></div></div><div class="container"><div class="line"><code> </code></div></div><div class="container"><div class="line"><code><span class="tag">&lt;/<span class="title">body</span>&gt;</span></code></div></div><div class="container"><div class="line"><code><span class="tag">&lt;/<span class="title">html</span>&gt;</span></code></div></div></pre>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+<h4>Demo:</h4>
+<div class="demo code-demo"></div>
+</div></section>
+</div></article>  <!-- .entry-content -->
+</div></article>    
+</div></div>

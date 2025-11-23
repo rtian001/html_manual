@@ -1,0 +1,58 @@
+        
+ <script src="js/rtian.index.js" ></script>
+            <header class="top-nav">
+                <a href="#index.html" title="">首页</a>&nbsp;&gt;&nbsp; <span class="sub-title">核心</span> &nbsp;&gt;&nbsp;get([index])
+                <a class="source" href="#jquery3.new.html" >jQuery3.0 新特性</a>
+            </header>
+            <div id="content" >
+              <h2><span>返回值:Element</span>get([index])</h2>
+    <h3>概述</h3>
+    <div class="desc">
+      <p>取得其中一个匹配的元素。 num表示取得第几个匹配的元素。从0开始，返回的是DOM对象，类似的有<a href="#eq.html" >eq(index)</a>返回的是jQuery对象。</p>
+      <div class="longdesc">
+        <p>这能够让你选择一个实际的DOM 元素并且对他直接操作，而不是通过 jQuery 函数。$(this).get(0)与$(this)[0]等价。</p>
+      </div>
+    </div>
+    <h3>参数</h3>
+    <div class="parameter">
+      <h4><strong>[index]</strong><span>Number</span></h4>
+      <p>取得第 index 个位置上的元素</p>
+      <h4><strong>get()</strong></h4>
+      <p>取得所有匹配的 DOM 元素集合。</p>
+    </div>
+    <div class="example">
+      <h3>示例</h3>
+      <span id="f_ad2"></span>
+      <h4>描述:</h4>
+      <p></p>
+      <h5>HTML 代码:</h5>
+      <pre><code>&lt;img src="test1.jpg"/&gt; &lt;img src="test2.jpg"/&gt;</code></pre>
+      <h5>jQuery 代码:</h5>
+      <pre><code>$("img").get(0);</code></pre>
+      <h5>结果:</h5>
+      <pre><code>[ &lt;img src="test1.jpg"/&gt; ]</code></pre>
+      <h4>描述:</h4>
+      <p>选择文档中所有图像作为元素数组，并用数组内建的 reverse 方法将数组反向。</p>
+      <h5>HTML 代码:</h5>
+      <pre><code>&lt;img src="test1.jpg"/&gt; &lt;img src="test2.jpg"/&gt;</code></pre>
+      <h5>jQuery 代码:</h5>
+      <pre><code>$("img").get().reverse();</code></pre>
+      <h5>结果:</h5>
+      <pre><code>[ &lt;img src="test2.jpg"/&gt; &lt;img src="test1.jpg"/&gt; ]</code></pre>
+    </div>
+            </div>
+            
+
+            <div class="navigation clearfix">
+                <span class="alignleft">上一篇：<a href="#context.html" >context</a></span>
+                
+                <span class="alignright">下一篇：<a href="#index_1.html" >index([selector|element])</a></span>
+            </div>
+            <div class="donate-con">
+              <div class="donate-btn">捐助</div>
+              <div class="donate-body">
+                <div class="donate-tips">本站为非盈利网站，所有的捐赠收入将用于支付带宽、服务器费用，您的支持将是本站撑下去的最大动力！</div>
+                <div class="donate-img"> <a href="#source.html" ></a>  </div>
+              </div>
+            </div>
+

@@ -1,0 +1,39 @@
+ <script src="js/rtian.index.js" ></script>
+            <header class="top-nav">
+                <a href="#index.html" title="">首页</a>&nbsp;&gt;&nbsp; <span class="sub-title">事件对象</span> &nbsp;&gt;&nbsp;eve.delegateTarget
+                <a class="source" href="#jquery3.new.html" >jQuery3.0 新特性</a>
+            </header>
+            <div id="content" >
+              <h2><span>返回值: Element</span>event.delegateTarget</h2>
+    <h3><em>V1.7</em>概述</h3>
+    <div class="desc">
+      <p> 当currently-called的jQuery事件处理程序附加元素。 </p>
+      <div class="longdesc">
+        <p>此属性是最经常有用是通过过<a href="#delegate.html" >.on()</a>, where the event handler is attached at an ancestor of the element being processed. It can be used, for example, to identify and remove event handlers at the delegation point.</p>
+        <p>对于非授权的事件处理程序，直接连接到一个元素，event.delegateTarget&nbsp;总是等价于event.currentTarget.</p>
+      </div>
+    </div>
+    <div class="example">
+      <h3>示例</h3>
+      <span id="f_ad2"></span>
+      <h4>描述:</h4>
+      <p>When a button in any box class is clicked, change the box's background color to red.</p>
+      <h5>jQuery 代码: </h5>
+      <pre>$(&quot;.box&quot;).on(&quot;click&quot;, &quot;button&quot;, function(event) {<br />&nbsp; $(event.delegateTarget).css(&quot;background-color&quot;, &quot;red&quot;);<br />}); </pre>
+    </div>
+            </div>
+            
+
+            <div class="navigation clearfix">
+                <span class="alignleft">上一篇：<a href="#event.data.html" >eve.data</a></span>
+                
+                <span class="alignright">下一篇：<a href="#event.isDefaultPrevented.html" >eve.isDefaultPrevented()</a></span>
+            </div>
+            <div class="donate-con">
+              <div class="donate-btn">捐助</div>
+              <div class="donate-body">
+                <div class="donate-tips">本站为非盈利网站，所有的捐赠收入将用于支付带宽、服务器费用，您的支持将是本站撑下去的最大动力！</div>
+                <div class="donate-img"> <a href="#source.html" ></a>  </div>
+              </div>
+            </div>
+

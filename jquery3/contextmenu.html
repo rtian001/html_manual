@@ -1,0 +1,276 @@
+ <script src="js/rtian.index.js" ></script>
+
+<!DOCTYPE html>
+<html >
+ <head>
+  <title> .contextmenu() | jQuery API中文文档(适用jQuery 1.0 - jQuery 3.0) </title>
+  <meta charset="utf-8" />
+ </head>
+
+ <body>
+  <article id="post-4093" class="post-4093 post type-post status-publish format-standard hentry category-mouse-events category-65 category-78">
+    	<header class="entry-header">
+    		<h1 class="entry-title">.contextmenu()</h1>
+    		<hr>
+    				<div class="entry-meta">
+    			Categories: <span class="category"><a href="http://www.css88.com/jqapi-1.9/category/events/">Events</a> &gt; <a href="http://www.css88.com/jqapi-1.9/category/events/mouse-events/">Mouse Events</a></span>		</div><!-- .entry-meta -->
+    			</header><!-- .entry-header -->
+
+    	<div class="entry-content">
+    		<article id="contextmenu1" class="entry method"><h2 class="section-title">
+    <span class="name">.contextmenu( handler )</span><span class="returns">Returns: <a href="http://www.css88.com/jqapi-1.9/Types/#jQuery">jQuery</a></span>
+    </h2>
+    <div class="entry-wrapper">
+    <p class="desc"><strong>描述: </strong>为 JavaScript 的"contextmenu" 事件绑定一个处理器，或者触发元素上的 "contextmenu" 事件。</p>
+    <ul class="signatures">
+    <li class="signature">
+    <h4 class="name">
+    <span class="version-details">添加的版本: <a href="http://www.css88.com/jqapi-1.9/category/version/1.0/">1.0</a></span><a id="contextmenu-handler" href="#contextmenu-handler"><span class="icon-link"></span>.contextmenu( handler )</a>
+    </h4>
+        <ul>
+            <li>
+                <div><strong>handler</strong></div>
+                <div>类型: <a href="http://www.css88.com/jqapi-1.9/Types/#Function">Function</a>( <a
+                        href="http://www.css88.com/jqapi-1.9/Types/#Event">Event</a> eventObject )
+                </div>
+                <div>每次事件触发时会执行的函数。</div>
+            </li>
+        </ul>
+    </li>
+        <li class="signature">
+            <h4 class="name">
+                <span class="version-details">添加的版本: <a href="http://www.css88.com/jqapi-1.9/category/version/1.4.3/">1.4.3</a></span><a
+                    id="contextmenu-eventData-handler" href="#contextmenu-eventData-handler"><span
+                    class="icon-link"></span>.contextmenu( [eventData ], handler )</a>
+            </h4>
+            <ul>
+                <li>
+                    <div><strong>eventData</strong></div>
+                    <div>类型: <a href="http://www.css88.com/jqapi-1.9/Types/#Anything">Anything</a>
+                    </div>
+                    <div>一个对象，它包含的数据键值对映射将被传递给事件处理程序。</div>
+                </li>
+                <li>
+                    <div><strong>handler</strong></div>
+                    <div>类型: <a href="http://www.css88.com/jqapi-1.9/Types/#Function">Function</a>( <a
+                            href="http://www.css88.com/jqapi-1.9/Types/#Event">Event</a> eventObject )
+                    </div>
+                    <div>每次事件触发时会执行的函数。</div>
+                </li>
+            </ul>
+        </li>
+        <li class="signature">
+            <h4 class="name">
+                <span class="version-details">添加的版本: <a href="http://www.css88.com/jqapi-1.9/category/version/1.0/">1.0</a></span><a
+                    id="contextmenu" href="#contextmenu"><span class="icon-link"></span>.contextmenu()</a>
+            </h4>
+            <ul>
+                <li>
+                    <div class="null-signature">这个方法不接受任何参数</div>
+                </li>
+            </ul>
+        </li>
+    </ul>
+    <div class="longdesc" id="entry-longdesc">
+        <p>
+            这个函数的前两个用法是  <code>.on( "contextmenu", handler )</code> 的快捷方式，第三个用法是 <code>.trigger( "contextmenu"
+                )</code> 的快捷方式。
+
+            当在一个元素上点击鼠标的右键时,<code>contextmenu</code>事件被发送到这个元素上,但在显示的上下文菜单(右键菜单)之前。
+            这时上下文菜单键被按下，该事件在<code>html</code>元素上被触发。
+            任何HTML元素都可以接受此事件。
+             例如，请看下面的HTML：</p>
+        <div class="syntaxhighlighter xml">
+    	<table>
+    		<tbody>
+    			<tr>
+
+    				<td class="gutter">
+
+    						<div class="line n1">1</div>
+
+    						<div class="line n2">2</div>
+
+    						<div class="line n3">3</div>
+
+    				</td>
+
+    				<td class="code">
+    					<pre><div class="container"><div class="line"><code><span class="tag">&lt;<span class="title">div</span> <span class="attribute">id</span>=<span class="value">"target"</span>&gt;</span></code></div></div><div class="container"><div class="line"><code>  Right-click here</code></div></div><div class="container"><div class="line"><code><span class="tag">&lt;/<span class="title">div</span>&gt;</span></code></div></div></pre>
+    				</td>
+    			</tr>
+    		</tbody>
+    	</table>
+    </div>
+
+        <p>事件处理程序可以绑定到 <code>&lt;div&gt;</code>元素上,如下：</p>
+        <div class="syntaxhighlighter javascript">
+    	<table>
+    		<tbody>
+    			<tr>
+
+    				<td class="gutter">
+
+    						<div class="line n1">1</div>
+
+    						<div class="line n2">2</div>
+
+    						<div class="line n3">3</div>
+
+    				</td>
+
+    				<td class="code">
+    					<pre><div class="container"><div class="line"><code>$( <span class="string">"#target"</span> ).contextmenu(<span class="keyword">function</span>() {</code></div></div><div class="container"><div class="line"><code>  alert( <span class="string">"Handler for .contextmenu() called."</span> );</code></div></div><div class="container"><div class="line"><code>});</code></div></div></pre>
+    				</td>
+    			</tr>
+    		</tbody>
+    	</table>
+    </div>
+
+        <p>现在，在这个元素上单击鼠标右键显示警报:</p>
+        <p>
+          <samp>Handler for .contextmenu() called.</samp>
+        </p>
+        <p>要手动触发事件，调用不带参数的 <code>.contextmenu()</code> :</p>
+        <div class="syntaxhighlighter javascript">
+    	<table>
+    		<tbody>
+    			<tr>
+
+    				<td class="gutter">
+
+    						<div class="line n1">1</div>
+
+    				</td>
+
+    				<td class="code">
+    					<pre><div class="container"><div class="line"><code>$( <span class="string">"#target"</span> ).contextmenu();</code></div></div></pre>
+    				</td>
+    			</tr>
+    		</tbody>
+    	</table>
+    </div>
+
+      </div>
+    <h3>其他注意事项:</h3>
+    <div class="longdesc"><ul><li>
+        <code>.contextmenu()</code>方法只是作为<code>.on( "contextmenu", handler )</code>的一个速记写法，移除该事件可以使用<code>.off( "contextmenu" )</code>.
+    		</li></ul></div>
+    <section class="entry-examples" id="entry-examples"><header><h2>例子:</h2></header><div class="entry-example"
+                                                                                         id="example-0">
+    <p>当contextmenu事件在段落元素上被触发时候,显示“Hello World！”对话框：</p>
+    <div class="syntaxhighlighter javascript">
+    	<table>
+    		<tbody>
+    			<tr>
+
+    				<td class="gutter">
+
+    						<div class="line n1">1</div>
+
+    						<div class="line n2">2</div>
+
+    						<div class="line n3">3</div>
+
+    				</td>
+
+    				<td class="code">
+    					<pre><div class="container"><div class="line"><code>$( <span class="string">"p"</span> ).contextmenu(<span class="keyword">function</span>() {</code></div></div><div class="container"><div class="line"><code>  alert( <span class="string">"Hello World!"</span> );</code></div></div><div class="container"><div class="line"><code>});</code></div></div></pre>
+    				</td>
+    			</tr>
+    		</tbody>
+    	</table>
+    </div>
+
+    </div>
+    <div class="entry-example" id="example-1">
+    <p>右键单击切换背景颜色。</p>
+    <div class="syntaxhighlighter xml">
+    	<table>
+    		<tbody>
+    			<tr>
+
+    				<td class="gutter">
+
+    						<div class="line n1">1</div>
+
+    						<div class="line n2">2</div>
+
+    						<div class="line n3">3</div>
+
+    						<div class="line n4">4</div>
+
+    						<div class="line n5">5</div>
+
+    						<div class="line n6">6</div>
+
+    						<div class="line n7">7</div>
+
+    						<div class="line n8">8</div>
+
+    						<div class="line n9">9</div>
+
+    						<div class="line n10">10</div>
+
+    						<div class="line n11">11</div>
+
+    						<div class="line n12">12</div>
+
+    						<div class="line n13">13</div>
+
+    						<div class="line n14">14</div>
+
+    						<div class="line n15">15</div>
+
+    						<div class="line n16">16</div>
+
+    						<div class="line n17">17</div>
+
+    						<div class="line n18">18</div>
+
+    						<div class="line n19">19</div>
+
+    						<div class="line n20">20</div>
+
+    						<div class="line n21">21</div>
+
+    						<div class="line n22">22</div>
+
+    						<div class="line n23">23</div>
+
+    						<div class="line n24">24</div>
+
+    						<div class="line n25">25</div>
+
+    						<div class="line n26">26</div>
+
+    						<div class="line n27">27</div>
+
+    						<div class="line n28">28</div>
+
+    						<div class="line n29">29</div>
+
+    						<div class="line n30">30</div>
+
+    						<div class="line n31">31</div>
+
+    						<div class="line n32">32</div>
+
+    						<div class="line n33">33</div>
+
+    				</td>
+
+    				<td class="code">
+    					<pre><div class="container"><div class="line"><code><span class="doctype">&lt;!doctype html&gt;</span></code></div></div><div class="container"><div class="line"><code><span class="tag">&lt;<span class="title">html</span> <span class="attribute">lang</span>=<span class="value">"en"</span>&gt;</span></code></div></div><div class="container"><div class="line"><code><span class="tag">&lt;<span class="title">head</span>&gt;</span></code></div></div><div class="container"><div class="line"><code>  <span class="tag">&lt;<span class="title">meta</span> <span class="attribute">charset</span>=<span class="value">"utf-8"</span>&gt;</span></code></div></div><div class="container"><div class="line"><code>  <span class="tag">&lt;<span class="title">title</span>&gt;</span>contextmenu demo<span class="tag">&lt;/<span class="title">title</span>&gt;</span></code></div></div><div class="container"><div class="line"><code>  <span class="tag">&lt;<span class="title">style</span>&gt;</span><span class="css"></span></code></div></div><div class="container"><div class="line"><code>  <span class="tag">div</span> <span class="rules">{</span></code></div></div><div class="container"><div class="line"><code>    <span class="rule"><span class="attribute">background</span>:<span class="value"> blue;</span></span></code></div></div><div class="container"><div class="line"><code>    <span class="rule"><span class="attribute">color</span>:<span class="value"> white;</span></span></code></div></div><div class="container"><div class="line"><code>    <span class="rule"><span class="attribute">height</span>:<span class="value"> <span class="number">100</span>px;</span></span></code></div></div><div class="container"><div class="line"><code>    <span class="rule"><span class="attribute">width</span>:<span class="value"> <span class="number">150</span>px;</span></span></code></div></div><div class="container"><div class="line"><code> <span class="rule">}</span></code></div></div><div class="container"><div class="line"><code>  <span class="tag">div</span><span class="class">.contextmenu</span> <span class="rules">{</span></code></div></div><div class="container"><div class="line"><code>    <span class="rule"><span class="attribute">background</span>:<span class="value"> yellow;</span></span></code></div></div><div class="container"><div class="line"><code>    <span class="rule"><span class="attribute">color</span>:<span class="value"> black;</span></span></code></div></div><div class="container"><div class="line"><code>  <span class="rule">}</span></code></div></div><div class="container"><div class="line"><code>  <span class="tag">&lt;/<span class="title">style</span>&gt;</span></code></div></div><div class="container"><div class="line"><code>  <span class="tag">&lt;<span class="title">script</span> <span class="attribute">src</span>=<span class="value">"https://code.jquery.com/jquery-1.10.2.js"</span>&gt;</span><span class="javascript"></span><span class="tag">&lt;/<span class="title">script</span>&gt;</span></code></div></div><div class="container"><div class="line"><code><span class="tag">&lt;/<span class="title">head</span>&gt;</span></code></div></div><div class="container"><div class="line"><code><span class="tag">&lt;<span class="title">body</span>&gt;</span></code></div></div><div class="container"><div class="line"><code> </code></div></div><div class="container"><div class="line"><code><span class="tag">&lt;<span class="title">div</span>&gt;</span><span class="tag">&lt;/<span class="title">div</span>&gt;</span></code></div></div><div class="container"><div class="line"><code><span class="tag">&lt;<span class="title">span</span>&gt;</span>Right click the block<span class="tag">&lt;/<span class="title">span</span>&gt;</span></code></div></div><div class="container"><div class="line"><code> </code></div></div><div class="container"><div class="line"><code><span class="tag">&lt;<span class="title">script</span>&gt;</span><span class="javascript"></span></code></div></div><div class="container"><div class="line"><code><span class="keyword">var</span> div = $( <span class="string">"div:first"</span> );</code></div></div><div class="container"><div class="line"><code>div.contextmenu(<span class="keyword">function</span>() {</code></div></div><div class="container"><div class="line"><code>  div.toggleClass( <span class="string">"contextmenu"</span> );</code></div></div><div class="container"><div class="line"><code>});</code></div></div><div class="container"><div class="line"><code><span class="tag">&lt;/<span class="title">script</span>&gt;</span></code></div></div><div class="container"><div class="line"><code> </code></div></div><div class="container"><div class="line"><code><span class="tag">&lt;/<span class="title">body</span>&gt;</span></code></div></div><div class="container"><div class="line"><code><span class="tag">&lt;/<span class="title">html</span>&gt;</span></code></div></div></pre>
+    				</td>
+    			</tr>
+    		</tbody>
+    	</table>
+    </div>
+
+    <h4>Demo:</h4>
+    <div class="demo code-demo"></div>
+    </div></section>
+    </div></article> 
+ </body>
+</html>

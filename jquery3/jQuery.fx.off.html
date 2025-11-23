@@ -1,0 +1,44 @@
+ <script src="js/rtian.index.js" ></script>
+            <header class="top-nav">
+                <a href="#index.html" title="">首页</a>&nbsp;&gt;&nbsp; <span class="sub-title">效果</span> &nbsp;&gt;&nbsp;jQuery.fx.off
+                <a class="source" href="#jquery3.new.html" >jQuery3.0 新特性</a>
+            </header>
+            <div id="content" >
+              <h2><span>返回值:Boolean</span>jQuery.fx.off</h2>
+    <h3><em>V1.3</em>概述</h3>
+    <div class="desc">
+      <p>关闭页面上所有的动画。</p>
+      <div class="longdesc">
+        <p>把这个属性设置为true可以立即关闭所有动画(所有效果会立即执行完毕)。有些情况下可能需要这样，比如：</p>
+        <p>* 你在配置比较低的电脑上使用jQuery。</p>
+        <p>* 你的一些用户由于动画效果而遇到了 <a href="http://www.jdeegan.phlegethon.org/turn_off_animation.html" >可访问性问题</a></p>
+        <p>当把这个属性设成false之后，可以重新开启所有动画。</p>
+      </div>
+    </div>
+    <div class="example">
+      <h3>示例</h3>
+      <span id="f_ad2"></span>
+      <h4>描述:</h4>
+      <p>执行一个禁用的动画</p>
+      <h5>jQuery 代码:</h5>
+      <pre><code>  jQuery.fx.off = true;
+  $("input").click(function(){
+      $("div").toggle("slow");
+  });</code></pre>
+    </div>
+            </div>
+            
+
+            <div class="navigation clearfix">
+                <span class="alignleft">上一篇：<a href="#finish.html" >finish([queue])</a></span>
+                
+                <span class="alignright">下一篇：<a href="#jQuery.fx.interval.html" >jQuery.fx.interval</a></span>
+            </div>
+            <div class="donate-con">
+              <div class="donate-btn">捐助</div>
+              <div class="donate-body">
+                <div class="donate-tips">本站为非盈利网站，所有的捐赠收入将用于支付带宽、服务器费用，您的支持将是本站撑下去的最大动力！</div>
+                <div class="donate-img"> <a href="#source.html" ></a>  </div>
+              </div>
+            </div>
+

@@ -1,0 +1,55 @@
+ <script src="js/rtian.index.js" ></script>
+            <header class="top-nav">
+                <a href="#index.html" title="">首页</a>&nbsp;&gt;&nbsp; <span class="sub-title">ajax</span> &nbsp;&gt;&nbsp;serialize()
+                <a class="source" href="#jquery3.new.html" >jQuery3.0 新特性</a>
+            </header>
+            <div id="content" >
+              <h2><span>返回值:String</span>serialize()</h2>
+    <h3><em>V1.0</em>概述</h3>
+    <div class="desc">
+      <p>序列表表格内容为字符串。</p>
+      <div class="longdesc">
+        <p></p>
+      </div>
+    </div>
+    <div class="example">
+      <h3>示例</h3>
+      <span id="f_ad2"></span>
+      <h4>描述:</h4>
+      <p>序列表表格内容为字符串，用于 Ajax 请求。</p>
+      <h5>HTML 代码:</h5>
+      <pre><code>&lt;p id="results"&gt;&lt;b&gt;Results: &lt;/b&gt; &lt;/p&gt;
+&lt;form&gt;
+  &lt;select name="single"&gt;
+    &lt;option&gt;Single&lt;/option&gt;
+    &lt;option&gt;Single2&lt;/option&gt;
+  &lt;/select&gt;
+  &lt;select name="multiple" multiple="multiple"&gt;
+    &lt;option selected="selected"&gt;Multiple&lt;/option&gt;
+    &lt;option&gt;Multiple2&lt;/option&gt;
+    &lt;option selected="selected"&gt;Multiple3&lt;/option&gt;
+  &lt;/select&gt;&lt;br/&gt;
+  &lt;input type="checkbox" name="check" value="check1"/&gt; check1
+  &lt;input type="checkbox" name="check" value="check2" checked="checked"/&gt; check2
+  &lt;input type="radio" name="radio" value="radio1" checked="checked"/&gt; radio1
+  &lt;input type="radio" name="radio" value="radio2"/&gt; radio2
+&lt;/form&gt;</code></pre>
+      <h5>jQuery 代码:</h5>
+      <pre><code>$("#results").append( "&lt;tt&gt;" + $("form").serialize() + "&lt;/tt&gt;" );</code></pre>
+    </div>
+            </div>
+            
+
+            <div class="navigation clearfix">
+                <span class="alignleft">上一篇：<a href="#jQuery.ajaxSetup.html" >$.ajaxSetup([options])</a></span>
+                
+                <span class="alignright">下一篇：<a href="#serializearray.html" >serializearray()</a></span>
+            </div>
+            <div class="donate-con">
+              <div class="donate-btn">捐助</div>
+              <div class="donate-body">
+                <div class="donate-tips">本站为非盈利网站，所有的捐赠收入将用于支付带宽、服务器费用，您的支持将是本站撑下去的最大动力！</div>
+                <div class="donate-img"> <a href="#source.html" ></a>  </div>
+              </div>
+            </div>
+

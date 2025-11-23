@@ -1,0 +1,71 @@
+ <script src="js/rtian.index.js" ></script>
+            <header class="top-nav">
+                <a href="#index.html" title="">首页</a>&nbsp;&gt;&nbsp; <span class="sub-title">ajax</span> &nbsp;&gt;&nbsp;$.get(url,[data],[fn],[type])
+                <a class="source" href="#jquery3.new.html" >jQuery3.0 新特性</a>
+            </header>
+            <div id="content" >
+              <h2><span>返回值:XMLHttpRequest</span>jQuery.get(url, <em class="optional">[data]</em>, <em class="optional">[callback]</em>, <em class="optional">[type]</em>)</h2>
+<h3>概述</h3>
+<div class="desc">
+    <p>通过远程 HTTP GET 请求载入信息。</p>
+    <div class="longdesc">
+        <p>这是一个简单的 GET 请求功能以取代复杂 $.ajax 。请求成功时可调用回调函数。如果需要在出错时执行函数，请使用 $.ajax。</p>
+        <p style="color: red">jQuery 1.12 中 jQuery.post 和 jQuery.get 支持对象参数，这样一来好处还比较多，比如设置回调函数的context，或者跨域 post 时可以withCredential: true。用法可以参考最后一个示例。</p>
+    </div>
+</div>
+<h3>参数</h3>
+<div class="parameter">
+    <h4><strong>url,[data],[callback],[type]</strong><span>String,Map,Function,String</span><em>V1.0</em></h4>
+    <p><strong>url</strong>:待载入页面的URL地址</p>
+    <p><strong>data</strong>:待发送 Key/value 参数。</p>
+    <p><strong>callback</strong>:载入成功时回调函数。</p>
+    <p><strong>type</strong>:返回内容格式，xml, html, script, json, text, _default。</p>
+</div>
+<div class="example">
+    <h3>示例</h3>
+    <span id="f_ad2"></span>
+    <h4>描述:</h4>
+    <p>请求 test.php 网页，忽略返回值。</p>
+    <h5>jQuery 代码:</h5>
+    <pre><code>$.get("test.php");</code></pre>
+    <h4>描述:</h4>
+    <p>请求 test.php 网页，传送2个参数，忽略返回值。</p>
+    <h5>jQuery 代码:</h5>
+    <pre><code>$.get("test.php", { name: "John", time: "2pm" } );</code></pre>
+    <h4>描述:</h4>
+    <p>显示 test.php 返回值(HTML 或 XML，取决于返回值)。</p>
+    <h5>jQuery 代码:</h5>
+      <pre><code>$.get("test.php", function(data){
+          alert("Data Loaded: " + data);
+});</code></pre>
+    <h4>描述:</h4>
+    <p>显示 test.cgi 返回值(HTML 或 XML，取决于返回值)，添加一组请求参数。</p>
+    <h5>jQuery 代码:</h5>
+      <pre><code>$.get("test.cgi", { name: "John", time: "2pm" },
+          function(data){
+          alert("Data Loaded: " + data);
+});</code></pre>
+    <h4>描述:</h4>
+    <p>jQuery 1.12 中 jQuery.get()支持对象参数，具体的参数可以参考 $.ajax()：</p>
+    <h5>jQuery 代码:</h5>
+      <pre><code>jQuery.post({
+            url: “/example”
+});
+      </code></pre>
+</div>
+            </div>
+            
+
+            <div class="navigation clearfix">
+                <span class="alignleft">上一篇：<a href="#load.html" >load(url,[data],[callback])</a></span>
+                
+                <span class="alignright">下一篇：<a href="#jQuery.getJSON.html" >$.getJSON(url,[data],[fn])</a></span>
+            </div>
+            <div class="donate-con">
+              <div class="donate-btn">捐助</div>
+              <div class="donate-body">
+                <div class="donate-tips">本站为非盈利网站，所有的捐赠收入将用于支付带宽、服务器费用，您的支持将是本站撑下去的最大动力！</div>
+                <div class="donate-img"> <a href="#source.html" ></a>  </div>
+              </div>
+            </div>
+

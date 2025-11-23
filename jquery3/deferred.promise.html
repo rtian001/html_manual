@@ -1,0 +1,53 @@
+ <script src="js/rtian.index.js" ></script>
+            <header class="top-nav">
+                <a href="#index.html" title="">首页</a>&nbsp;&gt;&nbsp; <span class="sub-title">延迟对象</span> &nbsp;&gt;&nbsp;def.promise([ty],[ta])
+                <a class="source" href="#jquery3.new.html" >jQuery3.0 新特性</a>
+            </header>
+            <div id="content" >
+              <h2><span>返回值:Deferred Object</span>deferred.promise([type],[target])</h2>
+    <h3>概述</h3>
+    <div class="desc">
+      <p>返回一个 Promise 对象用来观察当某种类型的所有行动绑定到集合，排队与否还是已经完成。</p>
+      <div class="longdesc">
+        <p>.promise()方法返回一个动态生成的Promise对象用来观察当某种类型的所有行动绑定到集合，排队与否还是已经完成。</p>
+        <p> 默认情况下， type是"fx" ，这意味着当选定的元素已完成所有动画是返回的Promise是解决的。 </p>
+        <p> 解决上下文和唯一的参数是哪个集合到.promise()被调用。 </p>
+        <p> 如果target是提供，.promise()将附加到它的方法，然后返回这个对象，而不是创建一个新的。这对在已经存在的对象上附加Promise的行为非常有用。 </p>
+      </div>
+    </div>
+    <h3>参数</h3>
+    <div class="parameter">
+      <h4><strong>type</strong><span>String</span><em>V1.6</em></h4>
+      <p>需要处理的字符串</p>
+      <h4><strong>target</strong><span>Object</span><em>V1.5</em></h4>
+      <p>附有promise 方法的Object</p>
+    </div>
+    <div class="example">
+      <h3>示例</h3>
+      <span id="f_ad2"></span>
+      <h4>描述:</h4>
+      <p>一个集合上使用promise，而没有动画解决的promise。</p>
+      <h5>jQuery 代码:</h5>
+      <pre><code>var div = $( "&lt;div /&gt;" );
+
+div.promise().done(function( arg1 ) {
+  // will fire right away and alert "true"
+  alert( this === div && arg1 === div );
+});</code></pre>
+    </div>
+            </div>
+            
+
+            <div class="navigation clearfix">
+                <span class="alignleft">上一篇：<a href="#deferred.then.html" >def.then(d[,f][,p])</a></span>
+                
+                <span class="alignright">下一篇：<a href="#deferred.pipe.html" >def.pipe([d],[f],[p])</a></span>
+            </div>
+            <div class="donate-con">
+              <div class="donate-btn">捐助</div>
+              <div class="donate-body">
+                <div class="donate-tips">本站为非盈利网站，所有的捐赠收入将用于支付带宽、服务器费用，您的支持将是本站撑下去的最大动力！</div>
+                <div class="donate-img"> <a href="#source.html" ></a>  </div>
+              </div>
+            </div>
+

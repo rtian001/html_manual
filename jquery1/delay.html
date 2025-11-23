@@ -1,0 +1,60 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title>delay(duration,[queueName]) | jQuery API 中文手册</title>
+<meta name="author" content="jQuery 中文手册 ">
+<meta name="keywords" content="jquery,chm,手册,在线,api" />
+<link type="image/x-icon" href="img/favicon.ico" rel="shortcut icon">
+<link type="text/css" rel="stylesheet" href="style/style.css"   />
+</head>
+<body>
+<div id="wrapper">
+<div id='left' class='dtree'>
+  <p style="text-align:center">
+    <input type="text" name="query" id="query" placeholder="请输入关键字"/>
+    <!--<input type="button" id="butsoso" value="搜索" />--></p>
+  <p style="margin:7px 0; text-align:center"><a href="javascript:void(0)" id="openAll">全部展开</a> | <a href="javascript:void(0)" id="closeAll">全部折叠 </a> | <a href="index.html" >速查表</a></p>
+	<div id="menu">
+    
+    </div>
+</div>
+<div id="content" class="a2">
+  <div rel="delay">
+    <h2><span>返回值:jQuery</span>delay(duration,<em class="optional">[queueName]</em>)</h2>
+    <h3>概述</h3>
+    <div class="desc">
+      <p>设置一个延时来推迟执行队列中之后的项目。</p>
+      <div class="longdesc">
+        <p>jQuery 1.4新增。用于将队列中的函数延时执行。他既可以推迟动画队列的执行，也可以用于自定义队列。</p>
+      </div>
+    </div>
+    <h3>参数</h3>
+    <div class="parameter">
+      <h4><strong>duration,[queueName]</strong><span>Integer,String</span><em>V1.4</em></h4>
+      <p><strong>duration</strong>:延时时间，单位：毫秒</p>
+      <p><strong>queueName</strong>:队列名词，默认是Fx，动画队列。</p>
+    </div>
+    <div class="example">
+      <h3>示例</h3>
+      <span id="f_ad2"></span>
+      <h4>描述:</h4>
+      <p>在.slideUp() 和 .fadeIn()之间延时800毫秒。</p>
+      <h5>HTML 代码:</h5>
+      <pre><code>&lt;div id="foo /"&gt;</code></pre>
+      <h5>jQuery 代码:</h5>
+      <pre><code>$('#foo').slideUp(300).delay(800).fadeIn(400);</code></pre>
+    </div>
+  </div>
+    
+</div>
+
+</div>
+</body>
+
+<script type="text/javascript" src="js/jquery-1.11.3.min.js" ></script>
+<script type="text/javascript" src="js/jquery.autocomplete.js" ></script>
+<script type="text/javascript" src="js/dtree.js" ></script>
+<script type="text/javascript" src="js/js.js" ></script>
+
+</html>

@@ -1,0 +1,64 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title>change([[data],fn]) | jQuery API 中文手册</title>
+<meta name="author" content="jQuery 中文手册 ">
+<meta name="keywords" content="jquery,chm,手册,在线,api" />
+<link type="image/x-icon" href="img/favicon.ico" rel="shortcut icon">
+<link type="text/css" rel="stylesheet" href="style/style.css"   />
+</head>
+<body>
+<div id="wrapper">
+<div id='left' class='dtree'>
+  <p style="text-align:center">
+    <input type="text" name="query" id="query" placeholder="请输入关键字"/>
+    <!--<input type="button" id="butsoso" value="搜索" />--></p>
+  <p style="margin:7px 0; text-align:center"><a href="javascript:void(0)" id="openAll">全部展开</a> | <a href="javascript:void(0)" id="closeAll">全部折叠 </a> | <a href="index.html" >速查表</a></p>
+  <div id="menu"> </div>
+</div>
+<div id="content" class="a2">
+  <div rel="change">
+    <h2><span>返回值:jQuery</span>change([[data],fn])</h2>
+    <h3>概述</h3>
+    <div class="desc">
+      <p>当元素的值发生改变时，会发生 change 事件。</p>
+      <div class="longdesc">
+        <p>该事件仅适用于文本域（text field），以及 textarea 和 select 元素。当用于 select 元素时，change 事件会在选择某个选项时发生。当用于 text field 或 text area 时，该事件会在元素失去焦点时发生。</p>
+      </div>
+    </div>
+    <h3>参数</h3>
+    <div class="parameter">
+      <h4><strong>fn</strong><span>Function</span><em>V1.0</em></h4>
+      <p>在每一个匹配元素的change事件中绑定的处理函数。</p>
+      <h4><strong>[data],fn</strong><span>String,Function</span><em>V1.4.3</em></h4>
+      <p><strong>data</strong>:change([Data], fn) 可传入data供函数fn处理。</p>
+      <p><strong>fn</strong>:在每一个匹配元素的change事件中绑定的处理函数。</p>
+    </div>
+    <div class="example">
+      <h3>示例</h3>
+      <span id="f_ad2"></span>
+      <h4>描述:</h4>
+      <p>触发被选元素的 change 事件。</p>
+      <h5>jQuery 代码:</h5>
+      <pre>$(<em>selector</em>).change();</pre>
+    </div>
+    <h4>描述:</h4>
+    <p>给所有的文本框增加输入验证</p>
+    <h5>jQuery 代码:</h5>
+    <pre><code>$("input[type='text']").change( function() {
+  // 这里可以写些验证代码
+});</code></pre>
+  </div>
+  <iframe rel="nofollow" width="100%" height="450" src="../ad.php-act=ad_1"   frameborder='0' scrolling='no' marginheight='0' marginwidth='0' ></iframe>
+</div>
+
+</div>
+</body>
+
+<script type="text/javascript" src="js/jquery-1.11.3.min.js" ></script>
+<script type="text/javascript" src="js/jquery.autocomplete.js" ></script>
+<script type="text/javascript" src="js/dtree.js" ></script>
+<script type="text/javascript" src="js/js.js" ></script>
+
+</html>

@@ -1,0 +1,67 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title>deferred.promise([type],[target]) | jQuery API 中文手册</title>
+<meta name="author" content="jQuery 中文手册 ">
+<meta name="keywords" content="jquery,chm,手册,在线,api" />
+<link type="image/x-icon" href="img/favicon.ico" rel="shortcut icon">
+<link type="text/css" rel="stylesheet" href="style/style.css"   />
+</head>
+<body>
+<div id="wrapper">
+<div id='left' class='dtree'>
+  <p style="text-align:center">
+    <input type="text" name="query" id="query" placeholder="请输入关键字"/>
+    <!--<input type="button" id="butsoso" value="搜索" />--></p>
+  <p style="margin:7px 0; text-align:center"><a href="javascript:void(0)" id="openAll">全部展开</a> | <a href="javascript:void(0)" id="closeAll">全部折叠 </a> | <a href="index.html" >速查表</a></p>
+	<div id="menu">
+    
+    </div>
+</div>
+<div id="content" class="a2">
+  <div rel="deferred.promise">
+    <h2><span>返回值:Deferred Object</span>deferred.promise([type],[target])</h2>
+    <h3>概述</h3>
+    <div class="desc">
+      <p>返回一个 Promise 对象用来观察当某种类型的所有行动绑定到集合，排队与否还是已经完成。</p>
+      <div class="longdesc">
+        <p>.promise()方法返回一个动态生成的Promise对象用来观察当某种类型的所有行动绑定到集合，排队与否还是已经完成。</p>
+        <p> 默认情况下， type是"fx" ，这意味着当选定的元素已完成所有动画是返回的Promise是解决的。 </p>
+        <p> 解决上下文和唯一的参数是哪个集合到.promise()被调用。 </p>
+        <p> 如果target是提供，.promise()将附加到它的方法，然后返回这个对象，而不是创建一个新的。这对在已经存在的对象上附加Promise的行为非常有用。 </p>
+      </div>
+    </div>
+    <h3>参数</h3>
+    <div class="parameter">
+      <h4><strong>type</strong><span>String</span><em>V1.6</em></h4>
+      <p>需要处理的字符串</p>
+      <h4><strong>target</strong><span>Object</span><em>V1.5</em></h4>
+      <p>附有promise 方法的Object</p>
+    </div>
+    <div class="example">
+      <h3>示例</h3>
+      <span id="f_ad2"></span>
+      <h4>描述:</h4>
+      <p>一个集合上使用promise，而没有动画解决的promise。</p>
+      <h5>jQuery 代码:</h5>
+      <pre><code>var div = $( "&lt;div /&gt;" );
+
+div.promise().done(function( arg1 ) {
+  // will fire right away and alert "true"
+  alert( this === div && arg1 === div );
+});</code></pre>
+    </div>
+  </div>
+    
+</div>
+
+</div>
+</body>
+
+<script type="text/javascript" src="js/jquery-1.11.3.min.js" ></script>
+<script type="text/javascript" src="js/jquery.autocomplete.js" ></script>
+<script type="text/javascript" src="js/dtree.js" ></script>
+<script type="text/javascript" src="js/js.js" ></script>
+
+</html>

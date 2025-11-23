@@ -1,0 +1,148 @@
+<script src="js/rtian.js" ></script>
+<meta charset="utf-8" />
+<title>.error() | jQuery API中文文档(适用jQuery 1.0 - jQuery 3.0)</title>
+  <div id="content" >
+<div class="inner" role="main"><article id="post-177" class="post-177 post type-post status-publish format-standard hentry category-browser-events category-10 category-143">
+	<header class="entry-header">
+		<h1 class="entry-title">.error()</h1>
+		<hr>
+<div class="entry-meta">
+			分类: <span class="category">
+<a href="events.htm"  title="View all posts in Events">事件</a> &gt; 
+<a href="browser-events.htm"  title="View all posts in Browser Events">浏览器事件</a></span>		</div><!-- .entry-meta -->
+			</header><!-- .entry-header -->
+	<div class="entry-content">
+		<article id="error1" class="entry method"><h2 class="section-title">
+<span class="name">.error( handler(eventObject) )</span><span class="returns">返回: 
+<a href="Types.htm#jQuery" >jQuery</a></span><span class="version-details">过时版本: 
+<a href="1.8.htm" >1.8</a>, 删除版本: 
+<a href="3.0.htm" >3.0</a></span>
+</h2>
+<div class="entry-wrapper">
+<p class="desc"><strong>描述: </strong>为 JavaScript 的 "error" 事件绑定一个处理函数。</p>
+	<ul class="signatures">
+		<li class="signature" id="error-handlereventObject">
+			<h4 class="name">
+				<span class="version-details">添加的版本: 
+<a href="1.0.htm" >1.0</a></span>.error(
+				handler(eventObject) )</h4>
+			<ul>
+				<li>
+					<div><strong>handler(eventObject)</strong></div>
+					<div>类型: 
+<a href="Types.htm#Function" >Function</a>()</div>
+					<div>每当事件触发时执行的函数。</div>
+				</li>
+			</ul>
+		</li>
+		<li class="signature" id="error-eventData-handlereventObject">
+			<h4 class="name">
+				<span class="version-details">添加的版本: 
+<a href="1.4.3.htm" >1.4.3</a></span>.error(
+				[eventData ], handler(eventObject) )</h4>
+			<ul>
+				<li>
+					<div><strong>eventData</strong></div>
+					<div>类型: 
+<a href="Types.htm#Anything" >Anything</a>
+					</div>
+					<div>一个对象，它包含的数据键值对映射将被传递给事件处理程序。</div>
+				</li>
+				<li>
+					<div><strong>handler(eventObject)</strong></div>
+					<div>Type: 
+<a href="Types.htm#Function" >Function</a>( 
+<a href="Types.htm#Event" >Event</a> eventObject )</div>
+					<div>每当事件触发时执行的函数。</div>
+				</li>
+			</ul>
+		</li>
+	</ul>
+<div class="longdesc" id="entry-longdesc">
+    <p>这个方法是 <code>.bind('error', handler)</code> 的快捷方式。</p>
+	<p>
+		<b>从jQuery 1.8 开始</b>， <code>.error()</code> 方法已被宣告过时。使用<code>.on( "error", handler )</code>来代替 将事件处理程序附加到<code>error</code>事件。</p>
+    <p><code>error</code>事件被发送到元素，比如一张图片被引用，由浏览器加载。如果没有正确载入，这个事件就会被调用。</p>
+    <p>例子，考虑一个简单的图像页面：</p>
+    <div class="syntaxhighlighter xml nogutter">
+	<table>
+		<tbody>
+			<tr>
+				<td class="gutter">
+						<div class="line n1">1</div>
+				</td>
+				<td class="code">
+					<pre><div class="container"><div class="line"><code><span class="tag">&lt;<span class="title">img</span> <span class="attribute">alt</span>=<span class="value">"Book"</span> <span class="attribute">id</span>=<span class="value">"book"</span> /&gt;</span></code></div></div></pre>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+    <p>事件处理器可以绑定到图像上：</p>
+    <div class="syntaxhighlighter javascript nogutter">
+	<table>
+		<tbody>
+			<tr>
+				<td class="gutter">
+						<div class="line n1">1</div>
+						<div class="line n2">2</div>
+						<div class="line n3">3</div>
+						<div class="line n4">4</div>
+						<div class="line n5">5</div>
+				</td>
+				<td class="code">
+					<pre><div class="container"><div class="line"><code>$(<span class="string">'#book'</span>)</code></div></div><div class="container"><div class="line"><code>  .error(<span class="keyword">function</span>() {</code></div></div><div class="container"><div class="line"><code>    alert(<span class="string">'Handler for .error() called.'</span>)</code></div></div><div class="container"><div class="line"><code>  })</code></div></div><div class="container"><div class="line"><code>  .attr(<span class="string">"src"</span>, <span class="string">"missing.png"</span>);</code></div></div></pre>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+    <p>如果图像无法加载（例如，因为目前所提供的URL不存在），警告显示：</p>
+    <p>
+      <span class="output">Handler for .error() called.</span>
+    </p>
+	<div class="warning">
+		<p>这个事件处理程序<em>必须</em>在浏览器触发<code>error</code>事件之前绑定，这就是为什么示例绑定的处理函数后设置<code>src</code>属性。此外，当页面保存到本地的时候此事件可能无法正确触发。由于<code>error</code>依赖于正常的HTTP状态码，如果URL使用<code>file:</code>协议，它通常不会被触发。</p>
+	</div>
+    <p>注意：一个jQuery的 <code>error</code> 事件处理器不应该附加到 <code>window</code> 对象上。当一个脚本错误的时候，浏览器就会触发 <code>window</code> 的 <code>error</code> 事件。无论如何， <code>window</code> 的 <code>error</code> 事件接收不同的参数和返回值与传统的事件不一样。若要绑定 <code>window</code> 的 <code>error</code> 事件，请使用<code>window.onerror</code>代替。
+</p>
+  </div>
+	<h3>Additional Notes（其他注意事项）:</h3>
+	<div class="longdesc">
+		<ul>
+			<li>
+				<code>.error()</code>方法只是作为<code>.on( "error", handler )</code>的一个速记写法，移除该事件可以使用<code>.off( "error"
+				)</code>。
+			</li>
+		</ul>
+	</div>
+<div class="jquery-api-top">
+</div>
+<section class="entry-examples" id="entry-examples">
+    <header><h2 class="underline">例子:</h2></header>
+    <div class="entry-example" id="example-0">
+    <p>要使用其他图片替换所有丢失的图片，您可以使用一个内部更新<code>src</code>属性的回调函数,传递给<code>.error()</code>。注意要确保替换图像存在; 否则<code>error</code> 事件将无限期的触发。</p>
+    <div class="syntaxhighlighter javascript">
+    	<table>
+    		<tbody>
+    			<tr>
+    				<td class="gutter">
+    						<div class="line n1">1</div>
+    						<div class="line n2">2</div>
+    						<div class="line n3">3</div>
+    						<div class="line n4">4</div>
+    						<div class="line n5">5</div>
+    						<div class="line n6">6</div>
+    				</td>
+    				<td class="code">
+    					<pre><div class="container"><div class="line"><code><span class="comment">// 如果 missing.png 丢失, 那么将被替换为 replacement.png</span></code></div></div><div class="container"><div class="line"><code>$( <span class="string">"img"</span> )</code></div></div><div class="container"><div class="line"><code>  .error(<span class="keyword">function</span>() {</code></div></div><div class="container"><div class="line"><code>    $( <span class="keyword">this</span> ).attr( <span class="string">"src"</span>, <span class="string">"replacement.png"</span> );</code></div></div><div class="container"><div class="line"><code>  })</code></div></div><div class="container"><div class="line"><code>  .attr( <span class="string">"src"</span>, <span class="string">"missing.png"</span> );</code></div></div></pre>
+    				</td>
+    			</tr>
+    		</tbody>
+    	</table>
+    </div>
+</div></section>
+</div></article>	</div><!-- .entry-content -->
+</article>
+</div>
+  </div>

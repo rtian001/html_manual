@@ -1,0 +1,71 @@
+ <script src="js/rtian.index.js" ></script>
+            <header class="top-nav">
+                <a href="#index.html" title="">首页</a>&nbsp;&gt;&nbsp; <span class="sub-title">筛选</span> &nbsp;&gt;&nbsp;filter(expr|obj|ele|fn)
+                <a class="source" href="#jquery3.new.html" >jQuery3.0 新特性</a>
+            </header>
+            <div id="content" >
+              <h2><span>返回值:jQuery</span>filter(expr|obj|ele|fn)</h2>
+    <h3>概述</h3>
+    <div class="desc">
+      <p>筛选出与指定表达式匹配的元素集合。</p>
+      <div class="longdesc">
+        <p>这个方法用于缩小匹配的范围。用逗号分隔多个表达式</p>
+      </div>
+    </div>
+    <h3>参数</h3>
+    <div class="parameter">
+      <h4><strong>expr</strong><span>String</span><em>V1.0</em></h4>
+      <p>字符串值，包含供匹配当前元素集合的选择器表达式。</p>
+      <h4><strong>jQuery object</strong><span>object</span><em>V1.0</em></h4>
+      <p> 现有的jQuery对象，以匹配当前的元素。</p>
+      <h4><strong>element </strong><span>Expression</span><em>V1.4</em></h4>
+      <p> 一个用于匹配元素的DOM元素。 </p>
+      <h4><strong>function(index) </strong><span>Function</span><em>V1.4</em></h4>
+      <p>一个函数用来作为测试元素的集合。它接受一个参数index，这是元素在jQuery集合的索引。在函数， this指的是当前的DOM元素。</p>
+    </div>
+    <div class="example">
+      <h3>示例</h3>
+      <span id="f_ad2"></span>
+      <h4>参数selector描述:</h4>
+      <p>保留带有select类的元素</p>
+      <h5>HTML 代码:</h5>
+      <pre><code>&lt;p&gt;Hello&lt;/p&gt;&lt;p&gt;Hello Again&lt;/p&gt;&lt;p class="selected"&gt;And Again&lt;/p&gt;</code></pre>
+      <h5>jQuery 代码:</h5>
+      <pre><code>$("p").filter(".selected")</code></pre>
+      <h5>结果:</h5>
+      <pre><code>[ &lt;p class="selected"&gt;And Again&lt;/p&gt; ]</code></pre>
+      <h4>参数selector描述:</h4>
+      <p>保留第一个以及带有select类的元素</p>
+      <h5>HTML 代码:</h5>
+      <pre><code>&lt;p&gt;Hello&lt;/p&gt;&lt;p&gt;Hello Again&lt;/p&gt;&lt;p class="selected"&gt;And Again&lt;/p&gt;</code></pre>
+      <h5>jQuery 代码:</h5>
+      <pre><code>$("p").filter(".selected, :first")</code></pre>
+      <h5>结果:</h5>
+      <pre><code>[ &lt;p&gt;Hello&lt;/p&gt;, &lt;p class="selected"&gt;And Again&lt;/p&gt; ]</code></pre>
+      <h4>回调函数 描述:</h4>
+      <p>保留子元素中不含有ol的元素。</p>
+      <h5>HTML 代码:</h5>
+      <pre><code>&lt;p&gt;&lt;ol&gt;&lt;li&gt;Hello&lt;/li&gt;&lt;/ol&gt;&lt;/p&gt;&lt;p&gt;How are you?&lt;/p&gt;</code></pre>
+      <h5>jQuery 代码:</h5>
+      <pre><code>$("p").filter(function(index) {
+  return $("ol", this).length == 0;
+});</code></pre>
+      <h5>结果:</h5>
+      <pre><code>[ &lt;p&gt;How are you?&lt;/p&gt; ]</code></pre>
+    </div>
+            </div>
+            
+
+            <div class="navigation clearfix">
+                <span class="alignleft">上一篇：<a href="#hasClass.html" >hasClass(class)</a></span>
+                
+                <span class="alignright">下一篇：<a href="#is.html" >is(expr|obj|ele|fn)</a></span>
+            </div>
+            <div class="donate-con">
+              <div class="donate-btn">捐助</div>
+              <div class="donate-body">
+                <div class="donate-tips">本站为非盈利网站，所有的捐赠收入将用于支付带宽、服务器费用，您的支持将是本站撑下去的最大动力！</div>
+                <div class="donate-img"> <a href="#source.html" ></a>  </div>
+              </div>
+            </div>
+

@@ -1,0 +1,166 @@
+<script src="js/rtian.js" ></script>
+<meta charset="utf-8" />
+<title>jQuery.speed | jQuery API中文文档(适用jQuery 1.0 - jQuery 3.0)</title>
+  <div id="content" >
+<div class="inner" role="main">
+    <article id="post-4175" class="post-4175 post type-post status-publish format-standard hentry category-custom-effects category-65 category-67">
+        <header class="entry-header">
+            <h1 class="entry-title">jQuery.speed</h1>
+            <hr>
+            <div class="entry-meta">
+                分类: <span class="category">
+<a href="effects.htm">效果</a> &gt; 
+<a href="custom-effects.htm">自定义</a></span></div><!-- .entry-meta -->
+        </header><!-- .entry-header -->
+        <div class="entry-content">
+            <article id="jQuery-speed1" class="entry method"><h2 class="section-title">
+                <span class="name">jQuery.speed(  [duration ] [, settings ] )</span><span class="returns">返回: 
+<a href="Types.htm#PlainObject" >PlainObject</a></span>
+            </h2>
+                <div class="entry-wrapper">
+                    <p class="desc"><strong>描述: </strong>创建一个包含一组属性的对象，准备用于定义自定义动画。</p>
+                    <ul class="signatures">
+                        <li class="signature">
+                            <h4 class="name">
+                                <span class="version-details">添加的版本： 
+<a href="1.0.htm" >1.0</a></span><a id="jQuery-speed-duration-settings" href="#jQuery-speed-duration-settings"><span class="icon-link"></span>jQuery.speed( [duration ] [, settings ] )</a>
+                            </h4>
+                            <ul>
+                                <li>
+                                    <div>
+                                        <strong>duration</strong> (默认： <code>400</code>)
+                                    </div>
+                                    <div>类型： 
+<a href="Types.htm#Number" >Number</a> 或者 
+<a href="Types.htm#String" >String</a>
+                                    </div>
+                                    <div>一个字符串或数字决定动画将运行多久。(默认值: "normal"， 三种预定速度的字符串("slow", "normal", 或 "fast")或表示动画时长的毫秒数值(如：1000))</div>
+                                </li>
+                                <li>
+                                    <div><strong>settings</strong></div>
+                                    <div>类型： 
+<a href="Types.htm#PlainObject" >PlainObject</a>
+                                    </div>
+                                    <div></div>
+                                    <ul>
+                                        <li>
+                                            <div>
+                                                <strong>easing</strong> (默认： <code>swing</code>)
+                                            </div>
+                                            <div>类型： 
+<a href="Types.htm#String" >String</a>
+                                            </div>
+                                            <div>一个字符串，表示过渡使用哪种缓动函数。（jQuery自身提供"linear" 和 "swing"，其他效果可以使用
+<a href="http://gsgd.co.uk/sandbox/jquery/easing/">jQuery Easing Plugin</a>插件）
+                                                                    </div>
+                                        </li>
+                                        <li>
+                                            <div><strong>complete</strong></div>
+                                            <div>类型： 
+<a href="Types.htm#Function" >Function</a>()
+                                            </div>
+                                            <div>动画完成时调用的函数。</div>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="signature">
+                            <h4 class="name">
+                                <span class="version-details">添加的版本： 
+<a href="1.1.htm" >1.1</a></span><a id="jQuery-speed-duration-easing-complete" href="#jQuery-speed-duration-easing-complete"><span class="icon-link"></span>jQuery.speed(
+                                [duration ] [, easing ] [, complete ] )</a>
+                            </h4>
+                            <ul>
+                                <li>
+                                    <div>
+                                        <strong>duration</strong> (默认： <code>400</code>)
+                                    </div>
+                                    <div>类型： 
+<a href="Types.htm#Number" >Number</a> 或者 
+<a href="Types.htm#String" >String</a>
+                                    </div>
+                                    <div>一个字符串或数字决定动画将运行多久。(默认值: "normal"， 三种预定速度的字符串("slow", "normal", 或 "fast")或表示动画时长的毫秒数值(如：1000))</div>
+                                </li>
+                                <li>
+                                    <div>
+                                        <strong>easing</strong> (默认： <code>swing</code>)
+                                    </div>
+                                    <div>类型： 
+<a href="Types.htm#String" >String</a>
+                                    </div>
+                                    <div>一个字符串，表示过渡使用哪种缓动函数。（jQuery自身提供"linear" 和 "swing"，其他效果可以使用
+<a href="http://gsgd.co.uk/sandbox/jquery/easing/">jQuery Easing Plugin</a>插件）</div>
+                                </li>
+                                <li>
+                                    <div><strong>complete</strong></div>
+                                    <div>类型： 
+<a href="Types.htm#Function" >Function</a>()</div>
+                                    <div>动画完成时调用的函数,每个匹配元素上调用一次。
+                                    </div>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="signature">
+                            <h4 class="name">
+                                <span class="version-details">添加的版本： 
+<a href="1.1.htm" >1.1</a></span><a id="jQuery-speed-settings" href="#jQuery-speed-settings"><span class="icon-link"></span>jQuery.speed( settings )</a>
+                            </h4>
+                            <ul>
+                                <li>
+                                    <div><strong>settings</strong></div>
+                                    <div>类型： 
+<a href="Types.htm#PlainObject" >PlainObject</a>
+                                    </div>
+                                    <div></div>
+                                    <ul>
+                                        <li>
+                                            <div>
+                                                <strong>duration</strong> (默认： <code>400</code>)
+                                            </div>
+                                            <div>类型： 
+<a href="Types.htm#Number" >Number</a> or 
+<a href="Types.htm#String" >String</a>
+                                            </div>
+                                            <div>一个字符串或数字决定动画将运行多久。(默认值: "normal"， 三种预定速度的字符串("slow", "normal", 或 "fast")或表示动画时长的毫秒数值(如：1000))</div>
+                                        </li>
+                                        <li>
+                                            <div>
+                                                <strong>easing</strong> (默认： <code>swing</code>)
+                                            </div>
+                                            <div>类型： 
+<a href="Types.htm#String" >String</a>
+                                            </div>
+                                            <div>一个字符串，表示过渡使用哪种缓动函数。（jQuery自身提供"linear" 和 "swing"，其他效果可以使用
+<a href="http://gsgd.co.uk/sandbox/jquery/easing/">jQuery Easing Plugin</a>插件）
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div><strong>complete</strong></div>
+                                            <div>类型： 
+<a href="Types.htm#Function" >Function</a>()
+                                            </div>
+                                            <div>动画完成时调用的函数。</div>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <div class="longdesc" id="entry-longdesc">
+                        <p><code>$.speed()</code>方法提供了一种方式来定义属性，如<code>duration</code>, <code>easing</code>, 和 <code>queue</code>，
+                        用于自定义动画。 使用它，你不必自己实现缺省值和可选参数所涉及的逻辑。
+                           </p>
+                        <p>这种方法意图为插件开发者提供新的动画方法。
+                        让<code>$.speed()</code>为你处理所有的参数缺省值和规范化，
+                        而不用你自己复制逻辑， 使您的工作更简单。
+                        使用的例子可以在jQuery UI的<code>.addClass()</code>的动画形式中找到。</p>
+                    </div>
+<div class="jquery-api-top">
+</div>
+                </div>
+            </article>
+        </div><!-- .entry-content -->
+    </article>
+</div>
+  </div>

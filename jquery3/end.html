@@ -1,0 +1,42 @@
+ <script src="js/rtian.index.js" ></script>
+            <header class="top-nav">
+                <a href="#index.html" title="">首页</a>&nbsp;&gt;&nbsp; <span class="sub-title">筛选</span> &nbsp;&gt;&nbsp;end()
+                <a class="source" href="#jquery3.new.html" >jQuery3.0 新特性</a>
+            </header>
+            <div id="content" >
+              <h2><span>返回值:jQuery</span>end()</h2>
+    <h3><em>V1.0</em>概述</h3>
+    <div class="desc">
+      <p>回到最近的一个"破坏性"操作之前。即，将匹配的元素列表变为前一次的状态。</p>
+      <div class="longdesc">
+        <p>如果之前没有破坏性操作，则返回一个空集。所谓的"破坏性"就是指任何改变所匹配的jQuery元素的操作。这包括在 Traversing 中任何返回一个jQuery对象的函数--'add', 'andSelf', 'children', 'filter', 'find', 'map', 'next', 'nextAll', 'not', 'parent', 'parents', 'prev', 'prevAll', 'siblings' and 'slice'--再加上 Manipulation 中的 'clone'。</p>
+      </div>
+    </div>
+    <div class="example">
+      <h3>示例</h3>
+      <span id="f_ad2"></span>
+      <h4>描述:</h4>
+      <p>选取所有的p元素，查找并选取span子元素，然后再回过来选取p元素</p>
+      <h5>HTML 代码:</h5>
+      <pre><code>&lt;p&gt;&lt;span&gt;Hello&lt;/span&gt;,how are you?&lt;/p&gt;</code></pre>
+      <h5>jQuery 代码:</h5>
+      <pre><code>$("p").find("span").end()</code></pre>
+      <h5>结果:</h5>
+      <pre><code>[ &lt;p&gt;&lt;span&gt;Hello&lt;/span&gt; how are you?&lt;/p&gt; ]</code></pre>
+    </div>
+            </div>
+            
+
+            <div class="navigation clearfix">
+                <span class="alignleft">上一篇：<a href="#contents.html" >contents()</a></span>
+                
+                <span class="alignright">下一篇：<a href="#ready.html" >ready(fn)</a></span>
+            </div>
+            <div class="donate-con">
+              <div class="donate-btn">捐助</div>
+              <div class="donate-body">
+                <div class="donate-tips">本站为非盈利网站，所有的捐赠收入将用于支付带宽、服务器费用，您的支持将是本站撑下去的最大动力！</div>
+                <div class="donate-img"> <a href="#source.html" ></a>  </div>
+              </div>
+            </div>
+

@@ -1,0 +1,65 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title>removeProp(name) | jQuery API 中文手册</title>
+<meta name="author" content="jQuery 中文手册 ">
+<meta name="keywords" content="jquery,chm,手册,在线,api" />
+<link type="image/x-icon" href="img/favicon.ico" rel="shortcut icon">
+<link type="text/css" rel="stylesheet" href="style/style.css"   />
+</head>
+<body>
+<div id="wrapper">
+<div id='left' class='dtree'>
+  <p style="text-align:center">
+    <input type="text" name="query" id="query" placeholder="请输入关键字"/>
+    <!--<input type="button" id="butsoso" value="搜索" />--></p>
+  <p style="margin:7px 0; text-align:center"><a href="javascript:void(0)" id="openAll">全部展开</a> | <a href="javascript:void(0)" id="closeAll">全部折叠 </a> | <a href="index.html" >速查表</a></p>
+	<div id="menu">
+    
+    </div>
+</div>
+<div id="content" class="a2">
+  <div rel="removeProp">
+    <h2><span>返回值:jQuery</span>removeProp(name)</h2>
+    <h3>概述</h3>
+    <div class="desc">
+      <p>用来删除由.prop()方法设置的属性集</p>
+      <div class="longdesc">
+        <p>随着一些内置属性的DOM元素或window对象，如果试图将删除该属性，浏览器可能会产生错误。jQuery第一次分配undefined值的属性，而忽略了浏览器生成的任何错误</p>
+      </div>
+    </div>
+    <h3>参数</h3>
+    <div class="parameter">
+      <h4><strong>propertyName</strong><span>String</span><em>V1.6</em></h4>
+      <p>要删除的属性名</p>
+    </div>
+    <div class="example">
+      <h3>示例</h3>
+      <span id="f_ad2"></span>
+      <h4>描述:</h4>
+      <p>设置一个段落数字属性，然后将其删除。</p>
+      <h5>HTML 代码:</h5>
+      <pre><code>&lt;p&gt; &lt;/p&gt;</code></pre>
+      <h5>jQuery 代码:</h5>
+      <pre><code>var $para = $("p");
+$para.prop("luggageCode", 1234);
+$para.append("The secret luggage code is: ", String($para.prop("luggageCode")), ". ");
+$para.removeProp("luggageCode");
+$para.append("Now the secret luggage code is: ", String($para.prop("luggageCode")), ". ");</code></pre>
+      <h5>结果:</h5>
+      <pre><code>The secret luggage code is: 1234. Now the secret luggage code is: undefined. </code></pre>
+    </div>
+  </div>
+    
+</div>
+
+</div>
+</body>
+
+<script type="text/javascript" src="js/jquery-1.11.3.min.js" ></script>
+<script type="text/javascript" src="js/jquery.autocomplete.js" ></script>
+<script type="text/javascript" src="js/dtree.js" ></script>
+<script type="text/javascript" src="js/js.js" ></script>
+
+</html>

@@ -1,0 +1,276 @@
+<script src="js/rtian.js" ></script>
+<meta charset="utf-8" />
+<title>.wrapAll() | jQuery API中文文档(适用jQuery 1.0 - jQuery 3.0)</title>
+  <div id="content" >
+	﻿
+<div class="inner" role="main"><article id="post-591" class="post-591 post type-post status-publish format-standard hentry category-dom-insertion-around category-12 category-14">
+  <header class="entry-header">
+    <h1 class="entry-title">.wrapAll()</h1>
+    <hr>
+<div class="entry-meta">
+      分类: <span class="category">
+<a href="manipulation.htm"  title="View all posts in Manipulation">操作</a> &gt; 
+<a href="dom-insertion-around.htm"  title="View all posts in DOM Insertion, Around">DOM 插入并包裹现有内容</a></span>   </div><!-- .entry-meta -->
+      </header><!-- .entry-header -->
+  <div class="entry-content">
+    <article id="wrapAll1" class="entry method"><h2 class="section-title">
+<span class="name">.wrapAll( wrappingElement )</span><span class="returns">返回: 
+<a href="Types.htm#jQuery" >jQuery</a></span>
+</h2>
+<div class="entry-wrapper">
+<p class="desc"><strong>描述: </strong>在集合中所有匹配元素的外面包裹一个HTML结构。</p>
+    <ul class="signatures">
+  <li class="signature">
+    <h4 class="name">
+      <span class="version-details">添加的版本: 
+<a href="1.2.htm" >1.2</a></span>.wrapAll( wrappingElement )
+    </h4>
+    <ul>
+      <li>
+        <div><strong>wrappingElement</strong></div>
+        <div>类型: 
+<a href="Types.htm#Selector" >Selector</a> 或 
+<a href="Types.htm#htmlString" >htmlString</a> 或 
+<a href="Types.htm#Element" >Element</a> 或 
+<a href="Types.htm#jQuery" >jQuery</a>
+        </div>
+        <div>
+          一个选择器，元素，HTML字符串，或jQuery对象指定的html结构环绕包裹的匹配元素。
+        </div>
+      </li>
+    </ul>
+  </li>
+  <li class="signature">
+    <h4 class="name">
+      <span class="version-details">version added: 
+<a href="1.4.htm" >1.4</a></span>.wrapAll( function )
+    </h4>
+    <ul>
+      <li>
+        <div><strong>function</strong></div>
+        <div>类型: 
+<a href="Types.htm#Function" >Function</a>() =&gt;
+<a href="Types.htm#String" >String</a> 或 
+<a href="Types.htm#jQuery" >jQuery</a>
+        </div>
+        <div>一个回调函数，返回的HTML内容或jQuery对象将包裹所有匹配的元素。函数内的<code>this</code>指向集合中的第一个元素。<strong>在jQuery 3.0 之前</strong>，回调函数错误地调用集合中的每一个元素并且接收所述集合中这个元素的索引位置作为参数。</div>
+      </li>
+    </ul>
+  </li>
+</ul>
+<div class="longdesc" id="entry-longdesc">
+  <p><code>.wrapAll()</code>函数可以接受任何字符串或对象，可以传递给<code>$()</code>工厂函数来指定一个DOM结构。这种结构可以嵌套多层，但是最内层只能有一个元素。所有匹配元素将会被当作是一个整体，在这个整体的外部用指定的 HTML 结构进行包裹。
+</p>
+    <p>考虑下面的HTML：</p>
+    <div class="syntaxhighlighter xml nogutter">
+  <table>
+    <tbody>
+      <tr>
+        <td class="gutter">
+            <div class="line n1">1</div>
+            <div class="line n2">2</div>
+            <div class="line n3">3</div>
+            <div class="line n4">4</div>
+        </td>
+        <td class="code">
+          <pre><div class="container"><div class="line"><code><span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"container"</span>&gt;</span></code></div></div><div class="container"><div class="line"><code>  <span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"inner"</span>&gt;</span>Hello<span class="tag">&lt;/<span class="title">div</span>&gt;</span></code></div></div><div class="container"><div class="line"><code>  <span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"inner"</span>&gt;</span>Goodbye<span class="tag">&lt;/<span class="title">div</span>&gt;</span></code></div></div><div class="container"><div class="line"><code><span class="tag">&lt;/<span class="title">div</span>&gt;</span></code></div></div></pre>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+    <p>如果我们对inner元素用.wrapAll():</p>
+    <div class="syntaxhighlighter javascript nogutter">
+  <table>
+    <tbody>
+      <tr>
+        <td class="gutter">
+            <div class="line n1">1</div>
+        </td>
+        <td class="code">
+          <pre><div class="container"><div class="line"><code>$(<span class="string">'.inner'</span>).wrapAll(<span class="string">'&lt;div class="new" /&gt;'</span>);</code></div></div></pre>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+    <p>new <code>&lt;div&gt;</code>元素是动态创建并添加到DOM中。
+    其结果是new <code>&lt;div&gt;</code>包裹了所有匹配的元素：</p>
+    <div class="syntaxhighlighter xml nogutter">
+  <table>
+    <tbody>
+      <tr>
+        <td class="gutter">
+            <div class="line n1">1</div>
+            <div class="line n2">2</div>
+            <div class="line n3">3</div>
+            <div class="line n4">4</div>
+            <div class="line n5">5</div>
+            <div class="line n6">6</div>
+        </td>
+        <td class="code">
+          <pre><div class="container"><div class="line"><code><span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"container"</span>&gt;</span></code></div></div><div class="container"><div class="line"><code>  <span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"new"</span>&gt;</span></code></div></div><div class="container"><div class="line"><code>    <span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"inner"</span>&gt;</span>Hello<span class="tag">&lt;/<span class="title">div</span>&gt;</span></code></div></div><div class="container"><div class="line"><code>    <span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"inner"</span>&gt;</span>Goodbye<span class="tag">&lt;/<span class="title">div</span>&gt;</span></code></div></div><div class="container"><div class="line"><code>  <span class="tag">&lt;/<span class="title">div</span>&gt;</span></code></div></div><div class="container"><div class="line"><code><span class="tag">&lt;/<span class="title">div</span>&gt;</span></code></div></div></pre>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+  </div>
+<div class="jquery-api-top">
+</div>
+<section class="entry-examples" id="entry-examples"><header><h2 class="underline">例子:</h2></header><div class="entry-example" id="example-0">
+<h4>Example: <span class="desc">在所有段落外包上新的div:</span>
+</h4>
+<div class="syntaxhighlighter xml ">
+  <table>
+    <tbody>
+      <tr>
+        <td class="gutter">
+            <div class="line n1">1</div>
+            <div class="line n2">2</div>
+            <div class="line n3">3</div>
+            <div class="line n4">4</div>
+            <div class="line n5">5</div>
+            <div class="line n6">6</div>
+            <div class="line n7">7</div>
+            <div class="line n8">8</div>
+            <div class="line n9">9</div>
+            <div class="line n10">10</div>
+            <div class="line n11">11</div>
+            <div class="line n12">12</div>
+            <div class="line n13">13</div>
+            <div class="line n14">14</div>
+            <div class="line n15">15</div>
+            <div class="line n16">16</div>
+            <div class="line n17">17</div>
+            <div class="line n18">18</div>
+        </td>
+        <td class="code">
+          <pre><div class="container"><div class="line"><code><span class="doctype">&lt;!DOCTYPE html&gt;</span></code></div></div><div class="container"><div class="line"><code><span class="tag">&lt;<span class="title">html</span>&gt;</span></code></div></div><div class="container"><div class="line"><code><span class="tag">&lt;<span class="title">head</span>&gt;</span></code></div></div><div class="container"><div class="line"><code>  <span class="tag">&lt;<span class="title">style</span>&gt;</span><span class="css"></span></code></div></div><div class="container"><div class="line"><code> </code></div></div><div class="container"><div class="line"><code>  <span class="tag">div</span> <span class="rules">{ <span class="rule"><span class="attribute">border</span>:<span class="value"> <span class="number">2</span>px solid blue;</span></span> <span class="rule">}</span></span></code></div></div><div class="container"><div class="line"><code>  <span class="tag">p</span> <span class="rules">{ <span class="rule"><span class="attribute">background</span>:<span class="value">yellow;</span></span> <span class="rule"><span class="attribute">margin</span>:<span class="value"><span class="number">4</span>px;</span></span> <span class="rule">}</span></span></code></div></div><div class="container"><div class="line"><code>  <span class="tag">&lt;/<span class="title">style</span>&gt;</span></code></div></div><div class="container"><div class="line"><code>  <span class="tag">&lt;<span class="title">script</span> <span class="attribute">src</span>=<span class="value">"http://code.jquery.com/jquery-latest.js"</span>&gt;</span><span class="javascript"></span><span class="tag">&lt;/<span class="title">script</span>&gt;</span></code></div></div><div class="container"><div class="line"><code><span class="tag">&lt;/<span class="title">head</span>&gt;</span></code></div></div><div class="container"><div class="line"><code><span class="tag">&lt;<span class="title">body</span>&gt;</span></code></div></div><div class="container"><div class="line"><code>  <span class="tag">&lt;<span class="title">p</span>&gt;</span>Hello<span class="tag">&lt;/<span class="title">p</span>&gt;</span></code></div></div><div class="container"><div class="line"><code>  <span class="tag">&lt;<span class="title">p</span>&gt;</span>cruel<span class="tag">&lt;/<span class="title">p</span>&gt;</span></code></div></div><div class="container"><div class="line"><code>  <span class="tag">&lt;<span class="title">p</span>&gt;</span>World<span class="tag">&lt;/<span class="title">p</span>&gt;</span></code></div></div><div class="container"><div class="line"><code><span class="tag">&lt;<span class="title">script</span>&gt;</span><span class="javascript">$(<span class="string">"p"</span>).wrapAll(<span class="string">"&lt;div&gt;&lt;/div&gt;"</span>);</span><span class="tag">&lt;/<span class="title">script</span>&gt;</span></code></div></div><div class="container"><div class="line"><code> </code></div></div><div class="container"><div class="line"><code><span class="tag">&lt;/<span class="title">body</span>&gt;</span></code></div></div><div class="container"><div class="line"><code><span class="tag">&lt;/<span class="title">html</span>&gt;</span></code></div></div></pre>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+<h4>Demo:</h4>
+<div class="demo code-demo"></div>
+</div>
+<div class="entry-example" id="example-1">
+<h4>Example: <span class="desc">为 span 标签包裹一个对象树。注意，任何 span 之间的元素都不会被包裹，例如例子中使用的 &lt;strong&gt; (红色文本)。即使是 span 之间的空格也不会被包裹。可以查看原始 HTML 的源代码。
+</span>
+</h4>
+<div class="syntaxhighlighter xml ">
+  <table>
+    <tbody>
+      <tr>
+        <td class="gutter">
+            <div class="line n1">1</div>
+            <div class="line n2">2</div>
+            <div class="line n3">3</div>
+            <div class="line n4">4</div>
+            <div class="line n5">5</div>
+            <div class="line n6">6</div>
+            <div class="line n7">7</div>
+            <div class="line n8">8</div>
+            <div class="line n9">9</div>
+            <div class="line n10">10</div>
+            <div class="line n11">11</div>
+            <div class="line n12">12</div>
+            <div class="line n13">13</div>
+            <div class="line n14">14</div>
+            <div class="line n15">15</div>
+            <div class="line n16">16</div>
+            <div class="line n17">17</div>
+            <div class="line n18">18</div>
+            <div class="line n19">19</div>
+        </td>
+        <td class="code">
+          <pre><div class="container"><div class="line"><code><span class="doctype">&lt;!DOCTYPE html&gt;</span></code></div></div><div class="container"><div class="line"><code><span class="tag">&lt;<span class="title">html</span>&gt;</span></code></div></div><div class="container"><div class="line"><code><span class="tag">&lt;<span class="title">head</span>&gt;</span></code></div></div><div class="container"><div class="line"><code>  <span class="tag">&lt;<span class="title">style</span>&gt;</span><span class="css"></span></code></div></div><div class="container"><div class="line"><code> </code></div></div><div class="container"><div class="line"><code>  <span class="tag">div</span> <span class="rules">{ <span class="rule"><span class="attribute">border</span>:<span class="value"><span class="number">2</span>px blue solid;</span></span> <span class="rule"><span class="attribute">margin</span>:<span class="value"><span class="number">2</span>px;</span></span> <span class="rule"><span class="attribute">padding</span>:<span class="value"><span class="number">2</span>px;</span></span> <span class="rule">}</span></span></code></div></div><div class="container"><div class="line"><code>  <span class="tag">p</span> <span class="rules">{ <span class="rule"><span class="attribute">background</span>:<span class="value">yellow;</span></span> <span class="rule"><span class="attribute">margin</span>:<span class="value"><span class="number">2</span>px;</span></span> <span class="rule"><span class="attribute">padding</span>:<span class="value"><span class="number">2</span>px;</span></span> <span class="rule">}</span></span></code></div></div><div class="container"><div class="line"><code>  <span class="tag">strong</span> <span class="rules">{ <span class="rule"><span class="attribute">color</span>:<span class="value">red;</span></span> <span class="rule">}</span></span></code></div></div><div class="container"><div class="line"><code>  <span class="tag">&lt;/<span class="title">style</span>&gt;</span></code></div></div><div class="container"><div class="line"><code>  <span class="tag">&lt;<span class="title">script</span> <span class="attribute">src</span>=<span class="value">"http://code.jquery.com/jquery-latest.js"</span>&gt;</span><span class="javascript"></span><span class="tag">&lt;/<span class="title">script</span>&gt;</span></code></div></div><div class="container"><div class="line"><code><span class="tag">&lt;/<span class="title">head</span>&gt;</span></code></div></div><div class="container"><div class="line"><code><span class="tag">&lt;<span class="title">body</span>&gt;</span></code></div></div><div class="container"><div class="line"><code>  <span class="tag">&lt;<span class="title">span</span>&gt;</span>Span Text<span class="tag">&lt;/<span class="title">span</span>&gt;</span></code></div></div><div class="container"><div class="line"><code>  <span class="tag">&lt;<span class="title">strong</span>&gt;</span>What about me?<span class="tag">&lt;/<span class="title">strong</span>&gt;</span></code></div></div><div class="container"><div class="line"><code>  <span class="tag">&lt;<span class="title">span</span>&gt;</span>Another One<span class="tag">&lt;/<span class="title">span</span>&gt;</span></code></div></div><div class="container"><div class="line"><code><span class="tag">&lt;<span class="title">script</span>&gt;</span><span class="javascript">$(<span class="string">"span"</span>).wrapAll(<span class="string">"&lt;div&gt;&lt;div&gt;&lt;p&gt;&lt;em&gt;&lt;b&gt;&lt;/b&gt;&lt;/em&gt;&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;"</span>);</span><span class="tag">&lt;/<span class="title">script</span>&gt;</span></code></div></div><div class="container"><div class="line"><code> </code></div></div><div class="container"><div class="line"><code><span class="tag">&lt;/<span class="title">body</span>&gt;</span></code></div></div><div class="container"><div class="line"><code><span class="tag">&lt;/<span class="title">html</span>&gt;</span></code></div></div></pre>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+<h4>Demo:</h4>
+<div class="demo code-demo"></div>
+</div>
+<div class="entry-example" id="example-2">
+<h4>Example: <span class="desc">用一个 div 将所有的段落包裹起来。</span>
+</h4>
+<div class="syntaxhighlighter xml ">
+  <table>
+    <tbody>
+      <tr>
+        <td class="gutter">
+            <div class="line n1">1</div>
+            <div class="line n2">2</div>
+            <div class="line n3">3</div>
+            <div class="line n4">4</div>
+            <div class="line n5">5</div>
+            <div class="line n6">6</div>
+            <div class="line n7">7</div>
+            <div class="line n8">8</div>
+            <div class="line n9">9</div>
+            <div class="line n10">10</div>
+            <div class="line n11">11</div>
+            <div class="line n12">12</div>
+            <div class="line n13">13</div>
+            <div class="line n14">14</div>
+            <div class="line n15">15</div>
+            <div class="line n16">16</div>
+            <div class="line n17">17</div>
+            <div class="line n18">18</div>
+        </td>
+        <td class="code">
+          <pre><div class="container"><div class="line"><code><span class="doctype">&lt;!DOCTYPE html&gt;</span></code></div></div><div class="container"><div class="line"><code><span class="tag">&lt;<span class="title">html</span>&gt;</span></code></div></div><div class="container"><div class="line"><code><span class="tag">&lt;<span class="title">head</span>&gt;</span></code></div></div><div class="container"><div class="line"><code>  <span class="tag">&lt;<span class="title">style</span>&gt;</span><span class="css"></span></code></div></div><div class="container"><div class="line"><code> </code></div></div><div class="container"><div class="line"><code>  <span class="tag">div</span> <span class="rules">{ <span class="rule"><span class="attribute">border</span>:<span class="value"> <span class="number">2</span>px solid blue;</span></span> <span class="rule">}</span></span></code></div></div><div class="container"><div class="line"><code>  <span class="tag">p</span> <span class="rules">{ <span class="rule"><span class="attribute">background</span>:<span class="value">yellow;</span></span> <span class="rule"><span class="attribute">margin</span>:<span class="value"><span class="number">4</span>px;</span></span> <span class="rule">}</span></span></code></div></div><div class="container"><div class="line"><code>  <span class="tag">&lt;/<span class="title">style</span>&gt;</span></code></div></div><div class="container"><div class="line"><code>  <span class="tag">&lt;<span class="title">script</span> <span class="attribute">src</span>=<span class="value">"http://code.jquery.com/jquery-latest.js"</span>&gt;</span><span class="javascript"></span><span class="tag">&lt;/<span class="title">script</span>&gt;</span></code></div></div><div class="container"><div class="line"><code><span class="tag">&lt;/<span class="title">head</span>&gt;</span></code></div></div><div class="container"><div class="line"><code><span class="tag">&lt;<span class="title">body</span>&gt;</span></code></div></div><div class="container"><div class="line"><code>  <span class="tag">&lt;<span class="title">p</span>&gt;</span>Hello<span class="tag">&lt;/<span class="title">p</span>&gt;</span></code></div></div><div class="container"><div class="line"><code>  <span class="tag">&lt;<span class="title">p</span>&gt;</span>cruel<span class="tag">&lt;/<span class="title">p</span>&gt;</span></code></div></div><div class="container"><div class="line"><code>  <span class="tag">&lt;<span class="title">p</span>&gt;</span>World<span class="tag">&lt;/<span class="title">p</span>&gt;</span></code></div></div><div class="container"><div class="line"><code><span class="tag">&lt;<span class="title">script</span>&gt;</span><span class="javascript">$(<span class="string">"p"</span>).wrapAll(document.createElement(<span class="string">"div"</span>));</span><span class="tag">&lt;/<span class="title">script</span>&gt;</span></code></div></div><div class="container"><div class="line"><code> </code></div></div><div class="container"><div class="line"><code><span class="tag">&lt;/<span class="title">body</span>&gt;</span></code></div></div><div class="container"><div class="line"><code><span class="tag">&lt;/<span class="title">html</span>&gt;</span></code></div></div></pre>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+<h4>Demo:</h4>
+<div class="demo code-demo"></div>
+</div>
+<div class="entry-example" id="example-3">
+<h4>Example: <span class="desc">使用一个嵌套深度为两层 div 的 jQuery 对象来包裹所有的段落。注意，这并不会移动用于包裹的对象，只是将克隆后的对象用于包裹。</span>
+</h4>
+<div class="syntaxhighlighter xml ">
+  <table>
+    <tbody>
+      <tr>
+        <td class="gutter">
+            <div class="line n1">1</div>
+            <div class="line n2">2</div>
+            <div class="line n3">3</div>
+            <div class="line n4">4</div>
+            <div class="line n5">5</div>
+            <div class="line n6">6</div>
+            <div class="line n7">7</div>
+            <div class="line n8">8</div>
+            <div class="line n9">9</div>
+            <div class="line n10">10</div>
+            <div class="line n11">11</div>
+            <div class="line n12">12</div>
+            <div class="line n13">13</div>
+            <div class="line n14">14</div>
+            <div class="line n15">15</div>
+            <div class="line n16">16</div>
+            <div class="line n17">17</div>
+            <div class="line n18">18</div>
+            <div class="line n19">19</div>
+            <div class="line n20">20</div>
+        </td>
+        <td class="code">
+          <pre><div class="container"><div class="line"><code><span class="doctype">&lt;!DOCTYPE html&gt;</span></code></div></div><div class="container"><div class="line"><code><span class="tag">&lt;<span class="title">html</span>&gt;</span></code></div></div><div class="container"><div class="line"><code><span class="tag">&lt;<span class="title">head</span>&gt;</span></code></div></div><div class="container"><div class="line"><code>  <span class="tag">&lt;<span class="title">style</span>&gt;</span><span class="css"></span></code></div></div><div class="container"><div class="line"><code> </code></div></div><div class="container"><div class="line"><code>  <span class="tag">div</span> <span class="rules">{ <span class="rule"><span class="attribute">border</span>:<span class="value"> <span class="number">2</span>px solid blue;</span></span> <span class="rule"><span class="attribute">margin</span>:<span class="value"><span class="number">2</span>px;</span></span> <span class="rule"><span class="attribute">padding</span>:<span class="value"><span class="number">2</span>px;</span></span> <span class="rule">}</span></span></code></div></div><div class="container"><div class="line"><code>  <span class="class">.doublediv</span> <span class="rules">{ <span class="rule"><span class="attribute">border-color</span>:<span class="value">red;</span></span> <span class="rule">}</span></span></code></div></div><div class="container"><div class="line"><code>  <span class="tag">p</span> <span class="rules">{ <span class="rule"><span class="attribute">background</span>:<span class="value">yellow;</span></span> <span class="rule"><span class="attribute">margin</span>:<span class="value"><span class="number">4</span>px;</span></span> <span class="rule"><span class="attribute">font-size</span>:<span class="value"><span class="number">14</span>px;</span></span> <span class="rule">}</span></span></code></div></div><div class="container"><div class="line"><code>  <span class="tag">&lt;/<span class="title">style</span>&gt;</span></code></div></div><div class="container"><div class="line"><code>  <span class="tag">&lt;<span class="title">script</span> <span class="attribute">src</span>=<span class="value">"http://code.jquery.com/jquery-latest.js"</span>&gt;</span><span class="javascript"></span><span class="tag">&lt;/<span class="title">script</span>&gt;</span></code></div></div><div class="container"><div class="line"><code><span class="tag">&lt;/<span class="title">head</span>&gt;</span></code></div></div><div class="container"><div class="line"><code><span class="tag">&lt;<span class="title">body</span>&gt;</span></code></div></div><div class="container"><div class="line"><code>  <span class="tag">&lt;<span class="title">p</span>&gt;</span>Hello<span class="tag">&lt;/<span class="title">p</span>&gt;</span></code></div></div><div class="container"><div class="line"><code>  <span class="tag">&lt;<span class="title">p</span>&gt;</span>cruel<span class="tag">&lt;/<span class="title">p</span>&gt;</span></code></div></div><div class="container"><div class="line"><code>  <span class="tag">&lt;<span class="title">p</span>&gt;</span>World<span class="tag">&lt;/<span class="title">p</span>&gt;</span></code></div></div><div class="container"><div class="line"><code>  <span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"doublediv"</span>&gt;</span><span class="tag">&lt;<span class="title">div</span>&gt;</span><span class="tag">&lt;/<span class="title">div</span>&gt;</span><span class="tag">&lt;/<span class="title">div</span>&gt;</span></code></div></div><div class="container"><div class="line"><code><span class="tag">&lt;<span class="title">script</span>&gt;</span><span class="javascript">$(<span class="string">"p"</span>).wrapAll($(<span class="string">".doublediv"</span>));</span><span class="tag">&lt;/<span class="title">script</span>&gt;</span></code></div></div><div class="container"><div class="line"><code> </code></div></div><div class="container"><div class="line"><code><span class="tag">&lt;/<span class="title">body</span>&gt;</span></code></div></div><div class="container"><div class="line"><code><span class="tag">&lt;/<span class="title">html</span>&gt;</span></code></div></div></pre>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+<h4>Demo:</h4>
+<div class="demo code-demo"></div>
+</div></section>
+</div></article>  </div><!-- .entry-content -->
+</article>        
+</div>
+  </div>

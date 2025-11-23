@@ -1,0 +1,154 @@
+ <script src="js/rtian.index.js" ></script><article id="jq31">
+	<header class="entry-header">
+		<h1 class="entry-title">jQuery.parseHTML()</h1>
+		<hr>
+<div class="jquery-api-top">
+
+
+</div>
+
+<div class="entry-meta">
+			分类: <span class="category"><a href="http://www.css88.com/jqapi-1.9/category/utilities/" title="View all posts in Utilities">Utilities</a></span>		</div><!-- .entry-meta -->
+			</header><!-- .entry-header -->
+
+	<div class="entry-content">
+		<article id="jQuery-parseHTML1" class="entry method"><h2 class="section-title">
+<span class="name">jQuery.parseHTML( data [, context ] [, keepScripts ] )</span><span class="returns">返回: <a href="http://www.css88.com/jqapi-1.9/Types#Array">Array</a></span>
+</h2>
+<div class="entry-wrapper">
+<p class="desc"><strong>描述: </strong>将字符串解析到一个DOM节点的数组中。</p>
+<ul class="signatures"><li class="signature" id="jQuery-parseHTML-data-context-keepScripts">
+<h4 class="name">
+<span class="version-details">添加的版本: <a href="http://www.css88.com/jqapi-1.9/category/version/1.8/">1.8</a></span>jQuery.parseHTML( data [, context ] [, keepScripts ] )</h4>
+<ul>
+<li>
+<div><strong>data</strong></div>
+<div>类型: <a href="http://www.css88.com/jqapi-1.9/Types#String">String</a>
+</div>
+<div>用来解析的HTML字符串。</div>
+</li>
+<li>
+<div>
+<strong>context</strong> (默认: <code>document</code>)</div>
+<div>类型: <a href="http://www.css88.com/jqapi-1.9/Types#Element">Element</a>
+</div>
+<div>DOM元素的上下文，在这个上下文中将创建的HTML片段。</div>
+</li>
+<li>
+<div>
+<strong>keepScripts</strong> (默认: <code>false</code>)</div>
+<div>类型: <a href="http://www.css88.com/jqapi-1.9/Types#Boolean">Boolean</a>
+</div>
+<div>一个布尔值，表明是否在传递的HTML字符串中包含脚本。</div>
+</li>
+</ul>
+</li></ul>
+<div class="longdesc" id="entry-longdesc">
+    <p>
+        <code>jQuery.parseHTML</code>使用原生方法将字符串转换为一个DOM节点的集合，然后可以插入到文档。
+        这些方法渲染所有尾随或前导文本（即使只是空格）。
+        为了防止尾随/前导空格被转换为文本节点，你可以通过将HTML字符串传递给<a href="http://www.css88.com/jqapi-1.9/jQuery.trim/"><code>jQuery
+        .trim</code></a>。</p>
+    <p>
+	默认情况下，如果没有指定或给定<code>null</code> 或 <code>undefined</code>，<code>context</code>是当前的<code>document</code>。如果HTML被用在另一个document中，比如一个iframe，该frame的文件可以使用。</p>
+
+	<p>在3.0中，这种默认行为已经被改变。如果没有指定<code>context</code>，或者给定值为<code>null</code> 或 <code>undefined</code>，那么将使用一个新的<code>document</code>。这有可能会提高安全性，因为当HTML解析时，内嵌的事件将不会执行。一旦解析的HTML注入到文档中它会执行，但是这给工具一个机会，遍历创建DOM和删除任何东西被视为不安全。这种改进并不适用于<code>jQuery.parseHTML</code>的内部使用，因为他们通常传递给当前文档。因此，如类似<code>$( "#log" ).append( $( htmlString ) )</code>的声明，仍然受制于恶意代码注入。</p>
+
+    <h2>Security Considerations（安全注意事项）</h2>
+    <p>
+        大多数的jQuery的API接受的HTML字符串将运行所包含在HTML中的脚本。<code>jQuery.parseHTML</code>不运行HTML中解析出来的脚本，除非 <code>keepScripts</code>参数为<code>true</code>。然而，它仍然是可能在大多数环境中间接地执行脚本，例如通过<code>&lt;img onerror&gt;</code>属性。调用者应该意识到这一点，并通过清理或避免任何不可信来源的输入，如URL或cookies，来防止它。为了未来的兼容性，当<code>keepScripts</code>为不确定的或<code>false</code>时，调用者不应该依赖于这个能力来运行<em>任何</em>脚本内容。</p>
+  </div>
+<div class="jquery-api-top">
+</div>
+
+<section class="entry-examples" id="entry-examples"><header><h2 class="underline">例子:</h2></header><div class="entry-example" id="example-0">
+<h4><span class="desc">Create an array of Dom nodes using an HTML string and insert it into a div.</span></h4>
+<div class="syntaxhighlighter xml ">
+	<table>
+		<tbody>
+			<tr>
+				<td class="gutter">
+					
+						<div class="line n1">1</div>
+					
+						<div class="line n2">2</div>
+					
+						<div class="line n3">3</div>
+					
+						<div class="line n4">4</div>
+					
+						<div class="line n5">5</div>
+					
+						<div class="line n6">6</div>
+					
+						<div class="line n7">7</div>
+					
+						<div class="line n8">8</div>
+					
+						<div class="line n9">9</div>
+					
+						<div class="line n10">10</div>
+					
+						<div class="line n11">11</div>
+					
+						<div class="line n12">12</div>
+					
+						<div class="line n13">13</div>
+					
+						<div class="line n14">14</div>
+					
+						<div class="line n15">15</div>
+					
+						<div class="line n16">16</div>
+					
+						<div class="line n17">17</div>
+					
+						<div class="line n18">18</div>
+					
+						<div class="line n19">19</div>
+					
+						<div class="line n20">20</div>
+					
+						<div class="line n21">21</div>
+					
+						<div class="line n22">22</div>
+					
+						<div class="line n23">23</div>
+					
+						<div class="line n24">24</div>
+					
+						<div class="line n25">25</div>
+					
+						<div class="line n26">26</div>
+					
+						<div class="line n27">27</div>
+					
+						<div class="line n28">28</div>
+					
+						<div class="line n29">29</div>
+					
+						<div class="line n30">30</div>
+					
+						<div class="line n31">31</div>
+					
+						<div class="line n32">32</div>
+					
+						<div class="line n33">33</div>
+					
+						<div class="line n34">34</div>
+					
+						<div class="line n35">35</div>
+					
+				</td>
+				<td class="code">
+					<pre><div class="container"><div class="line"><code><span class="doctype">&lt;!DOCTYPE html&gt;</span></code></div></div><div class="container"><div class="line"><code><span class="tag">&lt;<span class="title">html</span>&gt;</span></code></div></div><div class="container"><div class="line"><code><span class="tag">&lt;<span class="title">head</span>&gt;</span></code></div></div><div class="container"><div class="line"><code>  <span class="tag">&lt;<span class="title">script</span> <span class="attribute">src</span>=<span class="value">"http://code.jquery.com/jquery-latest.js"</span>&gt;</span><span class="javascript"></span><span class="tag">&lt;/<span class="title">script</span>&gt;</span></code></div></div><div class="container"><div class="line"><code><span class="tag">&lt;/<span class="title">head</span>&gt;</span></code></div></div><div class="container"><div class="line"><code><span class="tag">&lt;<span class="title">body</span>&gt;</span></code></div></div><div class="container"><div class="line"><code> </code></div></div><div class="container"><div class="line"><code><span class="tag">&lt;<span class="title">div</span> <span class="attribute">id</span>=<span class="value">"log"</span>&gt;</span></code></div></div><div class="container"><div class="line"><code>  <span class="tag">&lt;<span class="title">h3</span>&gt;</span>Content:<span class="tag">&lt;/<span class="title">h3</span>&gt;</span></code></div></div><div class="container"><div class="line"><code><span class="tag">&lt;/<span class="title">div</span>&gt;</span></code></div></div><div class="container"><div class="line"><code> </code></div></div><div class="container"><div class="line"><code><span class="tag">&lt;<span class="title">script</span>&gt;</span><span class="javascript"></span></code></div></div><div class="container"><div class="line"><code><span class="keyword">var</span> $log = $( <span class="string">"#log"</span> ),</code></div></div><div class="container"><div class="line"><code>    str = <span class="string">"hello, &lt;b&gt;my name is&lt;/b&gt; jQuery."</span>,</code></div></div><div class="container"><div class="line"><code>    html = $.parseHTML( str ),</code></div></div><div class="container"><div class="line"><code>    nodeNames = [];</code></div></div><div class="container"><div class="line"><code> </code></div></div><div class="container"><div class="line"><code><span class="comment">// Append the parsed HTML</span></code></div></div><div class="container"><div class="line"><code>$log.append( html );</code></div></div><div class="container"><div class="line"><code> </code></div></div><div class="container"><div class="line"><code><span class="comment">// Gather the parsed HTML's node names</span></code></div></div><div class="container"><div class="line"><code>$.each( html, <span class="keyword">function</span>( i, el ) {</code></div></div><div class="container"><div class="line"><code>    nodeNames[i] = <span class="string">"&lt;li&gt;"</span> + el.nodeName + <span class="string">"&lt;/li&gt;"</span>;</code></div></div><div class="container"><div class="line"><code>});</code></div></div><div class="container"><div class="line"><code> </code></div></div><div class="container"><div class="line"><code><span class="comment">// Insert the node names</span></code></div></div><div class="container"><div class="line"><code>$log.append( <span class="string">"&lt;h3&gt;Node Names:&lt;/h3&gt;"</span> );</code></div></div><div class="container"><div class="line"><code>$( <span class="string">"&lt;ol&gt;&lt;/ol&gt;"</span> )</code></div></div><div class="container"><div class="line"><code>  .append( nodeNames.join( <span class="string">""</span> ) )</code></div></div><div class="container"><div class="line"><code>  .appendTo( $log );</code></div></div><div class="container"><div class="line"><code> </code></div></div><div class="container"><div class="line"><code><span class="tag">&lt;/<span class="title">script</span>&gt;</span></code></div></div><div class="container"><div class="line"><code> </code></div></div><div class="container"><div class="line"><code><span class="tag">&lt;/<span class="title">body</span>&gt;</span></code></div></div><div class="container"><div class="line"><code><span class="tag">&lt;/<span class="title">html</span>&gt;</span></code></div></div></pre>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+
+<h4>Demo:</h4>
+<div class="demo code-demo"></div>
+</div></section>
+</div></article> 

@@ -1,0 +1,72 @@
+<script src="js/rtian.js" ></script>
+<meta charset="utf-8" />
+<title>Has Attribute Selector [name] | jQuery API中文文档(适用jQuery 1.0 - jQuery 3.0)</title>
+  <div id="content" >
+<div class="inner" role="main"><article id="post-251" class="post-251 post type-post status-publish format-standard hentry category-attribute-selectors category-10">
+  <header class="entry-header">
+    <h1 class="entry-title">Has Attribute Selector [name]</h1>
+    <hr>
+<div class="entry-meta">
+      分类: <span class="category">
+<a href="selectors.htm"  title="View all posts in Selectors">选择器</a> &gt; 
+<a href="attribute-selectors.htm"  title="View all posts in Attribute">属性选择器</a></span>    </div><!-- .entry-meta -->
+      </header><!-- .entry-header -->
+  <div class="entry-content">
+    <article id="attributeHas1" class="entry selector"><h2 class="section-title"><span>attributeHas selector</span></h2>
+<div class="entry-wrapper">
+<p class="desc"><strong>描述: </strong>选择所有具有指定属性的元素，该属性可以是任何值。</p>
+<ul class="signatures"><li class="signature">
+<h4 class="name">
+<span class="version-details">添加的版本: 
+<a href="1.0.htm" >1.0</a></span>jQuery( "[attribute]" )</h4>
+<p class="argument"><strong>attribute: </strong>一个属性名</p>
+</li></ul>
+<div class="jquery-api-top">
+</div>
+<section class="entry-examples" id="entry-examples"><header><h2 class="underline">例子:</h2></header><div class="entry-example" id="example-0">
+<h4><span class="desc">给具有id属性的div绑定一个单一的点击，文本中增加div的id文本。</span></h4>
+<div class="syntaxhighlighter xml ">
+  <table>
+    <tbody>
+      <tr>
+        <td class="gutter">
+            <div class="line n1">1</div>
+            <div class="line n2">2</div>
+            <div class="line n3">3</div>
+            <div class="line n4">4</div>
+            <div class="line n5">5</div>
+            <div class="line n6">6</div>
+            <div class="line n7">7</div>
+            <div class="line n8">8</div>
+            <div class="line n9">9</div>
+            <div class="line n10">10</div>
+            <div class="line n11">11</div>
+            <div class="line n12">12</div>
+            <div class="line n13">13</div>
+            <div class="line n14">14</div>
+            <div class="line n15">15</div>
+            <div class="line n16">16</div>
+            <div class="line n17">17</div>
+            <div class="line n18">18</div>
+            <div class="line n19">19</div>
+            <div class="line n20">20</div>
+            <div class="line n21">21</div>
+            <div class="line n22">22</div>
+            <div class="line n23">23</div>
+            <div class="line n24">24</div>
+            <div class="line n25">25</div>
+        </td>
+        <td class="code">
+          <pre><div class="container"><div class="line"><code><span class="doctype">&lt;!doctype html&gt;</span></code></div></div><div class="container"><div class="line"><code><span class="tag">&lt;<span class="title">html</span> <span class="attribute">lang</span>=<span class="value">"en"</span>&gt;</span></code></div></div><div class="container"><div class="line"><code><span class="tag">&lt;<span class="title">head</span>&gt;</span></code></div></div><div class="container"><div class="line"><code>  <span class="tag">&lt;<span class="title">meta</span> <span class="attribute">charset</span>=<span class="value">"utf-8"</span>&gt;</span></code></div></div><div class="container"><div class="line"><code>  <span class="tag">&lt;<span class="title">title</span>&gt;</span>attributeHas demo<span class="tag">&lt;/<span class="title">title</span>&gt;</span></code></div></div><div class="container"><div class="line"><code>  <span class="tag">&lt;<span class="title">script</span> <span class="attribute">src</span>=<span class="value">"//code.jquery.com/jquery-1.10.2.js"</span>&gt;</span><span class="javascript"></span><span class="tag">&lt;/<span class="title">script</span>&gt;</span></code></div></div><div class="container"><div class="line"><code><span class="tag">&lt;/<span class="title">head</span>&gt;</span></code></div></div><div class="container"><div class="line"><code><span class="tag">&lt;<span class="title">body</span>&gt;</span></code></div></div><div class="container"><div class="line"><code> </code></div></div><div class="container"><div class="line"><code><span class="tag">&lt;<span class="title">div</span>&gt;</span>no id<span class="tag">&lt;/<span class="title">div</span>&gt;</span></code></div></div><div class="container"><div class="line"><code><span class="tag">&lt;<span class="title">div</span> <span class="attribute">id</span>=<span class="value">"hey"</span>&gt;</span>with id<span class="tag">&lt;/<span class="title">div</span>&gt;</span></code></div></div><div class="container"><div class="line"><code><span class="tag">&lt;<span class="title">div</span> <span class="attribute">id</span>=<span class="value">"there"</span>&gt;</span>has an id<span class="tag">&lt;/<span class="title">div</span>&gt;</span></code></div></div><div class="container"><div class="line"><code><span class="tag">&lt;<span class="title">div</span>&gt;</span>nope<span class="tag">&lt;/<span class="title">div</span>&gt;</span></code></div></div><div class="container"><div class="line"><code> </code></div></div><div class="container"><div class="line"><code><span class="tag">&lt;<span class="title">script</span>&gt;</span><span class="javascript"></span></code></div></div><div class="container"><div class="line"><code><span class="comment">// Using .one() so the handler is executed at most once</span></code></div></div><div class="container"><div class="line"><code><span class="comment">// per element per event type</span></code></div></div><div class="container"><div class="line"><code>$( <span class="string">"div[id]"</span> ).one( <span class="string">"click"</span>, <span class="keyword">function</span>() {</code></div></div><div class="container"><div class="line"><code>  <span class="keyword">var</span> idString = $( <span class="keyword">this</span> ).text() + <span class="string">" = "</span> + $( <span class="keyword">this</span> ).attr( <span class="string">"id"</span> );</code></div></div><div class="container"><div class="line"><code>  $( <span class="keyword">this</span> ).text( idString );</code></div></div><div class="container"><div class="line"><code>});</code></div></div><div class="container"><div class="line"><code><span class="tag">&lt;/<span class="title">script</span>&gt;</span></code></div></div><div class="container"><div class="line"><code> </code></div></div><div class="container"><div class="line"><code><span class="tag">&lt;/<span class="title">body</span>&gt;</span></code></div></div><div class="container"><div class="line"><code><span class="tag">&lt;/<span class="title">html</span>&gt;</span></code></div></div></pre>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+<h4>Demo:</h4>
+<div class="demo code-demo"></div>
+</div></section>
+</div></article>  </div><!-- .entry-content -->
+</article>        
+</div>
+  </div>

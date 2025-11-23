@@ -1,0 +1,239 @@
+<script src="js/rtian.js" ></script>
+<meta charset="utf-8" />
+<title>.removeClass() | jQuery API中文文档(适用jQuery 1.0 - jQuery 3.0)</title>
+  <div id="content" >
+<div class="inner" role="main"><article id="post-509" class="post-509 post type-post status-publish format-standard hentry category-attributes category-class-attribute category-css category-10 category-14">
+  <header class="entry-header">
+    <h1 class="entry-title">.removeClass()</h1>
+    <hr>
+<div class="entry-meta">
+      分类: <span class="category">
+<a href="attributes.htm"  title="View all posts in Attributes">属性</a></span><span class="category-divider"> | </span><span class="category">
+<a href="manipulation.htm"  title="View all posts in Manipulation">操作</a> &gt; 
+<a href="class-attribute.htm"  title="View all posts in Class Attribute">Class 属性</a></span><span class="category-divider"> | </span><span class="category">
+<a href="css_1.htm"  title="View all posts in CSS">CSS</a></span>   </div><!-- .entry-meta -->
+      </header><!-- .entry-header -->
+  <div class="entry-content">
+    <article id="removeClass1" class="entry method"><h2 class="section-title">
+<span class="name">.removeClass(  [className ] )</span><span class="returns">返回: 
+<a href="Types.htm#jQuery" >jQuery</a></span>
+</h2>
+<div class="entry-wrapper">
+<p class="desc"><strong>描述: </strong>移除集合中每个匹配元素上一个，多个或全部样式。</p>
+    <ul class="signatures">
+        <li class="signature" id="removeClass-className">
+            <h4 class="name">
+                <span class="version-details">添加的版本: 
+<a href="1.0.htm" >1.0</a></span>.removeClass(
+                [className ] )</h4>
+            <ul>
+                <li>
+                    <div><strong>className</strong></div>
+                    <div>类型: 
+<a href="Types.htm#String" >String</a>
+                    </div>
+                    <div>每个匹配元素移除的一个或多个用空格隔开的样式名。</div>
+                </li>
+            </ul>
+        </li>
+        <li class="signature" id="removeClass-functionindex--class">
+            <h4 class="name">
+                <span class="version-details">添加的版本: 
+<a href="1.4.htm" >1.4</a></span>.removeClass(
+                function(index, class) )</h4>
+            <ul>
+                <li>
+                    <div><strong>function(index, class)</strong></div>
+                    <div>类型: 
+<a href="Types.htm#Function" >Function</a>()</div>
+                    <div>一个函数，返回一个或多个将要被移除的样式名。index 参数表示在所有匹配元素的集合中当前元素的索引位置。class 参数表示原有的样式名。</div>
+                </li>
+            </ul>
+        </li>
+    </ul>
+<div class="longdesc" id="entry-longdesc">
+    <p>如果一个样式类名作为一个参数,只有这样式类会被从匹配的元素集合中删除 。 如果没有样式名作为参数，那么所有的样式类将被移除。</p>
+    <p>在jQuery 1.12/2.2 版本之前， <code>.removeClass()</code>方法操纵是选定元素的<code>className</code>特性（<em>property</em>），不是<code>class</code>属性（<em>属性选择器</em>）。一旦特性（<em>property</em>）改变，浏览器就会更新相应地的属性（<em>属性选择器</em>）。此行为的一个言外之意是，这种方法只适用于HTML
+        DOM语义的文档（例如，不是纯XML文档）。</p>
+    <p>在jQuery1.12/2.2中，改变了这种行为以改善对XML文档，包括SVG的支持。从这个版本开始，<code>class</code>
+        属性（<em>属性选择器</em>）被替换（这个版本开始，<code>.addClass()</code>方法操作的是<code>class</code> 属性（<em>属性选择器</em>），而不是<code>className</code>特性（<em>property</em>））。因此，.<code>.removeClass()</code>可以在XML或SVG文档中使用。
+    </p>
+    <p>从所有匹配的每个元素中同时移除多个用空格隔开的样式类 ，像这样:</p>
+    <div class="syntaxhighlighter javascript nogutter">
+  <table>
+    <tbody>
+      <tr>
+        <td class="gutter">
+            <div class="line n1">1</div>
+        </td>
+        <td class="code">
+          <pre><div class="container"><div class="line"><code>$(<span class="string">'p'</span>).removeClass(<span class="string">'myClass yourClass'</span>)</code></div></div></pre>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+    <p>这个方法通常和 <code>.addClass()</code> 一起使用用来切换元素的样式, 像这样：</p>
+    <div class="syntaxhighlighter javascript nogutter">
+  <table>
+    <tbody>
+      <tr>
+        <td class="gutter">
+            <div class="line n1">1</div>
+        </td>
+        <td class="code">
+          <pre><div class="container"><div class="line"><code>$(<span class="string">'p'</span>).removeClass(<span class="string">'myClass noClass'</span>).addClass(<span class="string">'yourClass'</span>);</code></div></div></pre>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+    <p>这里从所有段落删除 <code>myClass</code> 和 <code>noClass</code> 样式类, 然后 <code>yourClass</code> 样式被添加。</p>
+    <p>用其他样式类替换现有的样式类，我们可以使是有 <code>.attr('class', 'newClass')</code> 替换.</p>
+    <p>从 jQuery 1.4开始， <code>.removeClass()</code> 方法允许我们指定一个函数作为参数，返回将要被删除的样式。</p>
+    <div class="syntaxhighlighter javascript nogutter">
+  <table>
+    <tbody>
+      <tr>
+        <td class="gutter">
+            <div class="line n1">1</div>
+            <div class="line n2">2</div>
+            <div class="line n3">3</div>
+        </td>
+        <td class="code">
+          <pre><div class="container"><div class="line"><code>$(<span class="string">'li:last'</span>).removeClass(<span class="keyword">function</span>() {</code></div></div><div class="container"><div class="line"><code>  <span class="keyword">return</span> $(<span class="keyword">this</span>).prev().attr(<span class="string">'class'</span>);</code></div></div><div class="container"><div class="line"><code>});</code></div></div></pre>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+    <p>上例中，移除了最后一个 <code>&lt;li&gt;</code> 的样式，该样式是倒数第二个 <code>&lt;li&gt;</code> 的样式。</p>
+  </div>
+<div class="jquery-api-top">
+</div>
+<section class="entry-examples" id="entry-examples"><header><h2 class="underline">例子:</h2></header><div class="entry-example" id="example-0">
+<h4>Example: <span class="desc">从匹配的元素中移除“blue”样式类。</span>
+</h4>
+<div class="syntaxhighlighter xml ">
+  <table>
+    <tbody>
+      <tr>
+        <td class="gutter">
+            <div class="line n1">1</div>
+            <div class="line n2">2</div>
+            <div class="line n3">3</div>
+            <div class="line n4">4</div>
+            <div class="line n5">5</div>
+            <div class="line n6">6</div>
+            <div class="line n7">7</div>
+            <div class="line n8">8</div>
+            <div class="line n9">9</div>
+            <div class="line n10">10</div>
+            <div class="line n11">11</div>
+            <div class="line n12">12</div>
+            <div class="line n13">13</div>
+            <div class="line n14">14</div>
+            <div class="line n15">15</div>
+            <div class="line n16">16</div>
+            <div class="line n17">17</div>
+            <div class="line n18">18</div>
+            <div class="line n19">19</div>
+            <div class="line n20">20</div>
+            <div class="line n21">21</div>
+            <div class="line n22">22</div>
+        </td>
+        <td class="code">
+          <pre><div class="container"><div class="line"><code><span class="doctype">&lt;!DOCTYPE html&gt;</span></code></div></div><div class="container"><div class="line"><code><span class="tag">&lt;<span class="title">html</span>&gt;</span></code></div></div><div class="container"><div class="line"><code><span class="tag">&lt;<span class="title">head</span>&gt;</span></code></div></div><div class="container"><div class="line"><code>  <span class="tag">&lt;<span class="title">style</span>&gt;</span><span class="css"></span></code></div></div><div class="container"><div class="line"><code> </code></div></div><div class="container"><div class="line"><code>  <span class="tag">p</span> <span class="rules">{ <span class="rule"><span class="attribute">margin</span>:<span class="value"> <span class="number">4</span>px;</span></span> <span class="rule"><span class="attribute">font-size</span>:<span class="value"><span class="number">16</span>px;</span></span> <span class="rule"><span class="attribute">font-weight</span>:<span class="value">bolder;</span></span> <span class="rule">}</span></span></code></div></div><div class="container"><div class="line"><code>  <span class="class">.blue</span> <span class="rules">{ <span class="rule"><span class="attribute">color</span>:<span class="value">blue;</span></span> <span class="rule">}</span></span></code></div></div><div class="container"><div class="line"><code>  <span class="class">.under</span> <span class="rules">{ <span class="rule"><span class="attribute">text-decoration</span>:<span class="value">underline;</span></span> <span class="rule">}</span></span></code></div></div><div class="container"><div class="line"><code>  <span class="class">.highlight</span> <span class="rules">{ <span class="rule"><span class="attribute">background</span>:<span class="value">yellow;</span></span> <span class="rule">}</span></span></code></div></div><div class="container"><div class="line"><code>  <span class="tag">&lt;/<span class="title">style</span>&gt;</span></code></div></div><div class="container"><div class="line"><code>  <span class="tag">&lt;<span class="title">script</span> <span class="attribute">src</span>=<span class="value">"http://code.jquery.com/jquery-latest.js"</span>&gt;</span><span class="javascript"></span><span class="tag">&lt;/<span class="title">script</span>&gt;</span></code></div></div><div class="container"><div class="line"><code><span class="tag">&lt;/<span class="title">head</span>&gt;</span></code></div></div><div class="container"><div class="line"><code><span class="tag">&lt;<span class="title">body</span>&gt;</span></code></div></div><div class="container"><div class="line"><code>  <span class="tag">&lt;<span class="title">p</span> <span class="attribute">class</span>=<span class="value">"blue under"</span>&gt;</span>Hello<span class="tag">&lt;/<span class="title">p</span>&gt;</span></code></div></div><div class="container"><div class="line"><code>  <span class="tag">&lt;<span class="title">p</span> <span class="attribute">class</span>=<span class="value">"blue under highlight"</span>&gt;</span>and<span class="tag">&lt;/<span class="title">p</span>&gt;</span></code></div></div><div class="container"><div class="line"><code>  <span class="tag">&lt;<span class="title">p</span> <span class="attribute">class</span>=<span class="value">"blue under"</span>&gt;</span>then<span class="tag">&lt;/<span class="title">p</span>&gt;</span></code></div></div><div class="container"><div class="line"><code> </code></div></div><div class="container"><div class="line"><code>  <span class="tag">&lt;<span class="title">p</span> <span class="attribute">class</span>=<span class="value">"blue under"</span>&gt;</span>Goodbye<span class="tag">&lt;/<span class="title">p</span>&gt;</span></code></div></div><div class="container"><div class="line"><code><span class="tag">&lt;<span class="title">script</span>&gt;</span><span class="javascript">$(<span class="string">"p:even"</span>).removeClass(<span class="string">"blue"</span>);</span><span class="tag">&lt;/<span class="title">script</span>&gt;</span></code></div></div><div class="container"><div class="line"><code> </code></div></div><div class="container"><div class="line"><code><span class="tag">&lt;/<span class="title">body</span>&gt;</span></code></div></div><div class="container"><div class="line"><code><span class="tag">&lt;/<span class="title">html</span>&gt;</span></code></div></div></pre>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+<h4>Demo:</h4>
+<div class="demo code-demo"></div>
+</div>
+<div class="entry-example" id="example-1">
+<h4>Example: <span class="desc">从匹配的元素中移除“blue”和“under”样式类。</span>
+</h4>
+<div class="syntaxhighlighter xml ">
+  <table>
+    <tbody>
+      <tr>
+        <td class="gutter">
+            <div class="line n1">1</div>
+            <div class="line n2">2</div>
+            <div class="line n3">3</div>
+            <div class="line n4">4</div>
+            <div class="line n5">5</div>
+            <div class="line n6">6</div>
+            <div class="line n7">7</div>
+            <div class="line n8">8</div>
+            <div class="line n9">9</div>
+            <div class="line n10">10</div>
+            <div class="line n11">11</div>
+            <div class="line n12">12</div>
+            <div class="line n13">13</div>
+            <div class="line n14">14</div>
+            <div class="line n15">15</div>
+            <div class="line n16">16</div>
+            <div class="line n17">17</div>
+            <div class="line n18">18</div>
+            <div class="line n19">19</div>
+            <div class="line n20">20</div>
+            <div class="line n21">21</div>
+        </td>
+        <td class="code">
+          <pre><div class="container"><div class="line"><code><span class="doctype">&lt;!DOCTYPE html&gt;</span></code></div></div><div class="container"><div class="line"><code><span class="tag">&lt;<span class="title">html</span>&gt;</span></code></div></div><div class="container"><div class="line"><code><span class="tag">&lt;<span class="title">head</span>&gt;</span></code></div></div><div class="container"><div class="line"><code>  <span class="tag">&lt;<span class="title">style</span>&gt;</span><span class="css"></span></code></div></div><div class="container"><div class="line"><code>  <span class="tag">p</span> <span class="rules">{ <span class="rule"><span class="attribute">margin</span>:<span class="value"> <span class="number">4</span>px;</span></span> <span class="rule"><span class="attribute">font-size</span>:<span class="value"><span class="number">16</span>px;</span></span> <span class="rule"><span class="attribute">font-weight</span>:<span class="value">bolder;</span></span> <span class="rule">}</span></span></code></div></div><div class="container"><div class="line"><code>  <span class="class">.blue</span> <span class="rules">{ <span class="rule"><span class="attribute">color</span>:<span class="value">blue;</span></span> <span class="rule">}</span></span></code></div></div><div class="container"><div class="line"><code>  <span class="class">.under</span> <span class="rules">{ <span class="rule"><span class="attribute">text-decoration</span>:<span class="value">underline;</span></span> <span class="rule">}</span></span></code></div></div><div class="container"><div class="line"><code>  <span class="class">.highlight</span> <span class="rules">{ <span class="rule"><span class="attribute">background</span>:<span class="value">yellow;</span></span> <span class="rule">}</span></span></code></div></div><div class="container"><div class="line"><code>  <span class="tag">&lt;/<span class="title">style</span>&gt;</span></code></div></div><div class="container"><div class="line"><code>  <span class="tag">&lt;<span class="title">script</span> <span class="attribute">src</span>=<span class="value">"http://code.jquery.com/jquery-latest.js"</span>&gt;</span><span class="javascript"></span><span class="tag">&lt;/<span class="title">script</span>&gt;</span></code></div></div><div class="container"><div class="line"><code><span class="tag">&lt;/<span class="title">head</span>&gt;</span></code></div></div><div class="container"><div class="line"><code><span class="tag">&lt;<span class="title">body</span>&gt;</span></code></div></div><div class="container"><div class="line"><code>  <span class="tag">&lt;<span class="title">p</span> <span class="attribute">class</span>=<span class="value">"blue under"</span>&gt;</span>Hello<span class="tag">&lt;/<span class="title">p</span>&gt;</span></code></div></div><div class="container"><div class="line"><code> </code></div></div><div class="container"><div class="line"><code>  <span class="tag">&lt;<span class="title">p</span> <span class="attribute">class</span>=<span class="value">"blue under highlight"</span>&gt;</span>and<span class="tag">&lt;/<span class="title">p</span>&gt;</span></code></div></div><div class="container"><div class="line"><code>  <span class="tag">&lt;<span class="title">p</span> <span class="attribute">class</span>=<span class="value">"blue under"</span>&gt;</span>then<span class="tag">&lt;/<span class="title">p</span>&gt;</span></code></div></div><div class="container"><div class="line"><code>  <span class="tag">&lt;<span class="title">p</span> <span class="attribute">class</span>=<span class="value">"blue under"</span>&gt;</span>Goodbye<span class="tag">&lt;/<span class="title">p</span>&gt;</span></code></div></div><div class="container"><div class="line"><code><span class="tag">&lt;<span class="title">script</span>&gt;</span><span class="javascript">$(<span class="string">"p:odd"</span>).removeClass(<span class="string">"blue under"</span>);</span><span class="tag">&lt;/<span class="title">script</span>&gt;</span></code></div></div><div class="container"><div class="line"><code> </code></div></div><div class="container"><div class="line"><code><span class="tag">&lt;/<span class="title">body</span>&gt;</span></code></div></div><div class="container"><div class="line"><code><span class="tag">&lt;/<span class="title">html</span>&gt;</span></code></div></div></pre>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+<h4>Demo:</h4>
+<div class="demo code-demo"></div>
+</div>
+<div class="entry-example" id="example-2">
+<h4>Example: <span class="desc">从匹配的元素中移除所有样式类。</span>
+</h4>
+<div class="syntaxhighlighter xml ">
+  <table>
+    <tbody>
+      <tr>
+        <td class="gutter">
+            <div class="line n1">1</div>
+            <div class="line n2">2</div>
+            <div class="line n3">3</div>
+            <div class="line n4">4</div>
+            <div class="line n5">5</div>
+            <div class="line n6">6</div>
+            <div class="line n7">7</div>
+            <div class="line n8">8</div>
+            <div class="line n9">9</div>
+            <div class="line n10">10</div>
+            <div class="line n11">11</div>
+            <div class="line n12">12</div>
+            <div class="line n13">13</div>
+            <div class="line n14">14</div>
+            <div class="line n15">15</div>
+            <div class="line n16">16</div>
+            <div class="line n17">17</div>
+            <div class="line n18">18</div>
+            <div class="line n19">19</div>
+            <div class="line n20">20</div>
+            <div class="line n21">21</div>
+            <div class="line n22">22</div>
+        </td>
+        <td class="code">
+          <pre><div class="container"><div class="line"><code><span class="doctype">&lt;!DOCTYPE html&gt;</span></code></div></div><div class="container"><div class="line"><code><span class="tag">&lt;<span class="title">html</span>&gt;</span></code></div></div><div class="container"><div class="line"><code><span class="tag">&lt;<span class="title">head</span>&gt;</span></code></div></div><div class="container"><div class="line"><code>  <span class="tag">&lt;<span class="title">style</span>&gt;</span><span class="css"></span></code></div></div><div class="container"><div class="line"><code> </code></div></div><div class="container"><div class="line"><code>  <span class="tag">p</span> <span class="rules">{ <span class="rule"><span class="attribute">margin</span>:<span class="value"> <span class="number">4</span>px;</span></span> <span class="rule"><span class="attribute">font-size</span>:<span class="value"><span class="number">16</span>px;</span></span> <span class="rule"><span class="attribute">font-weight</span>:<span class="value">bolder;</span></span> <span class="rule">}</span></span></code></div></div><div class="container"><div class="line"><code>  <span class="class">.blue</span> <span class="rules">{ <span class="rule"><span class="attribute">color</span>:<span class="value">blue;</span></span> <span class="rule">}</span></span></code></div></div><div class="container"><div class="line"><code>  <span class="class">.under</span> <span class="rules">{ <span class="rule"><span class="attribute">text-decoration</span>:<span class="value">underline;</span></span> <span class="rule">}</span></span></code></div></div><div class="container"><div class="line"><code>  <span class="class">.highlight</span> <span class="rules">{ <span class="rule"><span class="attribute">background</span>:<span class="value">yellow;</span></span> <span class="rule">}</span></span></code></div></div><div class="container"><div class="line"><code>  <span class="tag">&lt;/<span class="title">style</span>&gt;</span></code></div></div><div class="container"><div class="line"><code>  <span class="tag">&lt;<span class="title">script</span> <span class="attribute">src</span>=<span class="value">"http://code.jquery.com/jquery-latest.js"</span>&gt;</span><span class="javascript"></span><span class="tag">&lt;/<span class="title">script</span>&gt;</span></code></div></div><div class="container"><div class="line"><code><span class="tag">&lt;/<span class="title">head</span>&gt;</span></code></div></div><div class="container"><div class="line"><code><span class="tag">&lt;<span class="title">body</span>&gt;</span></code></div></div><div class="container"><div class="line"><code>  <span class="tag">&lt;<span class="title">p</span> <span class="attribute">class</span>=<span class="value">"blue under"</span>&gt;</span>Hello<span class="tag">&lt;/<span class="title">p</span>&gt;</span></code></div></div><div class="container"><div class="line"><code>  <span class="tag">&lt;<span class="title">p</span> <span class="attribute">class</span>=<span class="value">"blue under highlight"</span>&gt;</span>and<span class="tag">&lt;/<span class="title">p</span>&gt;</span></code></div></div><div class="container"><div class="line"><code>  <span class="tag">&lt;<span class="title">p</span> <span class="attribute">class</span>=<span class="value">"blue under"</span>&gt;</span>then<span class="tag">&lt;/<span class="title">p</span>&gt;</span></code></div></div><div class="container"><div class="line"><code> </code></div></div><div class="container"><div class="line"><code>  <span class="tag">&lt;<span class="title">p</span> <span class="attribute">class</span>=<span class="value">"blue under"</span>&gt;</span>Goodbye<span class="tag">&lt;/<span class="title">p</span>&gt;</span></code></div></div><div class="container"><div class="line"><code><span class="tag">&lt;<span class="title">script</span>&gt;</span><span class="javascript">$(<span class="string">"p:eq(1)"</span>).removeClass();</span><span class="tag">&lt;/<span class="title">script</span>&gt;</span></code></div></div><div class="container"><div class="line"><code> </code></div></div><div class="container"><div class="line"><code><span class="tag">&lt;/<span class="title">body</span>&gt;</span></code></div></div><div class="container"><div class="line"><code><span class="tag">&lt;/<span class="title">html</span>&gt;</span></code></div></div></pre>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+<h4>Demo:</h4>
+<div class="demo code-demo"></div>
+</div></section>
+</div></article>  </div><!-- .entry-content -->
+</article>        
+</div>
+  </div>

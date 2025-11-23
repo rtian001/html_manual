@@ -1,0 +1,36 @@
+ <script src="js/rtian.index.js" ></script>
+            <header class="top-nav">
+                <a href="#index.html" title="">首页</a>&nbsp;&gt;&nbsp; <span class="sub-title">延迟对象</span> &nbsp;&gt;&nbsp;def.notify(args)
+                <a class="source" href="#jquery3.new.html" >jQuery3.0 新特性</a>
+            </header>
+            <div id="content" >
+              <h2><span>返回值:Deferred Object</span>deferred.notify(args)</h2>
+    <h3>概述</h3>
+    <div class="desc">
+      <p>调用一个给定args的递延对象上的进行中的回调 （progressCallbacks）</p>
+      <div class="longdesc">
+        <p>通常情况下，只有一个递延的创建者，应调用此方法;你可以防止其他代码改变Deferred的状态或者通过deferred.promise()返回一个受限制的承诺对象报告状态</p>
+		<p>当&nbsp;deferred.notify&nbsp;被访问， 任何progressCallbacks 可以通过访问<a href="#deferred.then.html">deferred.then</a>&nbsp;好或者&nbsp;<a href="#deferred.progress.html">deferred.progress</a>来添加。回调是在它们被添加的顺序执行。每次通过来自.notify()的args回调。任何为.notify()后递延是解决或拒绝（或之后添加任何progressCallbacks ）被忽略。欲了解更多信息，请参阅文档&nbsp;<a href="#deferred-object.html">Deferred object</a>.</p>
+	</div>
+    </div>
+    <h3>参数</h3>
+    <div class="parameter">
+      <h4><strong>args</strong><em>V1.7</em></h4>
+      <p>可选参数传递到进行中的回调（progressCallbacks）</p>
+    </div>
+            </div>
+            
+
+            <div class="navigation clearfix">
+                <span class="alignleft">上一篇：<a href="#deferred.always.html" >def.always(al,[al])</a></span>
+                
+                <span class="alignright">下一篇：<a href="#deferred.notifyWith.html" >def.notifyWith(c,[a])</a></span>
+            </div>
+            <div class="donate-con">
+              <div class="donate-btn">捐助</div>
+              <div class="donate-body">
+                <div class="donate-tips">本站为非盈利网站，所有的捐赠收入将用于支付带宽、服务器费用，您的支持将是本站撑下去的最大动力！</div>
+                <div class="donate-img"> <a href="#source.html" ></a>  </div>
+              </div>
+            </div>
+

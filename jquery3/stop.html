@@ -1,0 +1,66 @@
+ <script src="js/rtian.index.js" ></script>
+            <header class="top-nav">
+                <a href="#index.html" title="">首页</a>&nbsp;&gt;&nbsp; <span class="sub-title">效果</span> &nbsp;&gt;&nbsp;stop([c],[j])
+                <a class="source" href="#jquery3.new.html" >jQuery3.0 新特性</a>
+            </header>
+            <div id="content" >
+              <h2><span>返回值:jQuery</span>stop([clearQueue],[jumpToEnd])</h2>
+    <h3>概述</h3>
+    <div class="desc">
+      <p>停止所有在指定元素上正在运行的动画。</p>
+      <div class="longdesc">
+        <p>如果队列中有等待执行的动画(并且clearQueue没有设为true)，他们将被马上执行</p>
+      </div>
+    </div>
+    <h3>参数</h3>
+    <div class="parameter">
+      <h4><strong>[clearQueue],[gotoEnd]<em> </em></strong><span>Boolean,Boolean</span><em>V1.2</em></h4>
+      <p><strong>clearQueue</strong>:如果设置成true，则清空队列。可以立即结束动画。</p>
+      <p><strong>gotoEnd</strong>:让当前正在执行的动画立即完成，并且重设show和hide的原始样式，调用回调函数等。</p>
+      <h4><strong>[queue],[clearQueue],[jumpToEnd]</strong><span>Boolean</span><em>V1.7</em></h4>
+      <p><strong>queue</strong>:用来停止动画的队列名称</p>
+      <p><strong>clearQueue</strong>:如果设置成true，则清空队列。可以立即结束动画。</p>
+      <p><strong>jumpToEnd</strong>:如果设置成true，则完成队列。可以立即完成动画。</p>
+    </div>
+    <div class="example">
+      <h3>示例</h3>
+      <span id="f_ad2"></span>
+      <h4>描述:</h4>
+      <p>停止当前正在运行的动画：</p>
+      <h5>HTML 代码:</h5>
+      <pre><code>$("#stop").click(function(){
+  $("#box").stop();
+});</code></pre>
+      <h4>描述:</h4>
+      <p>点击Go之后开始动画,点Stop之后会在当前位置停下来</p>
+      <h5>HTML 代码:</h5>
+      <pre><code>&lt;button id="go"&gt;Go&lt;/button&gt; &lt;button id="stop"&gt;STOP!&lt;/button&gt;
+&lt;div class="block"&gt;&lt;/div&gt;&lt;button id="go"&gt;Go&lt;/button&gt; &lt;button id="stop"&gt;STOP!&lt;/button&gt;
+&lt;div class="block"&gt;&lt;/div&gt;</code></pre>
+      <h5>jQuery 代码:</h5>
+      <pre><code>// 开始动画
+$("#go").click(function(){
+  $(".block").animate({left: '+200px'}, 5000);
+});
+
+// 当点击按钮后停止动画
+$("#stop").click(function(){
+  $(".block").stop();
+});</code></pre>
+    </div>
+            </div>
+            
+
+            <div class="navigation clearfix">
+                <span class="alignleft">上一篇：<a href="#animate.html" >animate(p,[s],[e],[fn])</a></span>
+                
+                <span class="alignright">下一篇：<a href="#delay.html" >delay(d,[q])</a></span>
+            </div>
+            <div class="donate-con">
+              <div class="donate-btn">捐助</div>
+              <div class="donate-body">
+                <div class="donate-tips">本站为非盈利网站，所有的捐赠收入将用于支付带宽、服务器费用，您的支持将是本站撑下去的最大动力！</div>
+                <div class="donate-img"> <a href="#source.html" ></a>  </div>
+              </div>
+            </div>
+

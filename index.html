@@ -1,0 +1,365 @@
+﻿<!DOCTYPE HTML>
+<HTML>
+	<HEAD>
+		<META charset="utf-8">
+		<TITLE>飞天网络 | 网页制作</TITLE>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="icon" href="/favicon.png" type="image/png">
+    <link rel="shortcut icon" href="/favicon.ico">
+		<STYLE>
+			html,
+			body {
+				background: #b8d7e9;
+				background: radial-gradient(circle, #f9fcff 20%, #e2eff7 50%, #b1d4e7 100%);
+				font-family: '\5fae\8f6f\96c5\9ed1', arial, sans-serif;
+			}
+
+			.m-nav {
+				width: 800px;
+				height: 640px;
+			}
+
+			.m-nav a {
+				position: absolute;
+				top: 40%;
+				left: 50%;
+				overflow: hidden;
+				color: #fff;
+			}
+
+			.m-nav .mysite {
+				width: 320px;
+				height: 320px;
+				margin: -160px 0 0 -160px;
+				border-radius: 320px 0 0 0;
+			}
+
+			.m-nav .html {
+				background: #009900;
+				-webkit-transform: rotate(45deg) translate(-401px, 241px);
+				-moz-transform: rotate(45deg) translate(-80px, -80px);
+				transform: rotate(45deg) translate(-401px, 241px);
+			}
+
+			.m-nav .jquery {
+				background: #3333ff;
+				-webkit-transform: rotate(45deg) translate(241px, -401px);
+				-moz-transform: rotate(45deg) translate(-80px, -80px);
+				transform: rotate(45deg) translate(241px, -401px);
+			}
+
+			.m-nav .css {
+				background: #1496bf;
+				-webkit-transform: rotate(45deg) translate(-80px, -80px);
+				-moz-transform: rotate(45deg) translate(-80px, -80px);
+				transform: rotate(45deg) translate(-80px, -80px);
+			}
+
+			.m-nav .blog {
+				background: #c465bb;
+				-webkit-transform: rotate(45deg) translate(241px, -80px);
+				-moz-transform: rotate(45deg) translate(241px, -80px);
+				transform: rotate(45deg) translate(241px, -80px);
+			}
+
+			.m-nav .lab {
+				background: #eb584b;
+				-webkit-transform: rotate(45deg) translate(-80px, 241px);
+				-moz-transform: rotate(45deg) translate(-80px, 241px);
+				transform: rotate(45deg) translate(-80px, 241px);
+			}
+
+			.m-nav .github {
+				width: 160px;
+				height: 160px;
+				margin: -80px 0 0 -80px;
+				background: #fad957;
+				-webkit-transform: rotate(45deg) translate(-321px, 0);
+				-moz-transform: rotate(45deg) translate(-321px, 0);
+				transform: rotate(45deg) translate(-321px, 0);
+				border-radius: 20px
+			}
+
+			.m-nav .cont {
+				position: absolute;
+				z-index: 2;
+				top: 50%;
+				left: 50%;
+				text-shadow: 0 0 3px rgba(255, 255, 255, .3);
+				text-align: center;
+				-webkit-transform: rotate(-45deg) translate3d(0, 0, 0);
+				-moz-transform: rotate(-45deg) translate3d(0, 0, 0);
+				transform: rotate(-45deg) translate3d(0, 0, 0);
+			}
+
+			.m-nav .mysite .cont {
+				width: 226px;
+				height: 226px;
+				margin: -113px 0 0 -113px;
+			}
+
+			.m-nav .github .cont {
+				width: 114px;
+				height: 114px;
+				margin: -57px 0 0 -57px;
+			}
+
+			.m-nav .title {
+				display: block;
+				font-weight: normal;
+			}
+
+			.m-nav .mysite .title {
+				padding-top: 50px;
+				font-size: 32px;
+			}
+
+			.m-nav .btn {
+				display: inline-block;
+				overflow: hidden;
+				vertical-align: top;
+			}
+
+			.m-nav .mysite .btn {
+				width: 180px;
+				height: 56px;
+				margin-top: 20px;
+				border: 1px solid #fff;
+				font-size: 18px;
+				line-height: 56px;
+				-webkit-transition: all 1s linear;
+				-moz-transition: all 1s linear;
+				transition: all 1s linear;
+			}
+
+			.m-nav .mysite:hover .btn {
+				background: #fff;
+			}
+
+			.m-nav .html:hover .btn {
+				color: #009900;
+			}
+
+			.m-nav .jquery:hover .btn {
+				color: #3333ff;
+			}
+
+			.m-nav .css:hover .btn {
+				color: #3ea8ca;
+			}
+
+			.m-nav .blog:hover .btn {
+				color: #c465bb;
+			}
+
+			.m-nav .lab:hover .btn {
+				color: #eb584b;
+			}
+
+			.m-nav .mysite .bg {
+				overflow: hidden;
+				position: absolute;
+				width: 452px;
+				height: 452px;
+				opacity: 0;
+				-webkit-transition: all 1s ease-in-out;
+				-moz-transition: all 1s ease-in-out;
+				transition: all 1s ease-in-out;
+				-webkit-transform: rotate(-45deg) translate(0, -90px);
+				-moz-transform: rotate(-45deg) translate(0, -90px);
+				transform: rotate(-45deg) translate(0, -90px);
+			}
+
+			.m-nav .css .bg {
+				background: url(/images/1.jpg) no-repeat;
+			}
+
+			.m-nav .blog .bg {
+				background: url(/images/3.jpg) no-repeat;
+			}
+
+			.m-nav .lab .bg {
+				background: url(/images/4.jpg) no-repeat;
+			}
+
+			.m-nav .html .bg {
+				background: url(/images/2.jpg) no-repeat;
+			}
+
+			.m-nav .jquery .bg {
+				background: url(/images/5.jpg) no-repeat;
+			}
+
+			.m-nav .mysite:hover .bg {
+				opacity: .5;
+				background-position: 0px -10px;
+			}
+
+			.m-nav .github .title {
+				padding-top: 70px;
+				font-size: 20px;
+			}
+
+			.m-nav .github .btn {
+				width: 50px;
+				height: 50px;
+				margin-top: -80px;
+				background: url(/images/github.png) no-repeat;
+				line-height: 10;
+			}
+
+			.m-nav .border {
+				position: absolute;
+				overflow: hidden;
+				background: rgba(255, 255, 255, .6);
+				-webkit-transition: all 1s linear;
+				-moz-transition: all 1s linear;
+				transition: all 1s linear;
+			}
+
+			.m-nav .border-b {
+				height: 1px;
+			}
+
+			.m-nav .border-r {
+				width: 1px;
+			}
+
+			.m-nav .border-t:before {
+				content: "";
+				display: block;
+				width: 304px;
+				height: 304px;
+				position: absolute;
+				left: 0px;
+				top: 0px;
+				border-left: 1px solid rgba(255, 255, 255, .6);
+				border-top: 1px solid rgba(255, 255, 255, .6);
+				border-radius: 100% 0 0 0;
+				transform-origin: 304px 304px;
+				transform: rotate(-91deg);
+				transition: all 1s linear;
+			}
+
+			.m-nav .border-t {
+				width: 304px;
+				height: 304px;
+				position: absolute;
+				left: 8px;
+				top: 8px;
+				border-radius: 100% 0 0 0;
+				background: transparent;
+				transform-origin: 304px 304px;
+				overflow: hidden;
+			}
+
+			.m-nav .border-b {
+				bottom: 8px;
+				right: 8px;
+				left: 100%;
+			}
+
+			.m-nav .border-r {
+				top: 8px;
+				bottom: 100%;
+				right: 8px;
+			}
+
+			.m-nav a:hover .border-t:before {
+				transform: rotate(0deg);
+			}
+
+			.m-nav a:hover .border-b {
+				left: 8px;
+			}
+
+			.m-nav a:hover .border-r {
+				bottom: 8px;
+			}
+		</STYLE>
+	</HEAD>
+	<BODY>
+		<NAV class="m-nav">
+			<A class="html mysite" href="css" target="_blank">
+				<DIV class="cont">
+					<H2 class="title">CSS参考手册</H2>
+					<SPAN class="btn">View CSS-Books</SPAN>
+				</DIV>
+				<SPAN class="border border-t"></SPAN>
+				<SPAN class="border border-r"></SPAN>
+				<SPAN class="border border-b"></SPAN>
+				<SPAN class="border border-l"></SPAN>
+				<SPAN class="bg"></SPAN>
+			</A>
+			<A class="css mysite" href="jquery3" target="_blank">
+				<DIV class="cont">
+					<H2 class="title">jQuery参考</H2>
+					<SPAN class="btn">View jQuery online</SPAN>
+				</DIV>
+				<SPAN class="border border-t"></SPAN>
+				<SPAN class="border border-r"></SPAN>
+				<SPAN class="border border-b"></SPAN>
+				<SPAN class="border border-l"></SPAN>
+				<SPAN class="bg"></SPAN>
+			</A>
+			<A class="jquery mysite" href="jquery" target="_blank">
+				<DIV class="cont">
+					<H2 class="title">MS-SQL命令</H2>
+					<SPAN class="btn">Microsoft SQL server</SPAN>
+				</DIV>
+				<SPAN class="border border-t"></SPAN>
+				<SPAN class="border border-r"></SPAN>
+				<SPAN class="border border-b"></SPAN>
+				<SPAN class="border border-l"></SPAN>
+				<SPAN class="bg"></SPAN>
+			</A>
+			<A class="lab mysite" href="jquery1" target="_blank">
+				<DIV class="cont">
+					<H2 class="title">Javascript教程</H2>
+					<SPAN class="btn">javascript-tutorial</SPAN>
+				</DIV>
+				<SPAN class="border border-t"></SPAN>
+				<SPAN class="border border-r"></SPAN>
+				<SPAN class="border border-b"></SPAN>
+				<SPAN class="border border-l"></SPAN>
+				<SPAN class="bg"></SPAN>
+			</A>
+			<A class="blog mysite" href="es6" target="_blank">
+				<DIV class="cont">
+					<H2 class="title">ES6 入门</H2>
+					<SPAN class="btn">ECMAscript6 tutorial</SPAN>
+				</DIV>
+				<SPAN class="border border-t"></SPAN>
+				<SPAN class="border border-r"></SPAN>
+				<SPAN class="border border-b"></SPAN>
+				<SPAN class="border border-l"></SPAN>
+				<SPAN class="bg"></SPAN>
+			</A>
+			<A class="heart" href="https://github.com/doyoe" target="_blank" hidden>
+				<DIV class="cont">
+					<H2 class="title">GitHub</H2>
+					<SPAN class="btn">View</SPAN>
+				</DIV>
+				<SPAN class="border border-t"></SPAN>
+				<SPAN class="border border-r"></SPAN>
+				<SPAN class="border border-b"></SPAN>
+				<SPAN class="border border-l"></SPAN>
+				<SPAN class="bg"></SPAN>
+			</A>
+		</NAV>
+		<div id="footer">互联网 ICP 备案：<a href="http://beian.miit.gov.cn/"></a></div>
+		<style type="text/css">
+			html>body>div#footer {
+				height: 30px;
+				line-height: 30px;
+				width: 100%;
+				position: absolute;
+				left: 0;
+				bottom: 0px;
+				text-align: center;
+				text-decoration: none;
+				font-size: 14px;
+			}
+		</style>
+	</BODY>
+</HTML>

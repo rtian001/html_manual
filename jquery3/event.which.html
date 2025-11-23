@@ -1,0 +1,51 @@
+ <script src="js/rtian.index.js" ></script>
+            <header class="top-nav">
+                <a href="#index.html" title="">首页</a>&nbsp;&gt;&nbsp; <span class="sub-title">事件对象</span> &nbsp;&gt;&nbsp;eve.which
+                <a class="source" href="#jquery3.new.html" >jQuery3.0 新特性</a>
+            </header>
+            <div id="content" >
+              <h2><span>返回值:String</span>event.which</h2>
+    <h3><em>V1.1.3</em>概述</h3>
+    <div class="desc">
+      <p>针对键盘和鼠标事件，这个属性能确定你到底按的是哪个键或按钮。</p>
+      <div class="longdesc">
+        <p> event.which&nbsp;将&nbsp;event.keyCode&nbsp;和&nbsp;event.charCode&nbsp;标准化了。推荐用&nbsp;event.which&nbsp;来监视键盘输入。更多细节请参阅：&nbsp;<a href="https://developer.mozilla.org/en/DOM/event.charCode#Notes" >event.charCode on the MDC</a>. </p>
+      </div>
+    </div>
+    <div class="example">
+      <h3>示例</h3>
+      <span id="f_ad2"></span>
+      <h4>描述:</h4>
+      <p>记录按键。</p>
+      <h5> 代码: </h5>
+      <pre>&lt;!DOCTYPE html&gt;
+  &lt;html&gt;
+  &lt;head&gt;
+    &lt;script src=&quot;http://code.jquery.com/jquery-latest.min.js&quot;&gt;&lt;/script&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+      &lt;input id=&quot;whichkey&quot; value=&quot;type something&quot;&gt;
+      &lt;div id=&quot;log&quot;&gt;&lt;/div&gt;
+      &lt;script&gt;
+        $('#whichkey').bind('keydown',function(e){
+        $('#log').html(e.type + ': ' +  e.which );  });
+      &lt;/script&gt;
+    &lt;/body&gt;
+  &lt;/html&gt;</pre>
+    </div>
+            </div>
+            
+
+            <div class="navigation clearfix">
+                <span class="alignleft">上一篇：<a href="#event.type.html" >eve.type</a></span>
+                
+                <span class="alignright">下一篇：<a href="#deferred.done.html" >def.done(d,[d])</a></span>
+            </div>
+            <div class="donate-con">
+              <div class="donate-btn">捐助</div>
+              <div class="donate-body">
+                <div class="donate-tips">本站为非盈利网站，所有的捐赠收入将用于支付带宽、服务器费用，您的支持将是本站撑下去的最大动力！</div>
+                <div class="donate-img"> <a href="#source.html" ></a>  </div>
+              </div>
+            </div>
+

@@ -1,0 +1,58 @@
+ <script src="js/rtian.index.js" ></script>
+            <header class="top-nav">
+                <a href="#index.html" title="">首页</a>&nbsp;&gt;&nbsp; <span class="sub-title">筛选</span> &nbsp;&gt;&nbsp;eq(index|-index)
+                <a class="source" href="#jquery3.new.html" >jQuery3.0 新特性</a>
+            </header>
+            <div id="content" >
+              <h2><span>返回值:jQuery</span>eq(index|-index)</h2>
+    <h3>概述</h3>
+    <div class="desc">
+      <p>获取当前链式操作中第N个jQuery对象，返回jQuery对象，当参数大于等于0时为正向选取，比如0代表第一个，1代表第二个。当参数为负数时为反向选取，比如-1为倒数第一个，具体可以看以下示例。</p>
+<p>类似的有<a href="#get.html" >get(index)</a>返回的是DOM对象。</p>
+      <div class="longdesc">
+        <p></p>
+      </div>
+    </div>
+    <h3>参数</h3>
+    <div class="parameter">
+      <h4><strong>index</strong><span>Integer</span><em>V1.1.2</em></h4>
+      <p>一个整数，指示元素基于0的位置,这个元素的位置是从0算起。</p>
+      <h4><strong>-index</strong><span>Integer</span><em>V1.4</em></h4>
+      <p>一个整数，指示元素的位置，从集合中的最后一个元素开始倒数。(-1算起)</p>
+    </div>
+    <div class="example">
+      <h3>示例</h3>
+      <span id="f_ad2"></span>
+      <h4>参数index描述:</h4>
+      <p>获取匹配的第二个元素</p>
+      <h5>HTML 代码:</h5>
+      <pre><code>&lt;p&gt; This is just a test.&lt;/p&gt; &lt;p&gt; So is this&lt;/p&gt;</code></pre>
+      <h5>jQuery 代码:</h5>
+      <pre><code>$("p").eq(1)</code></pre>
+      <h5>结果:</h5>
+      <pre><code>[ &lt;p&gt; So is this&lt;/p&gt; ]</code></pre>
+      <h4>参数-index描述:</h4>
+      <p>获取匹配的第二个元素</p>
+      <h5>HTML 代码:</h5>
+      <pre><code>&lt;p&gt; This is just a test.&lt;/p&gt; &lt;p&gt; So is this&lt;/p&gt;</code></pre>
+      <h5>jQuery 代码:</h5>
+      <pre><code>$("p").eq(-2)</code></pre>
+      <h5>结果:</h5>
+      <pre><code>[ &lt;p&gt; This is just a test.&lt;/p&gt; ]</code></pre>
+    </div>
+            </div>
+            
+
+            <div class="navigation clearfix">
+                <span class="alignleft">上一篇：<a href="#clone.html" >clone([Even[,deepEven]])</a></span>
+                
+                <span class="alignright">下一篇：<a href="#first.html" >first()</a></span>
+            </div>
+            <div class="donate-con">
+              <div class="donate-btn">捐助</div>
+              <div class="donate-body">
+                <div class="donate-tips">本站为非盈利网站，所有的捐赠收入将用于支付带宽、服务器费用，您的支持将是本站撑下去的最大动力！</div>
+                <div class="donate-img"> <a href="#source.html" ></a>  </div>
+              </div>
+            </div>
+

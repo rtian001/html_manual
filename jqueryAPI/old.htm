@@ -1,0 +1,749 @@
+<script src="js/rtian.js" ></script>
+<meta charset="utf-8" />
+<title>jQuery API 中文文档(适用jQuery 1.0 - jQuery 2.0)</title>
+    <div id="content">
+        <div class="content_warp">
+            <header class="header">
+                <hgroup>
+                    <div class="title">jQuery快速API参考</div>
+                </hgroup>
+                <nav>
+                    <label>选择jQuery API版本:
+                        <select id="version">
+                            <option value="a.v1-10">1.10 / 2.0
+                            <option value="a.v1-9">1.9
+                            <option value="a.v1-8">1.8
+                            <option value="a.v1-7">1.7
+                            <option value="a.v1-6">1.6
+                            <option value="a.v1-5">1.5
+                            <option value="a.v1-4-4">1.4.4
+                            <option value="a.v1-4-3">1.4.3
+                            <option value="a.v1-4-2">1.4.2
+                            <option value="a.v1-4-1">1.4.1
+                            <option value="a.v1-4">1.4
+                            <option value="a.v1-3">1.3
+                            <option value="a.v1-2-6">1.2.6
+                            <option value="a.v1-2-3">1.2.3
+                            <option value="a.v1-2">1.2
+                            <option value="a.v1-1-4">1.1.4
+                            <option value="a.v1-1-3">1.1.3
+                            <option value="a.v1-1-2">1.1.2
+                            <option value="a.v1-1">1.1
+                            <option value="a.v1-0-4">1.0.4
+                            <option value="a.v1-0">1.0
+                        </select>
+                    </label>
+                </nav>
+            </header>
+            <div class="content clearfix">
+                <article id="selectors">
+                    <h1>选择器</h1>
+                    <div>
+                        <section>
+                            <h2>基本</h2>
+                            <ul>
+                                <li><a class="v1-0" title="Selects all elements." href="old.html#p=all-selector" >*</a></li>
+                                <li><a class="v1-0" title="Selects all elements with the given class." href="old.html#p=class-selector" >.class</a></li>
+                                <li><a class="v1-0" title="Selects all elements with the given tag name." href="old.html#p=element-selector" >element</a>
+                                </li>
+                                <li><a class="v1-0" title="Selects a single element with the given id attribute." href="old.html#p=id-selector" >#id</a></li>
+                                <li><a class="v1-0" title="Selects the combined results of all the specified selectors." href="old.html#p=multiple-selector" >selector1,
+                                    selectorN, ...</a></li>
+                            </ul>
+                        </section>
+                        <section>
+                            <h2>层级</h2>
+                            <ul>
+                                <li><a class="v1-0" title="Selects all direct child elements specified by 'child' of elements specified by 'parent'." href="old.html#p=child-selector" >parent &gt;
+                                    child</a></li>
+                                <li><a class="v1-0" title="Selects all elements that are descendants of a given ancestor." href="old.html#p=descendant-selector" >ancestor
+                                    descendant</a></li>
+                                <li><a class="v1-0" title="Selects all next elements matching 'next' that are immediately preceded by a sibling 'prev'." href="old.html#p=next-adjacent-selector" >prev +
+                                    next</a></li>
+                                <li><a class="v1-0" title="Selects all sibling elements that follow after the 'prev' element, have the same parent, and match the filtering 'siblings' selector." href="old.html#p=next-siblings-selector" >prev ~
+                                    siblings</a></li>
+                            </ul>
+                        </section>
+                        <section>
+                            <h2>基本筛选</h2>
+                            <ul>
+                                <li><a class="v1-2" title="Select all elements that are in the progress of an animation at the time the selector is run." href="old.html#p=animated-selector" >:animated</a>
+                                </li>
+                                <li><a class="v1-0" title="Select the element at index n within the matched set." href="old.html#p=eq-selector" >:eq()</a></li>
+                                <li><a class="v1-0" title="Selects even elements, zero-indexed. See also odd." href="old.html#p=even-selector" >:even</a></li>
+                                <li><a class="v1-0" title="Selects the first matched element." href="old.html#p=first-selector" >:first</a></li>
+                                <li><a class="v1-0" title="Select all elements at an index greater than index within the matched set." href="old.html#p=gt-selector" >:gt()</a></li>
+                                <li><a class="v1-2" title="Selects all elements that are headers, like h1, h2, h3 and so on." href="old.html#p=header-selector" >:header</a></li>
+                                <li><a class="v1-9" title="Selects all elements of the specified language." href="old.html#p=lang-selector" >:lang()</a></li>
+                                <li><a class="v1-0" title="Selects the last matched element." href="old.html#p=last-selector" >:last</a></li>
+                                <li><a class="v1-0" title="Select all elements at an index less than index within the matched set." href="old.html#p=lt-selector" >:lt()</a></li>
+                                <li><a class="v1-0" title="Selects all elements that do not match the given selector." href="old.html#p=not-selector" >:not()</a></li>
+                                <li><a class="v1-0" title="Selects odd elements, zero-indexed. See also even." href="old.html#p=odd-selector" >:odd</a></li>
+                                <li><a class="v1-9" title="Selects the element that is the root of the document." href="old.html#p=root-selector" >:root</a></li>
+                                <li><a class="v1-9" title="Selects the target element indicated by the fragment identifier of the document's URI." href="old.html#p=target-selector" >:target</a></li>
+                            </ul>
+                        </section>
+                        <section>
+                            <h2>内容筛选</h2>
+                            <ul>
+                                <li><a class="v1-1-4" title="Select all elements that contain the specified text." href="old.html#p=contains-selector" >:contains()</a>
+                                </li>
+                                <li><a class="v1-0" title="Select all elements that have no children (including text nodes)." href="old.html#p=empty-selector" >:empty</a></li>
+                                <li><a class="v1-1-4" title="Selects elements which contain at least one element that matches the specified selector." href="old.html#p=has-selector" >:has()</a></li>
+                                <li><a class="v1-0" title="Select all elements that are the parent of another element, including text nodes." href="old.html#p=parent-selector" >:parent</a></li>
+                            </ul>
+                        </section>
+                    </div>
+                    <div>
+                        <section>
+                            <h2>可见性筛选</h2>
+                            <ul>
+                                <li><a class="v1-0" title="Selects all elements that are hidden." href="old.html#p=hidden-selector" >:hidden</a></li>
+                                <li><a class="v1-0" title="Selects all elements that are visible." href="old.html#p=visible-selector" >:visible</a>
+                                </li>
+                            </ul>
+                        </section>
+                        <section>
+                            <h2>属性</h2>
+                            <ul>
+                                <li><a class="v1-0" title="Selects elements that have the specified attribute with a value either equal to a given string or starting with that string followed by a hyphen (-)." href="old.html#p=attribute-contains-prefix-selector" >[name|="value"]</a>
+                                </li>
+                                <li><a class="v1-0" title="Selects elements that have the specified attribute with a value containing the a given substring." href="old.html#p=attribute-contains-selector" >[name*="value"]</a>
+                                </li>
+                                <li><a class="v1-0" title="Selects elements that have the specified attribute with a value containing a given word, delimited by spaces." href="old.html#p=attribute-contains-word-selector" >[name~="value"]</a>
+                                </li>
+                                <li><a class="v1-0" title="Selects elements that have the specified attribute with a value ending exactly with a given string. The comparison is case sensitive." href="old.html#p=attribute-ends-with-selector" >[name$="value"]</a>
+                                </li>
+                                <li><a class="v1-0" title="Selects elements that have the specified attribute with a value exactly equal to a certain value." href="old.html#p=attribute-equals-selector" >[name="value"]</a>
+                                </li>
+                                <li><a class="v1-0" title="Select elements that either don't have the specified attribute, or do have the specified attribute but not with a certain value." href="old.html#p=attribute-not-equal-selector" >[name!="value"</a>
+                                </li>
+                                <li><a class="v1-0" title="Selects elements that have the specified attribute with a value beginning exactly with a given string." href="old.html#p=attribute-starts-with-selector" >[name^="value"]</a>
+                                </li>
+                                <li><a class="v1-0" title="Selects elements that have the specified attribute, with any value." href="old.html#p=has-attribute-selector" >[name]</a>
+                                </li>
+                                <li><a class="v1-0" title="Matches elements that match all of the specified attribute filters." href="old.html#p=multiple-attribute-selector" >[name="value"][name2="value2"]</a>
+                                </li>
+                            </ul>
+                        </section>
+                        <section>
+                            <h2>子元素筛选</h2>
+                            <ul>
+                                <li><a class="v1-1-4" title="Selects all elements that are the first child of their parent." href="old.html#p=first-child-selector" >:first-child</a>
+                                </li>
+                                <li><a class="v1-9" title="Selects all elements that are the first among siblings of the same element name." href="old.html#p=first-of-type-selector" >:first-of-type</a>
+                                </li>
+                                <li><a class="v1-1-4" title="Selects all elements that are the last child of their parent." href="old.html#p=last-child-selector" >:last-child</a>
+                                </li>
+                                <li><a class="v1-9" title="Selects all elements that are the last among siblings of the same element name." href="old.html#p=last-of-type-selector" >:last-of-type</a>
+                                </li>
+                                <li><a class="v1-1-4" title="Selects all elements that are the nth-child of their parent." href="old.html#p=nth-child-selector" >:nth-child()</a>
+                                </li>
+                                <li><a class="v1-9" title="Selects all elements that are the nth-child of their parent, counting from the last element to the first." href="old.html#p=nth-last-child-selector" >:nth-last-child()</a>
+                                </li>
+                                <li><a class="v1-9" title="Selects all elements that are the nth-child of their parent, counting from the last element to the first." href="old.html#p=nth-last-of-type-selector" >:nth-last-of-type()</a>
+                                </li>
+                                <li><a class="v1-9" title="Selects all elements that are the nth child of their parent in relation to siblings with the same element name." href="old.html#p=nth-of-type-selector" >:nth-of-type()</a>
+                                </li>
+                                <li><a class="v1-1-4" title="Selects all elements that are the only child of their parent." href="old.html#p=only-child-selector" >:only-child</a>
+                                </li>
+                                <li><a class="v1-9" title="Selects all elements that have no siblings with the same element name." href="old.html#p=only-of-type-selector" >:only-of-type()</a>
+                                </li>
+                            </ul>
+                        </section>
+                    </div>
+                    <div>
+                        <section>
+                            <h2>表单</h2>
+                            <ul>
+                                <li><a class="v1-0" title="Selects all button elements and elements of type button." href="old.html#p=button-selector" >:button</a></li>
+                                <li><a class="v1-0" title="Selects all elements of type checkbox." href="old.html#p=checkbox-selector" >:checkbox</a>
+                                </li>
+                                <li><a class="v1-0" title="Matches all elements that are checked." href="old.html#p=checked-selector" >:checked</a>
+                                </li>
+                                <li><a class="v1-0" title="Selects all elements that are disabled." href="old.html#p=disabled-selector" >:disabled</a>
+                                </li>
+                                <li><a class="v1-0" title="Selects all elements that are enabled." href="old.html#p=enabled-selector" >:enabled</a>
+                                </li>
+                                <li><a class="v1-6" title="Selects element if it is currently focused." href="old.html#p=focus-selector" >:focus</a></li>
+                                <li><a class="v1-0" title="Selects all elements of type file." href="old.html#p=file-selector" >:file</a></li>
+                                <li><a class="v1-0" title="Selects all elements of type image." href="old.html#p=image-selector" >:image</a></li>
+                                <li><a class="v1-0" title="Selects all input, textarea, select and button elements." href="old.html#p=input-selector" >:input</a></li>
+                                <li><a class="v1-0" title="Selects all elements of type password." href="old.html#p=password-selector" >:password</a>
+                                </li>
+                                <li><a class="v1-0" title="Selects all elements of type radio." href="old.html#p=radio-selector" >:radio</a></li>
+                                <li><a class="v1-0" title="Selects all elements of type reset." href="old.html#p=reset-selector" >:reset</a></li>
+                                <li><a class="v1-0" title="Selects all elements that are selected." href="old.html#p=selected-selector" >:selected</a>
+                                </li>
+                                <li><a class="v1-0" title="Selects all elements of type submit." href="old.html#p=submit-selector" >:submit</a></li>
+                                <li><a class="v1-0" title="Selects all elements of type text." href="old.html#p=text-selector" >:text</a></li>
+                            </ul>
+                        </section>
+                    </div>
+                </article>
+                <article id="attributes">
+                    <h1>属性 / CSS</h1>
+                    <div>
+                        <section>
+                            <h2>属性</h2>
+                            <ul>
+                                <li><a class="v1-0" title="Get the value of an attribute for the first element in the set of matched elements." href="old.html#p=attr" >.attr()</a></li>
+                                <li><a class="v1-6" title="Get the value of a property for the first element in the set of matched elements." href="old.html#p=prop" >.prop()</a></li>
+                                <li><a class="v1-0" title="Remove an attribute from each element in the set of matched elements." href="old.html#p=removeAttr" >.removeAttr()</a>
+                                </li>
+                                <li><a class="v1-6" title="Remove a property for the set of matched elements." href="old.html#p=removeProp" >.removeProp()</a>
+                                </li>
+                                <li><a class="v1-0" title="Get the current value of the first element in the set of matched elements." href="old.html#p=val" >.val()</a></li>
+                            </ul>
+                        </section>
+                        <section>
+                            <h2>CSS</h2>
+                            <ul>
+                                <li><a class="v1-0" title="Adds the specified class(es) to each of the set of matched elements." href="old.html#p=addClass" >.addClass()</a></li>
+                                <li><a class="v1-0" title="Get the value of a style property for the first element in the set of matched elements." href="old.html#p=css" >.css()</a></li>
+                                <li><a class="v1-4-3" title="Provides a way to hook directly into jQuery to override how particular CSS properties are retrieved or set. Amongst other uses, cssHooks can be used to create custom, browser-normalized properties for CSS3 features such as box-shadows and gradients." href="old.html#p=jQuery.cssHooks" >jQuery.cssHooks</a>
+                                </li>
+                                <li><a class="v1-2" title="Determine whether any of the matched elements are assigned the given class." href="old.html#p=hasClass" >.hasClass()</a></li>
+                                <li><a class="v1-0" title="Remove a single class, multiple classes, or all classes from each element in the set of matched elements." href="old.html#p=removeClass" >.removeClass()</a>
+                                </li>
+                                <li><a class="v1-0" title="Add or remove one or more classes from each element in the set of matched elements, depending on either the class's presence or the value of the switch argument." href="old.html#p=toggleClass" >.toggleClass()</a>
+                                </li>
+                            </ul>
+                        </section>
+                        <section>
+                            <h2>尺寸</h2>
+                            <ul>
+                                <li><a class="v1-0" title="Get the current computed height for the first element in the set of matched elements." href="old.html#p=height" >.height()</a></li>
+                                <li><a class="v1-2-6" title="Get the current computed height for the first element in the set of matched elements, including padding but not border." href="old.html#p=innerHeight" >.innerHeight()</a>
+                                </li>
+                                <li><a class="v1-2-6" title="Get the current computed width for the first element in the set of matched elements, including padding but not border." href="old.html#p=innerWidth" >.innerWidth()</a>
+                                </li>
+                                <li><a class="v1-2-6" title="Get the current computed height for the first element in the set of matched elements, including padding, border, and optionally margin." href="old.html#p=outerHeight" >.outerHeight()</a>
+                                </li>
+                                <li><a class="v1-2-6" title="Get the current computed width for the first element in the set of matched elements, including padding and border." href="old.html#p=outerWidth" >.outerWidth()</a>
+                                </li>
+                                <li><a class="v1-0" title="Get the current computed width for the first element in the set of matched elements." href="old.html#p=width" >.width()</a></li>
+                            </ul>
+                        </section>
+                        <section>
+                            <h2>位置</h2>
+                            <ul>
+                                <li><a class="v1-2" title="Get the current coordinates of the first element in the set of matched elements, relative to the document." href="old.html#p=offset" >.offset()</a></li>
+                                <li><a class="v1-2-6" title="Get the closest ancestor element that is positioned." href="old.html#p=offsetParent" >.offsetParent()</a>
+                                </li>
+                                <li><a class="v1-2" title="Get the current coordinates of the first element in the set of matched elements, relative to the offset parent." href="old.html#p=position" >.position()</a></li>
+                                <li><a class="v1-2-6" title="Get the current horizontal position of the scroll bar for the first element in the set of matched elements." href="old.html#p=scrollLeft" >.scrollLeft()</a>
+                                </li>
+                                <li><a class="v1-2-6" title="Get the current vertical position of the scroll bar for the first element in the set of matched elements." href="old.html#p=scrollTop" >.scrollTop()</a></li>
+                            </ul>
+                        </section>
+                        <section>
+                            <h2>数据</h2>
+                            <ul>
+                                <li><a class="v1-2-3" title="Store arbitrary data associated with the specified element." href="old.html#p=jQuery.data" >jQuery.data()</a>
+                                </li>
+                                <li><a class="v1-2-3" title="Store arbitrary data associated with the matched elements." href="old.html#p=data" >.data()</a></li>
+                                <li><a class="v1-5" title="Determine whether an element has any jQuery data associated with it." href="old.html#p=jQuery.hasData" >jQuery.hasData()</a>
+                                </li>
+                                <li><a class="v1-2-3" title="Remove a previously-stored piece of data." href="old.html#p=jQuery.removeData" >jQuery.removeData()</a>
+                                </li>
+                                <li><a class="v1-2-3" title="Remove a previously-stored piece of data." href="old.html#p=removeData" >.removeData()</a>
+                                </li>
+                            </ul>
+                        </section>
+                    </div>
+                </article>
+                <article id="manipulation">
+                    <h1>操作</h1>
+                    <div>
+                        <section>
+                            <h2>拷贝</h2>
+                            <ul>
+                                <li><a class="v1-0" title="Create a deep copy of the set of matched elements." href="old.html#p=clone" >.clone()</a></li>
+                            </ul>
+                        </section>
+                        <section>
+                            <h2>DOM 插入, 包裹</h2>
+                            <ul>
+                                <li><a class="v1-0" title="Wrap an HTML structure around each element in the set of matched elements." href="old.html#p=wrap" >.wrap()</a></li>
+                                <li><a class="v1-2" title="Wrap an HTML structure around all elements in the set of matched elements." href="old.html#p=wrapAll" >.wrapAll()</a></li>
+                                <li><a class="v1-2" title="Wrap an HTML structure around the content of each element in the set of matched elements." href="old.html#p=wrapInner" >.wrapInner()</a></li>
+                            </ul>
+                        </section>
+                        <section>
+                            <h2>DOM 插入, 内部插入</h2>
+                            <ul>
+                                <li><a class="v1-0" title="Insert content, specified by the parameter, to the end of each element in the set of matched elements." href="old.html#p=append" >.append()</a></li>
+                                <li><a class="v1-0" title="Insert every element in the set of matched elements to the end of the target." href="old.html#p=appendTo" >.appendTo()</a></li>
+                                <li><a class="v1-0" title="Get the HTML contents of the first element in the set of matched elements." href="old.html#p=html" >.html()</a></li>
+                                <li><a class="v1-0" title="Insert content, specified by the parameter, to the beginning of each element in the set of matched elements." href="old.html#p=prepend" >.prepend()</a></li>
+                                <li><a class="v1-0" title="Insert every element in the set of matched elements to the beginning of the target." href="old.html#p=prependTo" >.prependTo()</a></li>
+                                <li><a class="v1-0" title="Get the combined text contents of each element in the set of matched elements, including their descendants." href="old.html#p=text" >.text()</a></li>
+                            </ul>
+                        </section>
+                        <section>
+                            <h2>DOM 插入, 外部插入</h2>
+                            <ul>
+                                <li><a class="v1-0" title="Insert content, specified by the parameter, after each element in the set of matched elements." href="old.html#p=after" >.after()</a></li>
+                                <li><a class="v1-0" title="Insert content, specified by the parameter, before each element in the set of matched elements." href="old.html#p=before" >.before()</a></li>
+                                <li><a class="v1-0" title="Insert every element in the set of matched elements after the target." href="old.html#p=insertAfter" >.insertAfter()</a>
+                                </li>
+                                <li><a class="v1-0" title="Insert every element in the set of matched elements before the target." href="old.html#p=insertBefore" >.insertBefore()</a>
+                                </li>
+                            </ul>
+                        </section>
+                        <section>
+                            <h2>DOM 移除</h2>
+                            <ul>
+                                <li><a class="v1-4" title="Remove the set of matched elements from the DOM." href="old.html#p=detach" >.detach()</a></li>
+                                <li><a class="v1-0" title="Remove all child nodes of the set of matched elements from the DOM." href="old.html#p=empty" >.empty()</a></li>
+                                <li><a class="v1-0" title="Remove the set of matched elements from the DOM." href="old.html#p=remove" >.remove()</a></li>
+                                <li><a class="v1-4" title="Remove the parents of the set of matched elements from the DOM, leaving the matched elements in their place." href="old.html#p=unwrap" >.unwrap()</a></li>
+                            </ul>
+                        </section>
+                        <section>
+                            <h2>DOM 替换</h2>
+                            <ul>
+                                <li><a class="v1-2" title="Replace each target element with the set of matched elements." href="old.html#p=replaceAll" >.replaceAll()</a>
+                                </li>
+                                <li><a class="v1-2" title="Replace each element in the set of matched elements with the provided new content." href="old.html#p=replaceWith" >.replaceWith()</a>
+                                </li>
+                            </ul>
+                        </section>
+                    </div>
+                </article>
+                <article id="traversing">
+                    <h1>遍历</h1>
+                    <div>
+                        <section>
+                            <h2>筛选</h2>
+                            <ul>
+                                <li><a class="v1-1-2" title="Reduce the set of matched elements to the one at the specified index." href="old.html#p=eq" >.eq()</a></li>
+                                <li><a class="v1-0" title="Reduce the set of matched elements to those that match the selector or pass the function's test." href="old.html#p=filter" >.filter()</a></li>
+                                <li><a class="v1-4" title="Reduce the set of matched elements to the first in the set." href="old.html#p=first" >.first()</a></li>
+                                <li><a class="v1-4" title="Reduce the set of matched elements to those that have a descendant that matches the selector or DOM element." href="old.html#p=has" >.has()</a></li>
+                                <li><a class="v1-0" title="Check the current matched set of elements against a selector and return true if at least one of these elements matches the selector." href="old.html#p=is" >.is()</a></li>
+                                <li><a class="v1-4" title="Reduce the set of matched elements to the final one in the set." href="old.html#p=last" >.last()</a></li>
+                                <li><a class="v1-2" title="Pass each element in the current matched set through a function, producing a new jQuery object containing the return values." href="old.html#p=map" >.map()</a></li>
+                                <li><a class="v1-0" title="Remove elements from the set of matched elements." href="old.html#p=not" >.not()</a></li>
+                                <li><a class="v1-1-4" title="Reduce the set of matched elements to a subset specified by a range of indices." href="old.html#p=slice" >.slice()</a></li>
+                            </ul>
+                        </section>
+                        <section>
+                            <h2>各种遍历</h2>
+                            <ul>
+                                <li><a class="v1-0" title="Add elements to the set of matched elements." href="old.html#p=add" >.add()</a></li>
+                                <li><a class="v1-2 v1-8-d" title="Add the previous set of elements on the stack to the current set." href="old.html#p=andSelf" >.andSelf()</a></li>
+                                <li><a class="v1-2" title="Get the children of each element in the set of matched elements, including text and comment nodes." href="old.html#p=contents" >.contents()</a></li>
+                                <li><a class="v1-0" title="Iterate over a jQuery object, executing a function for each matched element." href="old.html#p=each" >.each()</a></li>
+                                <li><a class="v1-0" title="End the most recent filtering operation in the current chain and return the set of matched elements to its previous state." href="old.html#p=end" >.end()</a></li>
+                            </ul>
+                        </section>
+                        <section>
+                            <h2>树遍历</h2>
+                            <ul>
+                                <li><a class="v1-8" title="Add the previous set of elements on the stack to the current set, optionally filtered by a selector." href="old.html#p=addBack" >.addBack()</a></li>
+                                <li><a class="v1-0" title="Get the children of each element in the set of matched elements, optionally filtered by a selector." href="old.html#p=children" >.children()</a></li>
+                                <li><a class="v1-3" title="Get the first ancestor element that matches the selector, beginning at the current element and progressing up through the DOM tree." href="old.html#p=closest" >.closest()</a></li>
+                                <li><a class="v1-0" title="Get the descendants of each element in the current set of matched elements, filtered by a selector." href="old.html#p=find" >.find()</a></li>
+                                <li><a class="v1-0" title="Get the immediately following sibling of each element in the set of matched elements. If a selector is provided, it retrieves the next sibling only if it matches that selector." href="old.html#p=next" >.next()</a></li>
+                                <li><a class="v1-2" title="Get all following siblings of each element in the set of matched elements, optionally filtered by a selector." href="old.html#p=nextAll" >.nextAll()</a></li>
+                                <li><a class="v1-4" title="Get all following siblings of each element up to but not including the element matched by the selector." href="old.html#p=nextUntil" >.nextUntil()</a></li>
+                                <li><a class="v1-0" title="Get the parent of each element in the current set of matched elements, optionally filtered by a selector." href="old.html#p=parent" >.parent()</a></li>
+                                <li><a class="v1-0" title="Get the ancestors of each element in the current set of matched elements, optionally filtered by a selector." href="old.html#p=parents" >.parents()</a></li>
+                                <li><a class="v1-4" title="Get the ancestors of each element in the current set of matched elements, up to but not including the element matched by the selector." href="old.html#p=parentsUntil" >.parentsUntil()</a>
+                                </li>
+                                <li><a class="v1-0" title="Get the immediately preceding sibling of each element in the set of matched elements, optionally filtered by a selector." href="old.html#p=prev" >.prev()</a></li>
+                                <li><a class="v1-2" title="Get all preceding siblings of each element in the set of matched elements, optionally filtered by a selector." href="old.html#p=prevAll" >.prevAll()</a></li>
+                                <li><a class="v1-4" title="Get all preceding siblings of each element up to but not including the element matched by the selector." href="old.html#p=prevUntil" >.prevUntil()</a></li>
+                                <li><a class="v1-0" title="Get the siblings of each element in the set of matched elements, optionally filtered by a selector." href="old.html#p=siblings" >.siblings()</a></li>
+                            </ul>
+                        </section>
+                    </div>
+                </article>
+                <article id="events">
+                    <h1>事件</h1>
+                    <div>
+                        <section>
+                            <h2>浏览器事件</h2>
+                            <ul>
+                                <li><a class="v1-0 v1-8-d" title="Bind an event handler to the 'error' JavaScript event." href="old.html#p=error" >.error()</a></li>
+                                <li><a class="v1-0" title="Bind an event handler to the 'resize' JavaScript event, or trigger that event on an element." href="old.html#p=resize" >.resize()</a></li>
+                                <li><a class="v1-0" title="Bind an event handler to the 'scroll' JavaScript event, or trigger that event on an element." href="old.html#p=scroll" >.scroll()</a></li>
+                            </ul>
+                        </section>
+                        <section>
+                            <h2>文档加载</h2>
+                            <ul>
+                                <li><a class="v1-6" title="Holds or releases the execution of jQuery's ready event." href="old.html#p=jQuery.holdReady" >.holdReady()</a>
+                                </li>
+                                <li><a class="v1-0 v1-8-d" title="Bind an event handler to the 'load' JavaScript event." href="old.html#p=load-event" >.load()</a></li>
+                                <li><a class="v1-0" title="Specify a function to execute when the DOM is fully loaded." href="old.html#p=ready" >.ready()</a></li>
+                                <li><a class="v1-0 v1-8-d" title="Bind an event handler to the 'unload' JavaScript event." href="old.html#p=unload" >.unload()</a></li>
+                            </ul>
+                        </section>
+                        <section>
+                            <h2>事件绑定</h2>
+                            <ul>
+                                <li><a class="v1-0" title="Attach a handler to an event for the elements." href="old.html#p=bind" >.bind()</a></li>
+                                <li><a class="v1-4-2" title="Attach a handler to one or more events for all elements that match the selector, now or in the future, based on a specific set of root elements." href="old.html#p=delegate" >.delegate()</a></li>
+                                <li><a class="v1-3 v1-7-d v1-9-r" title="Remove all event handlers previously attached using .live() from the elements." href="old.html#p=die" >.die()</a></li>
+                                <li><a class="v1-3 v1-7-d v1-9-r" title="Attach a handler to the event for all elements which match the current selector, now and in the future." href="old.html#p=live" >.live()</a></li>
+                                <li><a class="v1-7" title="Remove an event handler." href="old.html#p=off" >.off()</a></li>
+                                <li><a class="v1-7" title="Attach an event handler function for one or more events to the selected elements." href="old.html#p=on" >.on()</a></li>
+                                <li><a class="v1-1" title="Attach a handler to an event for the elements. The handler is executed at most once per element." href="old.html#p=one" >.one()</a></li>
+                                <li><a class="v1-0" title="Execute all handlers and behaviors attached to the matched elements for the given event type." href="old.html#p=trigger" >.trigger()</a></li>
+                                <li><a class="v1-2" title="Execute all handlers attached to an element for an event." href="old.html#p=triggerHandler" >.triggerHandler()</a>
+                                </li>
+                                <li><a class="v1-0" title="Remove a previously-attached event handler from the elements." href="old.html#p=unbind" >.unbind()</a></li>
+                                <li><a class="v1-4-2" title="Remove a handler from the event for all elements which match the current selector, now or in the future, based upon a specific set of root elements." href="old.html#p=undelegate" >.undelegate()</a>
+                                </li>
+                            </ul>
+                        </section>
+                        <section>
+                            <h2>表单事件</h2>
+                            <ul>
+                                <li><a class="v1-0" title="Bind an event handler to the 'blur' JavaScript event, or trigger that event on an element." href="old.html#p=blur" >.blur()</a></li>
+                                <li><a class="v1-0" title="Bind an event handler to the 'change' JavaScript event, or trigger that event on an element." href="old.html#p=change" >.change()</a></li>
+                                <li><a class="v1-0" title="Bind an event handler to the 'focus' JavaScript event, or trigger that event on an element." href="old.html#p=focus" >.focus()</a></li>
+                                <li><a class="v1-0" title="Bind an event handler to the 'select' JavaScript event, or trigger that event on an element." href="old.html#p=select" >.select()</a></li>
+                                <li><a class="v1-0" title="Bind an event handler to the 'submit' JavaScript event, or trigger that event on an element." href="old.html#p=submit" >.submit()</a></li>
+                            </ul>
+                        </section>
+                        <section>
+                            <h2>键盘事件</h2>
+                            <ul>
+                                <li><a class="v1-0" title="Bind an event handler to the 'keydown' JavaScript event, or trigger that event on an element." href="old.html#p=keydown" >.keydown()</a></li>
+                                <li><a class="v1-0" title="Bind an event handler to the 'keypress' JavaScript event, or trigger that event on an element." href="old.html#p=keypress" >.keypress()</a></li>
+                                <li><a class="v1-0" title="Bind an event handler to the 'keyup' JavaScript event, or trigger that event on an element." href="old.html#p=keyup" >.keyup()</a></li>
+                            </ul>
+                        </section>
+                    </div>
+                    <div>
+                        <section>
+                            <h2>鼠标事件</h2>
+                            <ul>
+                                <li><a class="v1-0" title="Bind an event handler to the 'click' JavaScript event, or trigger that event on an element." href="old.html#p=click" >.click()</a></li>
+                                <li><a class="v1-0" title="Bind an event handler to the 'dblclick' JavaScript event, or trigger that event on an element." href="old.html#p=dblclick" >.dblclick()</a></li>
+                                <li><a class="v1-4" title="Bind an event handler to the 'focusin' JavaScript event." href="old.html#p=focusin" >.focusin()</a></li>
+                                <li><a class="v1-4" title="Bind an event handler to the 'focusout' JavaScript event." href="old.html#p=focusout" >.focusout()</a></li>
+                                <li><a class="v1-0" title="Bind two handlers to the matched elements, to be executed when the mouse pointer enters and leaves the elements." href="old.html#p=hover" >.hover()</a></li>
+                                <li><a class="v1-0" title="Bind an event handler to the 'mousedown' JavaScript event, or trigger that event on an element." href="old.html#p=mousedown" >.mousedown()</a></li>
+                                <li><a class="v1-0" title="Bind an event handler to be fired when the mouse enters an element, or trigger that handler on an element." href="old.html#p=mouseenter" >.mouseenter()</a>
+                                </li>
+                                <li><a class="v1-0" title="Bind an event handler to be fired when the mouse leaves an element, or trigger that handler on an element." href="old.html#p=mouseleave" >.mouseleave()</a>
+                                </li>
+                                <li><a class="v1-0" title="Bind an event handler to the 'mousemove' JavaScript event, or trigger that event on an element." href="old.html#p=mousemove" >.mousemove()</a></li>
+                                <li><a class="v1-0" title="Bind an event handler to the 'mouseout' JavaScript event, or trigger that event on an element." href="old.html#p=mouseout" >.mouseout()</a></li>
+                                <li><a class="v1-0" title="Bind an event handler to the 'mouseover' JavaScript event, or trigger that event on an element." href="old.html#p=mouseover" >.mouseover()</a></li>
+                                <li><a class="v1-0" title="Bind an event handler to the 'mouseup' JavaScript event, or trigger that event on an element." href="old.html#p=mouseup" >.mouseup()</a></li>
+                                <li><a class="v1-0 v1-8-d v1-9-r" title="Bind two or more handlers to the matched elements, to be executed on alternate clicks." href="old.html#p=toggle-event" >.toggle()</a></li>
+                            </ul>
+                        </section>
+                        <section>
+                            <h2>事件对象</h2>
+                            <ul>
+                                <li><a class="v1-3" title="The current DOM element within the event bubbling phase." href="old.html#p=event.currentTarget" >event.currentTarget</a>
+                                </li>
+                                <li><a class="v1-1" title="The optional data passed to jQuery.fn.bind when the current executing handler was bound." href="old.html#p=event.data" >event.data</a></li>
+                                <li><a class="v1-3" title="Returns whether event.preventDefault() was ever called on this event object." href="old.html#p=event.isDefaultPrevented" >event.isDefaultPrevented()</a>
+                                </li>
+                                <li><a class="v1-3" title="Returns whether event.stopImmediatePropagation() was ever called on this event object." href="old.html#p=event.isImmediatePropagationStopped" >event.isImmediatePropagationStopped()</a>
+                                </li>
+                                <li><a class="v1-3" title="Returns whether event.stopPropagation() was ever called on this event object." href="old.html#p=event.isPropagationStopped" >event.isPropagationStopped()</a>
+                                </li>
+                                <li><a class="v1-4-3" title="The namespace specified when the event was triggered." href="old.html#p=event.namespace" >event.namespace</a>
+                                </li>
+                                <li><a class="v1-0-4" title="The mouse position relative to the left edge of the document." href="old.html#p=event.pageX" >event.pageX</a></li>
+                                <li><a class="v1-0-4" title="The mouse position relative to the top edge of the document." href="old.html#p=event.pageY" >event.pageY</a></li>
+                                <li><a class="v1-0" title="If this method is called, the default action of the event will not be triggered." href="old.html#p=event.preventDefault" >event.preventDefault()</a>
+                                </li>
+                                <li><a class="v1-1-4" title="The other DOM element involved in the event, if any." href="old.html#p=event.relatedTarget" >event.relatedTarget</a>
+                                </li>
+                                <li><a class="v1-3" title="The last value returned by an event handler that was triggered by this event, unless the value was undefined." href="old.html#p=event.result" >event.result</a>
+                                </li>
+                                <li><a class="v1-3" title="Prevents other event handlers from being called." href="old.html#p=event.stopImmediatePropagation" >event.stopImmediatePropagation()</a>
+                                </li>
+                                <li><a class="v1-0" title="Prevents the event from bubbling up the DOM tree, preventing any parent handlers from being notified of the event." href="old.html#p=event.stopPropagation" >event.stopPropagation()</a>
+                                </li>
+                                <li><a class="v1-0" title="The DOM element that initiated the event." href="old.html#p=event.target" >event.target</a>
+                                </li>
+                                <li><a class="v1-2-6" title="The difference in milliseconds between the time an event is triggered and January 1, 1970." href="old.html#p=event.timeStamp" >event.timeStamp</a>
+                                </li>
+                                <li><a class="v1-0" title="Describes the nature of the event." href="old.html#p=event.type" >event.type</a></li>
+                                <li><a class="v1-1-3" title="For key or button events, this attribute indicates the specific button or key that was pressed." href="old.html#p=event.which" >event.which</a></li>
+                            </ul>
+                        </section>
+                    </div>
+                </article>
+                <article id="effects">
+                    <h1>效果</h1>
+                    <div>
+                        <section>
+                            <h2>基础</h2>
+                            <ul>
+                                <li><a class="v1-0" title="Hide the matched elements." href="old.html#p=hide" >.hide()</a></li>
+                                <li><a class="v1-0" title="Display the matched elements." href="old.html#p=show" >.show()</a></li>
+                                <li><a class="v1-0" title="Display or hide the matched elements." href="old.html#p=toggle" >.toggle()</a></li>
+                            </ul>
+                        </section>
+                        <section>
+                            <h2>自定义</h2>
+                            <ul>
+                                <li><a class="v1-0" title="Perform a custom animation of a set of CSS properties." href="old.html#p=animate" >.animate()</a></li>
+                                <li><a class="v1-4" title="Remove from the queue all items that have not yet been run." href="old.html#p=clearQueue" >.clearQueue()</a>
+                                </li>
+                                <li><a class="v1-4" title="Set a timer to delay execution of subsequent items in the queue." href="old.html#p=delay" >.delay()</a></li>
+                                <li><a class="v1-2" title="Execute the next function on the queue for the matched elements." href="old.html#p=dequeue" >.dequeue()</a></li>
+                                <li><a class="v1-3" title="Execute the next function on the queue for the matched element." href="old.html#p=jQuery.dequeue" >jQuery.dequeue()</a>
+                                </li>
+                                <li><a class="v1-9" title="Stop the currently-running animation, remove all queued animations, and complete all animations for the matched elements." href="old.html#p=finish" >.finish()</a></li>
+                                <li><a class="v1-4-3" title="The rate (in milliseconds) at which animations fire." href="old.html#p=jQuery.fx.interval" >jQuery.fx.interval</a>
+                                </li>
+                                <li><a class="v1-3" title="Globally disable all animations." href="old.html#p=jQuery.fx.off" >jQuery.fx.off</a>
+                                </li>
+                                <li><a class="v1-2" title="Show the queue of functions to be executed on the matched elements." href="old.html#p=queue" >.queue()</a></li>
+                                <li><a class="v1-3" title="Show the queue of functions to be executed on the matched elements." href="old.html#p=jQuery.queue" >jQuery.queue()</a>
+                                </li>
+                                <li><a class="v1-2" title="Stop the currently-running animation on the matched elements." href="old.html#p=stop" >.stop()</a></li>
+                            </ul>
+                        </section>
+                        <section>
+                            <h2>渐变</h2>
+                            <ul>
+                                <li><a class="v1-0" title="Display the matched elements by fading them to opaque." href="old.html#p=fadeIn" >.fadeIn()</a></li>
+                                <li><a class="v1-0" title="Hide the matched elements by fading them to transparent." href="old.html#p=fadeOut" >.fadeOut()</a></li>
+                                <li><a class="v1-0" title="Adjust the opacity of the matched elements." href="old.html#p=fadeTo" >.fadeTo()</a></li>
+                                <li><a class="v1-4-4" title="Display or hide the matched elements by animating their opacity." href="old.html#p=fadeToggle" >.fadeToggle()</a>
+                                </li>
+                            </ul>
+                        </section>
+                        <section>
+                            <h2>滑动</h2>
+                            <ul>
+                                <li><a class="v1-0" title="Display the matched elements with a sliding motion." href="old.html#p=slideDown" >.slideDown()</a></li>
+                                <li><a class="v1-0" title="Display or hide the matched elements with a sliding motion." href="old.html#p=slideToggle" >.slideToggle()</a>
+                                </li>
+                                <li><a class="v1-0" title="Hide the matched elements with a sliding motion." href="old.html#p=slideUp" >.slideUp()</a></li>
+                            </ul>
+                        </section>
+                    </div>
+                </article>
+                <article id="ajax">
+                    <h1>Ajax</h1>
+                    <div>
+                        <section>
+                            <h2>全局Ajax事件处理程序</h2>
+                            <ul>
+                                <li><a class="v1-0" title="Register a handler to be called when Ajax requests complete. This is an Ajax Event." href="old.html#p=ajaxComplete" >.ajaxComplete()</a>
+                                </li>
+                                <li><a class="v1-0" title="Register a handler to be called when Ajax requests complete with an error. This is an Ajax Event." href="old.html#p=ajaxError" >.ajaxError()</a></li>
+                                <li><a class="v1-0" title="Attach a function to be executed before an Ajax request is sent. This is an Ajax Event." href="old.html#p=ajaxSend" >.ajaxSend()</a></li>
+                                <li><a class="v1-0" title="Register a handler to be called when the first Ajax request begins. This is an Ajax Event." href="old.html#p=ajaxStart" >.ajaxStart()</a></li>
+                                <li><a class="v1-0" title="Register a handler to be called when all Ajax requests have completed. This is an Ajax Event." href="old.html#p=ajaxStop" >.ajaxStop()</a></li>
+                                <li><a class="v1-0" title="Attach a function to be executed whenever an Ajax request completes successfully. This is an Ajax Event." href="old.html#p=ajaxSuccess" >.ajaxSuccess()</a>
+                                </li>
+                            </ul>
+                        </section>
+                        <section>
+                            <h2>辅助函数</h2>
+                            <ul>
+                                <li><a class="v1-2" title="Create a serialized representation of an array or object, suitable for use in a URL query string or Ajax request." href="old.html#p=jQuery.param" >jQuery.param()</a>
+                                </li>
+                                <li><a class="v1-0" title="Encode a set of form elements as a string for submission." href="old.html#p=serialize" >.serialize()</a></li>
+                                <li><a class="v1-2" title="Encode a set of form elements as an array of names and values." href="old.html#p=serializeArray" >.serializeArray()</a>
+                                </li>
+                            </ul>
+                        </section>
+                        <section>
+                            <h2>底层接口</h2>
+                            <ul>
+                                <li><a class="v1-0" title="Perform an asynchronous HTTP (Ajax) request." href="old.html#p=jQuery.ajax" >jQuery.ajax()</a>
+                                </li>
+                                <li><a class="v1-1" title="Set default values for future Ajax requests." href="old.html#p=jQuery.ajaxSetup" >jQuery.ajaxSetup()</a>
+                                </li>
+                            </ul>
+                        </section>
+                        <section>
+                            <h2>快捷方法</h2>
+                            <ul>
+                                <li><a class="v1-0" title="Load data from the server using a HTTP GET request." href="old.html#p=jQuery.get" >jQuery.get()</a></li>
+                                <li><a class="v1-0" title="Load JSON-encoded data from the server using a GET HTTP request." href="old.html#p=jQuery.getJSON" >jQuery.getJSON()</a>
+                                </li>
+                                <li><a class="v1-0" title="Load a JavaScript file from the server using a GET HTTP request, then execute it." href="old.html#p=jQuery.getScript" >jQuery.getScript()</a>
+                                </li>
+                                <li><a class="v1-0" title="Load data from the server and place the returned HTML into the matched element." href="old.html#p=load" >.load()</a></li>
+                                <li><a class="v1-0" title="Load data from the server using a HTTP POST request." href="old.html#p=jQuery.post" >jQuery.post()</a>
+                                </li>
+                            </ul>
+                        </section>
+                    </div>
+                </article>
+                <article id="core">
+                    <h1>核心</h1>
+                    <div>
+                        <section>
+                            <h2>jQuery 对象</h2>
+                            <ul>
+                                <li><a class="v1-0" title="Accepts a string containing a CSS selector which is then used to match a set of elements." href="old.html#p=jQuery" >jQuery()</a></li>
+                                <li><a class="v1-0" title="Relinquish jQuery's control of the $ variable." href="old.html#p=jQuery.noConflict" >jQuery.noConflict()</a>
+                                </li>
+                                <li><a class="v1-5 v1-7-d v1-9-r" title="Creates a new copy of jQuery whose properties and methods can be modified without affecting the original jQuery object." href="old.html#p=jQuery.sub" >jQuery.sub()</a></li>
+                                <li><a class="v1-5" title="Provides a way to execute callback functions based on one or more objects, usually Deferred objects that represent asynchronous events." href="old.html#p=jQuery.when" >jQuery.when()</a>
+                                </li>
+                            </ul>
+                        </section>
+                        <section>
+                            <h2>实用工具</h2>
+                            <ul>
+                                <li><a class="v1-0 v1-3-d" title="States if the current page, in the user's browser, is being rendered using the W3C CSS Box Model." href="old.html#p=jQuery.boxModel" >jQuery.boxModel</a>
+                                </li>
+                                <li><a class="v1-0 v1-3-d v1-9-r" title="Contains flags for the useragent, read from navigator.userAgent. We recommend against using this property; please try to use feature detection instead (see jQuery.support). jQuery.browser may be moved to a plugin in a future release of jQuery." href="old.html#p=jQuery.browser" >jQuery.browser</a>
+                                </li>
+                                <li><a class="v1-4" title="Check to see if a DOM node is within another DOM node." href="old.html#p=jQuery.contains" >jQuery.contains()</a>
+                                </li>
+                                <li><a class="v1-0" title="A generic iterator function, which can be used to seamlessly iterate over both objects and arrays. Arrays and array-like objects with a length property (such as a function's arguments object) are iterated by numeric index, from 0 to length-1. Other objects are iterated via their named properties." href="old.html#p=jQuery.each" >jQuery.each()</a>
+                                </li>
+                                <li><a class="v1-0" title="Merge the contents of two or more objects together into the first object." href="old.html#p=jQuery.extend" >jQuery.extend()</a>
+                                </li>
+                                <li><a class="v1-0-4" title="Execute some JavaScript code globally." href="old.html#p=jQuery.globalEval" >jQuery.globalEval()</a>
+                                </li>
+                                <li><a class="v1-0" title="Finds the elements of an array which satisfy a filter function. The original array is not affected." href="old.html#p=jQuery.grep" >jQuery.grep()</a>
+                                </li>
+                                <li><a class="v1-2" title="Search for a specified value within an array and return its index (or -1 if not found)." href="old.html#p=jQuery.inArray" >jQuery.inArray()</a>
+                                </li>
+                                <li><a class="v1-3" title="Determine whether the argument is an array." href="old.html#p=jQuery.isArray" >jQuery.isArray()</a>
+                                </li>
+                                <li><a class="v1-4" title="Check to see if an object is empty (contains no properties)." href="old.html#p=jQuery.isEmptyObject" >jQuery.isEmptyObject()</a>
+                                </li>
+                                <li><a class="v1-2" title="Determine if the argument passed is a Javascript function object." href="old.html#p=jQuery.isFunction" >jQuery.isFunction()</a>
+                                </li>
+                                <li><a class="v1-7" title="Determines whether its argument is a number." href="old.html#p=jQuery.isNumeric" >jQuery.isNumeric()</a>
+                                </li>
+                                <li><a class="v1-4" title="Check to see if an object is a plain object (created using '{}' or 'new Object')." href="old.html#p=jQuery.isPlainObject" >jQuery.isPlainObject()</a>
+                                </li>
+                                <li><a class="v1-4-3" title="Determine whether the argument is a window." href="old.html#p=jQuery.isWindow" >jQuery.isWindow()</a>
+                                </li>
+                                <li><a class="v1-1-4" title="Check to see if a DOM node is within an XML document (or is an XML document)." href="old.html#p=jQuery.isXMLDoc" >jQuery.isXMLDoc()</a>
+                                </li>
+                                <li><a class="v1-2" title="Convert an array-like object into a true JavaScript array." href="old.html#p=jQuery.makeArray" >jQuery.makeArray()</a>
+                                </li>
+                                <li><a class="v1-0" title="Translate all items in an array or array-like object to another array of items." href="old.html#p=jQuery.map" >jQuery.map()</a></li>
+                                <li><a class="v1-0" title="Merge the contents of two arrays together into the first array. " href="old.html#p=jQuery.merge" >jQuery.merge()</a>
+                                </li>
+                                <li><a class="v1-4" title="An empty function." href="old.html#p=jQuery.noop" >jQuery.noop()</a>
+                                </li>
+                                <li><a class="v1-4-3" title="Return a number representing the current time." href="old.html#p=jQuery.now" >jQuery.now()</a></li>
+                                <li><a class="v1-8" title="Parses a string into an array of DOM nodes." href="old.html#p=jQuery.parseHTML" >jQuery.parseHTML()</a>
+                                </li>
+                                <li><a class="v1-4-1" title="Takes a well-formed JSON string and returns the resulting JavaScript object." href="old.html#p=jQuery.parseJSON" >jQuery.parseJSON()</a>
+                                </li>
+                                <li><a class="v1-5" title="Parses a string into an XML document." href="old.html#p=jQuery.parseXML" >jQuery.parseXML()</a>
+                                </li>
+                                <li><a class="v1-4" title="Takes a function and returns a new one that will always have a particular context." href="old.html#p=jQuery.proxy" >jQuery.proxy()</a>
+                                </li>
+                                <li><a class="v1-3" title="A collection of properties that represent the presence of different browser features or bugs." href="old.html#p=jQuery.support" >jQuery.support</a>
+                                </li>
+                                <li><a class="v1-0" title="Remove the whitespace from the beginning and end of a string." href="old.html#p=jQuery.trim" >jQuery.trim()</a>
+                                </li>
+                                <li><a class="v1-4-3" title="Determine the internal JavaScript [[Class]] of an object." href="old.html#p=jQuery.type" >jQuery.type()</a>
+                                </li>
+                                <li><a class="v1-1-3" title="Sorts an array of DOM elements, in place, with the duplicates removed. Note that this only works on arrays of DOM elements, not strings or numbers." href="old.html#p=jQuery.unique" >jQuery.unique()</a>
+                                </li>
+                            </ul>
+                        </section>
+                    </div>
+                    <div>
+                        <section>
+                            <h2>DOM 元素方法</h2>
+                            <ul>
+                                <li><a class="v1-0" title="Retrieve the DOM elements matched by the jQuery object." href="old.html#p=get" >.get()</a></li>
+                                <li><a class="v1-0" title="Search for a given element from among the matched elements." href="old.html#p=index" >.index()</a></li>
+                                <li><a class="v1-0 v1-8-d" title="Return the number of elements in the jQuery object." href="old.html#p=size" >.size()</a></li>
+                                <li><a class="v1-4" title="Retrieve all the DOM elements contained in the jQuery set, as an array." href="old.html#p=toArray" >.toArray()</a></li>
+                            </ul>
+                        </section>
+                        <section>
+                            <h2>内部构件</h2>
+                            <ul>
+                                <li><a class="v1-0" title="A string containing the jQuery version number." href="old.html#p=jquery-2" >.jquery</a></li>
+                                <li><a class="v1-3 v1-10-d" title="The DOM node context originally passed to jQuery(); if none was passed then context will likely be the document." href="old.html#p=context" >.context</a></li>
+                                <li><a class="v1-4-1" title="Takes a string and throws an exception containing it." href="old.html#p=jQuery.error" >jQuery.error()</a>
+                                </li>
+                                <li><a class="v1-0" title="The number of elements in the jQuery object." href="old.html#p=length" >.length</a></li>
+                                <li><a class="v1-0" title="Add a collection of DOM elements onto the jQuery stack." href="old.html#p=pushStack" >.pushStack()</a></li>
+                                <li><a class="v1-3" title="A selector representing selector originally passed to jQuery()." href="old.html#p=selector" >.selector</a></li>
+                            </ul>
+                        </section>
+                        <section>
+                            <h2>延迟对象</h2>
+                            <ul>
+                                <li><a class="v1-6" title="Add handlers to be called when the Deferred object is either resolved or rejected." href="old.html#p=deferred.always" >deferred.always()</a>
+                                </li>
+                                <li><a class="v1-5" title="Add handlers to be called when the Deferred object is resolved." href="old.html#p=deferred.done" >deferred.done()</a>
+                                </li>
+                                <li><a class="v1-5" title="Add handlers to be called when the Deferred object is rejected." href="old.html#p=deferred.fail" >deferred.fail()</a>
+                                </li>
+                                <li><a class="v1-5 v1-7-d v1-8-r" title="Determine whether a Deferred object has been rejected." href="old.html#p=deferred.isRejected" >deferred.isRejected()</a>
+                                </li>
+                                <li><a class="v1-5 v1-7-d v1-8-r" title="Determine whether a Deferred object has been resolved." href="old.html#p=deferred.isResolved" >deferred.isResolved()</a>
+                                </li>
+                                <li><a class="v1-7" title="Call the progressCallbacks on a Deferred object with the given args." href="old.html#p=deferred.notify" >deferred.notify()</a>
+                                </li>
+                                <li><a class="v1-7" title="Call the progressCallbacks on a Deferred object with the given context and args." href="old.html#p=deferred.notifyWith" >deferred.notifyWith()</a>
+                                </li>
+                                <li><a class="v1-6 v1-8-d" title="Utility method to filter and/or chain Deferreds." href="old.html#p=deferred.pipe" >deferred.pipe()</a>
+                                </li>
+                                <li><a class="v1-7" title="Add handlers to be called when the Deferred object generates progress notifications." href="old.html#p=deferred.progress" >deferred.progress()</a>
+                                </li>
+                                <li><a class="v1-5" title="Return a Deferred's Promise object." href="old.html#p=deferred.promise" >deferred.promise()</a>
+                                </li>
+                                <li><a class="v1-5" title="Reject a Deferred object and call any failCallbacks with the given args." href="old.html#p=deferred.reject" >deferred.reject()</a>
+                                </li>
+                                <li><a class="v1-5" title="Reject a Deferred object and call any failCallbacks with the given context and args." href="old.html#p=deferred.rejectWith" >deferred.rejectWith()</a>
+                                </li>
+                                <li><a class="v1-5" title="Resolve a Deferred object and call any doneCallbacks with the given args." href="old.html#p=deferred.resolve" >deferred.resolve()</a>
+                                </li>
+                                <li><a class="v1-5" title="Resolve a Deferred object and call any doneCallbacks with the given context and args." href="old.html#p=deferred.resolveWith" >deferred.resolveWith()</a>
+                                </li>
+                                <li><a class="v1-7" title="Determine the current state of a Deferred object." href="old.html#p=deferred.state" >deferred.state()</a>
+                                </li>
+                                <li><a class="v1-5" title="Add handlers to be called when the Deferred object is resolved or rejected." href="old.html#p=deferred.then" >deferred.then()</a>
+                                </li>
+                                <li><a class="v1-6" title="Return a Promise object to observe when all actions of a certain type bound to the collection, queued or not, have finished." href="old.html#p=promise" >.promise()</a></li>
+                            </ul>
+                        </section>
+                    </div>
+                    <div>
+                        <section>
+                            <h2>回调对象</h2>
+                            <ul>
+                                <li><a class="v1-7" title="A multi-purpose callbacks list object that provides a powerful way to manage callback lists." href="old.html#p=jQuery.Callbacks" >jQuery.Callbacks()</a>
+                                </li>
+                                <li><a class="v1-7" title="Add a callback or a collection of callbacks to a callback list." href="old.html#p=callbacks.add" >callbacks.add()</a>
+                                </li>
+                                <li><a class="v1-7" title="Disable a callback list from doing anything more." href="old.html#p=callbacks.disable" >callbacks.disable()</a>
+                                </li>
+                                <li><a class="v1-7" title="Remove all of the callbacks from a list." href="old.html#p=callbacks.empty" >callbacks.empty()</a>
+                                </li>
+                                <li><a class="v1-7" title="Call all of the callbacks with the given arguments." href="old.html#p=callbacks.fire" >callbacks.fire()</a>
+                                </li>
+                                <li><a class="v1-7" title="Determine if the callbacks have already been called at least once." href="old.html#p=callbacks.fired" >callbacks.fired()</a>
+                                </li>
+                                <li><a class="v1-7" title="Call all callbacks in a list with the given context and arguments." href="old.html#p=callbacks.fireWith" >callbacks.fireWith()</a>
+                                </li>
+                                <li><a class="v1-7" title="Determine whether a supplied callback is in a list." href="old.html#p=callbacks.has" >callbacks.has()</a>
+                                </li>
+                                <li><a class="v1-7" title="Lock a callback list in its current state." href="old.html#p=callbacks.lock" >callbacks.lock()</a>
+                                </li>
+                                <li><a class="v1-7" title="Determine if the callbacks list has been locked." href="old.html#p=callbacks.locked" >callbacks.locked()</a>
+                                </li>
+                                <li><a class="v1-7" title="Remove a callback or a collection of callbacks from a callback list." href="old.html#p=callbacks.remove" >callbacks.remove()</a>
+                                </li>
+                            </ul>
+                        </section>
+                    </div>
+                </article>
+            </div>
+        </div>
+</div>
